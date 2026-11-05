@@ -1,0 +1,2035 @@
+id: D059
+title: Ottawa Tourism - Always on Search
+client: Ottawa Tourism
+priority: Medium
+build_type: Standard
+move_group: '3'
+target_live_date: '2027-01-22'
+template: master
+tapclicks:
+  dashboard_id: 1154
+  client_account: Ottawa Tourism and Convention Authority
+  built_from: template
+  data_widgets: 110
+scope:
+  smart_campaign_filter_values: 'Ottawa Tourism: Always On Search'
+  how_widgets_are_scoped: 'Smart Campaign: 97, Campaign: 13'
+notes:
+- Likely merged into one Ottawa Tourism dashboard once Epitaph approves the template.
+sections:
+- name: Adara
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 136361
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Impressions / Clicks
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136362
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Site Visits
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136363
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Uniques Reached
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136364
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Flight Searches
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136365
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Flight Bookings
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136366
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Hotel Searches
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136367
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Hotel Bookings
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136368
+    element: bar-chart
+    title: By Month
+    metrics:
+    - Impressions / Clicks
+    - Site Visits
+    - Uniques Reached
+    group_by:
+    - date:month
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136369
+    element: bar-chart
+    title: By Channel
+    metrics:
+    - Impressions / Clicks
+    - Site Visits
+    - Uniques Reached
+    group_by:
+    - media_type
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136371
+    element: bar-chart
+    title: By Month
+    metrics:
+    - Flight Searches
+    - Flight Bookings
+    group_by:
+    - date:month
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136373
+    element: bar-chart
+    title: By Channel
+    metrics:
+    - Flight Searches
+    - Flight Bookings
+    group_by:
+    - media_type
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136377
+    element: bar-chart
+    title: By Month
+    metrics:
+    - Hotel Searches
+    - Hotel Bookings
+    group_by:
+    - date:month
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136378
+    element: bar-chart
+    title: By Channel
+    metrics:
+    - Hotel Searches
+    - Hotel Bookings
+    group_by:
+    - media_type
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Always On
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 48559
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48564
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48566
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Search
+      - Search - Perfmax
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48570
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48576
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48577
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48581
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48587
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48589
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48593
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48666
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48667
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48669
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48670
+    element: kpi
+    title: Booking Search
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48671
+    element: kpi
+    title: Booking Confirmation
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Confirmation
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48672
+    element: kpi
+    title: Ottawa Pass Add to Cart
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51402
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51403
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51405
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53107
+    element: kpi
+    title: clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53108
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53109
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53110
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53111
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83133
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83134
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83135
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83136
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83137
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117313
+    element: kpi
+    title: Ottawa Pass Purchase
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 48636
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48639
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 48641
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48643
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48645
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48647
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48649
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48651
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48659
+    element: kpi
+    title: Booking Search
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48661
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48662
+    element: kpi
+    title: Booking Confirmation
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Confirmation
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48663
+    element: kpi
+    title: Ottawa Pass Add to Cart
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 48664
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51407
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51409
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53162
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53164
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53166
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53168
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 53174
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83138
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83139
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83140
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83141
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83142
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117314
+    element: kpi
+    title: Ottawa Pass Purchase
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Bing
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 135987
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135988
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135989
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135990
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135991
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135992
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136000
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 136003
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136004
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136005
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136008
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136009
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136010
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136013
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136014
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136015
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Perfmax
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 106097
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106098
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106099
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106100
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106101
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106102
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106104
+    element: kpi
+    title: Booking Search
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106105
+    element: kpi
+    title: Booking Confirmation
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Confirmation
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106106
+    element: kpi
+    title: Ottawa Pass Add to Cart
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106110
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106111
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106112
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106114
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106115
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106116
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106118
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106119
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106120
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106122
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106123
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106124
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106126
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106127
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 106128
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Add to Cart
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117315
+    element: kpi
+    title: Ottawa Pass Purchase
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Pass Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Always On Search'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

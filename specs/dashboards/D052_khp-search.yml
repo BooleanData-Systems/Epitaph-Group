@@ -1,0 +1,1200 @@
+id: D052
+title: KHP - Search
+client: Kids Help Phone
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 2434
+  client_account: Kids Help Phone
+  built_from: template
+  data_widgets: 55
+scope:
+  smart_campaign_filter_values: 'NOT Kids Help Phone: Grants; Kids Help Phone: Grants'
+  how_widgets_are_scoped: 'Data Source Name: 30, Smart Campaign: 25'
+notes:
+- Google Ads Grants spend is USD and shows in CAD via dim_fx_rate (Q20).
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 97660
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97663
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97664
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97665
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97666
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97667
+    element: bar-chart
+    title: Campaign
+    metrics:
+    - Spend
+    group_by:
+    - campaign_filter
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97669
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97670
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97671
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97672
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97673
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - campaign_filter
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+      - Google Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97675
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97676
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97677
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+      - Google Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97678
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97679
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - campaign_filter
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Bing
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 97706
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97709
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 97711
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97712
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97713
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97715
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97716
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97717
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97719
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97720
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97721
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97797
+    element: bar-chart
+    title: Campaign
+    metrics:
+    - Spend
+    group_by:
+    - campaign_filter
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97798
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - campaign_filter
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97799
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - campaign_filter
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Google Grants
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 98350
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98352
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 98354
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98355
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98356
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98359
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98360
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98361
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98364
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98365
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98366
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Google Paid
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 97690
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97693
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 97695
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97696
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97697
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97699
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97700
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97701
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97703
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97704
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97705
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97794
+    element: bar-chart
+    title: Campaign
+    metrics:
+    - Spend
+    group_by:
+    - campaign_filter
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97795
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - campaign_filter
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97796
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - campaign_filter
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: not in
+      values:
+      - 'Kids Help Phone: Grants'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

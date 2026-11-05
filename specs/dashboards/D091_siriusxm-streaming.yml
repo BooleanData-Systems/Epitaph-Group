@@ -1,0 +1,4880 @@
+id: D091
+title: SiriusXM - Streaming
+client: SiriusXM
+priority: High
+build_type: Custom
+move_group: '1'
+target_live_date: '2026-12-11'
+template: master-base-plus-custom
+tapclicks:
+  dashboard_id: 633
+  client_account: SiriusXM Canada Inc - Performance
+  built_from: template
+  data_widgets: 244
+scope:
+  smart_campaign_filter_values: 'SiriusXM: Streaming'
+  how_widgets_are_scoped: 'Smart Campaign: 184, Other filter: 21, Program Code: 20, Campaign: 17, Data Source Name: 2'
+notes:
+- 'Not rebuilt: 6 widgets, source Goloot stopped over 90 days ago (A23); 21 widgets, source GoLoot stopped over 90 days ago
+  (A23)'
+sections:
+- name: 2024 - Monthly
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 123249
+    element: combo-chart
+    title: Trials Goal
+    metrics:
+    - Performance Trials
+    - Organic Trials
+    - Trials - Goal
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2024-01-01..2024-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123250
+    element: combo-chart
+    title: Flow Starts VS Trials
+    metrics:
+    - Total Flow Starts
+    - Total Trials
+    - Trials - SC
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - Scorecard - IAP
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2024-01-01..2024-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123252
+    element: combo-chart
+    title: Adobe by Month - Performance
+    metrics:
+    - Performance Trials
+    - Performance Flow Starts
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Fixed: 2024-01-01..2024-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123253
+    element: combo-chart
+    title: Adobe by Month - Organic
+    metrics:
+    - Organic Trials
+    - Organic Flow Starts
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Fixed: 2024-01-01..2024-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123254
+    element: line-chart
+    title: Clicks by Month
+    metrics:
+    - Clicks
+    group_by:
+    - media_type
+    - date:month
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: not in
+      values:
+      - Unclassified
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    date_range:
+      was: 'Fixed: 2024-01-01..2024-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123255
+    element: combo-chart
+    title: Trials over Clicks - Monthly
+    metrics:
+    - Clicks
+    - Performance Trials
+    - Organic Trials
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Fixed: 2024-01-01..2024-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123256
+    element: line-chart
+    title: Adobe and Scorecard CPT Monthly
+    metrics:
+    - CPT
+    - Performance CPT
+    - Scorecard CPT
+    labels:
+      CPT: Adobe CPT
+      Performance CPT: Adobe Performance CPT
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Scorecard - IAP
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2024-01-01..2024-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+- name: 2025 - Monthly
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 87563
+    element: combo-chart
+    title: Trials Goal
+    metrics:
+    - Performance Trials
+    - Organic Trials
+    - Trials - Goal
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 87564
+    element: combo-chart
+    title: Flow Starts VS Trials
+    metrics:
+    - Total Flow Starts
+    - Total Trials
+    - Trials - SC
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - Scorecard - IAP
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 87566
+    element: combo-chart
+    title: Adobe by Month - Performance
+    metrics:
+    - Performance Trials
+    - Performance Flow Starts
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Own relative range: lastyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 87567
+    element: combo-chart
+    title: Adobe by Month - Organic
+    metrics:
+    - Organic Trials
+    - Organic Flow Starts
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Own relative range: lastyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 87568
+    element: line-chart
+    title: Clicks by Month
+    metrics:
+    - Clicks
+    group_by:
+    - media_type
+    - date:month
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: not in
+      values:
+      - Unclassified
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    date_range:
+      was: 'Own relative range: lastyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87572
+    element: combo-chart
+    title: Trials over Clicks - Monthly
+    metrics:
+    - Clicks
+    - Performance Trials
+    - Organic Trials
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Own relative range: lastyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 87574
+    element: line-chart
+    title: Adobe and Scorecard CPT Monthly
+    metrics:
+    - CPT
+    - Performance CPT
+    - Scorecard CPT
+    labels:
+      CPT: Adobe CPT
+      Performance CPT: Adobe Performance CPT
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Scorecard - IAP
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 27597
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27598
+    element: kpi
+    title: Adobe
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    - Organic Trials
+    - CPT
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - Scorecard - IAP
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+      - Streaming - Organic
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 27601
+    element: kpi
+    title: Platform Conversions
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Inactive Purchase
+      - SiriusXM - Inactive Subscription Complete
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27603
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    - Organic Trials
+    - CPT
+    - Trials - SC
+    group_by:
+    - date:day
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - Scorecard - IAP
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Streaming*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+      - Streaming - Organic
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 27604
+    element: bar-chart
+    title: Media Type by Adobe Trials
+    metrics:
+    - Performance Trials
+    group_by:
+    - media_type
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Performance Trials
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Streaming*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 27605
+    element: bar-chart
+    title: Media Type by CPT
+    metrics:
+    - Performance CPT
+    group_by:
+    - media_type
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Performance Trials
+        value: 1.0
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 27607
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Inactive Purchase
+      - SiriusXM - Inactive Subscription Complete
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27608
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - Inactive Purchase
+      - SiriusXM - Inactive Subscription Complete
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27609
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Inactive Purchase
+      - SiriusXM - Inactive Subscription Complete
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27610
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Inactive Purchase
+      - SiriusXM - Inactive Subscription Complete
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27613
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27615
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27616
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27619
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27620
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27621
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27622
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27625
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27626
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27627
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27628
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27631
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27632
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27633
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27634
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54311
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54312
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54313
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54314
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54315
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83814
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Inactive Purchase
+      - SiriusXM - Inactive Subscription Complete
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83815
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83816
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83817
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83818
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Display
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 27689
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27691
+    element: kpi
+    title: Platform Conversions
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27695
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27696
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27697
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27700
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27701
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27702
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27705
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27706
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27707
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27710
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27711
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27712
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56300
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56301
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56302
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56303
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56304
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83824
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      - SiriusXM - Satellite - Complete
+      - SiriusXM - Streaming 6MOFREE - Complete
+      - SiriusXM - Satellite 6MOFREE - Complete
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83825
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83826
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83827
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97817
+    element: kpi
+    title: CATPSRTP4MOFREE
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+    - field: media_type
+      op: in
+      values:
+      - Programmatic
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97818
+    element: kpi
+    title: PARTNERSAT4MO
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - PARTNERSAT4MO
+    - field: media_type
+      op: in
+      values:
+      - Programmatic
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+- name: GoLoot
+  rebuild: false
+  widgets: []
+  note: every widget in this section is retired; data stays available by date range
+- name: Main
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 47181
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 47184
+    element: kpi
+    title: Organic
+    metrics:
+    - Trials - SC
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - Scorecard - Organic
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 47185
+    element: kpi
+    title: Total
+    metrics:
+    - Trials - SC
+    - Scorecard CPT
+    labels:
+      Scorecard CPT: CPT - SC
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - Scorecard - IAP
+      - '*IAP*'
+      - '*Other*'
+      - '*Satellite*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 47186
+    element: combo-chart
+    title: Trials Goal
+    metrics:
+    - Performance Trials
+    - Organic Trials
+    - Trials - Goal
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Other*'
+      - '*Satellite*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+      - Streaming - Organic
+    date_range:
+      was: 'Own relative range: yeartodate'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 47187
+    element: combo-chart
+    title: Flow Starts VS Trials
+    metrics:
+    - Total Flow Starts
+    - Total Trials
+    - Trials - SC
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - Scorecard - IAP
+      - '*IAP*'
+      - '*Other*'
+      - '*Satellite*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: yeartodate'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 47189
+    element: combo-chart
+    title: Adobe by Month - Performance
+    metrics:
+    - Performance Trials
+    - Performance Flow Starts
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Other*'
+      - '*Satellite*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Own relative range: yeartodate'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 47190
+    element: line-chart
+    title: Clicks by Month
+    metrics:
+    - Clicks
+    group_by:
+    - media_type
+    - date:month
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: not in
+      values:
+      - Unclassified
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    date_range:
+      was: 'Own relative range: yeartodate'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 47191
+    element: combo-chart
+    title: Trials over Clicks - Daily
+    metrics:
+    - Clicks
+    - Performance Trials
+    - Organic Trials
+    group_by:
+    - date:day
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*Satellite*'
+      - '*IAP*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 47250
+    element: line-chart
+    title: Adobe Flow Starts by Day
+    metrics:
+    - Performance Flow Starts
+    - Organic Flow Starts
+    group_by:
+    - date:day
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 47306
+    element: combo-chart
+    title: Flow Starts VS Trials Daily
+    metrics:
+    - Total Flow Starts
+    - Total Trials
+    group_by:
+    - date:day
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - Scorecard - IAP
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 50411
+    element: table
+    title: Untitled Widget
+    metrics:
+    - Throughput Percentage
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - Programmatic - Streaming
+      - Search - Streaming
+      - Social Paid - Streaming
+      - Streaming - Organic
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 51208
+    element: combo-chart
+    title: Adobe by Month - Organic
+    metrics:
+    - Organic Trials
+    - Organic Flow Starts
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Own relative range: yeartodate'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 58919
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58920
+    element: kpi
+    title: Total Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58921
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58922
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58923
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 60458
+    element: combo-chart
+    title: Trials over Clicks - Monthly
+    metrics:
+    - Clicks
+    - Performance Trials
+    - Organic Trials
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Other*'
+      - '*Satellite*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: in
+      values:
+      - Streaming
+    date_range:
+      was: 'Own relative range: yeartodate'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 82982
+    element: line-chart
+    title: Adobe and Scorecard CPT Monthly
+    metrics:
+    - CPT
+    - Performance CPT
+    - Scorecard CPT
+    labels:
+      CPT: Adobe CPT
+      Performance CPT: Adobe Performance CPT
+    group_by:
+    - date:month
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Scorecard - IAP
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: yeartodate'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97062
+    element: kpi
+    title: Streaming
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97064
+    element: kpi
+    title: Total
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - PARTNERSAT4MO
+      - CATPSRTP4MOFREE
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Streaming Test
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97065
+    element: kpi
+    title: Organic Trial Total
+    metrics:
+    - Organic Trials
+    - CPT
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - Streaming - Organic
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97066
+    element: kpi
+    title: Trials Total
+    metrics:
+    - Total Trials
+    - CPT
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+      - Streaming - Organic
+      - 5 for 12 - Satellite
+      - 5 for 12 - Streaming
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97067
+    element: kpi
+    title: Starts Totals
+    metrics:
+    - Performance Flow Starts
+    - Organic Flow Starts
+    - Total Flow Starts
+    - Throughput Percentage
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97805
+    element: kpi
+    title: Satellite
+    metrics:
+    - Trials - SC
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - Search - Dual Offer
+      - Social Paid - Dual Offer
+      - Programmatic - Dual Offer
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 99442
+    element: bar-chart
+    title: SXMDUAL Daily
+    metrics:
+    - Performance Trials
+    group_by:
+    - date:day
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - SXMDUAL
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 120583
+    element: kpi
+    title: Satellite
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - PARTNERSAT4MO
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 121549
+    element: line-chart
+    title: CATPSRTP4MOFREE
+    metrics:
+    - Performance Trials
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 121550
+    element: line-chart
+    title: 3MOPARTNER2
+    metrics:
+    - Performance Trials
+    group_by:
+    - date
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - 3MOPARTNER2
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123794
+    element: kpi
+    title: 5 for 12 Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123955
+    element: kpi
+    title: Dual Offer Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123996
+    element: kpi
+    title: Satellite
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - 5 for 12 - Satellite
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123997
+    element: kpi
+    title: Streaming
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - 5 for 12 - Streaming
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123998
+    element: kpi
+    title: Total
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - 5 for 12 - Satellite
+      - 5 for 12 - Streaming
+    - field: campaign_name
+      op: in
+      values:
+      - Commuter Streaming Test
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 124116
+    element: kpi
+    title: 5 for 12
+    metrics:
+    - Trials - SC
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - Search - Dual Offer
+      - Social Paid - Dual Offer
+      - Programmatic - Dual Offer
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+- name: Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 27666
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27668
+    element: kpi
+    title: Platform Conversions
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - Streaming Purchase
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - SiriusXM - Inactive Subscription Complete
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27670
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    group_by:
+    - date:day
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - Search - Streaming
+      - Search - Dual Offer
+      - Search - Streaming Dual Offer
+    - field: campaign_name
+      op: not in
+      values:
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 27672
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 27674
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - SiriusXM - Inactive Subscription Complete
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27676
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - SiriusXM - Inactive Subscription Complete
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27678
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27680
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27682
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27684
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27686
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27688
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56295
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56296
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56297
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56298
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56299
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83692
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - SiriusXM - Inactive Subscription Complete
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83693
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83694
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83695
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97822
+    element: kpi
+    title: CATPSRTP4MOFREE
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97823
+    element: kpi
+    title: PARTNERSAT4MO
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - PARTNERSAT4MO
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97825
+    element: kpi
+    title: Performance Trial Total
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 123798
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123799
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123800
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123801
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123802
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123803
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123804
+    element: kpi
+    title: Platform Conversions
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - SXM Commuters 5$ for 12 Months - Complete
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    - field: campaign_name
+      op: in
+      values:
+      - '*_Offer_Test*'
+      - '*Commuter*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123957
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123958
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123959
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123960
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123961
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123962
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123963
+    element: kpi
+    title: Platform Conversions
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: conversion_tag
+      op: in
+      values:
+      - Streaming Purchase
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - SiriusXM - Inactive Subscription Complete
+      - SXM Commuters 5$ for 12 Months - Complete
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 27636
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27638
+    element: kpi
+    title: Streaming - Platform Conversions
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27640
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    group_by:
+    - date:day
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - Social Paid
+      - Social Paid - Streaming
+      - Social Paid - Dual Offer
+      - Social Paid - Streaming Dual Offer
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Satellite*'
+      - '*IAP*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+      - PARTNERSAT4MO
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 27642
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - Inactive Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27643
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - Inactive Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27644
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - Inactive Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27647
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27648
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27649
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27652
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27653
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27654
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27657
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27658
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27659
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27662
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27663
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27664
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54316
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54317
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54318
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54319
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54320
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 54321
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83819
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - Inactive Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83820
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83821
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83822
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83823
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 96824
+    element: kpi
+    title: Inactive - Platform Conversions
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - Inactive Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 96825
+    element: kpi
+    title: Platform Conversions CPA
+    metrics:
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+      - Inactive Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 97809
+    element: kpi
+    title: CATPSRTP4MOFREE
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - CATPSRTP4MOFREE
+    - field: media_type
+      op: in
+      values:
+      - Social
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97814
+    element: kpi
+    title: PARTNERSAT4MO
+    metrics:
+    - Performance Trials
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - PARTNERSAT4MO
+    - field: media_type
+      op: in
+      values:
+      - Social
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 97815
+    element: kpi
+    title: Performance Trial Total
+    metrics:
+    - Performance Trials
+    - Performance CPT
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+      - '*IAP*'
+      - '*Satellite*'
+      - '*Other*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: program_code
+      op: in
+      values:
+      - PARTNERSAT4MO
+      - CATPSRTP4MOFREE
+    - field: media_type
+      op: in
+      values:
+      - Social
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 122974
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122975
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122976
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122977
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming - Subscriber Confirmation
+      - SiriusXM - Streaming Subscription Complete
+      - Streaming Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122979
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - Inactive Purchase
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122980
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - Inactive Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122981
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - Inactive Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122982
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: conversion_tag
+      op: in
+      values:
+      - Inactive Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Video
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 27569
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27570
+    element: kpi
+    title: Platform Conversions
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27572
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27573
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27574
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27577
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27578
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27579
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27582
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27583
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27584
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27587
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27588
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27589
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27592
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27593
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 27594
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56306
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56307
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56308
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56309
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56310
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56311
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83828
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: conversion_tag
+      op: in
+      values:
+      - SiriusXM - Streaming Subscription Complete
+      - '*SiriusXM - Streaming - Subscriber Confirmation*'
+      - Streaming Purchase
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83829
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83830
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83831
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83832
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Streaming'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

@@ -1,0 +1,2207 @@
+id: D001
+title: Aquamar - Rouses Retail
+client: Aquamar
+priority: Medium
+build_type: Hand-built
+move_group: '3'
+target_live_date: '2027-01-22'
+template: hand-built-layout
+tapclicks:
+  dashboard_id: 3135
+  client_account: Aquamar Inc.
+  built_from: freehand
+  data_widgets: 102
+scope:
+  smart_campaign_filter_values: 'Aquamar: Rouses'
+  how_widgets_are_scoped: 'Smart Campaign: 102'
+notes: []
+sections:
+- name: CTV
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 129768
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129769
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129770
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129771
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Starts
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129772
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129773
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - VCR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129774
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129777
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129778
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129779
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129780
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129783
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129784
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129785
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129786
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129789
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129790
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129791
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129792
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135900
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135901
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135902
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135903
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135904
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135905
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135906
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 129424
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129425
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129426
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129427
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129428
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129429
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129434
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129435
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129436
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129437
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129438
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129441
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129442
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129443
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129444
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129445
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129448
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129449
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129450
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129451
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129452
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129455
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129456
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129457
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129458
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129459
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129795
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Completed Plays
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129796
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Seedtag
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 135863
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135864
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135865
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135872
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135873
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135874
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135875
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135878
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135879
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135880
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135881
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135907
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135908
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135909
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135912
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135913
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135914
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 135915
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 129476
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129477
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129478
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129479
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129480
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129481
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129482
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Starts
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129483
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129484
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - VCR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129485
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: creative_format
+      op: in
+      values:
+      - Video
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129491
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129492
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129493
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129494
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129495
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129498
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129499
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129500
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129501
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129502
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129505
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129506
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129507
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129508
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129509
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129512
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: creative_format
+      op: in
+      values:
+      - Video
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129513
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: creative_format
+      op: in
+      values:
+      - Video
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129514
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: creative_format
+      op: in
+      values:
+      - Video
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129515
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: creative_format
+      op: in
+      values:
+      - Video
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 129516
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Aquamar: Rouses'
+    - field: creative_format
+      op: in
+      values:
+      - Video
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

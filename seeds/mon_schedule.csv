@@ -1,0 +1,25 @@
+job_name,stage,kind,schedule,time_zone,expected_minutes,max_minutes,missed_after_minutes,owner,notes
+T_LOAD_SHAREPOINT,source_to_bronze,task,hourly at :15,America/Toronto,3,5,135,Boolean then Epitaph analyst,SharePoint files to BRONZE.SHAREPOINT
+T_LOAD_FX_RATES,source_to_bronze,task,daily 18:00,America/Toronto,1,5,1560,Boolean then Epitaph analyst,Bank of Canada rates
+FIVETRAN_GOOGLE_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Google Ads (build)
+FIVETRAN_MICROSOFT_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Microsoft Advertising (build)
+FIVETRAN_FACEBOOK_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Facebook Ads (build)
+FIVETRAN_GA4,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Google Analytics 4 (build)
+FIVETRAN_LINKEDIN_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,LinkedIn Ads (build)
+FIVETRAN_TIKTOK_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,TikTok Ads (build)
+FIVETRAN_SNAPCHAT_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,SnapChat (build)
+FIVETRAN_REDDIT_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Reddit Ads (build)
+FIVETRAN_PINTEREST_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Pinterest Ads (build)
+FIVETRAN_AMAZON_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Amazon Ads (build)
+FIVETRAN_CM360,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Campaign Manager 360 (build)
+FIVETRAN_DV360,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Display & Video 360 IO (build)
+FIVETRAN_THE_TRADE_DESK,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,The Trade Desk (waiting)
+FIVETRAN_AMAZON_DSP,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Amazon DSP (prove-first)
+FIVETRAN_SPOTIFY_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Spotify Ads (prove-first)
+STG_TAPCLICKS_HISTORY,bronze_to_silver,dynamic_table,when downstream refreshes,n/a,2,5,1440,Boolean,"History, refreshes with its consumers"
+INT_AD_DELIVERY,bronze_to_silver,dynamic_table,target lag 1 hour,n/a,2,5,180,Boolean,Cut-over and source rules applied
+INT_CONVERSIONS,bronze_to_silver,dynamic_table,target lag 1 hour,n/a,2,5,180,Boolean,
+FCT_AD_DELIVERY_DAILY,silver_to_gold,dynamic_table,target lag 1 hour,n/a,2,5,180,Boolean,And every other fact and dimension in GOLD.MARTS
+T_DAILY_CHECKS,silver_to_gold,task,daily 07:00,America/Toronto,3,5,1560,Boolean then Epitaph analyst,Quality checks and comparison with TapClicks
+T_DAILY_PLATFORM_CHECKS,silver_to_gold,task,daily 06:30,America/Toronto,1,5,1560,Boolean,Warehouse standard and stream staleness
+OMNI_QUERIES,gold_to_downstream,omni,on demand,n/a,0,5,0,Report developer then Epitaph analyst,Alert when 5 or more Omni queries fail in an hour

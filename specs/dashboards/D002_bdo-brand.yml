@@ -1,0 +1,1243 @@
+id: D002
+title: BDO - Brand
+client: BDO
+priority: Medium
+build_type: Hand-built
+move_group: '3'
+target_live_date: '2027-01-22'
+template: hand-built-layout
+tapclicks:
+  dashboard_id: 3139
+  client_account: BDO Canada LLP
+  built_from: freehand
+  data_widgets: 69
+scope:
+  smart_campaign_filter_values: 'BDO: Brand'
+  how_widgets_are_scoped: 'Smart Campaign: 69'
+notes: []
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 130477
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130478
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130479
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130480
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130481
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130482
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130487
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130488
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+      - StndDisplay
+      - DOOH
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130489
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130490
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130491
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130494
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130495
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130496
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130497
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130498
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130501
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130502
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130503
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130504
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130505
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: DOOH
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 133180
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133182
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133183
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133188
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133189
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133190
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133191
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133194
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133195
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133196
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 133197
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: LinkedIn
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 130514
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130515
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130516
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130517
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130518
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130519
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130524
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130525
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130526
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130527
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130530
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130531
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130532
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130533
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130536
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130537
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130538
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130539
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: StndDisplay
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 130709
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130710
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130711
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130712
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130713
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130714
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130717
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130718
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    - field: audience
+      op: in
+      values:
+      - Atlantic Business
+      - BC Business
+      - Business in Calgary
+      - G&M
+      - La Presse
+      - Les Affaires
+      - Uber
+      - Business in Edmonton
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130719
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130720
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130723
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130724
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130725
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130726
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130729
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130730
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130731
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 130732
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132462
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'BDO: Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

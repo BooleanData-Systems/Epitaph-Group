@@ -1,0 +1,11 @@
+priority,method,rows,due
+P1,TapClicks download,279,2026-11-20
+P1,Fivetran history sync,144,2026-11-20
+P1,Original files from Epitaph,72,2026-11-20
+P2,TapClicks download,288,2026-12-04
+P2,Fivetran history sync,144,2026-12-04
+P2,Original files from Epitaph,72,2026-12-04
+P4,TapClicks download,725,2027-01-15
+Compare,"TapClicks download of the previous week, all sources in one file, for the comparison check",12,weekly
+P5,TapClicks download,7138,2027-02-19
+P5,Original files from Epitaph,348,2027-02-19

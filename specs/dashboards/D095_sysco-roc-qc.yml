@@ -1,0 +1,1747 @@
+id: D095
+title: Sysco - ROC & QC
+client: Sysco
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 1164
+  client_account: Sysco Canada
+  built_from: template
+  data_widgets: 98
+scope:
+  smart_campaign_filter_values: 'Sysco: QC; Sysco: ROC'
+  how_widgets_are_scoped: 'Smart Campaign: 69, Client only (no filter): 11, Conversion Tag Name: 9, Other filter: 9'
+notes:
+- Shows every campaign for the client, as Epitaph confirmed (Q23).
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 49851
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49852
+    element: kpi
+    title: Sign Ups
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) sign_up
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49853
+    element: kpi
+    title: Form Submits
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) form_submit
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49854
+    element: kpi
+    title: Call Contacts
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco.ca - GA4 (web) call_contact
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49855
+    element: kpi
+    title: Email Submissions
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco.ca - GA4 (web) email_contact
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49856
+    element: kpi
+    title: Catalog Downloads
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) Download
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49858
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49859
+    element: bar-chart
+    title: Campaign
+    metrics:
+    - Spend
+    group_by:
+    - campaign_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Search
+      - StndDisplay
+      - '*NativeDis*'
+      - '*Display*'
+      - '*Search - Bing*'
+      - '*DemandGen*'
+      - '*YouTube*'
+      - '*Video*'
+      - '*CTV*'
+      - '*Snapchat*'
+      - '*TikTok*'
+      - '*DOOH*'
+      - '*Linkedin*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49861
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49864
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49865
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - campaign_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49867
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49870
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49871
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - campaign_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49873
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49876
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) sign_up
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49877
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - campaign_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) sign_up
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49879
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) sign_up
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59002
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59003
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59004
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59005
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59006
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59007
+    element: kpi
+    title: Total Conversions
+    metrics:
+    - Total Conversions
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59008
+    element: kpi
+    title: CPA
+    metrics:
+    - CPA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83589
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83590
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83591
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83592
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) sign_up
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - QC
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 49931
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49933
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 49935
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49937
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49939
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49941
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49943
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49945
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51203
+    element: kpi
+    title: Sign Ups
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) sign_up
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51204
+    element: kpi
+    title: Form Submits
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) form_submit
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51205
+    element: kpi
+    title: Email Submissions
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco.ca - GA4 (web) email_contact
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51206
+    element: kpi
+    title: Call Contacts
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco.ca - GA4 (web) call_contact
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51207
+    element: kpi
+    title: Catalog Downloads
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) Download
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59025
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59026
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59027
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59028
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59029
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59030
+    element: kpi
+    title: Total Conversions
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59031
+    element: kpi
+    title: CPA
+    metrics:
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83582
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83583
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83584
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - ROC
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 49880
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49882
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 49884
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49886
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49888
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49890
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49892
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49894
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51198
+    element: kpi
+    title: Sign Ups
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) sign_up
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51199
+    element: kpi
+    title: Form Submits
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) form_submit
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51200
+    element: kpi
+    title: Call Contacts
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco.ca - GA4 (web) call_contact
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51201
+    element: kpi
+    title: Email Submissions
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco.ca - GA4 (web) email_contact
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 51202
+    element: kpi
+    title: Catalog Downloads
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Sysco Canada Website - GA4 (web) Download
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59009
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59010
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59011
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59012
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59013
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59014
+    element: kpi
+    title: Total Conversions
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59015
+    element: kpi
+    title: CPA
+    metrics:
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83579
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83580
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83581
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: ROC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social - QC
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 49829
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49831
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49832
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49833
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49836
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49837
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49838
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49841
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49842
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49843
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49846
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49847
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 49848
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59033
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59034
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59035
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59036
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59037
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59038
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83585
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83586
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83587
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83588
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Sysco: QC'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

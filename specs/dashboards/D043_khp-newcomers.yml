@@ -1,0 +1,2496 @@
+id: D043
+title: KHP - Newcomers
+client: Kids Help Phone
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 591
+  client_account: Kids Help Phone
+  built_from: template
+  data_widgets: 116
+scope:
+  smart_campaign_filter_values: 'Kids Help Phone: Newcomers; Kids Help Phone: Youth - Feel Out Loud - National'
+  how_widgets_are_scoped: 'Smart Campaign: 98, Campaign Name: 14, Other filter: 3, Campaign: 1'
+notes:
+- 'Not rebuilt: 1 widget, marked do-not-use in TapClicks'
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36022
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36024
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36025
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - StndDisplay
+      - Facebook
+      - Instagram
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36026
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36027
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36030
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36031
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36032
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36033
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36036
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36037
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36038
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36039
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36042
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36043
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36044
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36045
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38528
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38529
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Sessions
+    - Cost Per Session
+    group_by:
+    - date:week
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38530
+    element: bar-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38531
+    element: bar-chart
+    title: Cost per Session by Media Type
+    metrics:
+    - Cost Per Session
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82808
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82809
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82810
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82811
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86827
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86828
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86829
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86830
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86831
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Display
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 87229
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87230
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paiddisplay
+      - programmatic / paidnative
+    - field: campaign_name
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87232
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87233
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87234
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87235
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87237
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87238
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87239
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87240
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87242
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87243
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87244
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87245
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87251
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87252
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87253
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87254
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87255
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136782
+    element: kpi-with-target
+    title: Jan 1-Mar 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - The Trade Desk
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Instagram*'
+      - '*SnapChat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136783
+    element: kpi-with-target
+    title: Jan 1-Mar 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - The Trade Desk
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Instagram*'
+      - '*SnapChat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136784
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - The Trade Desk
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Instagram*'
+      - '*SnapChat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136785
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - The Trade Desk
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Instagram*'
+      - '*SnapChat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136786
+    element: kpi
+    title: 'Benchmark CPM: $6.50'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - The Trade Desk
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136787
+    element: kpi
+    title: 'Benchmark CPC: $4'
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - The Trade Desk
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: GA4 - Live Call
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 38524
+    element: kpi
+    title: Total Sessions
+    metrics:
+    - Sessions
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - qrcode
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 38525
+    element: pie-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_session_source
+    - ga4_session_medium
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - qrcode
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 38526
+    element: bar-chart
+    title: Sessions by Day
+    metrics:
+    - Sessions
+    group_by:
+    - date:day
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - qrcode
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+- name: Silverpush
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 136790
+    element: kpi-with-target
+    title: Jan 1-Mar 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Instagram*'
+      - '*SnapChat*'
+      - '*StndDisplay*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-02-09..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136792
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Instagram*'
+      - '*SnapChat*'
+      - '*StndDisplay*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-02-09..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136794
+    element: kpi
+    title: 'Benchmark CPM: $22'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136795
+    element: kpi
+    title: 'Benchmark VCR: 89%'
+    metrics:
+    - VCR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    date_range:
+      was: 'Fixed: 2026-01-01..2026-03-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136838
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136839
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paidvideo
+      - youtube
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - '*folyouth*'
+      - '*fol youth*'
+      - feeloutloudyouth1h
+      - Feel Out Loud Youth 1H
+      - Feel Out Loud Youth 1H-EG
+      - Feel Out Loud Youth 1H-SP
+      - '*Youth FOL 2.0*'
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136841
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136842
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136843
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136844
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136846
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136847
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136848
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136849
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136851
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136852
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136853
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136854
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136856
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136857
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136858
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136859
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36047
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36049
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36050
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36051
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36054
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36055
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36056
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36059
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36060
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36061
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36064
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36065
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36066
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38532
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - facebook
+      - snapchat
+      - tiktok
+    - field: campaign_name
+      op: in
+      values:
+      - '*newcomer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82812
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82813
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82814
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82815
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86832
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86833
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86834
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86835
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86836
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136766
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Facebook Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Snapchat*'
+      - '*StndDisplay*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136767
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Facebook Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Snapchat*'
+      - '*StndDisplay*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136768
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Facebook Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Snapchat*'
+      - '*StndDisplay*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136769
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Facebook Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*Snapchat*'
+      - '*StndDisplay*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136770
+    element: kpi
+    title: 'Benchmark CPM: $5'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - Facebook Ads
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136771
+    element: kpi
+    title: 'Benchmark CPC: $2.50'
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - Facebook Ads
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136774
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*StndDisplay*'
+      - '*Instagram*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136775
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*StndDisplay*'
+      - '*Instagram*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136776
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*StndDisplay*'
+      - '*Instagram*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136777
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Newcomers*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*StndDisplay*'
+      - '*Instagram*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136778
+    element: kpi
+    title: 'Benchmark CPM: $2.50'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - SnapChat
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136779
+    element: kpi
+    title: 'Benchmark CPC: $3.34'
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Newcomers'
+    - field: source_name
+      op: in
+      values:
+      - SnapChat
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

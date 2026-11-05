@@ -1,0 +1,4518 @@
+id: D097
+title: Wurth Canada - 2026
+client: Wurth Canada
+priority: Medium
+build_type: Hand-built
+move_group: '3'
+target_live_date: '2027-01-29'
+template: hand-built-layout
+tapclicks:
+  dashboard_id: 2016
+  client_account: Wurth Canada Limited
+  built_from: freehand
+  data_widgets: 267
+scope:
+  smart_campaign_filter_values: (none - see scoping)
+  how_widgets_are_scoped: 'Other filter: 196, Conversion Tag Name: 43, Client only (no filter): 15, Data Source Name: 13'
+notes:
+- Shows every campaign for the client, as Epitaph confirmed (Q23).
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 87110
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87111
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87112
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87113
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87114
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87115
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87116
+    element: kpi
+    title: Video Fully Played
+    metrics:
+    - Completed Plays
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87117
+    element: kpi
+    title: Revenue
+    metrics:
+    - Revenue
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87118
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth - Purchase Confirmation
+      - Wurth - Purchase
+      - Purchase - Linkedin
+      - Tag1
+      - Add to Cart
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87120
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87121
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Search
+      - StndDisplay
+      - Facebook
+      - Linkedin
+      - Video
+      - '*YouTube*'
+      - '*CTV*'
+      - '*Snapchat*'
+      - '*Reddit*'
+      - '*DOOH*'
+      - '*NativeDis*'
+      - '*Display*'
+      - '*DOOH'
+      - '*Search - Amazon*'
+      - '*Search - Bing*'
+      - '*Pinterest*'
+      - Search - Bing
+      - Search - Perfmax
+      - StndDisplay - Google
+      - DemandGen
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87122
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87123
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87124
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87126
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87127
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87128
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87129
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87130
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87132
+    element: combo-chart
+    title: By Week
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - date:week
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87133
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87134
+    element: combo-chart
+    title: Audience
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87135
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87136
+    element: combo-chart
+    title: Creative
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87138
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - date:week
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87139
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87140
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87141
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87142
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87202
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87203
+    element: kpi
+    title: Revenue
+    metrics:
+    - ROAS
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87204
+    element: kpi
+    title: Purchases
+    metrics:
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth - Purchase Confirmation
+      - Wurth - Purchase
+      - Purchase - Linkedin
+      - Tag1
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87206
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+      - Purchase - Linkedin
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87207
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Purchase - Linkedin
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+      - Wurth Canada - GA4 (web) purchase
+      - Bing Purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87208
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+      - Purchase - Linkedin
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87209
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+      - Purchase - Linkedin
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87210
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+      - Purchase - Linkedin
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: DemandGen - Google
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 93191
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93192
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93193
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93194
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93195
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93196
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93197
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93199
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93200
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93201
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93202
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93204
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93205
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93206
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93207
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93209
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93210
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93211
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93212
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93214
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93215
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93216
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93217
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93219
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93220
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93221
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93222
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93223
+    element: kpi
+    title: Revenue
+    metrics:
+    - Revenue
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 93224
+    element: kpi
+    title: ROAS
+    metrics:
+    - ROAS
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Linkedin
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 87176
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87177
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87178
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87179
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87180
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87181
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87183
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87184
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87185
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87186
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87188
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87189
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87190
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87191
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87193
+    element: combo-chart
+    title: By Week
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87194
+    element: combo-chart
+    title: Audience
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87195
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87196
+    element: combo-chart
+    title: Creative
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87198
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Leads
+    - CPL
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87199
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Leads
+    - CPL
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Leads
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87200
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Leads
+    - CPL
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Leads
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87201
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Leads
+    - CPL
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    - metric_at_least:
+        metric: Leads
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87789
+    element: kpi
+    title: Leads
+    metrics:
+    - Leads
+    - CPL
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98372
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Purchase - Linkedin
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98374
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Purchase - Linkedin
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98375
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Purchase - Linkedin
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98376
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Purchase - Linkedin
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 98377
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Purchase - Linkedin
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Linkedin
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Meta
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 87143
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87144
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87145
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87146
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87147
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87148
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87149
+    element: kpi
+    title: Revenue
+    metrics:
+    - Revenue
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87150
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+      - Tag1
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87152
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87153
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87154
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87155
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87157
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87158
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87159
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87160
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87162
+    element: combo-chart
+    title: By Week
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87163
+    element: combo-chart
+    title: Audience
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87164
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87165
+    element: combo-chart
+    title: Creative
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87167
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87168
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87169
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87170
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Tag1
+      - Wurth - Purchase
+      - Wurth - Purchase Confirmation
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87172
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Revenue
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87173
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Revenue
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87174
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Revenue
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87175
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Revenue
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Bing
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 86906
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86907
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86908
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86909
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86910
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86911
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86912
+    element: kpi
+    title: Revenue
+    metrics:
+    - Revenue
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86913
+    element: kpi
+    title: ROAS
+    metrics:
+    - ROAS
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86914
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax-OLD
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86916
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Revenue
+    - ROAS
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 86918
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86919
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86920
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86922
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86923
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86924
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86926
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86927
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax-OLD
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86928
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax-OLD
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86931
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - date:week
+    filters:
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86941
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86945
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86950
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+      - Bing Purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86955
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86957
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Bing - Performance Max
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 119508
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+      - Performance Max
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119509
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119510
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119511
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119512
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119513
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119514
+    element: kpi
+    title: ROAS
+    metrics:
+    - ROAS
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119515
+    element: kpi
+    title: Revenue
+    metrics:
+    - Revenue
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119516
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax-OLD
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119518
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119519
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119520
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119522
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119523
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119524
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119526
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119527
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax-OLD
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119528
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax-OLD
+      - PerfMax2
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119530
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - date:week
+    filters:
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax
+      - PerfMax2
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119531
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119532
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119534
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+      - Bing Purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119535
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 119536
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Bing
+    - field: tactic
+      op: in
+      values:
+      - PerfMax
+      - PerfMax2
+      - PerfMax-OLD
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Google
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 86840
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86841
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86842
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86843
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86844
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86845
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86846
+    element: kpi
+    title: Revenue
+    metrics:
+    - Revenue
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86847
+    element: kpi
+    title: ROAS
+    metrics:
+    - ROAS
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86848
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86850
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Revenue
+    - ROAS
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 86852
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86853
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86854
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86856
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86857
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86858
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86860
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86861
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86862
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86864
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86865
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86866
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax2
+      - PerfMax-OLD
+      - PerfMax
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86868
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+      - Bing Purchase
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86869
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86870
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: tactic
+      op: not in
+      values:
+      - PerfMax-OLD
+      - PerfMax2
+      - PerfMax
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Google - Performance Max
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 86962
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86965
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86969
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86971
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86974
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86976
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86977
+    element: kpi
+    title: Revenue
+    metrics:
+    - Revenue
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86978
+    element: kpi
+    title: ROAS
+    metrics:
+    - ROAS
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86979
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86981
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86982
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86983
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86985
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86986
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86987
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86989
+    element: combo-chart
+    title: By Week
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86990
+    element: combo-chart
+    title: Audience
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86991
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - CPC
+    - Clicks
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86993
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86994
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86995
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Revenue
+    - ROAS
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Revenue
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86997
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+      - Bing Purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86998
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 86999
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Bing Purchase
+      - Wurth Canada - GA4 (web) purchase
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: StndDisplay - Google
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 87029
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87030
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87031
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87032
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87033
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87034
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87036
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87037
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87040
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87042
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87047
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87049
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87053
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87056
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87062
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87065
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87069
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87071
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87783
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87784
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87785
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87786
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87787
+    element: kpi
+    title: Purchases
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay - Google
+    - field: conversion_tag
+      op: in
+      values:
+      - Wurth Canada - GA4 (web) purchase
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: YouTube
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 102079
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102080
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102081
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102082
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102083
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102084
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102085
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102086
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102088
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102089
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102090
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102091
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102093
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102094
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102095
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102096
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102098
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102099
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102100
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102101
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102103
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102104
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102105
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 102106
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

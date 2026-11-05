@@ -1,0 +1,5520 @@
+id: D061
+title: Ottawa Tourism - Fall
+client: Ottawa Tourism
+priority: Medium
+build_type: Standard
+move_group: '3'
+target_live_date: '2027-01-22'
+template: master
+tapclicks:
+  dashboard_id: 1293
+  client_account: Ottawa Tourism and Convention Authority
+  built_from: template
+  data_widgets: 241
+scope:
+  smart_campaign_filter_values: 'Ottawa Tourism: Fall 2024; *Ottawa Tourism: Fall*; Ottawa Tourism: Fall'
+  how_widgets_are_scoped: 'Smart Campaign: 235, Campaign: 6'
+notes:
+- Likely merged into one Ottawa Tourism dashboard once Epitaph approves the template.
+sections:
+- name: Adara
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 136395
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Travel Search Signals
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Fall
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136396
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Site Visits
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Fall
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136397
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Attributed Books
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Fall
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136410
+    element: table
+    title: By Creative
+    metrics:
+    - Site Visits
+    - Travel Search Signals
+    - Attributed Books
+    group_by:
+    - creative_name
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Fall
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136464
+    element: table
+    title: By Media Type
+    metrics:
+    - Site Visits
+    - Travel Search Signals
+    - Attributed Books
+    group_by:
+    - media_type
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Fall
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+  - tapclicks_widget_id: 136465
+    element: table
+    title: By Attribution Group
+    metrics:
+    - Site Visits
+    - Flight Searches
+    - Hotel Searches
+    - Flight Bookings
+    - Hotel Bookings
+    group_by:
+    - attribution_group
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Fall
+    source_mapping_in_tapclicks: 'Direct: Adara - Ottawa Tourism'
+- name: Audio
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 67141
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67142
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67143
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67144
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67145
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67146
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67147
+    element: kpi
+    title: '*Completed Listens'
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67148
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67150
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67151
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67152
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67155
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67156
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67157
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67160
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67161
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67162
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67165
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67166
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 67167
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83175
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83176
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83177
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83178
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Audio*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: CTV
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 59429
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59431
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59433
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59436
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59438
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59440
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59442
+    element: kpi
+    title: Vid fully Played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59444
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59448
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59450
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59452
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59458
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59460
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59462
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59468
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59470
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59472
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59478
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59480
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59482
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83163
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83164
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83165
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83166
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*CTV*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 59240
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59241
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59242
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59243
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59244
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59245
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59246
+    element: kpi
+    title: Vid Fully Played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59247
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59248
+    element: kpi
+    title: Book Now Search
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59249
+    element: kpi
+    title: Add to Cart
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59251
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59252
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59253
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+      - Booking Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59254
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+      - Booking Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59257
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59258
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - DemandGen
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Video
+      - YouTube
+      - '*TikTok*'
+      - '*Snapchat*'
+      - '*Pinterest*'
+      - '*Search*'
+      - '*Search - Bing*'
+      - '*StndDisplay*'
+      - '*NativeDis*'
+      - '*Reddit*'
+      - '*Linkedin*'
+      - '*DOOH*'
+      - '*Audio*'
+      - StndDisplay
+      - Audio
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59259
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59260
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59263
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59264
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59265
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59266
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59269
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59270
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59271
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59272
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59275
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59276
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59277
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59278
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59281
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59282
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59283
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59284
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65905
+    element: kpi
+    title: Ottawa Museum Pass
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65907
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65908
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65909
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65910
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83143
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+      - Booking Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83144
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83145
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83146
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83147
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83148
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83149
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Demand Gen
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 59486
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59488
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59490
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59492
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59494
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59496
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59498
+    element: kpi
+    title: Ottawa Pass Purchase
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Ottawa Pass Purchase*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59500
+    element: kpi
+    title: Booking Search
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Booking Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59502
+    element: kpi
+    title: Booking Confirmation
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Booking Confirmation*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59508
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59516
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59526
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59533
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59541
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59548
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59557
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Booking Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59563
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Booking Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83167
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83168
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83169
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83170
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Booking Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83171
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83172
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83173
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83174
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Booking Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Display
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 59347
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59349
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59351
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59353
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59355
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59358
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59360
+    element: kpi
+    title: Vid Fully Played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59362
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59365
+    element: kpi
+    title: Ottawa Museum Pass
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59368
+    element: kpi
+    title: Add to Cart
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59372
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59374
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59376
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59381
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59383
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59385
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59391
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59394
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59396
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59401
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59403
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59405
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59421
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59423
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59425
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65913
+    element: kpi
+    title: Book Now Search
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65915
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65916
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65917
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83157
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83158
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83159
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83160
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83161
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83162
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Reddit
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 113650
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113651
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113652
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113653
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113654
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113655
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113657
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113658
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113659
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113660
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113662
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113663
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113664
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113665
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113667
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113668
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113669
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 113670
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 59286
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59287
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59288
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59289
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59290
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59291
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59292
+    element: kpi
+    title: Vid Flurry Played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59293
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59295
+    element: kpi
+    title: Book Now Search
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+      - Facebook+Instagram
+      - Facebook
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59296
+    element: kpi
+    title: Add to Cart
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+      - Facebook+Instagram
+      - Facebook
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59298
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59299
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59300
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59303
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59304
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59305
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59308
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59309
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59310
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59314
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59317
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59320
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59328
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59330
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59332
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59338
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59340
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59342
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65927
+    element: kpi
+    title: Ottawa Museum Pass
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65929
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65930
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 65931
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83150
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Book Now Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83151
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83152
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83153
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism Museum Pass
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83154
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83155
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Ottawa Tourism - Add to Cart
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 83156
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall 2024'
+      - '*Ottawa Tourism: Fall*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: YouTube
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 116810
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116811
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116812
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116813
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116814
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116815
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116816
+    element: kpi
+    title: Vid Fully Played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116817
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116819
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116820
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116821
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116822
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116824
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116825
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116826
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116827
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116829
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116830
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116831
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116832
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116834
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116835
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116836
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116837
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Ottawa Tourism: Fall'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

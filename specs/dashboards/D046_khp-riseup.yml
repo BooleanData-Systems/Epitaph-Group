@@ -1,0 +1,3322 @@
+id: D046
+title: KHP - RiseUp
+client: Kids Help Phone
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 586
+  client_account: Kids Help Phone
+  built_from: template
+  data_widgets: 167
+scope:
+  smart_campaign_filter_values: 'Kids Help Phone: RiseUp; Kids Help Phone: Peer to Peer'
+  how_widgets_are_scoped: 'Smart Campaign: 147, Campaign Name: 8, Client only (no filter): 8, Other filter: 3, Campaign: 1'
+notes:
+- 'Not rebuilt: 1 widget, marked do-not-use in TapClicks'
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 22304
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22306
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22307
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Video
+      - Search
+      - DOOH
+      - Reddit
+      - NativeDis
+      - YouTube
+      - SnapChat
+      - StndDisplay
+      - Search - Bing
+      - '*CTV*'
+      - '*Search - Amazon*'
+      - '*Adobe*'
+      - '*DemandGen*'
+      - '*LinkedIn*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22308
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22309
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22312
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22313
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22314
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22315
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22318
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22319
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22320
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22321
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22324
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22325
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22326
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22327
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37186
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37187
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Sessions
+    - Cost Per Session
+    group_by:
+    - date:week
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37188
+    element: bar-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37189
+    element: bar-chart
+    title: Cost per Session by Media Type
+    metrics:
+    - Cost Per Session
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52758
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52759
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52760
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52761
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52762
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82867
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82868
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82869
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82870
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: DOOH
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36403
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36405
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36406
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36407
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36410
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36411
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36412
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52779
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52780
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82882
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82883
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Display
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36366
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36368
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36369
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36370
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36373
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36374
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36375
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36378
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36379
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36380
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38127
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paiddisplay
+      - programmatic / paidnative
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52768
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52769
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52770
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52771
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52772
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82875
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82876
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82877
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: GA4 - Live Call
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 37095
+    element: kpi
+    title: Total Sessions
+    metrics:
+    - Sessions
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*riseup*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 37096
+    element: pie-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_session_source
+    - ga4_session_medium
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*riseup*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 37097
+    element: bar-chart
+    title: Sessions by Day
+    metrics:
+    - Sessions
+    group_by:
+    - date:day
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*riseup*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+- name: Reddit
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 120555
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120556
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120557
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120558
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120559
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120560
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120561
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - reddit / paiddisplay
+      - reddit / paidvideo
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120563
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120564
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120565
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120566
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120568
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120569
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120570
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120571
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120573
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120574
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120575
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 120576
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36351
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36353
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 36355
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36357
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36359
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36361
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36363
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36365
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38125
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - paidsearch
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52763
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52764
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52765
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52766
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52767
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82884
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82885
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82886
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36330
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36332
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36333
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36334
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36337
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36338
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36339
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36342
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36343
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36344
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36347
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36348
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36349
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38124
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - facebook
+      - snapchat
+      - tiktok
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58947
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58948
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58949
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58950
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58951
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Linkedin
+      - Pinterest
+      - Snapchat
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82871
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82872
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82873
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82874
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136746
+    element: kpi-with-target
+    title: July 8th -Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - TikTok Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136747
+    element: kpi-with-target
+    title: July 8th -Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - TikTok Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136748
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - TikTok Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136749
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - TikTok Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136750
+    element: kpi
+    title: 'Benchmark CPM: $3'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136751
+    element: kpi
+    title: 'Benchmark CPC: 2.50'
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Video
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36382
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36384
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36385
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36386
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36389
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36390
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36391
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36394
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36395
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36396
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36399
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36400
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36401
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38126
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paidvideo
+      - youtube
+    - field: campaign_name
+      op: in
+      values:
+      - '*rise*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52773
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52774
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52775
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52776
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52777
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52778
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82878
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82879
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82880
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82881
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136755
+    element: kpi-with-target
+    title: July 8th -Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136756
+    element: kpi-with-target
+    title: July 8th -Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136757
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136758
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*RiseUp*'
+      - '*Rise Up*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136759
+    element: kpi
+    title: 'Benchmark VCR: 67%'
+    metrics:
+    - VCR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136760
+    element: kpi
+    title: 'Benchmark CPCV: $0.03'
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: RiseUp'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    date_range:
+      was: 'Fixed: 2026-07-08..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Wattpad
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 71722
+    element: kpi
+    title: Untitled Widget
+    metrics:
+    - Impressions
+    source_mapping_in_tapclicks: Wattpad
+  - tapclicks_widget_id: 71723
+    element: kpi
+    title: Untitled Widget
+    metrics:
+    - Clicks
+    source_mapping_in_tapclicks: Wattpad
+  - tapclicks_widget_id: 71724
+    element: kpi
+    title: Untitled Widget
+    metrics:
+    - CTR
+    source_mapping_in_tapclicks: Wattpad
+  - tapclicks_widget_id: 71725
+    element: kpi
+    title: Untitled Widget
+    metrics:
+    - Completed Plays
+    labels:
+      Completed Plays: Video Fully Played
+    source_mapping_in_tapclicks: Wattpad
+  - tapclicks_widget_id: 71726
+    element: bar-chart
+    title: Impressions by Day
+    metrics:
+    - Impressions
+    group_by:
+    - date:day
+    source_mapping_in_tapclicks: Wattpad
+  - tapclicks_widget_id: 71728
+    element: bar-chart
+    title: Clicks by Day
+    metrics:
+    - Clicks
+    group_by:
+    - date:day
+    source_mapping_in_tapclicks: Wattpad
+  - tapclicks_widget_id: 71730
+    element: line-chart
+    title: CTR by Day
+    metrics:
+    - CTR
+    group_by:
+    - media_type
+    - date:day
+    source_mapping_in_tapclicks: Wattpad
+  - tapclicks_widget_id: 71733
+    element: bar-chart
+    title: 'Outstream: Video Fully Played by Day'
+    metrics:
+    - Completed Plays
+    labels:
+      Completed Plays: Video Fully Played
+    group_by:
+    - date:day
+    source_mapping_in_tapclicks: Wattpad

@@ -1,0 +1,134 @@
+# KPI definitions for the 29 live dashboards.
+# One entry per KPI name as it will show in Omni. Every rate is calculated from totals over the
+# selected filters and dates, never averaged from rows (K02).
+#
+# Fields
+#   name        label shown on dashboards
+#   type        sum | ratio | as_reported | goal
+#   expr        SQL over the measures in GOLD.semantic.v_kpi_* (sum and ratio only)
+#   format      integer | decimal | currency | percent
+#   fact        model table the measures come from
+#   decision    Epitaph sign-off row (K01 to K22, R00 = kept exactly as in TapClicks)
+#   status      agreed | open (waiting on Epitaph) | retired
+#   tapclicks   TapClicks KPI IDs this replaces (from profiling)
+#   not_additive  true when the value cannot be added across days or platforms (K09, K18)
+
+version: 1
+signoff_date: 2026-10-29
+change_rule: "R01: after 13 Nov 2026, a change goes through a written change request approved by the product owner."
+
+kpis:
+  # Delivery (K01, K02, K03, K04)
+  - {name: Impressions, type: sum, expr: "sum(impressions)", format: integer, fact: fct_ad_delivery_daily, decision: K01, status: agreed, tapclicks: [K001, K022, K024, K032, K109, K172], aliases: [Impression]}
+  - {name: Clicks, type: sum, expr: "sum(clicks)", format: integer, fact: fct_ad_delivery_daily, decision: K01, status: agreed, tapclicks: [K005, K027, K033, K049, K113, K173]}
+  - {name: Spend, type: sum, expr: "sum(spend)", format: currency, fact: fct_ad_delivery_daily, decision: K04, status: agreed, tapclicks: [K003, K016, K034, K111], notes: "In the ad account's currency (Q19). Kids Help Phone USD accounts shown in CAD via dim_fx_rate (Q20)."}
+  - {name: CPM, type: ratio, expr: "sum(spend) / nullif(sum(impressions), 0) * 1000", format: currency, fact: fct_ad_delivery_daily, decision: K02, status: agreed, tapclicks: [K002, K021, K038]}
+  - {name: CPC, type: ratio, expr: "sum(spend) / nullif(sum(clicks), 0)", format: currency, fact: fct_ad_delivery_daily, decision: K02, status: agreed, tapclicks: [K004, K020, K036]}
+  - {name: CTR, type: ratio, expr: "sum(clicks) / nullif(sum(impressions), 0)", format: percent, fact: fct_ad_delivery_daily, decision: K02, status: agreed, tapclicks: [K006, K035, K037, K174]}
+  - {name: Revenue, type: sum, expr: "sum(revenue)", format: currency, fact: fct_conversions_daily, decision: K01, status: agreed, tapclicks: [K046, K192]}
+  - {name: ROAS, type: ratio, expr: "sum(revenue) / nullif(sum(spend), 0)", format: decimal, fact: [fct_conversions_daily, fct_ad_delivery_daily], decision: K01, status: agreed, tapclicks: [K047, K193]}
+
+  # Video (K05 to K08)
+  - {name: Starts, type: sum, expr: "sum(video_starts)", format: integer, fact: fct_ad_delivery_daily, decision: K06, status: agreed, tapclicks: [K012], notes: "Facebook image and carousel ads no longer count as starts."}
+  - {name: Completed Plays, type: sum, expr: "sum(completed_plays)", format: integer, fact: fct_ad_delivery_daily, decision: K08, status: agreed, tapclicks: [K010, K044, K175, K204], aliases: [Video Fully Played]}
+  - {name: VCR, type: ratio, expr: "sum(completed_plays) / nullif(sum(video_starts), 0)", format: percent, fact: fct_ad_delivery_daily, decision: K07, status: agreed, tapclicks: [K011, K114], per_platform_only: true, notes: "Never blended across platforms. Sonnet's TapClicks version divided by impressions; now uses starts."}
+  - {name: CPCV, type: ratio, expr: "sum(spend) / nullif(sum(completed_plays), 0)", format: currency, fact: fct_ad_delivery_daily, decision: R00, status: agreed, tapclicks: [K009, K045]}
+  - {name: CPV, type: ratio, expr: "sum(spend) / nullif(sum(video_starts), 0)", format: currency, fact: fct_ad_delivery_daily, decision: K05, status: agreed, tapclicks: [K076], notes: "Name kept as CPV (cost per video start)."}
+
+  # Reach (K09, open)
+  - {name: Reach, type: as_reported, format: integer, fact: fct_reach_frequency, decision: K09, status: open, not_additive: true, tapclicks: [K088, K117]}
+  - {name: Frequency, type: as_reported, format: decimal, fact: fct_reach_frequency, decision: K09, status: open, not_additive: true, tapclicks: [K078, K118], notes: "Proposed: impressions / reach for the platform and period."}
+  - {name: Uniques Reached, type: as_reported, format: integer, fact: fct_reach_frequency, decision: K09, status: open, not_additive: true, tapclicks: [K070]}
+
+  # Conversions (K10, K21, R00)
+  - {name: Total Conversions, type: sum, expr: "sum(conversions) filter (counts_toward_kpi)", format: integer, fact: fct_conversions_daily, decision: K10, status: agreed, tapclicks: [K007, K013], aliases: [Conversions - Conexus], notes: "Counted tags come from dim_conversion_tag (Conversion tags sheet, T01 to T11)."}
+  - {name: CPA, type: ratio, expr: "sum(spend) / nullif(sum(conversions) filter (counts_toward_kpi), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_conversions_daily], decision: K10, status: agreed, tapclicks: [K008, K039], aliases: [Conexus CPA]}
+  - {name: Find a Retailer - Nulo, type: sum, expr: "sum(conversions) filter (kpi_group = 'find_a_retailer')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K041]}
+  - {name: Find a Retailer - CPA, type: ratio, expr: "sum(spend) / nullif(sum(conversions) filter (kpi_group = 'find_a_retailer'), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_conversions_daily], decision: R00, status: agreed, tapclicks: [K042]}
+  - {name: LPV, type: sum, expr: "sum(conversions) filter (kpi_group = 'landing_page_view')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K051]}
+  - {name: CPLPV, type: ratio, expr: "sum(spend) / nullif(sum(conversions) filter (kpi_group = 'landing_page_view'), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_conversions_daily], decision: R00, status: agreed, tapclicks: [K050]}
+  - {name: Orders, type: sum, expr: "sum(conversions) filter (kpi_group = 'order')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K067]}
+  - {name: Cost per Order, type: ratio, expr: "sum(spend) / nullif(sum(conversions) filter (kpi_group = 'order'), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_conversions_daily], decision: R00, status: agreed, tapclicks: [K068]}
+  - {name: Leads, type: sum, expr: "sum(conversions) filter (kpi_group = 'lead')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K095]}
+  - {name: CPL, type: ratio, expr: "sum(spend) / nullif(sum(conversions) filter (kpi_group = 'lead'), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_conversions_daily], decision: R00, status: agreed, tapclicks: [K096]}
+  - {name: Completed Registration, type: sum, expr: "sum(conversions) filter (kpi_group = 'completed_registration')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K082]}
+  - {name: Apple App Store, type: sum, expr: "sum(conversions) filter (kpi_group = 'apple_app_store')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K106]}
+  - {name: Post Shares, type: sum, expr: "sum(post_shares)", format: integer, fact: fct_ad_delivery_daily, decision: R00, status: agreed, tapclicks: [K072]}
+  - {name: Share Rate, type: ratio, expr: "sum(post_shares) / nullif(sum(impressions), 0)", format: percent, fact: fct_ad_delivery_daily, decision: R00, status: agreed, tapclicks: [K086]}
+  - {name: Cost Per Share, type: ratio, expr: "sum(spend) / nullif(sum(post_shares), 0)", format: currency, fact: fct_ad_delivery_daily, decision: R00, status: agreed, tapclicks: [K087]}
+  - {name: Conversions, type: sum, expr: "sum(platform_conversions)", format: decimal, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K195], notes: "Google Ads Conversions column as reported."}
+  - {name: All Conv., type: sum, expr: "sum(platform_all_conversions)", format: decimal, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K196]}
+  - {name: Conversions - PerfMax, type: sum, expr: "sum(platform_conversions) filter (campaign_type = 'PERFORMANCE_MAX')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K194], notes: "TapClicks formula not readable; confirm against the TapClicks value in the comparison check."}
+  - {name: Application, type: sum, expr: "sum(conversions) filter (kpi_group = 'amazon_application')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K199]}
+  - {name: Application click-through conversions, type: sum, expr: "sum(click_through_conversions) filter (kpi_group = 'amazon_application')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K200]}
+  - {name: Application view-through conversions, type: sum, expr: "sum(view_through_conversions) filter (kpi_group = 'amazon_application')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K201]}
+  - {name: Checkouts, type: sum, expr: "sum(conversions) filter (kpi_group = 'amazon_checkout')", format: integer, fact: fct_conversions_daily, decision: R00, status: agreed, tapclicks: [K202]}
+
+  # Web (K11)
+  - {name: Sessions, type: sum, expr: "sum(sessions)", format: integer, fact: fct_web_sessions_daily, decision: K11, status: agreed, tapclicks: [K014, K029], notes: "GA4 Test property excluded (Q22)."}
+  - {name: Cost Per Session, type: ratio, expr: "sum(spend) / nullif(sum(sessions), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_web_sessions_daily], decision: R00, status: agreed, tapclicks: [K015]}
+
+  # Goals (K12): shown next to actuals, never added to them
+  - {name: Impressions Goal, type: goal, expr: "sum(goal_value) filter (goal_metric = 'impressions')", format: integer, fact: fct_goals, decision: K12, status: agreed, tapclicks: [K023]}
+  - {name: Clicks Goal, type: goal, expr: "sum(goal_value) filter (goal_metric = 'clicks')", format: integer, fact: fct_goals, decision: K12, status: agreed, tapclicks: [K048]}
+  - {name: Spend Goal, type: goal, expr: "sum(goal_value) filter (goal_metric = 'spend')", format: currency, fact: fct_goals, decision: K12, status: agreed, tapclicks: [K094]}
+  - {name: Quotes Goal, type: goal, expr: "sum(goal_value) filter (goal_metric = 'quotes')", format: integer, fact: fct_goals, decision: K12, status: agreed, tapclicks: [K053]}
+  - {name: CPQ Goal, type: goal, expr: "avg(goal_value) filter (goal_metric = 'cpq')", format: currency, fact: fct_goals, decision: K12, status: agreed, not_additive: true, tapclicks: [K054], notes: "A rate goal: shown as entered for each month; over several months, the average of the monthly goals. Never summed."}
+  - {name: Trials - Goal, type: goal, expr: "sum(goal_value) filter (goal_metric = 'trials')", format: integer, fact: fct_goals, decision: K12, status: agreed, tapclicks: [K139]}
+  - {name: Video Fully Played Goal, type: goal, expr: "sum(goal_value) filter (goal_metric = 'completed_plays')", format: integer, fact: fct_goals, decision: K12, status: agreed, tapclicks: [K203]}
+
+  # Ottawa Tourism, Adara (K13 open, T07: bookings shown separately)
+  - {name: Site Visits, type: sum, expr: "sum(site_visits)", format: integer, fact: fct_adara_daily, decision: R00, status: agreed, tapclicks: [K056]}
+  - {name: Flight Searches, type: sum, expr: "sum(flight_searches)", format: integer, fact: fct_adara_daily, decision: R00, status: agreed, tapclicks: [K062]}
+  - {name: Flight Bookings, type: sum, expr: "sum(flight_bookings)", format: integer, fact: fct_adara_daily, decision: T07, status: agreed, tapclicks: [K063]}
+  - {name: Hotel Searches, type: sum, expr: "sum(hotel_searches)", format: integer, fact: fct_adara_daily, decision: R00, status: agreed, tapclicks: [K064]}
+  - {name: Hotel Bookings, type: sum, expr: "sum(hotel_bookings)", format: integer, fact: fct_adara_daily, decision: T07, status: agreed, tapclicks: [K065]}
+  - {name: Impressions / Clicks, type: as_reported, format: integer, fact: fct_adara_daily, decision: K13, status: agreed, tapclicks: [K069], notes: "As delivered in Epitaph's monthly Adara upload (K13: tracked by Adara, uploaded monthly)."}
+  - {name: Travel Search Signals, type: sum, expr: "sum(travel_search_signals)", format: integer, fact: fct_adara_daily, decision: K13, status: agreed, tapclicks: [K134], notes: "As delivered in Epitaph's monthly Adara upload, columns 13 and 14 (K13: tracked by Adara, uploaded monthly)."}
+  - {name: Attributed Books, type: sum, expr: "sum(attributed_books)", format: integer, fact: fct_adara_daily, decision: K13, status: agreed, tapclicks: [K135], notes: "As delivered in Epitaph's monthly Adara upload, columns 15 and 16 (K13: tracked by Adara, uploaded monthly)."}
+
+  # Jolt Media (out of home)
+  - {name: Spots, type: sum, expr: "sum(spots)", format: integer, fact: fct_ad_delivery_daily, decision: R00, status: agreed, tapclicks: [K110]}
+
+  # SiriusXM (K14, K15, K16). Duplicate formulas kept once; Omni labels each chart as before.
+  - {name: Performance Trials, type: sum, expr: "sum(performance_trials)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K043]}
+  - {name: Organic Trials, type: sum, expr: "sum(organic_trials)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K057]}
+  - {name: Total Trials, type: sum, expr: "sum(performance_trials) + sum(organic_trials)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K091]}
+  - {name: Trials - SC, type: sum, expr: "sum(scorecard_trials)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K052]}
+  - {name: Performance Flow Starts, type: sum, expr: "sum(performance_flow_starts)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K092]}
+  - {name: Organic Flow Starts, type: sum, expr: "sum(organic_flow_starts)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K093]}
+  - {name: Total Flow Starts, type: sum, expr: "sum(performance_flow_starts) + sum(organic_flow_starts)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K090]}
+  - {name: CPT, type: ratio, expr: "sum(spend) / nullif(sum(performance_trials) + sum(organic_trials), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_sxm_scorecard], decision: K14, status: agreed, tapclicks: [K112, K145], labels_used: [CPT, Adobe CPT]}
+  - {name: Performance CPT, type: ratio, expr: "sum(spend) / nullif(sum(performance_trials), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_sxm_scorecard], decision: K14, status: agreed, tapclicks: [K061, K146], labels_used: [Performance CPT, Adobe Performance CPT]}
+  - {name: Scorecard CPT, type: ratio, expr: "sum(spend) / nullif(sum(scorecard_trials), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_sxm_scorecard], decision: K14, status: agreed, tapclicks: [K089, K147], labels_used: [Scorecard CPT, CPT - SC]}
+  - {name: Throughput Percentage, type: ratio, expr: "(sum(performance_trials) + sum(organic_trials)) / nullif(sum(performance_flow_starts) + sum(organic_flow_starts), 0)", format: percent, fact: fct_sxm_scorecard, decision: K16, status: agreed, tapclicks: [K186], notes: "Share of people who start the sign-up flow and complete a trial."}
+  - {name: Starts - Commuter, type: sum, expr: "sum(commuter_starts)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K073]}
+  - {name: Activations - Commuter, type: sum, expr: "sum(commuter_activations)", format: integer, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K074]}
+  - {name: Throughput, type: ratio, expr: "sum(commuter_activations) / nullif(sum(commuter_starts), 0)", format: percent, fact: fct_sxm_scorecard, decision: R00, status: agreed, tapclicks: [K075]}
+
+  # Sonnet Insurance (K17 to K22)
+  - {name: Quotes, type: sum, expr: "sum(quotes)", format: integer, fact: fct_sonnet_quotes_daily, decision: K22, status: agreed, tapclicks: [K019, K209, K210], notes: "Source of truth is the Sonnet Raw Data file. Group Breakdown is used only for its extra splits."}
+  - {name: Binds, type: sum, expr: "sum(binds)", format: integer, fact: fct_sonnet_quotes_daily, decision: R00, status: agreed, tapclicks: [K028]}
+  - {name: CPQ, type: ratio, expr: "sum(spend) / nullif(sum(quotes), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_sonnet_quotes_daily], decision: R00, status: agreed, tapclicks: [K030]}
+  - {name: QTB, type: ratio, expr: "sum(binds) / nullif(sum(quotes), 0)", format: percent, fact: fct_sonnet_quotes_daily, decision: R00, status: agreed, tapclicks: [K040]}
+  - {name: Platform Conversions, type: sum, expr: "sum(platform_conversions)", format: integer, fact: fct_conversions_daily, decision: K21, status: agreed, tapclicks: [K115], notes: "Name kept so it is not confused with Quotes, the actual conversions."}
+  - {name: PCPA, type: ratio, expr: "sum(spend) / nullif(sum(platform_conversions), 0)", format: currency, fact: [fct_ad_delivery_daily, fct_conversions_daily], decision: R00, status: agreed, tapclicks: [K116]}
+  - {name: Red, type: sum, expr: "sum(quality_quotes) filter (quality_band = 'Red')", format: integer, fact: fct_sonnet_quotes_daily, decision: K20, status: agreed, tapclicks: [K213], notes: "K20: quality of the customer receiving a quote, from the daily Quote Quality email file."}
+  - {name: Yellow, type: sum, expr: "sum(quality_quotes) filter (quality_band = 'Yellow')", format: integer, fact: fct_sonnet_quotes_daily, decision: K20, status: agreed, tapclicks: [K215]}
+  - {name: Green, type: sum, expr: "sum(quality_quotes) filter (quality_band = 'Green')", format: integer, fact: fct_sonnet_quotes_daily, decision: K20, status: agreed, tapclicks: [K214]}
+  - {name: Multiline Customer, type: sum, expr: "sum(customers) filter (line_type = 'Multiline')", format: integer, fact: fct_sonnet_quotes_daily, decision: K20, status: agreed, tapclicks: [K211], notes: "K20: customers holding more than one Sonnet product, from the monthly Multiline file (multiline_customer). A monthly count of customers, not of quotes, so it is shown by month and never compared with Quotes."}
+  - {name: Monoline Customer, type: sum, expr: "sum(customers) filter (line_type = 'Monoline')", format: integer, fact: fct_sonnet_quotes_daily, decision: K20, status: agreed, tapclicks: [K212], notes: "K20: customers with one product: customer_count minus multiline_customer in the monthly Multiline file."}
+  - {name: Search Impr. share (Auction Insights), type: as_reported, format: percent, fact: fct_auction_insights, decision: K17, status: agreed, not_additive: true, tapclicks: [K031, K079], aliases: [Search impr. share], notes: "Name as Epitaph gave it (K17). The '-' label was only a TapClicks workaround, so the label is hidden on the competitor charts instead. By competitor domain from Auction Insights, shown per period as Google Ads reports it."}
+  - {name: Click share, type: as_reported, format: percent, fact: fct_auction_insights, decision: K18, status: agreed, not_additive: true, tapclicks: [K080]}
+  - {name: Impr. (Abs. Top) %, type: as_reported, format: percent, fact: fct_auction_insights, decision: K18, status: agreed, not_additive: true, tapclicks: [K081]}
+  - {name: Search lost IS (budget), type: as_reported, format: percent, fact: fct_auction_insights, decision: K18, status: agreed, not_additive: true, tapclicks: [K148, K150]}
+  - {name: Search lost IS (rank), type: as_reported, format: percent, fact: fct_auction_insights, decision: K18, status: agreed, not_additive: true, tapclicks: [K149, K151]}
+
+retired:
+  - {name: Trials - SC x 100, decision: K16, tapclicks: [K144]}
+  - {name: Spend - Goloot, decision: K15, tapclicks: [K143], reason: "GoLoot source stopped; section not rebuilt"}
+  - {name: Spend - Facebook+Instagram, decision: K15, tapclicks: [K140], replaced_by: "Spend filtered to media type Facebook+Instagram"}
+  - {name: Spend - Search, decision: K15, tapclicks: [K141], replaced_by: "Spend filtered to media type Search"}
+  - {name: Spend - StndDisplay, decision: K15, tapclicks: [K142], replaced_by: "Spend filtered to media type StndDisplay"}
+  - {name: "Sonnet, Competition 1 to 4", decision: K19, tapclicks: [K187, K188, K189, K190, K191], reason: "Google Trends data no longer updated"}
+  - {name: "Email Sends, Email Opens, Email Clicks (55 Rush)", decision: A23, tapclicks: [K168, K169, K170, K171], reason: "55 Rush source stopped over 90 days ago"}

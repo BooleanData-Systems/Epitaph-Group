@@ -1,0 +1,474 @@
+id: D056
+title: Nulo - Product
+client: Nulo
+priority: Medium
+build_type: Standard
+move_group: '1'
+target_live_date: '2026-12-11'
+template: master
+tapclicks:
+  dashboard_id: 2934
+  client_account: Nulo
+  built_from: template
+  data_widgets: 36
+scope:
+  smart_campaign_filter_values: 'Nulo: Freestyle; Nulo: Frontrunner Lifestyle; Nulo: Prowess'
+  how_widgets_are_scoped: 'Smart Campaign: 32, Campaign Name: 4'
+notes: []
+sections:
+- name: All Campaigns
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 122490
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122491
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122492
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122493
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Reach
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122494
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122495
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122500
+    element: bar-chart
+    title: Spend by Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122837
+    element: bar-chart
+    title: Spend by Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+      - 'Nulo: Frontrunner Lifestyle'
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122856
+    element: kpi
+    title: Frequency - Nulo Pet Food
+    metrics:
+    - Frequency
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Prowess*'
+      - '*FreeStyle*'
+      - '*Frontrunner*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Facebook Ads'
+- name: FreeStyle
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 122868
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122869
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122870
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122871
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Reach
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122872
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122873
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122875
+    element: bar-chart
+    title: Spend by Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122876
+    element: bar-chart
+    title: Spend by Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Freestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122953
+    element: kpi
+    title: Frequency - Nulo Pet Food FreeStyle
+    metrics:
+    - Frequency
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*FreeStyle*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Facebook Ads'
+- name: Frontrunner
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 122878
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122879
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122880
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122881
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Reach
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122882
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122883
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122885
+    element: bar-chart
+    title: Spend by Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122886
+    element: bar-chart
+    title: Spend by Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Frontrunner Lifestyle'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122954
+    element: kpi
+    title: Frequency - Nulo Pet Food Frontrunner
+    metrics:
+    - Frequency
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Frontrunner*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Facebook Ads'
+- name: Prowess
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 122888
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122889
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122890
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122891
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Reach
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122892
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122893
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122895
+    element: bar-chart
+    title: Spend by Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122896
+    element: bar-chart
+    title: Spend by Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Nulo: Prowess'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122952
+    element: kpi
+    title: Frequency - Nulo Pet Food Prowess
+    metrics:
+    - Frequency
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Prowess*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Facebook Ads'

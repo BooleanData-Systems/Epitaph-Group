@@ -1,0 +1,44 @@
+name: validate
+
+# Every pull request. No credentials: nothing here can reach Snowflake, Omni or SharePoint.
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Loader tests (synthetic files only)
+        run: python -m pytest -q loader/tests tests
+      - name: KPI definitions are current
+        run: |
+          python scripts/gen_semantic.py
+          git diff --exit-code snowflake/50_semantic/v_kpi_definitions.sql
+      - name: Specs, KPIs, feeds, SQL and wording
+        run: python scripts/validate.py
+      - name: Omni model and build sheets are current, every reference resolves
+        run: |
+          python scripts/omni_build.py
+          python scripts/omni_deploy.py validate
+          git diff --exit-code omni/
+      - name: Access matrix and column masking are current
+        run: |
+          python scripts/omni_access.py matrix
+          python scripts/gen_column_masking.py
+          git diff --exit-code omni/access_matrix.csv snowflake/50_semantic/column_masking.sql
+      - name: Seeds readable
+        run: python scripts/load_seeds.py --dry-run
+      - name: No data files committed
+        run: |
+          if git ls-files | grep -Ei '\.(xlsx|parquet|zip)$' | grep -v '^plans/'; then
+            echo "Data files are not allowed in the repo"; exit 1; fi

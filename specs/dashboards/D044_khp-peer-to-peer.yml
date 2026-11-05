@@ -1,0 +1,3075 @@
+id: D044
+title: KHP - Peer to Peer
+client: Kids Help Phone
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 584
+  client_account: Kids Help Phone
+  built_from: template
+  data_widgets: 131
+scope:
+  smart_campaign_filter_values: 'Kids Help Phone: Peer to Peer'
+  how_widgets_are_scoped: 'Smart Campaign: 119, Campaign Name: 8, Other filter: 3, Campaign: 1'
+notes:
+- 'Not rebuilt: 1 widget, marked do-not-use in TapClicks'
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 23140
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23142
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23143
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Instagram
+      - Snapchat
+      - TikTok
+      - Video
+      - YouTube
+      - Reddit
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23144
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23145
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23148
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23149
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23150
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23151
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23154
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23155
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23156
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23157
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23160
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23161
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23162
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23163
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37176
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37177
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Sessions
+    - Cost Per Session
+    group_by:
+    - date:week
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37178
+    element: bar-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 37179
+    element: bar-chart
+    title: Cost per Session by Media Type
+    metrics:
+    - Cost Per Session
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52685
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52686
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52687
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52688
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52689
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82816
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82817
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82818
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82819
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Display
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36146
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36148
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36149
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36150
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36153
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36154
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36155
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36158
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36159
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36160
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38121
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paiddisplay
+      - programmatic / paidnative
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52695
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52696
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52697
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52698
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52699
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82824
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82825
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82826
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: GA4 - Live Call
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 37092
+    element: kpi
+    title: Total Sessions
+    metrics:
+    - Sessions
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfrench
+      - '*peer2peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - wattpad
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 37093
+    element: pie-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_session_source
+    - ga4_session_medium
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfrench
+      - '*peer2peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - wattpad
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 37094
+    element: bar-chart
+    title: Sessions by Day
+    metrics:
+    - Sessions
+    group_by:
+    - date:day
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfrench
+      - '*peer2peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - wattpad
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+- name: Reddit
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36183
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36185
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36186
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36187
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36190
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36191
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36192
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36195
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36196
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36197
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38122
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - reddit / paiddisplay
+      - reddit / paidvideo
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52735
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52737
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52740
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52741
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52743
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82831
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82832
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82833
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136736
+    element: kpi-with-target
+    title: Jan 1st -Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Reddit Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Snapchat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136737
+    element: kpi-with-target
+    title: Jan 1st -Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Reddit Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Snapchat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136738
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Reddit Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Snapchat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136739
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Reddit Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Snapchat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136740
+    element: kpi
+    title: 'Benchmark CPM: $7.69'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    - field: source_name
+      op: in
+      values:
+      - Reddit Ads
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136741
+    element: kpi
+    title: 'Benchmark CTR: 0.18%'
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    - field: source_name
+      op: in
+      values:
+      - Reddit Ads
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 23171
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23173
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23174
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23175
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23178
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23179
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23180
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23183
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23184
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23185
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23188
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23189
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 23190
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38120
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - facebook
+      - snapchat
+      - tiktok
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52690
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52691
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52692
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52693
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52694
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82820
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82821
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82822
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82823
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136727
+    element: kpi-with-target
+    title: Jan 1st -Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136728
+    element: kpi-with-target
+    title: Jan 1st -Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136729
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136730
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - SnapChat
+    - field: campaign_name
+      op: in
+      values:
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136731
+    element: kpi
+    title: 'Benchmark CPM: $5.76'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    - field: source_name
+      op: in
+      values:
+      - SnapChat
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136732
+    element: kpi
+    title: 'Benchmark CPC: $0.36'
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    - field: source_name
+      op: in
+      values:
+      - SnapChat
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Video
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 36162
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36164
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+      - CTV
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36165
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36166
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36169
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36170
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36171
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36174
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36175
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36176
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36179
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36180
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 36181
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38123
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paidvideo
+      - youtube
+    - field: campaign_name
+      op: in
+      values:
+      - Peer to Peer
+      - Peer to Peer FR
+      - peer2peer
+      - peer2peerfr
+      - peertopeer
+      - peertopeerfr
+      - peertopeerfrench
+      - '*Peer2Peer*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52700
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52701
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52702
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52703
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52704
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52706
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - YouTube
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82827
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - CTV
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82828
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82829
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - Video
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82830
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: not in
+      values:
+      - '*2023-343*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Peer to Peer'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

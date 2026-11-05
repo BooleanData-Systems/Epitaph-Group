@@ -1,0 +1,1066 @@
+id: D026
+title: KHC - Retail
+client: Kicking Horse Coffee
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 1187
+  client_account: Kicking Horse Coffee
+  built_from: template
+  data_widgets: 45
+scope:
+  smart_campaign_filter_values: 'Kicking Horse Coffee: Retail'
+  how_widgets_are_scoped: 'Smart Campaign: 45'
+notes: []
+sections:
+- name: Amazon - Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 56199
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56200
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56202
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56203
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56204
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56205
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56208
+    element: kpi
+    title: Orders
+    metrics:
+    - Orders
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56210
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56211
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56212
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56215
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56216
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56217
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56220
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56221
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56222
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56225
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Orders
+    - Cost per Order
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56226
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Orders
+    - Cost per Order
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Orders
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56227
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Orders
+    - Cost per Order
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Orders
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56230
+    element: table
+    title: Search Words
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 59890
+    element: kpi
+    title: Cost per Orders
+    metrics:
+    - Cost per Order
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 56138
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56139
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56140
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56141
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56142
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56143
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56144
+    element: kpi
+    title: Orders
+    metrics:
+    - Orders
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56147
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56149
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56153
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56154
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56155
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56156
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56159
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56160
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56161
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56162
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56165
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Orders
+    - Cost per Order
+    group_by:
+    - date:day
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56166
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Orders
+    - Cost per Order
+    group_by:
+    - media_type
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Orders
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56167
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Orders
+    - Cost per Order
+    group_by:
+    - audience
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Orders
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56168
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Orders
+    - Cost per Order
+    group_by:
+    - tactic
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Orders
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 56233
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: bulk_status_khc
+      op: in
+      values:
+      - 6 Pack
+      - Single
+    - field: category_khc
+      op: in
+      values:
+      - Ground
+      - Whole Bean
+    - field: product
+      op: in
+      values:
+      - 454 Horse Power
+      - Cliff Hanger Espresso
+      - Decaf
+      - Grizzly Claw
+      - Hola
+      - Hoodoo Jo
+      - Kick Ass
+      - Lucky Jim
+      - Pacific Pipeline
+      - Smart Ass
+      - Three Sisters
+      - Z-Wrangler
+    - field: size_khc
+      op: in
+      values:
+      - 1 kg
+      - 1 lb
+      - 284 g
+      - 850 g
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58924
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search - Amazon
+      - '*Search*'
+      - '*Search - Bing*'
+      - '*linkedin*'
+      - '*NativeDis*'
+      - '*Reddit*'
+      - '*YouTube*'
+      - '*CTV*'
+      - '*Video*'
+      - '*DOOH*'
+      - '*TikTok*'
+      - '*Snapchat*'
+      - '*Facebook*'
+      - '*Instagram*'
+      - '*snapchat*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 59891
+    element: kpi
+    title: Cost per Order
+    metrics:
+    - Cost per Order
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Kicking Horse Coffee*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kicking Horse Coffee: Retail'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

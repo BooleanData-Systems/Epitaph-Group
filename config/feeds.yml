@@ -1,0 +1,65 @@
+# SharePoint feeds loaded to BRONZE by the SharePoint loader (loader/sharepoint_loader.py).
+# One entry per file type. The loader reads new or changed files from each folder, checks the columns,
+# writes every row to BRONZE.SHAREPOINT.<table> with the file name, version and load time, and moves bad files to Rejected.
+#
+#   folder      path under the site's document library (Epitaph Reporting > Feeds)
+#   match       file name pattern (case-insensitive)
+#   table       BRONZE.SHAREPOINT table the rows land in
+#   required    columns that must be present (after trimming and lower-casing headers)
+#   date_column column holding the activity date, and its format
+#   headers     optional: names to use instead of the file's header row (when the export puts labels or totals there)
+#   Column names were checked against the sample files Epitaph sent on 2 Nov 2026.
+#   owner       who is emailed when a file is rejected (role mailbox; set in Snowflake secret, not here)
+#   arrives     how files get to the folder
+#   status      live | standby (no flight booked; loader runs but expects nothing) | prove-first (Fivetran may replace it)
+
+site: "Epitaph Reporting"
+library: "Feeds"
+rejected_folder: "Rejected"
+history_folder: "History"           # TapClicks CSV downloads for the history load go here
+max_file_mb: 200
+excel_sheets: first                 # .xlsx: read the first sheet unless a feed names one
+
+feeds:
+  # F01 Sonnet daily emails (K20, K22)
+  - {id: F01a, name: Sonnet Raw Data, folder: Sonnet/Raw Data, match: "*raw*data*.csv|*raw*data*.xlsx", table: SONNET_RAW_DATA, required: [quote_date, quotes, binds], date_column: {name: quote_date, format: auto}, owner: sonnet_files, arrives: "Sonnet email, saved by Power Automate flow", status: live}
+  - {id: F01b, name: Sonnet Quote Quality Data, folder: Sonnet/Quote Quality, match: "*quality*", table: SONNET_QUOTE_QUALITY, required: [quote_date, pvm, quotes], date_column: {name: quote_date, format: auto}, owner: sonnet_files, arrives: "Sonnet email, saved by Power Automate flow", status: live}
+  - {id: F01c, name: Sonnet Group Breakdown Data, folder: Sonnet/Group Breakdown, match: "*group*breakdown*", table: SONNET_GROUP_BREAKDOWN, required: [quote_date, segment, quotes], date_column: {name: quote_date, format: auto}, owner: sonnet_files, arrives: "Sonnet email, saved by Power Automate flow", status: live}
+  - {id: F01d, name: Sonnet Multiline Data, folder: Sonnet/Multiline, match: "*multiline*", table: SONNET_MULTILINE, required: [month, customer_count, multiline_customer], date_column: {name: month, format: auto}, grain: month, owner: sonnet_files, arrives: "Sonnet email, saved by Power Automate flow", status: live}
+  - {id: F02, name: Sonnet Direct Buy Offline Spend, folder: Sonnet/Direct Buy Spend, match: "*.csv|*.xlsx", table: DIRECT_BUY_SPEND, required: [date, channel, province, grouped_spend], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Uploaded by Epitaph when a direct buy runs", status: live}
+  - {id: F03, name: Sonnet DV360 Creative, folder: Sonnet/DV360 Creative, match: "*.csv|*.xlsx", table: SONNET_DV360_CREATIVE, required: [date, line_item, impressions], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "DV360 scheduled email", status: prove-first, notes: "Replace with the Fivetran DV360 connector once the comparison check passes"}
+  # F05 auction reports: Google Ads does not offer Auction Insights through its API, so the files stay
+  - {id: F05a, name: Sonnet Auction Pressure Weekly, folder: Sonnet/Auction/Pressure Weekly, match: "*.csv", table: SONNET_AUCTION_PRESSURE, required: [account_name, week, search_lost_is_budget, search_lost_is_rank], date_column: {name: week, format: auto}, owner: epitaph_media, arrives: "Google Ads scheduled report email", status: live, grain: week}
+  - {id: F05b, name: Sonnet Auction Pressure Monthly, folder: Sonnet/Auction/Pressure Monthly, match: "*.csv", table: SONNET_AUCTION_PRESSURE, required: [account_name, month, search_lost_is_budget, search_lost_is_rank], date_column: {name: month, format: auto}, owner: epitaph_media, arrives: "Google Ads scheduled report email", status: live, grain: month}
+  - {id: F05c, name: Sonnet Visibility Weekly, folder: Sonnet/Auction/Visibility Weekly, match: "*.csv", table: SONNET_VISIBILITY, required: [account_name, week, search_impr_share, click_share], date_column: {name: week, format: auto}, owner: epitaph_media, arrives: "Google Ads scheduled report email", status: live, grain: week}
+  - {id: F05d, name: Sonnet Visibility Monthly, folder: Sonnet/Auction/Visibility Monthly, match: "*.csv", table: SONNET_VISIBILITY, required: [account_name, month, search_impr_share, click_share], date_column: {name: month, format: auto}, owner: epitaph_media, arrives: "Google Ads scheduled report email", status: live, grain: month}
+  - {id: F05e, name: Sonnet vs Competition Weekly, folder: Sonnet/Auction/Competition Weekly, match: "*.csv", table: SONNET_VS_COMPETITION, required: [account_name, week, display_url_domain, search_impr_share_auction_insights], date_column: {name: week, format: auto}, owner: epitaph_media, arrives: "Google Ads scheduled report email", status: live, grain: week}
+  - {id: F05f, name: Sonnet vs Competition Monthly, folder: Sonnet/Auction/Competition Monthly, match: "*.csv", table: SONNET_VS_COMPETITION, required: [account_name, month, display_url_domain, search_impr_share_auction_insights], date_column: {name: month, format: auto}, owner: epitaph_media, arrives: "Google Ads scheduled report email", status: live, grain: month}
+  - {id: F06, name: Amazon DSP Sonnet Reach and Frequency, folder: Sonnet/Amazon DSP Reach, match: "*.csv|*.xlsx", table: AMAZON_DSP_REACH, required: [date, campaign_name, user_reach], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Amazon DSP scheduled email", status: prove-first, notes: "Fivetran may not carry reach and frequency; keep the file until proven"}
+  # F07 and F08 SiriusXM
+  - {id: F07a, name: SXM Commuter Activations, folder: SiriusXM/Adobe/Commuter Activations, match: "*.csv", table: SXM_ADOBE, required: [date, online_campaign_code_v70_evar70, visits], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Adobe Analytics Data Warehouse scheduled email", status: live, report: commuter_activations}
+  - {id: F07b, name: SXM Commuter Starts, folder: SiriusXM/Adobe/Commuter Starts, match: "*.csv", table: SXM_ADOBE, required: [date, online_campaign_code_v70_evar70, visits], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Adobe Analytics Data Warehouse scheduled email", status: live, report: commuter_starts}
+  - {id: F07c, name: SXM Dual Offer Streaming, folder: SiriusXM/Adobe/Dual Offer Streaming, match: "*.csv", table: SXM_ADOBE, required: [date, visits, orders], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Adobe Analytics Data Warehouse scheduled email", status: live, report: dual_offer_streaming}
+  - {id: F07d, name: SXM Streaming Starts, folder: SiriusXM/Adobe/Streaming Starts, match: "*.csv", table: SXM_ADOBE, required: [date, visits, orders], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Adobe Analytics Data Warehouse scheduled email", status: live, report: streaming_starts}
+  - {id: F07e, name: SXM Organic Streaming, folder: SiriusXM/Adobe/Organic Streaming, match: "*.csv", table: SXM_ADOBE, required: [day, starts], date_column: {name: day, format: auto}, headers: [segment, day, starts, trials], owner: epitaph_media, arrives: "Adobe Analytics Data Warehouse scheduled email", status: live, report: organic_streaming}
+  - {id: F08, name: SiriusXM Scorecard, folder: SiriusXM/Scorecard, match: "*.csv|*.xlsx", table: SXM_SCORECARD, required: [activation_date, promo_code, total_trial_starts], date_column: {name: activation_date, format: auto}, owner: epitaph_media, arrives: "SiriusXM email, saved by Power Automate flow", status: live}
+  # Vendor reports
+  - {id: F09, name: Silverpush Automated Report, folder: Vendors/Silverpush, match: "*.csv|*.xlsx", table: SILVERPUSH, required: [date, advertiser, impressions], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Vendor email to the SharePoint folder address (routing to confirm)", status: live}
+  - {id: F10, name: Silverpush CTV, folder: Vendors/Silverpush CTV, match: "*.csv|*.xlsx", table: SILVERPUSH, required: [date, advertiser, impressions, player_starts], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Vendor email", status: standby, notes: "No Nulo CTV flight booked"}
+  - {id: F11, name: HiveStack, folder: Vendors/HiveStack, match: "*.csv|*.xlsx", table: HIVESTACK, required: [date, campaign, impressions], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Vendor email to the SharePoint folder address (routing to confirm)", status: live}
+  - {id: F12, name: Netflix Pause Ads, folder: Vendors/Netflix, match: "*.csv|*.xlsx", table: NETFLIX_PAUSE_ADS, required: [date, line_item, ad_server_impressions], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Netflix sends the file; Epitaph saves it", status: live}
+  - {id: F13, name: Jolt Media, folder: Vendors/Jolt Media, match: "*.csv|*.xlsx", table: JOLT_MEDIA, required: [day, order_name, impressions], date_column: {name: day, format: auto}, owner: epitaph_media, arrives: "Uploaded by Epitaph", status: live}
+  - {id: F14, name: Adara Ottawa Tourism, folder: Vendors/Adara, match: "*.csv|*.xlsx", table: ADARA, required: [date, attribution_group_name, tracker_name], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Uploaded by Epitaph monthly", status: live}
+  - {id: F15, name: Spotify Cobs Bread, folder: Vendors/Spotify, match: "*.csv|*.xlsx", table: SPOTIFY_FILES, required: [date, campaign_name, impressions], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Spotify sends the file", status: live}
+  # Planning
+  - {id: F16, name: Goals, folder: Planning/Goals, match: "*.csv|*.xlsx", table: GOALS, required: [date, campaign_name, impressions_goal], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Uploaded by Epitaph (goals process under review)", status: live}
+  - {id: F19, name: WildBrain, folder: Vendors/WildBrain, match: "*.csv|*.xlsx", table: WILDBRAIN, required: [date], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "One-time upload of the past files", status: live}
+
+  # History: TapClicks Data Table exports, one file per source per month (plans/history_download_plan.csv)
+  - {id: H01, name: TapClicks history download, folder: History/TapClicks, match: "*.csv", table: TAPCLICKS_HISTORY, mode: stage, stage: BRONZE.TAPCLICKS.HISTORY_STAGE, required: [date, data_source_name, campaign_name, media_buy_name, creative_name, conversion_tag_name, impressions, clicks, spend, starts, completed_plays, total_conversions], date_column: {name: date, format: "%b %d %Y"}, owner: boolean_team, arrives: "Downloaded from TapClicks by the delivery team", status: live, notes: "CPM, CTR, CPC and CPCV columns are ignored; rates are recalculated"}
+
+not_loaded:
+  - {id: F04, name: Sonnet Google CDI files, reason: "Stopped; past files go to the History folder"}
+  - {id: F17, name: Google Trends, reason: "Not needed (K19)"}
+  - {id: F18, name: Currency Exchange Rates, reason: "Replaced by the Bank of Canada loader (snowflake/20_raw/load_fx_rates.sql)"}
+  - {id: F19x, name: HVC Heat Map and StackAdapt Conexus Geo Split, reason: "Ad hoc tests; not needed"}

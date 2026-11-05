@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.ci_key.p8
+*.p8
+*.pem
+.env
+review/
+/data/
+/exports/
+mask_map*.csv
+*.parquet
+*.zip

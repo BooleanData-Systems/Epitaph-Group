@@ -1,0 +1,38 @@
+raw_value,media_type,channel,platform_family,notes
+Audio,Audio,Audio,Programmatic,
+CTV,CTV,Paid Video,Programmatic,
+CTV - Amazon Prime,CTV - Amazon Prime,Paid Video,Amazon,
+CTV - Bell Media,CTV - Bell Media,Paid Video,Direct,
+Chewy,Chewy,Display,Retail media,
+DOOH,DOOH,DOOH,Programmatic,
+Dooh,DOOH,DOOH,Programmatic,case variant
+DemandGen,DemandGen,Paid Video,Google,
+Facebook,Facebook,Social,Meta,
+Facebook+Instagram,Facebook+Instagram,Social,Meta,
+Facebook + Instagram,Facebook+Instagram,Social,Meta,spacing variant
+Instagram,Instagram,Social,Meta,
+Linkedin,LinkedIn,Social,LinkedIn,case variant
+LinkedIn,LinkedIn,Social,LinkedIn,
+Meta,Meta,Social,Meta,
+NativeDis,NativeDis,Display,Programmatic,
+Pinterest,Pinterest,Social,Pinterest,
+Programmatic,Programmatic,Display,Programmatic,
+Reddit,Reddit,Social,Reddit,
+RichMed,RichMed,Display,Programmatic,
+Search,Search,Paid Search,Google,
+Search - Amazon,Search - Amazon,Paid Search,Amazon,
+Search - Bing,Search - Bing,Paid Search,Microsoft,
+Search - Perfmax,Search - Perfmax,Paid Search,Google,
+Site Skin,Site Skin,Display,Direct,
+SnapChat,Snapchat,Social,Snapchat,case variant
+Snapchat,Snapchat,Social,Snapchat,
+Snapchat Lens,Snapchat Lens,Social,Snapchat,
+Social,Social,Social,Mixed,
+StndDisplay,StndDisplay,Display,Programmatic,
+StndDisplay - Google,StndDisplay - Google,Display,Google,
+Teads,Teads,Paid Video,Direct,
+TikTok,TikTok,Social,TikTok,
+Video,Video,Paid Video,Programmatic,
+YouTube,YouTube,Paid Video,Google,
+Youtube,YouTube,Paid Video,Google,case variant
+Unclassified,Unclassified,Unclassified,Unknown,name does not follow the convention; listed in dq_naming_exceptions
