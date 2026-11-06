@@ -13,22 +13,43 @@ select
   dayname(d)                                  as day_name
 from (select dateadd(day, seq4(), '2020-01-01'::date) as d from table(generator(rowcount => 4018)));  -- to 2030
 
+-- Client: the Master Client Index golden record (GOLD.CONTROL.MCI_CLIENT), with its TapClicks accounts and dashboards
 create or replace dynamic table DIM_CLIENT target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
-select distinct
-  client_code, client_name, reporting_currency,
-  sha2(client_code, 256) as client_key
-from GOLD.CONTROL.MAP_CLIENT_ACCOUNT;
+select
+  sha2(c.client_code, 256) as client_key,
+  c.client_code, c.client_name, c.legal_name, c.reporting_currency, c.home_country, c.status,
+  c.effective_from, c.effective_to, c.steward,
+  t.tapclicks_accounts, t.dashboards
+from GOLD.CONTROL.MCI_CLIENT c
+left join (select client_code,
+                  listagg(tapclicks_client_account, '; ') within group (order by tapclicks_client_account) as tapclicks_accounts,
+                  listagg(dashboards, ' ') within group (order by dashboards) as dashboards
+           from GOLD.CONTROL.MAP_CLIENT_ACCOUNT group by client_code) t on t.client_code = c.client_code;
+
+-- The published index: every identifier and the client it points to (approved), plus proposed ones awaiting Epitaph
+create or replace dynamic table DIM_CLIENT_IDENTIFIER target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
+select sha2(client_code, 256) as client_key, client_code, id_type, system, id_value, match_rule, match_rank,
+       valid_from, valid_to, held_in, 'approved' as status
+from SILVER.STG.MCI_IDENTIFIERS
+union all
+select sha2(client_code, 256), client_code, id_type, system, id_value,
+       iff(id_type = 'campaign_token', 'whole word', 'exact'), null, valid_from, valid_to, 'MCI_CLIENT_IDENTIFIER', status
+from GOLD.CONTROL.MCI_CLIENT_IDENTIFIER
+where status <> 'approved';
 
 -- Campaign to Smart Campaign: override first, then approved rules by priority, else Unmapped (Q009)
 create or replace dynamic table DIM_CAMPAIGN target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
 with campaigns as (
-  select campaign_name,
-         any_value(client_part) as client_part, any_value(campaign_part) as campaign_part,
-         any_value(job_number) as job_number, any_value(language) as language, any_value(country) as country,
-         boolor_agg(campaign_name_valid) as campaign_name_valid,
-         min(activity_date) as first_seen, max(activity_date) as last_seen, sum(spend) as spend_to_date
-  from SILVER.STG.INT_AD_DELIVERY
-  group by campaign_name
+  -- the client comes from the Master Client Index (MCI_CLIENT_RESOLUTION); one campaign name, one client
+  select a.campaign_name,
+         any_value(a.client_part) as client_part, any_value(a.campaign_part) as campaign_part,
+         any_value(a.job_number) as job_number, any_value(a.language) as language, any_value(a.country) as country,
+         boolor_agg(a.campaign_name_valid) as campaign_name_valid,
+         min(a.activity_date) as first_seen, max(a.activity_date) as last_seen, sum(a.spend) as spend_to_date,
+         iff(count(distinct r.client_code) = 1, min(r.client_code), null) as mci_client_code
+  from SILVER.STG.INT_AD_DELIVERY a
+  left join SILVER.STG.MCI_CLIENT_RESOLUTION r on r.mci_key = a.mci_key
+  group by a.campaign_name
 ),
 by_rule as (
   select c.campaign_name, r.smart_campaign, r.client,
@@ -46,15 +67,15 @@ select
   c.campaign_name_valid,
   coalesce(o.smart_campaign, br.smart_campaign, 'Unmapped')   as smart_campaign,
   case when o.smart_campaign is not null then 'override' when br.smart_campaign is not null then 'rule' else 'none' end as mapped_by,
-  coalesce(ca.client_code, cl.client_code)                    as client_code,
+  coalesce(c.mci_client_code, cl.client_code)                 as client_code,
+  case when c.mci_client_code is not null then 'mci' when cl.client_code is not null then 'smart_campaign' end as client_from,
   c.first_seen, c.last_seen, c.spend_to_date
 from campaigns c
 left join GOLD.CONTROL.MAP_SMART_CAMPAIGN_OVERRIDE o on o.campaign_name = c.campaign_name
 left join by_rule br on br.campaign_name = c.campaign_name and br.rn = 1
-left join (select distinct client_code, client_name from GOLD.CONTROL.MAP_CLIENT_ACCOUNT) cl
-  on lower(cl.client_name) = lower(split_part(coalesce(o.smart_campaign, br.smart_campaign), ':', 1))
-left join (select distinct client_code, client_name from GOLD.CONTROL.MAP_CLIENT_ACCOUNT) ca
-  on lower(ca.client_name) = lower(c.client_part);
+-- fallback only: the client named in an approved Smart Campaign ("Nulo: Product")
+left join GOLD.CONTROL.MCI_CLIENT cl
+  on lower(cl.client_name) = lower(split_part(coalesce(o.smart_campaign, br.smart_campaign), ':', 1));
 
 create or replace dynamic table DIM_SMART_CAMPAIGN target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
 select sha2(smart_campaign, 256) as smart_campaign_key, smart_campaign,

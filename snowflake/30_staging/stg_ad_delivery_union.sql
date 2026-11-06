@@ -78,7 +78,10 @@ preferred_days as (
     on sp.preferred_source = p.source_name
    and (sp.client_pattern = '*' or p.client_part ilike replace(sp.client_pattern, '*', '%'))
 )
-select p.*, coalesce(mt.media_type, 'Unclassified') as media_type, coalesce(mt.channel, 'Unclassified') as channel
+select p.*, coalesce(mt.media_type, 'Unclassified') as media_type, coalesce(mt.channel, 'Unclassified') as channel,
+  -- key into the Master Client Index (mci_resolution.sql): source, account, campaign and the vendor file's client
+  sha2(coalesce(p.source_name, '') || '|' || coalesce(p.account_id, '') || '|' || coalesce(p.campaign_name, '') || '|'
+       || coalesce(p.client_hint, ''), 256) as mci_key
 from parsed p
 left join GOLD.CONTROL.MAP_MEDIA_TYPE mt on mt.raw_value = p.media_type_raw
 left join preferred_days pd
@@ -132,7 +135,8 @@ preferred_days as (
     on sp.preferred_source = w.source_name
    and (sp.client_pattern = '*' or w.client_part ilike replace(sp.client_pattern, '*', '%'))
 )
-select w.*
+select w.*,
+  sha2(coalesce(w.source_name, '') || '|' || coalesce(w.account_id, '') || '|' || coalesce(w.campaign_name, '') || '|', 256) as mci_key
 from withclient w
 left join preferred_days pd
   on pd.suppressed_source = w.source_name and pd.client_part = w.client_part and pd.activity_date = w.activity_date

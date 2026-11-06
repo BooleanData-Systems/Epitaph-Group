@@ -31,12 +31,12 @@ def con():
                  (20261001, 's1', 'c1', 'purchase', 'order', true, 7, 7),
                  (20261001, 's1', 'c1', 'page view', 'landing_page_view', false, 50, 50),
                  (20261001, 's2', 'c1', 'lead form', 'lead', true, 3, 3)""")
-    c.execute("""insert into FCT_SONNET_QUOTES_DAILY (date_key, quality_band, file_type, quotes, quality_quotes, binds, customers) values
-                 (20261001, null, 'raw_data', 40, 0, 10, 0),
-                 (20261001, 'Green', 'quote_quality', 0, 25, 0, 0),
-                 (20261001, 'Red', 'quote_quality', 0, 15, 0, 0)""")
-    c.execute("""insert into FCT_SXM_SCORECARD (date_key, performance_trials, organic_trials, performance_flow_starts, organic_flow_starts)
-                 values (20261001, 30, 10, 100, 100)""")
+    c.execute("""insert into FCT_SONNET_QUOTES_DAILY (date_key, client_code, quality_band, file_type, quotes, quality_quotes, binds, customers) values
+                 (20261001, 'C11', null, 'raw_data', 40, 0, 10, 0),
+                 (20261001, 'C11', 'Green', 'quote_quality', 0, 25, 0, 0),
+                 (20261001, 'C11', 'Red', 'quote_quality', 0, 15, 0, 0)""")
+    c.execute("""insert into FCT_SXM_SCORECARD (date_key, client_code, performance_trials, organic_trials, performance_flow_starts, organic_flow_starts)
+                 values (20261001, 'C10', 30, 10, 100, 100)""")
     c.execute("insert into FCT_GOALS values ('2026-10-01', 'C08', 'Nulo: Brand', 'impressions', 50000)")
     return c
 

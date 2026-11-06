@@ -1,0 +1,14 @@
+client_code,client_name,legal_name,reporting_currency,home_country,status,effective_from,effective_to,steward,notes
+C01,Aquamar,Aquamar Inc.,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C02,BDO,BDO Canada LLP,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C03,Cobs Bread,Cobs Bread,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C04,Conexus,Conexus Credit Union,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C05,Embark,Embark Student Corp,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C06,Kicking Horse Coffee,Kicking Horse Coffee,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C07,Kids Help Phone,Kids Help Phone,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,USD ad accounts shown in CAD (Q20)
+C08,Nulo,Nulo,USD,US,active,2024-11-01,9999-12-31,Nathan Sennema,
+C09,Ottawa Tourism,Ottawa Tourism and Convention Authority,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C10,SiriusXM,SiriusXM Canada Inc,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,Two TapClicks accounts: Brand & Performance and Performance
+C11,Sonnet Insurance,Sonnet Insurance,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C12,Sysco,Sysco Canada,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,
+C13,Wurth Canada,Wurth Canada Limited,CAD,CA,active,2024-11-01,9999-12-31,Nathan Sennema,

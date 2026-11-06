@@ -12,8 +12,10 @@
 30_staging/stg_microsoft_ads.sql
 30_staging/stg_facebook_ads.sql
 30_staging/stg_ga4_sessions.sql
+30_staging/mci_identifiers.sql
 30_staging/stg_sharepoint_feeds.sql
 30_staging/stg_ad_delivery_union.sql
+30_staging/mci_resolution.sql
 40_marts/dims.sql
 40_marts/facts.sql
 45_archive/archive.sql

@@ -17,7 +17,7 @@ select
   d.date_day as date_day,
   d.week_start as week_start,
   d.month_start as month_start,
-  c.client_code as client_code,
+  coalesce(f.client_code, c.client_code) as client_code,
   cl.client_name as client_name,
   c.smart_campaign as smart_campaign,
   c.campaign_name as campaign_name,
@@ -86,7 +86,7 @@ select
 from GOLD.MARTS.FCT_AD_DELIVERY_DAILY f
 join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
 left join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key
-left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = c.client_code
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = coalesce(f.client_code, c.client_code)
 left join GOLD.MARTS.DIM_SOURCE s on s.source_key = f.source_key
 left join GOLD.MARTS.DIM_MEDIA_BUY mb on mb.media_buy_key = f.media_buy_key
 left join GOLD.MARTS.DIM_CREATIVE cr on cr.creative_key = f.creative_key
@@ -96,7 +96,7 @@ select
   d.date_day as date_day,
   d.week_start as week_start,
   d.month_start as month_start,
-  c.client_code as client_code,
+  coalesce(f.client_code, c.client_code) as client_code,
   cl.client_name as client_name,
   c.smart_campaign as smart_campaign,
   c.campaign_name as campaign_name,
@@ -165,7 +165,7 @@ select
 from GOLD.MARTS.FCT_CONVERSIONS_DAILY f
 join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
 left join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key
-left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = c.client_code
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = coalesce(f.client_code, c.client_code)
 left join GOLD.MARTS.DIM_SOURCE s on s.source_key = f.source_key
 union all
 select
@@ -248,7 +248,7 @@ select
   d.date_day as date_day,
   d.week_start as week_start,
   d.month_start as month_start,
-  cl.client_code as client_code,
+  f.client_code as client_code,
   cl.client_name as client_name,
   null::varchar as smart_campaign,
   null::varchar as campaign_name,
@@ -316,14 +316,14 @@ select
   0 as goal_value
 from GOLD.MARTS.FCT_SONNET_QUOTES_DAILY f
 join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
-cross join (select client_code, client_name from GOLD.MARTS.DIM_CLIENT where client_name = 'Sonnet Insurance') cl
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code
 union all
 select
   'siriusxm' as row_type,
   d.date_day as date_day,
   d.week_start as week_start,
   d.month_start as month_start,
-  cl.client_code as client_code,
+  f.client_code as client_code,
   cl.client_name as client_name,
   null::varchar as smart_campaign,
   f.campaign_name as campaign_name,
@@ -391,14 +391,14 @@ select
   0 as goal_value
 from GOLD.MARTS.FCT_SXM_SCORECARD f
 join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
-cross join (select client_code, client_name from GOLD.MARTS.DIM_CLIENT where client_name = 'SiriusXM') cl
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code
 union all
 select
   'adara' as row_type,
   d.date_day as date_day,
   d.week_start as week_start,
   d.month_start as month_start,
-  cl.client_code as client_code,
+  f.client_code as client_code,
   cl.client_name as client_name,
   null::varchar as smart_campaign,
   f.campaign_name as campaign_name,
@@ -466,7 +466,7 @@ select
   0 as goal_value
 from GOLD.MARTS.FCT_ADARA_DAILY f
 join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
-cross join (select client_code, client_name from GOLD.MARTS.DIM_CLIENT where client_name = 'Ottawa Tourism') cl
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code
 union all
 select
   'goal' as row_type,
@@ -542,25 +542,25 @@ select
 from GOLD.MARTS.FCT_GOALS f
 left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code;
 
--- Custom dashboards read these alongside the main view
+-- Custom dashboards read these alongside the main view. Each fact carries client_code from the Master Client Index.
 create or replace view GOLD.SEMANTIC.V_WEB_SESSIONS_DAILY with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as
 select d.date_day, d.week_start, d.month_start, f.client_code, f.ga4_session_source, f.ga4_session_medium,
        f.ga4_session_campaign, f.ga4_manual_ad_content, f.sessions
 from GOLD.MARTS.FCT_WEB_SESSIONS_DAILY f join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key;
 
 create or replace view GOLD.SEMANTIC.V_SONNET_DAILY with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as
-select d.date_day, d.week_start, d.month_start, 'C11' as client_code, f.*
+select d.date_day, d.week_start, d.month_start, f.*
 from GOLD.MARTS.FCT_SONNET_QUOTES_DAILY f join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key;
 
 create or replace view GOLD.SEMANTIC.V_SONNET_AUCTION with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as
-select 'C11' as client_code, * from GOLD.MARTS.FCT_AUCTION_INSIGHTS;
+select * from GOLD.MARTS.FCT_AUCTION_INSIGHTS;
 
 create or replace view GOLD.SEMANTIC.V_SXM_DAILY with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as
-select d.date_day, d.week_start, d.month_start, 'C10' as client_code, f.*
+select d.date_day, d.week_start, d.month_start, f.*
 from GOLD.MARTS.FCT_SXM_SCORECARD f join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key;
 
 create or replace view GOLD.SEMANTIC.V_ADARA_DAILY with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as
-select d.date_day, d.week_start, d.month_start, 'C09' as client_code, f.*
+select d.date_day, d.week_start, d.month_start, f.*
 from GOLD.MARTS.FCT_ADARA_DAILY f join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key;
 
 create or replace view GOLD.SEMANTIC.V_REACH_FREQUENCY with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as

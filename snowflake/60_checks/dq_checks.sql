@@ -55,9 +55,8 @@ select d.date_day from GOLD.MARTS.DIM_FX_RATE d where d.rate is null and d.date_
 
 -- Live conversion tags not yet decided (T01 to T11): conversions that count nowhere
 create or replace view DQ_UNDECIDED_TAGS as
-select c.client_code, f.platform, f.conversion_tag_name, sum(f.platform_conversions) as conversions_90d
+select f.client_code, f.platform, f.conversion_tag_name, sum(f.platform_conversions) as conversions_90d
 from GOLD.MARTS.FCT_CONVERSIONS_DAILY f
-join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key
 where f.conversion_tag_key is null and f.date_key >= to_number(to_char(dateadd(day, -90, current_date()), 'YYYYMMDD'))
 group by all;
 
@@ -65,6 +64,27 @@ group by all;
 create or replace view DQ_REJECTED_FILES as
 select feed_id, file_name, reason, logged_at from BRONZE.LOADER.LOAD_LOG
 where status = 'rejected' and logged_at >= dateadd(day, -7, current_timestamp());
+
+-- Master Client Index: rows with no client (or two clients at the same rank). They are missing from every client
+-- dashboard until an identifier is approved. suggested_client: a proposed identifier that would resolve it.
+create or replace view DQ_UNRESOLVED_CLIENTS as
+select r.source_name, r.account_id, r.campaign_name, r.matched_by, r.last_seen,
+       sum(d.spend) as spend, sum(d.impressions) as impressions,
+       (select min(p.client_code) from GOLD.CONTROL.MCI_CLIENT_IDENTIFIER p
+        where p.status = 'proposed' and p.id_type in ('campaign_token', 'campaign_prefix')
+          and ' ' || regexp_replace(lower(r.campaign_name), '[^a-z0-9]+', ' ') || ' '
+              like '% ' || trim(regexp_replace(lower(p.id_value), '[^a-z0-9]+', ' ')) || ' %') as suggested_client
+from SILVER.STG.MCI_CLIENT_RESOLUTION r
+left join SILVER.STG.INT_AD_DELIVERY d on d.mci_key = r.mci_key
+where r.client_code is null
+group by r.source_name, r.account_id, r.campaign_name, r.matched_by, r.last_seen;
+
+-- Master Client Index: one identifier pointing to two clients. Must be empty; a conflict blocks the identifier.
+create or replace view DQ_MCI_CONFLICTS as
+select id_type, system, id_norm, count(distinct client_code) as clients, listagg(distinct client_code, ', ') as client_codes
+from SILVER.STG.MCI_IDENTIFIERS
+group by id_type, system, id_norm
+having count(distinct client_code) > 1;
 
 create table if not exists DQ_RESULTS (check_name varchar, failing_rows number, checked_at timestamp_ltz default current_timestamp());
 
@@ -95,7 +115,9 @@ begin
   union all select 'missing_fx', count(*) from GOLD.CHECKS.DQ_MISSING_FX
   union all select 'undecided_tags', count(*) from GOLD.CHECKS.DQ_UNDECIDED_TAGS
   union all select 'rejected_files', count(*) from GOLD.CHECKS.DQ_REJECTED_FILES
-  union all select 'sonnet_files', count(*) from GOLD.CHECKS.DQ_SONNET_FILES;
+  union all select 'sonnet_files', count(*) from GOLD.CHECKS.DQ_SONNET_FILES
+  union all select 'unresolved_clients', count(*) from GOLD.CHECKS.DQ_UNRESOLVED_CLIENTS
+  union all select 'mci_conflicts', count(*) from GOLD.CHECKS.DQ_MCI_CONFLICTS;
   return 'ok';
 end;
 $$;

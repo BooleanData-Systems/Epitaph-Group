@@ -36,19 +36,20 @@ MEASURES = [
 ]
 
 CAMPAIGN_DIMS = {
-    "client_code": "c.client_code", "client_name": "cl.client_name", "smart_campaign": "c.smart_campaign",
+    "client_code": "coalesce(f.client_code, c.client_code)", "client_name": "cl.client_name", "smart_campaign": "c.smart_campaign",
     "campaign_name": "c.campaign_name", "job_number": "c.job_number", "language": "c.language", "country": "c.country",
     "campaign_name_valid": "c.campaign_name_valid", "source_name": "s.source_name", "platform": "f.platform",
 }
 DATE_DIMS = {"date_day": "d.date_day", "week_start": "d.week_start", "month_start": "d.month_start"}
-CLIENT_BY_NAME = "cross join (select client_code, client_name from GOLD.MARTS.DIM_CLIENT where client_name = '{name}') cl"
+# Every fact carries its client from the Master Client Index (f.client_code); no client is named in this view
+CLIENT_JOIN = "left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code"
 
 BLOCKS = [
     {"row_type": "delivery",
      "from": """GOLD.MARTS.FCT_AD_DELIVERY_DAILY f
 join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
 left join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key
-left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = c.client_code
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = coalesce(f.client_code, c.client_code)
 left join GOLD.MARTS.DIM_SOURCE s on s.source_key = f.source_key
 left join GOLD.MARTS.DIM_MEDIA_BUY mb on mb.media_buy_key = f.media_buy_key
 left join GOLD.MARTS.DIM_CREATIVE cr on cr.creative_key = f.creative_key""",
@@ -61,7 +62,7 @@ left join GOLD.MARTS.DIM_CREATIVE cr on cr.creative_key = f.creative_key""",
      "from": """GOLD.MARTS.FCT_CONVERSIONS_DAILY f
 join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
 left join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key
-left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = c.client_code
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = coalesce(f.client_code, c.client_code)
 left join GOLD.MARTS.DIM_SOURCE s on s.source_key = f.source_key""",
      "cols": {**DATE_DIMS, **CAMPAIGN_DIMS, "conversion_tag": "f.conversion_tag_name", "kpi_group": "f.kpi_group",
               "counts_toward_kpi": "f.counts_toward_kpi", "campaign_type": "f.campaign_type", "loaded_from": "f.loaded_from",
@@ -76,22 +77,22 @@ left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code""",
               "ga4_session_campaign": "f.ga4_session_campaign", "sessions": "f.sessions"}},
     {"row_type": "sonnet",
      "from": "GOLD.MARTS.FCT_SONNET_QUOTES_DAILY f\njoin GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key\n"
-             + CLIENT_BY_NAME.format(name="Sonnet Insurance"),
-     "cols": {**DATE_DIMS, "client_code": "cl.client_code", "client_name": "cl.client_name", "source_name": "'Sonnet files'",
+             + CLIENT_JOIN,
+     "cols": {**DATE_DIMS, "client_code": "f.client_code", "client_name": "cl.client_name", "source_name": "'Sonnet files'",
               "province": "f.province", "product": "f.product", "channel": "f.channel", "segment": "f.segment",
               "quality_band": "f.quality_band", "line_type": "f.line_type",
               **{m: f"f.{m}" for m in ("quotes", "quality_quotes", "binds", "customers")}}},
     {"row_type": "siriusxm",
      "from": "GOLD.MARTS.FCT_SXM_SCORECARD f\njoin GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key\n"
-             + CLIENT_BY_NAME.format(name="SiriusXM"),
-     "cols": {**DATE_DIMS, "client_code": "cl.client_code", "client_name": "cl.client_name", "source_name": "'SiriusXM files'",
+             + CLIENT_JOIN,
+     "cols": {**DATE_DIMS, "client_code": "f.client_code", "client_name": "cl.client_name", "source_name": "'SiriusXM files'",
               "channel": "f.channel", "campaign_name": "f.campaign_name",
               **{m: f"f.{m}" for m in ("performance_trials", "organic_trials", "scorecard_trials", "performance_flow_starts",
                                        "organic_flow_starts", "commuter_starts", "commuter_activations")}}},
     {"row_type": "adara",
      "from": "GOLD.MARTS.FCT_ADARA_DAILY f\njoin GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key\n"
-             + CLIENT_BY_NAME.format(name="Ottawa Tourism"),
-     "cols": {**DATE_DIMS, "client_code": "cl.client_code", "client_name": "cl.client_name", "source_name": "'Adara - Ottawa Tourism'",
+             + CLIENT_JOIN,
+     "cols": {**DATE_DIMS, "client_code": "f.client_code", "client_name": "cl.client_name", "source_name": "'Adara - Ottawa Tourism'",
               "campaign_name": "f.campaign_name",
               **{m: f"f.{m}" for m in ("site_visits", "flight_searches", "flight_bookings", "hotel_searches", "hotel_bookings",
                                        "travel_search_signals", "attributed_books")}}},
