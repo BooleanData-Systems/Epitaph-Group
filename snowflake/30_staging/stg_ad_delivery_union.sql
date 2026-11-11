@@ -21,11 +21,66 @@ create or replace view SILVER.STG.STG_LIVE_DELIVERY as
          video_starts, completed_plays, post_shares, spots, null, 'new_route'
   from SILVER.STG.STG_FACEBOOK_ADS
   union all
+  -- the other Fivetran connectors (config/connectors.yml); each reads its stub until the first sync
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_LINKEDIN_ADS
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_TIKTOK_ADS
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_SNAPCHAT_ADS
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_REDDIT_ADS
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_PINTEREST_ADS
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_AMAZON_ADS
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_CM360
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_DV360
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_THE_TRADE_DESK
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_AMAZON_DSP
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_SPOTIFY_ADS
+  union all
   select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
          media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
          video_starts, completed_plays, post_shares, spots, client_hint, 'new_route'
   from SILVER.STG.STG_VENDOR_DELIVERY
-  -- further Fivetran connectors are added here as their staging views go live (config/connectors.yml)
 ;
 
 create or replace dynamic table SILVER.STG.INT_AD_DELIVERY

@@ -12,6 +12,17 @@
 30_staging/stg_microsoft_ads.sql
 30_staging/stg_facebook_ads.sql
 30_staging/stg_ga4_sessions.sql
+30_staging/stg_linkedin_ads.sql
+30_staging/stg_tiktok_ads.sql
+30_staging/stg_snapchat_ads.sql
+30_staging/stg_reddit_ads.sql
+30_staging/stg_pinterest_ads.sql
+30_staging/stg_amazon_ads.sql
+30_staging/stg_cm360.sql
+30_staging/stg_dv360.sql
+30_staging/stg_the_trade_desk.sql
+30_staging/stg_amazon_dsp.sql
+30_staging/stg_spotify_ads.sql
 30_staging/mci_identifiers.sql
 30_staging/stg_sharepoint_feeds.sql
 30_staging/stg_ad_delivery_union.sql
