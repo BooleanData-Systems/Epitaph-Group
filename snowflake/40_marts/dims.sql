@@ -69,10 +69,24 @@ select
   case when o.smart_campaign is not null then 'override' when br.smart_campaign is not null then 'rule' else 'none' end as mapped_by,
   coalesce(c.mci_client_code, cl.client_code)                 as client_code,
   case when c.mci_client_code is not null then 'mci' when cl.client_code is not null then 'smart_campaign' end as client_from,
+  -- Campaign Filter in TapClicks: the Smart Campaign name without the client ("Kids Help Phone: Grants" -> "Grants")
+  nullif(trim(split_part(coalesce(o.smart_campaign, br.smart_campaign), ':', 2)), '') as campaign_filter,
+  -- Product: Kicking Horse Coffee from the product seed; Sonnet from prod= in its campaign naming code
+  coalesce(kp.product, regexp_substr(c.campaign_name, 'prod[=:]([^_();|]+)', 1, 1, 'ie', 1)) as product,
+  -- Province: Sonnet geo= code, named as TapClicks shows it. Combined codes (ONQC) stay as written: TapClicks splits
+  -- them below campaign level, which the campaign name cannot do
+  case upper(regexp_substr(c.campaign_name, 'geo[=:]([^_();|]+)', 1, 1, 'ie', 1))
+    when 'ON' then 'Ontario' when 'ONTARIO' then 'Ontario'
+    when 'QC' then 'Quebec' when 'QUEBEC' then 'Quebec'
+    when 'BC' then 'British Columbia' when 'BRITISHCOLUMBIA' then 'British Columbia'
+    when 'AB' then 'Alberta' when 'ALBERTA' then 'Alberta'
+    else regexp_substr(c.campaign_name, 'geo[=:]([^_();|]+)', 1, 1, 'ie', 1) end as province,
+  kp.size_khc, kp.category_khc, kp.bulk_status_khc,
   c.first_seen, c.last_seen, c.spend_to_date
 from campaigns c
 left join GOLD.CONTROL.MAP_SMART_CAMPAIGN_OVERRIDE o on o.campaign_name = c.campaign_name
 left join by_rule br on br.campaign_name = c.campaign_name and br.rn = 1
+left join GOLD.CONTROL.MAP_CAMPAIGN_PRODUCT kp on kp.campaign_name = c.campaign_name
 -- fallback only: the client named in an approved Smart Campaign ("Nulo: Product")
 left join GOLD.CONTROL.MCI_CLIENT cl
   on lower(cl.client_name) = lower(split_part(coalesce(o.smart_campaign, br.smart_campaign), ':', 1));

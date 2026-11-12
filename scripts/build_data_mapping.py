@@ -350,6 +350,29 @@ outcome("Goals", "F16", "GOALS", "MCI rank 40 or 50: the client named at the sta
     ("campaign_name (part 3)", "goal_metric", "goal_metric", "varchar", "impression, click, spend, quote, trial or CPQ goal"),
     ("impressions_goal | goal", "goal_value", "goal_value", "number", "shown beside actuals, never added to them")])
 
+# ------------------------------------------------------------------ Dashboard columns derived in Gold (specs/model_gaps.md)
+CAMP = "derived from the campaign (client from DIM_CAMPAIGN)"
+SC = "MAP_SMART_CAMPAIGN_OVERRIDE, then MAP_SMART_CAMPAIGN_RULE"
+for src_obj, src_field, silver_obj, gold_field, rule in (
+        (SC, "smart_campaign", "", "campaign_filter",
+         "text after ':' in the Smart Campaign (\"Kids Help Phone: Grants\" gives \"Grants\"); goal rows take it from FCT_GOALS"),
+        ("seeds/map_campaign_product.csv", "product", "", "product",
+         "seed by campaign name first, else prod= in the campaign naming code"),
+        ("campaign name", "geo=", "SILVER.STG.INT_AD_DELIVERY", "province",
+         "geo= code named as TapClicks shows it (ON gives Ontario); combined codes such as ONQC kept as written"),
+        ("seeds/map_campaign_product.csv", "size_khc", "", "size_khc", "by campaign name"),
+        ("seeds/map_campaign_product.csv", "category_khc", "", "category_khc", "by campaign name"),
+        ("seeds/map_campaign_product.csv", "bulk_status_khc", "", "bulk_status_khc", "by campaign name")):
+    add("Dashboard columns", "Gold (DIM_CAMPAIGN)", CAMP, src_obj, src_field, "", "", silver_obj,
+        "campaign_name" if silver_obj else "",
+        ("DIM_CAMPAIGN", gold_field, gold_field, "varchar", ""), rule=rule)
+add("Dashboard columns", "Semantic view", "delivery rows only", "seeds/map_site_key.csv", "site_key", "", "",
+    "", "", ("", "", "site_key", "varchar", ""),
+    rule="by source and media type; an exact media type beats * (Epitaph - Data Mapping in TapClicks)")
+add("Dashboard columns", "Semantic view", SXM, "SharePoint files F07a to F08", "program_code_v98_evar98 | online_campaign_code_v70_evar70",
+    "", "", "SILVER.STG.STG_SXM", "campaign_name", ("FCT_SXM_SCORECARD", "campaign_name", "program_code", "varchar", ""),
+    rule="the Adobe offer code; SiriusXM rows only")
+
 # ------------------------------------------------------------------ Exchange rates
 for f, b, s, g, rule in (("FXUSDCAD observation date", "rate_date", "date_day", "date_day", "every day carries the last rate on or before it (weekends, holidays)"),
                          ("FXUSDCAD value", "rate", "rate", "rate", "USD to CAD; applied to live USD spend for accounts marked convert_to CAD (Q20)")):

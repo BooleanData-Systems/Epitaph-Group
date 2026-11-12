@@ -69,6 +69,21 @@ create table if not exists MAP_MEDIA_TYPE (
   notes           varchar
 ) comment = 'seeds/map_media_type.csv. Media type is the 4th part of the media buy name';
 
+create table if not exists MAP_SITE_KEY (
+  source_name     varchar not null,
+  media_type      varchar not null,     -- * = every media type of the source
+  site_key        varchar not null,
+  primary key (source_name, media_type)
+) comment = 'seeds/map_site_key.csv. Site Key from TapClicks Epitaph - Data Mapping; an exact media type beats *';
+
+create table if not exists MAP_CAMPAIGN_PRODUCT (
+  campaign_name   varchar not null primary key,
+  product         varchar,
+  size_khc        varchar,
+  category_khc    varchar,
+  bulk_status_khc varchar
+) comment = 'seeds/map_campaign_product.csv. Kicking Horse Coffee product fields per Amazon Ads campaign, from TapClicks';
+
 create table if not exists MAP_SMART_CAMPAIGN_RULE (
   smart_campaign  varchar not null,
   client          varchar not null,

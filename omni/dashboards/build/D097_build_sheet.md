@@ -151,31 +151,31 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 
 | Done | Element | Title | Metrics (Omni field) | Group by | Filters |
 |---|---|---|---|---|---|
-| [ ] | kpi | Impressions | Impressions (impressions) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | Clicks | Clicks (clicks) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | Spend | Spend (spend) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | CPM | CPM (cpm) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | CTR | CTR (ctr) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | CPC | CPC (cpc) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | Revenue | Revenue (revenue) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | ROAS | ROAS (roas) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | kpi | Purchases | Total Conversions (total_conversions), CPA (cpa) |  | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax-OLD, PerfMax2, All outcomes] |
+| [ ] | kpi | Impressions | Impressions (impressions) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | Clicks | Clicks (clicks) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | Spend | Spend (spend) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | CPM | CPM (cpm) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | CTR | CTR (ctr) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | CPC | CPC (cpc) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | Revenue | Revenue (revenue) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | ROAS | ROAS (roas) |  | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | kpi | Purchases | Total Conversions (total_conversions), CPA (cpa) |  | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax-OLD, PerfMax2] |
 | [ ] | table | Search Keywords | Impressions (impressions), Clicks (clicks), Spend (spend), CPM (cpm), CTR (ctr), CPC (cpc), Revenue (revenue), ROAS (roas) (labels: Impressions as Impression) | keyword |  |
-| [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | bar-chart | Audience | Spend (spend) | audience | Spend >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | bar-chart | Tactic | Spend (spend) | tactic | Spend >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | combo-chart | By Week | Impressions (impressions), CPM (cpm) | date:week | filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2, All outcomes] |
-| [ ] | combo-chart | Audience | Impressions (impressions), CPM (cpm) | audience | Impressions >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes] |
-| [ ] | combo-chart | Tactic | Impressions (impressions), CPM (cpm) | tactic | Impressions >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes] |
-| [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2, All outcomes] |
-| [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | Clicks >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax-OLD, PerfMax2, All outcomes] |
-| [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | Clicks >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax-OLD, PerfMax2, All outcomes] |
-| [ ] | combo-chart | By Week | Revenue (revenue), ROAS (roas) | date:week | filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | combo-chart | Audience | Revenue (revenue), ROAS (roas) | audience | Revenue >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | combo-chart | Tactic | Revenue (revenue), ROAS (roas) | tactic | Revenue >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax, All outcomes]; filter_media_type in [Search - Bing, All outcomes] |
-| [ ] | combo-chart | By Week | Total Conversions (total_conversions), CPA (cpa) | date:week | conversion_tag in [Wurth Canada - GA4 (web) purchase, Bing Purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax, All outcomes] |
-| [ ] | combo-chart | Audience | Total Conversions (total_conversions), CPA (cpa) | audience | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes] |
-| [ ] | combo-chart | Tactic | Total Conversions (total_conversions), CPA (cpa) | tactic | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD, All outcomes] |
+| [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | bar-chart | Audience | Spend (spend) | audience | Spend >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | bar-chart | Tactic | Spend (spend) | tactic | Spend >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | combo-chart | By Week | Impressions (impressions), CPM (cpm) | date:week | filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2] |
+| [ ] | combo-chart | Audience | Impressions (impressions), CPM (cpm) | audience | Impressions >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD] |
+| [ ] | combo-chart | Tactic | Impressions (impressions), CPM (cpm) | tactic | Impressions >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD] |
+| [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2] |
+| [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | Clicks >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax-OLD, PerfMax2] |
+| [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | Clicks >= 1.0; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax-OLD, PerfMax2] |
+| [ ] | combo-chart | By Week | Revenue (revenue), ROAS (roas) | date:week | filter_tactic not in [PerfMax-OLD, PerfMax, PerfMax2]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | combo-chart | Audience | Revenue (revenue), ROAS (roas) | audience | Revenue >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | combo-chart | Tactic | Revenue (revenue), ROAS (roas) | tactic | Revenue >= 0.01; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax]; filter_media_type in [Search - Bing, All outcomes] |
+| [ ] | combo-chart | By Week | Total Conversions (total_conversions), CPA (cpa) | date:week | conversion_tag in [Wurth Canada - GA4 (web) purchase, Bing Purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax] |
+| [ ] | combo-chart | Audience | Total Conversions (total_conversions), CPA (cpa) | audience | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD] |
+| [ ] | combo-chart | Tactic | Total Conversions (total_conversions), CPA (cpa) | tactic | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search - Bing, All outcomes]; filter_tactic not in [PerfMax, PerfMax2, PerfMax-OLD] |
 
 ## Search - Bing - Performance Max
 
@@ -210,31 +210,31 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 
 | Done | Element | Title | Metrics (Omni field) | Group by | Filters |
 |---|---|---|---|---|---|
-| [ ] | kpi | Impressions | Impressions (impressions) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | Clicks | Clicks (clicks) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | Spend | Spend (spend) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | CPM | CPM (cpm) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | CTR | CTR (ctr) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | CPC | CPC (cpc) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | Revenue | Revenue (revenue) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | ROAS | ROAS (roas) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | kpi | Purchases | Total Conversions (total_conversions), CPA (cpa) |  | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax, All outcomes] |
+| [ ] | kpi | Impressions | Impressions (impressions) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | Clicks | Clicks (clicks) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | Spend | Spend (spend) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | CPM | CPM (cpm) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | CTR | CTR (ctr) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | CPC | CPC (cpc) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | Revenue | Revenue (revenue) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | ROAS | ROAS (roas) |  | filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | kpi | Purchases | Total Conversions (total_conversions), CPA (cpa) |  | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_media_type in [Search, All outcomes]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax] |
 | [ ] | table | Search Keywords | Impressions (impressions), Clicks (clicks), Spend (spend), CPM (cpm), CTR (ctr), CPC (cpc), Revenue (revenue), ROAS (roas) (labels: Impressions as Impression) | keyword | source_name in [Google Ads] |
-| [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | bar-chart | Audience | Spend (spend) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Spend >= 0.01 |
-| [ ] | bar-chart | Tactic | Spend (spend) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Spend >= 0.01 |
-| [ ] | combo-chart | By Week | Impressions (impressions), CPM (cpm) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | combo-chart | Audience | Impressions (impressions), CPM (cpm) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Impressions >= 1.0 |
-| [ ] | combo-chart | Tactic | Impressions (impressions), CPM (cpm) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Impressions >= 1.0 |
-| [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Clicks >= 1.0 |
-| [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Clicks >= 1.0 |
-| [ ] | combo-chart | By Week | Revenue (revenue), ROAS (roas) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes] |
-| [ ] | combo-chart | Audience | Revenue (revenue), ROAS (roas) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Revenue >= 0.01 |
-| [ ] | combo-chart | Tactic | Revenue (revenue), ROAS (roas) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax, All outcomes]; Revenue >= 0.01 |
-| [ ] | combo-chart | By Week | Total Conversions (total_conversions), CPA (cpa) | date:week | conversion_tag in [Wurth Canada - GA4 (web) purchase, Bing Purchase]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax, All outcomes]; filter_media_type in [Search, All outcomes] |
-| [ ] | combo-chart | Audience | Total Conversions (total_conversions), CPA (cpa) | audience | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax, All outcomes]; filter_media_type in [Search, All outcomes] |
-| [ ] | combo-chart | Tactic | Total Conversions (total_conversions), CPA (cpa) | tactic | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax, All outcomes]; filter_media_type in [Search, All outcomes] |
+| [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | bar-chart | Audience | Spend (spend) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Spend >= 0.01 |
+| [ ] | bar-chart | Tactic | Spend (spend) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Spend >= 0.01 |
+| [ ] | combo-chart | By Week | Impressions (impressions), CPM (cpm) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | combo-chart | Audience | Impressions (impressions), CPM (cpm) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Impressions >= 1.0 |
+| [ ] | combo-chart | Tactic | Impressions (impressions), CPM (cpm) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Impressions >= 1.0 |
+| [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Clicks >= 1.0 |
+| [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Clicks >= 1.0 |
+| [ ] | combo-chart | By Week | Revenue (revenue), ROAS (roas) | date:week | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax] |
+| [ ] | combo-chart | Audience | Revenue (revenue), ROAS (roas) | audience | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Revenue >= 0.01 |
+| [ ] | combo-chart | Tactic | Revenue (revenue), ROAS (roas) | tactic | filter_media_type in [Search, All outcomes]; source_name in [Google Ads]; filter_tactic not in [PerfMax2, PerfMax-OLD, PerfMax]; Revenue >= 0.01 |
+| [ ] | combo-chart | By Week | Total Conversions (total_conversions), CPA (cpa) | date:week | conversion_tag in [Wurth Canada - GA4 (web) purchase, Bing Purchase]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax]; filter_media_type in [Search, All outcomes] |
+| [ ] | combo-chart | Audience | Total Conversions (total_conversions), CPA (cpa) | audience | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax]; filter_media_type in [Search, All outcomes] |
+| [ ] | combo-chart | Tactic | Total Conversions (total_conversions), CPA (cpa) | tactic | Total Conversions >= 1.0; conversion_tag in [Bing Purchase, Wurth Canada - GA4 (web) purchase]; filter_tactic not in [PerfMax-OLD, PerfMax2, PerfMax]; filter_media_type in [Search, All outcomes] |
 
 ## Search - Google - Performance Max
 

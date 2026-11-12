@@ -1,0 +1,12 @@
+source_name,media_type,site_key
+Amazon DSP,*,programmatic / paidvideo
+Campaign Manager 360,CTV,programmatic / paidvideo
+Campaign Manager 360,StndDisplay,programmatic / paiddisplay
+Campaign Manager 360,YouTube,youtube
+Facebook Ads,*,facebook
+Google Ads,*,paidsearch
+Microsoft Advertising,*,paidsearch - bing
+SnapChat,*,snapchat
+The Trade Desk,CTV - Bell Media,programmatic / paidvideo
+The Trade Desk,NativeDis,programmatic / paiddisplay
+TikTok Ads,*,tiktok
