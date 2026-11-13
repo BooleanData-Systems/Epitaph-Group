@@ -1,6 +1,7 @@
 -- Bank of Canada USD to CAD rates, daily at 18:00 Eastern (after the 16:30 publication).
 -- Used for Kids Help Phone's Reddit and Google Ads Grants spend, which is billed in USD and shown in CAD (Q20).
 use role EPITAPH_LOADER;
+use warehouse WH_LOAD;   -- the loader role's warehouse (procedure calls need one)
 
 create or replace procedure BRONZE.REFERENCE.LOAD_FX_RATES(series varchar default 'FXUSDCAD', days_back number default 10)
 returns varchar

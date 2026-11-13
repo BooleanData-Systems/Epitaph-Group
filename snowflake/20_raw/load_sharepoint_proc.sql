@@ -1,6 +1,7 @@
 -- SharePoint loader as a Snowflake Python procedure, run by a task every hour.
 -- CI uploads loader/sharepoint_loader.py and config/feeds.yml to @BRONZE.LOADER.CODE before running this file.
 use role EPITAPH_LOADER;
+use warehouse WH_LOAD;   -- the loader role's warehouse (procedure calls need one)
 
 create or replace procedure BRONZE.LOADER.LOAD_SHAREPOINT(feed_id varchar default null)
 returns varchar

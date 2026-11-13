@@ -27,7 +27,7 @@ grep -v '^#' snowflake/deploy_order.txt | grep -v '^$' | while read -r f; do
   req=$(grep -m1 '^-- requires: ' "snowflake/$f" | sed 's/^-- requires: //' || true)
   if [ -n "$req" ]; then
     if [ "$(schema_exists "$req")" = "yes" ]; then
-      snow sql -q "call BRONZE.LOADER.ENABLE_CHANGE_TRACKING('${req#*.}')" -c "$CONN" --role EPITAPH_LOADER --silent >/dev/null
+      snow sql -q "call BRONZE.LOADER.ENABLE_CHANGE_TRACKING('${req#*.}')" -c "$CONN" --role EPITAPH_LOADER --warehouse WH_LOAD --silent >/dev/null
     else
       stub="snowflake/$(dirname "$f")/stubs/$(basename "$f")"
       echo "   $f: ${req} not synced yet, using stub"

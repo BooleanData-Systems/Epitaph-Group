@@ -1,4 +1,5 @@
 """Tests for the SharePoint loader on synthetic files only. No client data is used or needed."""
+import csv
 import datetime as dt
 import io
 import sys
@@ -200,6 +201,8 @@ class MemStore:
 
     def stage_file(self, stage, name, content, rows):
         self.tables.setdefault(stage, []).append(name)
+        self.staged = getattr(self, "staged", {})
+        self.staged[name] = content
         return rows
 
     def log(self, entry):
@@ -245,6 +248,21 @@ def test_history_files_go_to_stage():
     store = MemStore()
     s = sl.run(g, store, MemNotifier(), CONFIG, feed_id="H01", today=TODAY)
     assert s["loaded"] == 1 and store.tables["BRONZE.TAPCLICKS.HISTORY_STAGE"] == ["google_ads_2026-10.csv"]
+
+
+def test_history_file_is_staged_in_the_copy_column_order():
+    """COPY INTO reads by position: extra rate columns and a different order must not shift any value."""
+    text = ('Impressions,Date,CPM,"Data Source Name","Campaign Name","Media Buy Name","Creative Name","Conversion Tag Name",'
+            'Clicks,CTR,Spend,Starts,"Completed Plays","Total Conversions",CPC\n'
+            '10,"Oct 14 2026",200.00,"Google Ads","c, with comma","m","cr",,1,10%,2.00,0,0,3,2.00\n'
+            'Total,,,,,,,,1,,2.00,,,,\n')
+    g = FakeGraph({"History/TapClicks": [(item("9", "google_ads_2026-10.csv", "History/TapClicks"), csv_bytes(text))]})
+    store = MemStore()
+    sl.run(g, store, MemNotifier(), CONFIG, feed_id="H01", today=TODAY)
+    staged = list(csv.reader(io.StringIO(store.staged["google_ads_2026-10.csv"].decode("utf-8"))))
+    assert staged[0] == ["date", "data_source_name", "campaign_name", "media_buy_name", "creative_name", "conversion_tag_name",
+                         "impressions", "clicks", "spend", "starts", "completed_plays", "total_conversions"]
+    assert staged[1:] == [["Oct 14 2026", "Google Ads", "c, with comma", "m", "cr", "", "10", "1", "2.00", "0", "0", "3"]]
 
 
 def test_one_failing_file_does_not_stop_the_run():

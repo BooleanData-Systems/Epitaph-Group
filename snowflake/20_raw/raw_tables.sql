@@ -1,5 +1,6 @@
 -- BRONZE tables written by the loaders. Fivetran creates its own schemas (BRONZE.FIVETRAN_GOOGLE_ADS, ...).
 use role EPITAPH_LOADER;
+use warehouse WH_LOAD;   -- the loader role's warehouse (procedure calls need one)
 
 create table if not exists BRONZE.LOADER.LOAD_LOG (
   run_id        varchar,
