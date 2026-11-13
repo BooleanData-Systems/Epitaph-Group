@@ -66,6 +66,11 @@ grant select on all dynamic tables in database GOLD to role EPITAPH_READER;
 grant select on future tables in database GOLD to role EPITAPH_READER;
 grant select on future views in database GOLD to role EPITAPH_READER;
 grant select on future dynamic tables in database GOLD to role EPITAPH_READER;
+-- Snowflake ignores database-level future grants in a schema that has its own future grants for the same object type.
+-- GOLD.SEMANTIC and GOLD.CHECKS have schema-level ones (for the reporter, below), so the reader is granted there too.
+grant select on future views in schema GOLD.SEMANTIC to role EPITAPH_READER;
+grant select on future tables in schema GOLD.CHECKS to role EPITAPH_READER;
+grant select on future views in schema GOLD.CHECKS to role EPITAPH_READER;
 
 -- Archive (A12): only Epitaph admins read it. Schema-level future grants take precedence over the database-level
 -- future grants above, so READER gets nothing in GOLD.ARCHIVE; its schema usage is removed as well.
@@ -115,6 +120,11 @@ grant usage on all schemas in database SILVER to role EPITAPH_STRUCTURE;
 grant usage on all schemas in database GOLD to role EPITAPH_STRUCTURE;
 grant references on future tables in database GOLD to role EPITAPH_STRUCTURE;
 grant references on future views in database GOLD to role EPITAPH_STRUCTURE;
+-- same rule: schemas with their own future grants need the structure role granted there as well
+grant references on future views in schema GOLD.SEMANTIC to role EPITAPH_STRUCTURE;
+grant references on future tables in schema GOLD.CHECKS to role EPITAPH_STRUCTURE;
+grant references on future views in schema GOLD.CHECKS to role EPITAPH_STRUCTURE;
+grant references on future views in schema GOLD.ADMIN to role EPITAPH_STRUCTURE;
 
 -- Loader may call the email helper GOLD.CONTROL.NOTIFY (grant on the procedure is in 10_control)
 grant usage on database GOLD to role EPITAPH_LOADER;
