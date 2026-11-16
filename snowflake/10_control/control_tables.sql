@@ -151,7 +151,18 @@ create table if not exists FEED_OWNERS (
 
 create table if not exists ALERT_RECIPIENTS (
   alert_name varchar, email varchar
-) comment = 'Filled by the Epitaph admin. Not in the repo';
+) comment = 'Who gets each pipeline alert email. Addresses must match verified Snowflake user emails';
+
+-- Every alert goes to the distribution list (DL_EPITAPH_DATA_ALERTS). Named people, such as Nathan, are added by the
+-- Epitaph admin (runbook step 3a) so personal addresses stay out of the repo; this merge only adds missing rows, so it
+-- never removes them. At handover, replace the Boolean list with Epitaph's own.
+merge into ALERT_RECIPIENTS t
+using (select a.column1 as alert_name, e.column1 as email
+       from values ('ingestion'), ('transformation'), ('publishing'), ('downstream'), ('freshness'),
+                   ('check_failures'), ('streams') a
+       cross join values ('epitaph@booleandata.ai') e) s
+on t.alert_name = s.alert_name and lower(t.email) = s.email
+when not matched then insert (alert_name, email) values (s.alert_name, s.email);
 
 create table if not exists CTL_HISTORY_LOAD (
   source_name   varchar not null,

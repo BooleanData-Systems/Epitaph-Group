@@ -41,7 +41,7 @@ client dashboards stay fast, and WH_HISTORY (S, 3,600 s timeout) runs the one-of
 | LOAD warehouse monitor | same | RM_WH_LOAD (100) | same | Built |
 | TRANSFORMATION warehouse monitor | same | RM_WH_TRANSFORMATION (120) | same | Built |
 | ADHOC warehouse monitor | same | RM_WH_ADHOC (20) | same | Built (also RM_WH_REPORTING 160, RM_WH_HISTORY 150) |
-| Email notifications | To the DL | User DL_EPITAPH_DATA_ALERTS with the DL's verified email; notification integration EPITAPH_EMAIL | Test email received | Both: DL address needed |
+| Email notifications | To the DL | Users DL_EPITAPH_DATA_ALERTS (epitaph@booleandata.ai, set in `01_account.sql`) and NATHANEPITAPH (address set by the Epitaph admin); notification integration EPITAPH_EMAIL | Test email received | Both: set Nathan's address; verify both |
 | LOGIN_HISTORY view | Who, when, where | GOLD.ADMIN.V_LOGIN_HISTORY, V_FAILED_LOGINS_24H | Returns rows | Built |
 | QUERY_HISTORY view | Top queries by cost and duration | GOLD.ADMIN.V_QUERY_HISTORY_TOP | Returns rows | Built |
 | Consumption report | Credits per warehouse per day | GOLD.ADMIN.V_CREDITS_DAILY, V_CREDITS_MONTH_TO_DATE; a page in Omni for Epitaph | Client reviews | Built |
