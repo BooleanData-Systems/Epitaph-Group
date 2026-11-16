@@ -1,0 +1,6 @@
+# Omni user ids per client code, filled in by Epitaph's admin when users are invited (ids only, no names or emails).
+# scripts/omni_access.py apply sets client_code and the cg_* attributes on each user from the seeds.
+# Example:
+# C01: [11111111-2222-3333-4444-555555555555]
+# ALL: []          # Epitaph staff
+{}

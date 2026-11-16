@@ -1,0 +1,153 @@
+# Master dashboard template (Omni dashboard)
+# One template serves the 21 standard dashboards. A client dashboard is the template plus a parameter file
+# (specs/dashboards/<ID>.yml): which sections to show, which Smart Campaigns, which conversion KPIs.
+# Built from the patterns that repeat across the standard dashboards in TapClicks:
+#   "Total Metrics" KPI rows (567 widgets), Tactic / Audience / Creative breakdowns (about 1,650),
+#   By Week and By Day trends (about 600), Media Type breakdown (about 230).
+
+template: epitaph-master-v1
+data_source: GOLD.semantic.v_media_performance_daily   # one row per day x client x campaign x media buy x creative x tag
+client_access:
+  # Omni connects with one service user, so Snowflake's row policy cannot tell client viewers apart.
+  # Separation therefore happens in the Omni model, and the Snowflake policy covers anyone querying Snowflake directly.
+  omni_user_group_per_client: true       # user group "Client - <client name>"; the client's dashboards shared to it only
+  user_attribute: client_code            # C01..C13 for client users, ALL for Epitaph staff
+  access_filter: {field: media_performance_daily.client_code, user_attribute: client_code, values_for_unfiltered: [ALL]}
+  column_groups: "access grants cg_<group> on user attributes cg_<group> = yes (omni/model/model.yaml)"
+  snowflake_policy: GOLD.CONTROL.RAP_CLIENT
+
+page:
+  width: 1440
+  grid_columns: 12
+  theme: epitaph            # created once in the Omni UI (colors, font, logo); referenced by name
+  header:
+    - {element: image, asset: client_logo, cols: 2}
+    - {element: text, value: "{client_name} | {dashboard_title}", style: title, cols: 7}
+    - {element: text, value: "Data as of {max_loaded_at}", style: caption, cols: 3}
+
+controls:   # page-level, apply to every element (A22: no widget keeps its own date range)
+  - {name: date_range, type: date-range, default: last-30-days, required: true}
+  - {name: smart_campaign, type: list, column: smart_campaign, default: "from dashboard spec"}
+  - {name: media_type, type: list, column: media_type, default: all}
+  - {name: platform, type: list, column: platform, default: all}
+  - {name: currency_note, type: text, value: "Amounts in {reporting_currency}"}
+
+sections:
+  # Each section is a tab (or a stacked group on one page if the dashboard has 3 or fewer sections).
+  # A section repeats the same block, filtered to one media type, platform or campaign group.
+  # A filter on a delivery-only column (media type, tactic, audience, creative) is written as
+  #   <filter> or [Row Type] != "delivery"   so conversions, quotes and trials stay on the page.
+  - name: Campaign Overview
+    filter: none
+    blocks: [kpi_row_delivery, kpi_row_outcomes, trend_week, breakdown_media_type]
+  - name: "{media_type}"          # one per media type the client runs: Social, Search, Display, CTV, DOOH, Video, Audio ...
+    repeat_for: media_types_in_spec
+    filter: {media_type: "{media_type}"}
+    blocks: [kpi_row_delivery, kpi_row_video_if_video, trend_week, trend_day, breakdown_tactic, breakdown_audience, breakdown_creative]
+  - name: Search Keywords
+    when: client_runs_search
+    filter: {media_type: [Search, Search - Bing]}
+    blocks: [keyword_table]
+  - name: GA4 - Live Call
+    when: client_has_ga4
+    blocks: [kpi_row_web, sessions_by_day, sessions_by_source]
+  - name: Goals
+    when: client_has_goals
+    blocks: [goal_gauges]
+
+blocks:
+  kpi_row_delivery:
+    layout: row
+    elements:
+      - {element: kpi, metric: Impressions}
+      - {element: kpi, metric: Clicks}
+      - {element: kpi, metric: Spend}
+      - {element: kpi, metric: CPM}
+      - {element: kpi, metric: CTR}
+      - {element: kpi, metric: CPC}
+    compare: previous-period     # small delta under each number
+  kpi_row_outcomes:
+    layout: row
+    elements:
+      - {element: kpi, metric: "{conversion_kpi}", default: Total Conversions}   # e.g. Find a Retailer - Nulo, Leads
+      - {element: kpi, metric: "{conversion_cost_kpi}", default: CPA}
+  kpi_row_video_if_video:
+    when: media_type in [CTV, Video, YouTube, DemandGen, Teads, Audio]
+    layout: row
+    elements:
+      - {element: kpi, metric: Starts}
+      - {element: kpi, metric: Completed Plays}
+      - {element: kpi, metric: VCR}
+      - {element: kpi, metric: CPCV}
+  kpi_row_web:
+    layout: row
+    elements:
+      - {element: kpi, metric: Sessions}
+      - {element: kpi, metric: Cost Per Session}
+  trend_week:
+    element: combo-chart
+    x: date:week
+    bars: Spend
+    line: "{primary_rate}"       # CPM by default, CPA when the section has conversions
+  trend_day:
+    element: combo-chart
+    x: date:day
+    bars: Impressions
+    line: CTR
+  breakdown_media_type:
+    element: combo-chart
+    x: media_type
+    bars: Spend
+    line: CPM
+    sort: {by: Spend, order: desc}
+  breakdown_tactic:
+    element: combo-chart
+    x: tactic
+    bars: Impressions
+    line: CTR
+    min_threshold: {metric: Spend, value: 0.01}     # Q010: hide rows with no spend
+  breakdown_audience:
+    element: combo-chart
+    x: audience
+    bars: Impressions
+    line: CTR
+    min_threshold: {metric: Spend, value: 0.01}
+  breakdown_creative:
+    element: combo-chart
+    x: creative_name
+    bars: Impressions
+    line: CTR
+    min_threshold: {metric: Spend, value: 0.01}
+    limit: 15
+  keyword_table:
+    element: table
+    columns: [keyword, Impressions, Clicks, CTR, Spend, CPC, Total Conversions, CPA]
+    sort: {by: Spend, order: desc}
+    limit: 50
+  sessions_by_day:
+    element: bar-chart
+    x: date:day
+    y: Sessions
+  sessions_by_source:
+    element: pie-chart
+    slice: ga4_session_source
+    value: Sessions
+  goal_gauges:
+    element: kpi-with-target
+    pairs:     # actual next to goal, never added together (K12)
+      - {actual: Impressions, goal: Impressions Goal}
+      - {actual: Clicks, goal: Clicks Goal}
+      - {actual: Completed Plays, goal: Video Fully Played Goal}
+
+formatting:
+  currency: "$#,##0.00"
+  integer: "#,##0"
+  percent: "0.00%"
+  decimal: "0.00"
+  empty_value: "–"        # shown when a rate has a zero denominator
+  null_rows: hidden
+
+hand_built:
+  # D001, D002, D032, D097 (and the custom parts of D091, D092, D093, D094) were built freehand in TapClicks.
+  # They reuse the blocks above where they match and follow their own spec file for the rest.
+  dashboards: [D001, D002, D032, D097]

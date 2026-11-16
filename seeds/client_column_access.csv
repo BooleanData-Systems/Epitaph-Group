@@ -1,0 +1,8 @@
+client_code,column_group,access,approved_by,notes
+*,identity,show,,Default for every client
+*,delivery,show,,
+*,spend,show,,Clients see spend in TapClicks today; set hide for a client that should not
+*,conversions,show,,
+*,client_files,show,,Only the client that sent the file has rows
+*,goals,show,,
+*,internal,hide,,Never shown to client users

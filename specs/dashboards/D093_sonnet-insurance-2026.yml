@@ -1,0 +1,4807 @@
+id: D093
+title: Sonnet Insurance - 2026
+client: Sonnet Insurance
+priority: High
+build_type: Custom
+move_group: '1'
+target_live_date: '2026-12-11'
+template: master-base-plus-custom
+tapclicks:
+  dashboard_id: 2943
+  client_account: Sonnet Insurance
+  built_from: freehand
+  data_widgets: 176
+scope:
+  smart_campaign_filter_values: (none - see scoping)
+  how_widgets_are_scoped: 'Data Source Name: 84, Other filter: 61, Campaign Name: 25, Client only (no filter): 6'
+notes:
+- GA4 Test source excluded (Q22). Quotes come from Sonnet Raw Data (K22).
+- 'Not rebuilt: 1 widget, marked do-not-use in TapClicks; 2 widgets, all metrics retired (K16, K19)'
+sections:
+- name: Creative
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 130628
+    element: table
+    title: Bottom 5 Creatives by CPC
+    metrics:
+    - CPC
+    sort:
+      by: CPC
+      order: asc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Facebook Ads
+      - Reddit Ads
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130629
+    element: table
+    title: Top 5 Creatives by CPC
+    metrics:
+    - CPC
+    sort:
+      by: CPC
+      order: desc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - metric_at_least:
+        metric: CPC
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Facebook Ads
+      - Reddit Ads
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130758
+    element: table
+    title: "CTV Creative\uFEFF"
+    metrics:
+    - Spend
+    - Impressions
+    - CPM
+    - Clicks
+    - CPC
+    - Completed Plays
+    - CPCV
+    - VCR
+    - Platform Conversions
+    - PCPA
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    - field: creative_name
+      op: not in
+      values:
+      - Unallocated
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Purchase -*'
+      - '*get_quote*'
+      - '*Custom.get Quote Any*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: channel
+      op: not in
+      values:
+      - Display
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130759
+    element: table
+    title: "Display Creative\uFEFF"
+    metrics:
+    - Spend
+    - Impressions
+    - CPM
+    - Clicks
+    - CPC
+    - Platform Conversions
+    - PCPA
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Display & Video 360 IO
+      - Amazon DSP
+    - field: creative_name
+      op: not in
+      values:
+      - Unallocated
+      - YouTube Ad
+      - Unknown
+    - field: campaign_name
+      op: in
+      values:
+      - '*GDN*'
+      - '*Programmatic_Display*'
+      - '*GoogleDGen*'
+      - '*chan=Paid Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Purchase -*'
+      - '*get_quote*'
+      - '*Custom.get Quote Any*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: channel
+      op: not in
+      values:
+      - Paid Video
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130760
+    element: table
+    title: "Social Creative\uFEFF"
+    metrics:
+    - Spend
+    - Impressions
+    - CPM
+    - Clicks
+    - CPC
+    - Platform Conversions
+    - PCPA
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Facebook Ads
+      - Reddit Ads
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Purchase -*'
+      - '*get_quote*'
+      - '*Custom.get Quote Any*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130871
+    element: table
+    title: Top 5 Creatives by CPC
+    metrics:
+    - CPC
+    sort:
+      by: CPC
+      order: desc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - metric_at_least:
+        metric: CPC
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Display & Video 360 IO
+      - Amazon DSP
+    - field: creative_name
+      op: not in
+      values:
+      - YouTube Ad
+      - Unallocated
+      - Unknown
+    - field: campaign_name
+      op: in
+      values:
+      - '*GDN*'
+      - '*Programmatic_Display*'
+      - '*GoogleDGen*'
+      - '*chan=Paid Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    - field: channel
+      op: not in
+      values:
+      - Paid Video
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130872
+    element: table
+    title: Bottom 5 Creatives by CPC
+    metrics:
+    - CPC
+    sort:
+      by: CPC
+      order: asc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+      - Display & Video 360 IO
+      - Amazon DSP
+    - field: creative_name
+      op: not in
+      values:
+      - YouTube Ad
+      - Unallocated
+      - Unknown
+    - field: campaign_name
+      op: in
+      values:
+      - '*GDN*'
+      - '*Programmatic_Display*'
+      - '*GoogleDGen*'
+      - '*chan=Paid Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    - metric_at_least:
+        metric: CPC
+        value: 0.01
+    - field: channel
+      op: not in
+      values:
+      - Paid Video
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130873
+    element: table
+    title: Top 5 Creatives by CPM
+    metrics:
+    - CPM
+    sort:
+      by: CPM
+      order: desc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - metric_at_least:
+        metric: CPC
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    - field: creative_name
+      op: not in
+      values:
+      - Unallocated
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    - field: channel
+      op: not in
+      values:
+      - Display
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 130874
+    element: table
+    title: Bottom 5 Creatives by CPM
+    metrics:
+    - CPM
+    sort:
+      by: CPM
+      order: asc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Amazon DSP
+    - field: creative_name
+      op: not in
+      values:
+      - Unallocated
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    - field: channel
+      op: not in
+      values:
+      - Display
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 133978
+    element: table
+    title: "DOOH Creative\uFEFF"
+    metrics:
+    - Spend
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - HiveStack
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 133979
+    element: table
+    title: Top 5 Creatives by CPM
+    metrics:
+    - CPM
+    sort:
+      by: CPM
+      order: desc
+      limit: 5
+    group_by:
+    - creative_name
+    - site
+    - product
+    - language
+    filters:
+    - metric_at_least:
+        metric: CPM
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 133980
+    element: table
+    title: Bottom 5 Creatives by CPM
+    metrics:
+    - CPM
+    sort:
+      by: CPM
+      order: asc
+      limit: 5
+    group_by:
+    - creative_name
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - HiveStack
+    - metric_at_least:
+        metric: CPM
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135034
+    element: table
+    title: "YouTube Creative\uFEFF"
+    metrics:
+    - Spend
+    - Impressions
+    - CPM
+    - Clicks
+    - CPC
+    - Completed Plays
+    - CPCV
+    - VCR
+    - Platform Conversions
+    - PCPA
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Sonnet - DV360 Creative
+      - Silverpush - Automated Report
+    - field: creative_name
+      op: not in
+      values:
+      - Unallocated
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: conversion_tag
+      op: in
+      values:
+      - '*Purchase -*'
+      - '*get_quote*'
+      - '*Custom.get Quote Any*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: channel
+      op: not in
+      values:
+      - Display
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135035
+    element: table
+    title: Top 5 Creatives by VCR
+    metrics:
+    - VCR
+    sort:
+      by: VCR
+      order: desc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - metric_at_least:
+        metric: CPC
+        value: 0.01
+    - field: source_name
+      op: in
+      values:
+      - Sonnet - DV360 Creative
+      - Silverpush - Automated Report
+    - field: creative_name
+      op: not in
+      values:
+      - Unallocated
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    - field: channel
+      op: not in
+      values:
+      - Display
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135036
+    element: table
+    title: Bottom 5 Creatives by CPCV
+    metrics:
+    - VCR
+    sort:
+      by: CPCV
+      order: asc
+      limit: 5
+    group_by:
+    - creative_name
+    - call_to_action
+    - site
+    - product
+    - language
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Sonnet - DV360 Creative
+      - Silverpush - Automated Report
+    - field: creative_name
+      op: not in
+      values:
+      - Unallocated
+    - field: call_to_action
+      op: not in
+      values:
+      - Unclassified
+    - field: channel
+      op: not in
+      values:
+      - Display
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Executive Summary - Paid Media (Current Month)
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 132556
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 132561
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet_Ontario_Auto_Quotes Goal
+      - Sonnet_Ontario_Home_Quotes Goal
+      - Sonnet_Quebec_Auto_Quotes Goal
+      - Sonnet_Quebec_Home_Quotes Goal
+      - Sonnet_British Columbia_Quotes Goal
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 132562
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet_British Columbia_Auto_CPQ Goal
+      - Sonnet_British Columbia_Home_CPQ Goal
+      - Sonnet_Ontario_Auto_CPQ Goal
+      - Sonnet_Ontario_Home_CPQ Goal
+      - Sonnet_Quebec_Auto_CPQ Goal
+      - Sonnet_Quebec_Home_CPQ Goal
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134262
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134263
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134264
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134267
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134361
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134362
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134363
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134364
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134365
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134366
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134372
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+      - Sonnet_Ontario_Auto_Quotes Goal
+      - Sonnet_Ontario_Home_Quotes Goal
+      - Sonnet_Quebec_Auto_Quotes Goal
+      - Sonnet_Quebec_Home_Quotes Goal
+      - Sonnet_British Columbia_Quotes Goal
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134373
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+      - Sonnet_British Columbia_Auto_CPQ Goal
+      - Sonnet_British Columbia_Home_CPQ Goal
+      - Sonnet_Ontario_Auto_CPQ Goal
+      - Sonnet_Ontario_Home_CPQ Goal
+      - Sonnet_Quebec_Auto_CPQ Goal
+      - Sonnet_Quebec_Home_CPQ Goal
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134392
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134393
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - Ontario
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134394
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134395
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134396
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134397
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134398
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134399
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134400
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134407
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134408
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134409
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134410
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134411
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134412
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134413
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134414
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134415
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134558
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134630
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134631
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134633
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Spend Goal
+    - Spend
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+      - Sonnet_Ontario_Spend Goal
+      - Sonnet_Quebec_Spend Goal
+      - Sonnet_British Columbia_Spend Goal
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134634
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134635
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135023
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135024
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135025
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135026
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135888
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135889
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 136355
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Spend Goal
+    - Spend
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 136356
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Spend Goal
+    - Spend
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 136357
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Spend Goal
+    - Spend
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thismonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Executive Summary - Paid Media (Last Month)
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 134645
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet_Ontario_Auto_Quotes Goal
+      - Sonnet_Ontario_Home_Quotes Goal
+      - Sonnet_Quebec_Auto_Quotes Goal
+      - Sonnet_Quebec_Home_Quotes Goal
+      - Sonnet_British Columbia_Quotes Goal
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134646
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - Radio
+      - DOOH
+      - Audio
+      - Linear TV
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet_British Columbia_Auto_CPQ Goal
+      - Sonnet_British Columbia_Home_CPQ Goal
+      - Sonnet_Ontario_Auto_CPQ Goal
+      - Sonnet_Ontario_Home_CPQ Goal
+      - Sonnet_Quebec_Auto_CPQ Goal
+      - Sonnet_Quebec_Home_CPQ Goal
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134647
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134648
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134649
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134650
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134651
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+      - Sonnet_Ontario_Auto_Quotes Goal
+      - Sonnet_Ontario_Home_Quotes Goal
+      - Sonnet_Quebec_Auto_Quotes Goal
+      - Sonnet_Quebec_Home_Quotes Goal
+      - Sonnet_British Columbia_Quotes Goal
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134652
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Spend Goal
+    - Spend
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - Radio
+      - DOOH
+      - Audio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+      - Sonnet_Ontario_Spend Goal
+      - Sonnet_Quebec_Spend Goal
+      - Sonnet_British Columbia_Spend Goal
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134653
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - Radio
+      - DOOH
+      - Audio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+      - Sonnet_British Columbia_Auto_CPQ Goal
+      - Sonnet_British Columbia_Home_CPQ Goal
+      - Sonnet_Ontario_Auto_CPQ Goal
+      - Sonnet_Ontario_Home_CPQ Goal
+      - Sonnet_Quebec_Auto_CPQ Goal
+      - Sonnet_Quebec_Home_CPQ Goal
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134654
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - Audio
+      - Radio
+      - DOOH
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134655
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134658
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134659
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - Audio
+      - Radio
+      - DOOH
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134660
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - Ontario
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134661
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134662
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134663
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134664
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134665
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - Audio
+      - Radio
+      - DOOH
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134666
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - Audio
+      - Radio
+      - DOOH
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134667
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134670
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134671
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134672
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134673
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134674
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134675
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134676
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134677
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134678
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134679
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134682
+    element: kpi
+    title: Quotes
+    metrics:
+    - Quotes
+    - Quotes Goal
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134683
+    element: kpi
+    title: Quotes
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134684
+    element: kpi
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134685
+    element: kpi
+    title: CPQ
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134686
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134687
+    element: kpi
+    title: CPM
+    metrics:
+    - CPC
+    filters:
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134688
+    element: line-chart
+    title: Media Spend and Quotes over time
+    metrics:
+    - Spend
+    - Quotes
+    - Binds
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134689
+    element: bar-chart
+    title: Quotes by Channel
+    metrics:
+    - Quotes
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135027
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - Audio
+      - Radio
+      - DOOH
+      - Linear TV
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135028
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - Audio
+      - Radio
+      - DOOH
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Ontario*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135029
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*Quebec*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135030
+    element: bar-chart
+    title: Spend by Channel
+    metrics:
+    - Spend
+    group_by:
+    - channel
+    - platform
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Direct
+      - Display
+      - Organic Search
+      - Paid Search
+      - Paid Video
+      - Social
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135890
+    element: kpi-with-target
+    title: Quotes
+    metrics:
+    - Quotes Goal
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly Quotes Goal 2025-2026
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135891
+    element: line-chart
+    title: CPQ
+    metrics:
+    - CPQ
+    - CPQ Goal
+    group_by:
+    - date
+    filters:
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+      - Goals
+      - DOOH
+      - Audio
+      - Radio
+      - Linear TV
+    - field: campaign_name
+      op: not in
+      values:
+      - Sonnet Yearly CPQ Goal 2025-2026
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: province
+      op: in
+      values:
+      - '*British Columbia*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    date_range:
+      was: 'Own relative range: lastmonth'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Quality Details
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 129162
+    element: pie-chart
+    title: Product Portfolio
+    metrics:
+    - Quotes
+    group_by:
+    - product
+    source_mapping_in_tapclicks: 'Direct: Sonnet - Raw Data'
+  - tapclicks_widget_id: 129163
+    element: pie-chart
+    title: Affinity vs. Retail
+    metrics:
+    - Quotes
+    group_by:
+    - segment
+    source_mapping_in_tapclicks: 'Direct: Sonnet - Group Breakdown Data'
+  - tapclicks_widget_id: 129165
+    element: pie-chart
+    title: Multiline vs Monoline
+    metrics:
+    - Multiline Customer
+    - Monoline Customer
+    group_by:
+    - date
+    source_mapping_in_tapclicks: 'Direct: Sonnet - Multiline Data'
+  - tapclicks_widget_id: 129169
+    element: pie-chart
+    title: PVM
+    metrics:
+    - Red
+    - Green
+    - Yellow
+    group_by:
+    - quality_band
+    source_mapping_in_tapclicks: 'Direct: Sonnet - Quote Quality Data'
+- name: Search Visibility & Competition
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 135593
+    element: line-chart
+    title: Sonnet Visibility
+    metrics:
+    - Search Impr. share (Auction Insights)
+    - Click share
+    - Impr. (Abs. Top) %
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    source_mapping_in_tapclicks: 'Direct: Sonnet Visibility - Weekly V2'
+  - tapclicks_widget_id: 135594
+    element: line-chart
+    title: Auction Pressure
+    metrics:
+    - Search lost IS (budget)
+    - Search lost IS (rank)
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    source_mapping_in_tapclicks: 'Direct: Sonnet Auction Pressure - Weekly V2'
+  - tapclicks_widget_id: 135596
+    element: line-chart
+    title: Untitled widget
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    group_by:
+    - competitor_domain
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+      - tdinsurance.com
+      - belairdirect.com
+      - intact.ca
+      - desjardins.com
+      - allstate.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135598
+    element: line-chart
+    title: Sonnet Visibility
+    metrics:
+    - Search Impr. share (Auction Insights)
+    - Click share
+    - Impr. (Abs. Top) %
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    source_mapping_in_tapclicks: 'Direct: Sonnet Visibility - Monthly V2'
+  - tapclicks_widget_id: 135599
+    element: line-chart
+    title: Auction Pressure
+    metrics:
+    - Search lost IS (budget)
+    - Search lost IS (rank)
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    source_mapping_in_tapclicks: 'Direct: Sonnet Auction Pressure - Monthly V2'
+  - tapclicks_widget_id: 135601
+    element: line-chart
+    title: Untitled widget
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    group_by:
+    - competitor_domain
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+      - tdinsurance.com
+      - belairdirect.com
+      - intact.ca
+      - desjardins.com
+      - allstate.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135605
+    element: line-chart
+    title: Sonnet Visibility
+    metrics:
+    - Search Impr. share (Auction Insights)
+    - Click share
+    - Impr. (Abs. Top) %
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    source_mapping_in_tapclicks: 'Direct: Sonnet Visibility - Weekly V2'
+  - tapclicks_widget_id: 135606
+    element: line-chart
+    title: Auction Pressure
+    metrics:
+    - Search lost IS (budget)
+    - Search lost IS (rank)
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    source_mapping_in_tapclicks: 'Direct: Sonnet Auction Pressure - Weekly V2'
+  - tapclicks_widget_id: 135608
+    element: line-chart
+    title: Untitled widget
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    group_by:
+    - competitor_domain
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+      - tdinsurance.com
+      - belairdirect.com
+      - intact.ca
+      - beneva.ca
+      - caaquebec.com
+      - desjardins.com
+      - promutuelassurance.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135610
+    element: line-chart
+    title: Sonnet Visibility
+    metrics:
+    - Search Impr. share (Auction Insights)
+    - Click share
+    - Impr. (Abs. Top) %
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    source_mapping_in_tapclicks: 'Direct: Sonnet Visibility - Monthly V2'
+  - tapclicks_widget_id: 135611
+    element: line-chart
+    title: Auction Pressure
+    metrics:
+    - Search lost IS (budget)
+    - Search lost IS (rank)
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    source_mapping_in_tapclicks: 'Direct: Sonnet Auction Pressure - Monthly V2'
+  - tapclicks_widget_id: 135613
+    element: line-chart
+    title: Untitled widget
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    group_by:
+    - competitor_domain
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+      - tdinsurance.com
+      - belairdirect.com
+      - intact.ca
+      - beneva.ca
+      - caaquebec.com
+      - desjardins.com
+      - promutuelassurance.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135616
+    element: line-chart
+    title: Sonnet Visibility
+    metrics:
+    - Search Impr. share (Auction Insights)
+    - Click share
+    - Impr. (Abs. Top) %
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    source_mapping_in_tapclicks: 'Direct: Sonnet Visibility - Weekly V2'
+  - tapclicks_widget_id: 135617
+    element: line-chart
+    title: Auction Pressure
+    metrics:
+    - Search lost IS (budget)
+    - Search lost IS (rank)
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    source_mapping_in_tapclicks: 'Direct: Sonnet Auction Pressure - Weekly V2'
+  - tapclicks_widget_id: 135619
+    element: line-chart
+    title: Untitled widget
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    group_by:
+    - competitor_domain
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+      - tdinsurance.com
+      - belairdirect.com
+      - squareone.ca
+      - apollocover.com
+      - bcaa.com
+      - westlandinsurance.ca
+      - cooperators.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135621
+    element: line-chart
+    title: Sonnet Visibility
+    metrics:
+    - Search Impr. share (Auction Insights)
+    - Click share
+    - Impr. (Abs. Top) %
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    source_mapping_in_tapclicks: 'Direct: Sonnet Visibility - Monthly V2'
+  - tapclicks_widget_id: 135622
+    element: line-chart
+    title: Auction Pressure
+    metrics:
+    - Search lost IS (budget)
+    - Search lost IS (rank)
+    group_by:
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    source_mapping_in_tapclicks: 'Direct: Sonnet Auction Pressure - Monthly V2'
+  - tapclicks_widget_id: 135624
+    element: line-chart
+    title: Untitled widget
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    group_by:
+    - competitor_domain
+    - date
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+      - tdinsurance.com
+      - belairdirect.com
+      - squareone.ca
+      - apollocover.com
+      - bcaa.com
+      - westlandinsurance.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135686
+    element: kpi
+    title: Sonnet
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135687
+    element: kpi
+    title: Sonnet
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135689
+    element: kpi
+    title: Sonnet
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135690
+    element: kpi
+    title: Sonnet
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135691
+    element: kpi
+    title: Sonnet
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135692
+    element: kpi
+    title: Sonnet
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - You
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135693
+    element: kpi
+    title: TD Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - tdinsurance.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135694
+    element: kpi
+    title: belairdirect
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - belairdirect.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135695
+    element: kpi
+    title: Intact
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - intact.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135696
+    element: kpi
+    title: Desjardins
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - desjardins.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135697
+    element: kpi
+    title: Allstate
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - allstate.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135698
+    element: kpi
+    title: TD Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - tdinsurance.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135699
+    element: kpi
+    title: belairdirect
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - belairdirect.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135700
+    element: kpi
+    title: Intact
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - intact.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135701
+    element: kpi
+    title: Desjardins
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - desjardins.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135702
+    element: kpi
+    title: Allstate
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Ontario
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - allstate.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135703
+    element: kpi
+    title: TD Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - tdinsurance.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135704
+    element: kpi
+    title: belairdirect
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - belairdirect.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135705
+    element: kpi
+    title: Intact
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - intact.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135706
+    element: kpi
+    title: Beneva
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - beneva.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135707
+    element: kpi
+    title: CAA Quebec
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - caaquebec.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135708
+    element: kpi
+    title: Desjardins
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - desjardins.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135709
+    element: kpi
+    title: Promutuel
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - promutuelassurance.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135710
+    element: kpi
+    title: TD Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - field: competitor_domain
+      op: in
+      values:
+      - tdinsurance.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135711
+    element: kpi
+    title: belairdirect
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - belairdirect.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135712
+    element: kpi
+    title: Intact
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - intact.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135713
+    element: kpi
+    title: Beneva
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - beneva.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135714
+    element: kpi
+    title: CAA Quebec
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - caaquebec.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135715
+    element: kpi
+    title: Desjardins
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - desjardins.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135716
+    element: kpi
+    title: Promutuel
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Quebec
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - promutuelassurance.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135718
+    element: kpi
+    title: TD Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - tdinsurance.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135719
+    element: kpi
+    title: Square One
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - squareone.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135720
+    element: kpi
+    title: belairdirect
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - belairdirect.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135721
+    element: kpi
+    title: Apollo Cover
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - apollocover.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135722
+    element: kpi
+    title: BCAA
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - bcaa.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135723
+    element: kpi
+    title: Westland Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - westlandinsurance.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135724
+    element: kpi
+    title: Co-operators
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - cooperators.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Weekly V2'
+  - tapclicks_widget_id: 135726
+    element: kpi
+    title: TD Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - tdinsurance.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135727
+    element: kpi
+    title: belairdirect
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - belairdirect.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135728
+    element: kpi
+    title: Square One
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - squareone.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135729
+    element: kpi
+    title: Apollo Cover
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - apollocover.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135730
+    element: kpi
+    title: Westland Insurance
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - westlandinsurance.ca
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'
+  - tapclicks_widget_id: 135731
+    element: kpi
+    title: BCAA
+    metrics:
+    - Search Impr. share (Auction Insights)
+    hide_metric_label: true
+    filters:
+    - field: account_name
+      op: in
+      values:
+      - Alberta / British Columbia
+    - metric_at_least:
+        metric: Search Impr. share (Auction Insights)
+        value: 0.01
+    - field: competitor_domain
+      op: in
+      values:
+      - bcaa.com
+    source_mapping_in_tapclicks: 'Direct: Sonnet vs. Competition - Monthly V2'

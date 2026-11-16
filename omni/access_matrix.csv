@@ -1,0 +1,15 @@
+client_code,omni_user_group,user_attribute_client_code,dashboards,identity,delivery,spend,conversions,client_files,goals,internal
+C01,Client - Aquamar,C01,D001,show,show,show,show,show,show,hide
+C02,Client - BDO,C02,D002,show,show,show,show,show,show,hide
+C03,Client - Cobs Bread,C03,D005,show,show,show,show,show,show,hide
+C04,Client - Conexus,C04,D014 D017,show,show,show,show,show,show,hide
+C05,Client - Embark,C05,D023,show,show,show,show,show,show,hide
+C06,Client - Kicking Horse Coffee,C06,D026 D032,show,show,show,show,show,show,hide
+C07,Client - Kids Help Phone,C07,D035 D038 D039 D041 D043 D044 D046 D049 D051 D052,show,show,show,show,show,show,hide
+C08,Client - Nulo,C08,D053 D056,show,show,show,show,show,show,hide
+C09,Client - Ottawa Tourism,C09,D059 D061 D074,show,show,show,show,show,show,hide
+C10,Client - SiriusXM,C10,D091 D092,show,show,show,show,show,show,hide
+C11,Client - Sonnet Insurance,C11,D093 D094,show,show,show,show,show,show,hide
+C12,Client - Sysco,C12,D095,show,show,show,show,show,show,hide
+C13,Client - Wurth Canada,C13,D097,show,show,show,show,show,show,hide
+ALL,Epitaph,ALL,all,show,show,show,show,show,show,show

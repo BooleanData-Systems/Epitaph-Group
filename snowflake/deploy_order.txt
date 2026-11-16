@@ -1,0 +1,26 @@
+# Run top to bottom. 00_setup is run once by an account admin (ACCOUNTADMIN); CI runs from 10_control on.
+# 00_setup/01_account.sql
+# 00_setup/02_integrations.sql
+# 00_setup/03_grants.sql
+# 00_setup/04_monitoring.sql   (resource monitors and monitoring views; re-run by the admin when a quota changes)
+10_control/control_tables.sql
+20_raw/raw_tables.sql
+20_raw/load_sharepoint_proc.sql
+20_raw/load_fx_rates.sql
+30_staging/stg_tapclicks_history.sql
+30_staging/stg_google_ads.sql
+30_staging/stg_microsoft_ads.sql
+30_staging/stg_facebook_ads.sql
+30_staging/stg_ga4_sessions.sql
+30_staging/stg_sharepoint_feeds.sql
+30_staging/stg_ad_delivery_union.sql
+40_marts/dims.sql
+40_marts/facts.sql
+45_archive/archive.sql
+50_semantic/v_media_performance_daily.sql
+50_semantic/v_kpi_definitions.sql
+50_semantic/column_masking.sql
+60_checks/comparison_checks.sql
+60_checks/dq_checks.sql
+70_tasks/tasks_and_alerts.sql
+70_tasks/pipeline_monitoring.sql

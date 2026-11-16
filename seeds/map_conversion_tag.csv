@@ -1,0 +1,84 @@
+client_code,platform,tag_name,kpi_group,counts_toward_kpi,approved_by,valid_from,valid_to
+C03,*,COBS Bread - GA4 (web) find_a_bakery_page_click,find_a_bakery,true,Proposed T01: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C03,*,*Custom.find A Bakery Click*,find_a_bakery,true,Proposed T01: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C03,*,Sign-up (Google Analytics event sign_up),completed_registration,true,Proposed T01: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C04,*,Conexus - Investing - Form Start - BingAds - Epitaph,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Conexus - Investing - Form Start - GoogleAds - Epitaph,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Google Ads - Investing Form Start,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Microsoft Ads - Investing Form Start,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Investing - Form Start,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Investing Form Start 2025,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Conexus - Investing Promo Form Start 2025,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,offsite_conversion.fb_pixel_custom.investingpromoformstart2025,investing_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Conexus - Investing - Form Complete - Epitaph,investing_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Conexus - Investing - Form Complete - GoogleAds - Epitaph,investing_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Google Ads - Investing Form Submit,investing_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Microsoft Ads - Investing Form Submit,investing_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Conexus - Mortgage - Form Start - BingAds - Epitaph,mortgage_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Conexus - Mortgage - Form Start - GoogleAds - Epitaph,mortgage_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Google Ads - Mortgage Form Start,mortgage_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Microsoft Ads - Mortgage Form Start,mortgage_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Conexus - Mortgage - Form Complete - GoogleAds - Epitaph,mortgage_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Google Ads - Mortgage Form Submit,mortgage_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Microsoft Ads - Mortgage Form Submit,mortgage_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Google Ads - Connect With Us Form Start,connect_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Microsoft Ads - Connect With Us Form Start,connect_form_start,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Google Ads - Connect With Us Form Submit,connect_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,*,Epitaph - Microsoft Ads - Connect With Us Form Submit,connect_form_complete,true,Nathan Sennema 2026-11-02 (T02),2000-01-01,9999-12-31
+C04,The Trade Desk,Conexus Investing 2026,investing_form_start,true,Nathan Sennema 2026-11-02 (T02); start date placeholder until D-008,2026-01-01,9999-12-31
+C04,The Trade Desk,Cornerstone Conexus Investing 2026,investing_form_start,true,Nathan Sennema 2026-11-02 (T02); start date placeholder until D-008,2026-01-01,9999-12-31
+C04,The Trade Desk,Synergy Conexus Investing 2026,investing_form_start,true,Nathan Sennema 2026-11-02 (T02); start date placeholder until D-008,2026-01-01,9999-12-31
+C05,Amazon DSP,*Application*,amazon_application,true,Nathan Sennema 2026-11-02 (T03),2000-01-01,9999-12-31
+C05,Amazon DSP,*Checkout*,amazon_checkout,true,Nathan Sennema 2026-11-02 (T03),2000-01-01,9999-12-31
+C06,*,*Purchase*,order,true,Nathan Sennema 2026-11-02 (T04); tag names to confirm on first sync,2000-01-01,9999-12-31
+C06,*,*Order*,order,true,Nathan Sennema 2026-11-02 (T04); tag names to confirm on first sync,2000-01-01,9999-12-31
+C06,*,Cart Start,cart_start,false,Nathan Sennema 2026-11-02 (T04),2000-01-01,9999-12-31
+C06,*,Cart Start (new),cart_start,false,Nathan Sennema 2026-11-02 (T04),2000-01-01,9999-12-31
+C07,*,Kids Help Phone (GA4 New) (web) scroll,scroll,true,Nathan Sennema 2026-11-02 (T05),2000-01-01,9999-12-31
+C07,*,*App Store*,apple_app_store,false,Nathan Sennema 2026-11-02 (T05),2000-01-01,9999-12-31
+C08,*,Find A Retailer,find_a_retailer,true,Nathan Sennema 2026-11-02 (T06),2000-01-01,9999-12-31
+C08,*,Nulo - Find a Retailer,find_a_retailer,true,Nathan Sennema 2026-11-02 (T06),2000-01-01,9999-12-31
+C08,*,Tiktok - Find a Retailer,find_a_retailer,true,Nathan Sennema 2026-11-02 (T06),2000-01-01,9999-12-31
+C08,*,https://www.nulo.com - GA4 (web) GA4 Where To Buy,find_a_retailer,true,Nathan Sennema 2026-11-02 (T06),2000-01-01,9999-12-31
+C08,*,*where_to_buy*,find_a_retailer,true,Nathan Sennema 2026-11-02 (T06),2000-01-01,9999-12-31
+C08,*,Nulo - Shop Now,shop_now,false,Proposed T06: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C08,*,Shop Now Click,shop_now,false,Proposed T06: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C08,*,*shop_now*,shop_now,false,Proposed T06: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C08,*,Clicks to call,call,false,Nathan Sennema 2026-11-02 (T06),2000-01-01,9999-12-31
+C09,*,Ottawa Tourism - Book Now Search,booking_search,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,Booking Search,booking_search,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,*Booking Search*,booking_search,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,Ottawa Tourism - Add to Cart,add_to_cart,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,Ottawa Pass Add to Cart,add_to_cart,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,Ottawa Tourism Museum Pass,order,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,Ottawa Pass Purchase,order,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,*Ottawa Pass Purchase*,order,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,Booking Confirmation,booking_confirmation,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C09,*,*Booking Confirmation*,booking_confirmation,true,Nathan Sennema 2026-11-02 (T07),2000-01-01,9999-12-31
+C10,*,SiriusXM - Streaming Subscription Complete,streaming_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,Streaming Purchase,streaming_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,*SiriusXM - Streaming - Subscriber Confirmation*,streaming_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,SiriusXM - Streaming 6MOFREE - Complete,streaming_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,Inactive Purchase,streaming_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,SiriusXM - Inactive Subscription Complete,streaming_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,SiriusXM - Satellite - Complete,satellite_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,SiriusXM - Satellite 6MOFREE - Complete,satellite_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,SXM Satellite Acquisition 2026 Complete,satellite_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,SiriusXM - Commuters Complete,commuter_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C10,*,SXM Commuters 5$ for 12 Months - Complete,commuter_subscription,true,Nathan Sennema 2026-11-02 (T08),2000-01-01,9999-12-31
+C11,*,*Purchase -*,platform_quote,true,Nathan Sennema 2026-11-02 (T09),2000-01-01,9999-12-31
+C11,*,*get_quote*,platform_quote,true,Nathan Sennema 2026-11-02 (T09),2000-01-01,9999-12-31
+C11,*,*Custom.get Quote Any*,platform_quote,true,Nathan Sennema 2026-11-02 (T09),2000-01-01,9999-12-31
+C13,*,Wurth Canada - GA4 (web) purchase,order,true,Proposed T10: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C13,*,Bing Purchase,order,true,Proposed T10: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C13,*,Wurth - Purchase,order,true,Proposed T10: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C13,*,Wurth - Purchase Confirmation,order,true,Proposed T10: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C13,*,Purchase - Linkedin,order,true,Proposed T10: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C13,*,Tag1,order,true,Proposed T10: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C13,*,Add to Cart,add_to_cart,false,Proposed T10: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C13,*,*Lead*,lead,false,Nathan Sennema 2026-11-02 (T10),2000-01-01,9999-12-31
+C12,*,Sysco Canada Website - GA4 (web) sign_up,sign_up,true,Proposed T11: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C12,*,Sysco Canada Website - GA4 (web) form_submit,website_action,true,Proposed T11: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C12,*,Sysco.ca - GA4 (web) call_contact,website_action,true,Proposed T11: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C12,*,Sysco.ca - GA4 (web) email_contact,website_action,true,Proposed T11: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31
+C12,*,Sysco Canada Website - GA4 (web) Download,website_action,true,Proposed T11: applies unless Epitaph objects by 2026-11-13,2000-01-01,9999-12-31

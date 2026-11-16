@@ -1,0 +1,5773 @@
+id: D038
+title: KHP - Good2Talk
+client: Kids Help Phone
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 589
+  client_account: Kids Help Phone
+  built_from: template
+  data_widgets: 272
+scope:
+  smart_campaign_filter_values: 'Kids Help Phone: Good2Talk'
+  how_widgets_are_scoped: 'Smart Campaign: 257, Client only (no filter): 8, Other filter: 7'
+notes:
+- 'Not rebuilt: 8 widgets, source 55 Rush stopped over 90 days ago (A23)'
+sections:
+- name: 55 Rush
+  rebuild: false
+  widgets: []
+  note: every widget in this section is retired; data stays available by date range
+- name: Always On
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 28217
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - Good2Talk Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28219
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T - Always-on/BTS
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28220
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28221
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28222
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28225
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28226
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T - Always-on/BTS
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28227
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28228
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28231
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28232
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28233
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28234
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28237
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28238
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28240
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29427
+    element: kpi
+    title: 'Search CPC Goal: $2.00'
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29428
+    element: kpi
+    title: 'Instagram CPC Goal: $3.00'
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: media_type
+      op: in
+      values:
+      - Instagram
+      - Facebook+Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29429
+    element: kpi
+    title: 'Tiktok CPM Goal: $3.50'
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29430
+    element: kpi
+    title: 'Display CPC Goal: $5.00'
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4 Clicks
+      - G2T Always On Q3-Q4
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31974
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38136
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - g2talwayson
+      - good2talkalwayson
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - Good2Talk Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk ON Q1 RSM
+      - G2T Always On August
+      - g2talwaysonaugust
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52480
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - Good2Talk Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52481
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - Good2Talk Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52482
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - Good2Talk Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52483
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - Good2Talk Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52484
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - Good2Talk Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk ON Q1 RSM
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82739
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82740
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82741
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82742
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - Good2Talk Q1 2024 UB
+      - Good2Talk Always On
+      - Good2Talk ON Q1 RSM
+      - G2T - Always-on/BTS
+      - G2T Always On
+      - G2T Always On August
+      - G2T - Always On
+      - G2T Always On August-Dec
+      - G2T Always On Q3-Q4
+      - G2T Always On Q3-Q4 Clicks
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 22076
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22078
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22079
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Instagram
+      - StndDisplay
+      - TikTok
+      - Snapchat
+      - Search
+      - DOOH
+      - Video
+      - YouTube
+      - Reddit
+      - Audio
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22080
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22081
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22084
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22085
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22086
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22087
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22090
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22091
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22092
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22093
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22096
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22097
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22098
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22099
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33555
+    element: combo-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - site_key
+    filters:
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33557
+    element: combo-chart
+    title: Sessions by Week
+    metrics:
+    - Sessions
+    - Cost Per Session
+    group_by:
+    - date:week
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33559
+    element: combo-chart
+    title: Cost per Session by Media Type
+    metrics:
+    - Cost Per Session
+    group_by:
+    - site_key
+    filters:
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33560
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52459
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52460
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52461
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52462
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52463
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82719
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82720
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82721
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82722
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: DOOH
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 22133
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22135
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22136
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22137
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22140
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22141
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22142
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58917
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58918
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82730
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82731
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Display
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 19798
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19800
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19801
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19802
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19805
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19806
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19807
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19810
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19811
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19812
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33567
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paiddisplay
+      - programmatic / paidnative
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52475
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52476
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52477
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52478
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52479
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82727
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82728
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82729
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: GA4 - Live Call
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 37083
+    element: kpi
+    title: Total Sessions
+    metrics:
+    - Sessions
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*good2talk*'
+      - '*g2t*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - print
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 37084
+    element: pie-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_session_source
+    - ga4_session_medium
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*good2talk*'
+      - '*g2t*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - print
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 37085
+    element: bar-chart
+    title: Sessions by Day
+    metrics:
+    - Sessions
+    group_by:
+    - date:day
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*good2talk*'
+      - '*g2t*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - print
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 50647
+    element: bar-chart
+    title: 'Always On: Sessions by Creative'
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_manual_ad_content
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - g2talwayson
+      - good2talkalwayson
+    - field: ga4_session_source
+      op: not in
+      values:
+      - print
+    - field: ga4_manual_ad_content
+      op: not in
+      values:
+      - (not set)
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 50648
+    element: bar-chart
+    title: 'Language Expansion: Sessions by Creative'
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_manual_ad_content
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_source
+      op: not in
+      values:
+      - print
+    - field: ga4_manual_ad_content
+      op: not in
+      values:
+      - (not set)
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 50649
+    element: bar-chart
+    title: 'Peer2Peer: Sessions by Creative'
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_manual_ad_content
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - g2tpeer2peer
+    - field: ga4_session_source
+      op: not in
+      values:
+      - print
+    - field: ga4_manual_ad_content
+      op: not in
+      values:
+      - (not set)
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 50650
+    element: bar-chart
+    title: 'Expanded Access Point: Sessions by Creative'
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_manual_ad_content
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - gt2expandedaccesspoint
+    - field: ga4_session_source
+      op: not in
+      values:
+      - print
+    - field: ga4_manual_ad_content
+      op: not in
+      values:
+      - (not set)
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+- name: Language Expansion
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 28243
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28245
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28246
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28247
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28248
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28251
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28252
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28253
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28254
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28257
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28258
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28259
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28260
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28263
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28264
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28265
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28266
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29435
+    element: kpi
+    title: 'Meta CPM Goal: $5.00'
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29436
+    element: kpi
+    title: 'YouTube CPCV Goal: $0.05'
+    metrics:
+    - CPCV
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38137
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - languageexpansion
+      - g2tlanguageexpansion
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58934
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58935
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58937
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58938
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58939
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82745
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82746
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82747
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82748
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Language Expansion
+      - G2T Language Expansion
+      - Language Expansion
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Online Messaging
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 31945
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31947
+    element: kpi
+    title: 'Tiktok CPM Goal: $3.00'
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31948
+    element: kpi
+    title: 'Snapchat CPM Goal: $6.50'
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31951
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31952
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31953
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31954
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31957
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31958
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31959
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31960
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31963
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31964
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31965
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31966
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31969
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31970
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31971
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 31972
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38139
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - gt2expandedaccesspoint
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+      - g2tonlinemessaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52486
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52487
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52488
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52489
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52490
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82753
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82754
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82755
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82756
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T - Expanded Access Point
+      - G2T - Online Messaging
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Peer2Peer
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 28269
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28271
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28272
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28273
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28274
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28277
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28278
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28279
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28280
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28283
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28284
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28285
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28286
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28861
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - date:week
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28862
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - media_type
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28863
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28864
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 28866
+    element: kpi
+    title: Video Metrics
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29438
+    element: kpi
+    title: 'Reddit CPM Goal: $5.00'
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 29439
+    element: kpi
+    title: 'Twitch VCR Goal: 90%'
+    metrics:
+    - VCR
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+    - field: media_type
+      op: in
+      values:
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 38138
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - g2tpeer2peer
+      - G2T - P2P
+      - G2T – P2P
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58941
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58942
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58943
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58944
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58945
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - G2T – P2P
+      - peer2peer
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82749
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82750
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82751
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82752
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - peer2peer
+      - G2T – P2P
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: media_type
+      op: in
+      values:
+      - Video
+      - '*G2T - P2P*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Reddit
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 25880
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25882
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25883
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25884
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25887
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25888
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25889
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25892
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25893
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 25894
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33566
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - reddit / paiddisplay
+      - reddit / paidvideo
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82732
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82733
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82734
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 19779
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19781
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 19783
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19785
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19787
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19789
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19791
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 19793
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33565
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - paidsearch
+      - paidsearch - bing
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52470
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52471
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52472
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52473
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52474
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82757
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82758
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82759
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 22107
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22109
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22110
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22111
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22114
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22115
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22116
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22119
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22120
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22121
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22124
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22125
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 22126
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33564
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - facebook
+      - snapchat
+      - tiktok
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52465
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52466
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52467
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52468
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 52469
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82723
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82724
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82725
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82726
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Youtube
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 26142
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26144
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26145
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26146
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26149
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26150
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26151
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26154
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26155
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26156
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26159
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26160
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 26161
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 33568
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paidvideo
+      - youtube
+    - field: campaign_name
+      op: in
+      values:
+      - '*g2t*'
+      - '*good2talk*'
+      - '*gt2*'
+      - '*languageexpansion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58928
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58929
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58930
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58931
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58932
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 58933
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82735
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82736
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82737
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 82738
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+      - Video
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Good2Talk'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

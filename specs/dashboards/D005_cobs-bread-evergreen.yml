@@ -1,0 +1,4741 @@
+id: D005
+title: Cobs Bread - Evergreen
+client: Cobs Bread
+priority: Medium
+build_type: Standard
+move_group: '3'
+target_live_date: '2027-01-15'
+template: master
+tapclicks:
+  dashboard_id: 2021
+  client_account: Cobs Bread
+  built_from: template
+  data_widgets: 206
+scope:
+  smart_campaign_filter_values: 'Cobs Bread: Evergreen'
+  how_widgets_are_scoped: 'Smart Campaign: 205, Campaign Name: 1'
+split_money_by: currency_code
+notes:
+- Merge Cobs Bread Evergreen and Evergreen USA into this one dashboard (A16), each account in its own currency (CAD and USD).
+sections:
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 88071
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88072
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88073
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88074
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88075
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88076
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88078
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88079
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+      - Search
+      - Search - Perfmax
+      - Meta
+      - TikTok
+    - field: country
+      op: in
+      values:
+      - Canada
+      - USA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88080
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88081
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88082
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88084
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88085
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88086
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88087
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88088
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88090
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88091
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88092
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88093
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88094
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88117
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88118
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88119
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88120
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88121
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88134
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137046
+    element: kpi
+    title: Loyalty Sign Ups
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137049
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137050
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137051
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137052
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137053
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: DemandGen
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 88214
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88215
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88216
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88217
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88218
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88219
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88220
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88222
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88223
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88224
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88225
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88227
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88228
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88229
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88230
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88232
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88233
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88234
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88235
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88237
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88238
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88239
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88240
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - DemandGen
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Meta - Consideration
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 87976
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87977
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87978
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87979
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87980
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87981
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87983
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87985
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87986
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87987
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87989
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87991
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87992
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87993
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87995
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87997
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87998
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 87999
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88123
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88124
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88125
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88126
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88135
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Meta - Conversion
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 136518
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136519
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136520
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136521
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136522
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136523
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136524
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136527
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136528
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136529
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136530
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136533
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136534
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136535
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136536
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136539
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136540
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136541
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136542
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136545
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136546
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136547
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136548
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137076
+    element: kpi
+    title: Loyalty Sign Ups
+    metrics:
+    - Completed Registration
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137079
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Completed Registration
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137080
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Completed Registration
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Completed Registration
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137081
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Completed Registration
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Completed Registration
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137082
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Completed Registration
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Completed Registration
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 88095
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88096
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88097
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88098
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88099
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88100
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88103
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 88105
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88106
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88107
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88109
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88110
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88111
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88113
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88114
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88115
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88128
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88129
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88130
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88136
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137062
+    element: kpi
+    title: Loyalty Sign Ups
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137065
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137066
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137067
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search - Performance Max
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 88162
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88163
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88164
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88165
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88166
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88167
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88168
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88172
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88173
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88174
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88176
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88177
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88178
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88180
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88181
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88182
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88184
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88185
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 88186
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137068
+    element: kpi
+    title: Loyalty Sign Ups
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137071
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137072
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137073
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - Search - Perfmax
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137086
+    element: table
+    title: PerfMax Conversions Audit
+    metrics:
+    - Conversions - PerfMax
+    - Conversions
+    - All Conv.
+    labels:
+      Conversions - PerfMax: '*Conversions - PerfMax'
+    group_by:
+    - campaign_name
+    - conversion_tag
+    filters:
+    - field: campaign_name
+      op: in
+      values:
+      - '*Loyalty*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Google Ads'
+- name: TikTok - Consideration
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 136551
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136552
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136553
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136554
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136555
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136556
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136557
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136560
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136561
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136562
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136563
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136566
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136567
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136568
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136569
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136572
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136573
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136574
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136575
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136578
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136579
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136580
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136581
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Traffic*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: TikTok - Conversion
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 136583
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136584
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136585
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136586
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136587
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136588
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136589
+    element: kpi
+    title: Find a Bakery
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136592
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136593
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136594
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136595
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136598
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136599
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136600
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136601
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136604
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136605
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136606
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136607
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136610
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136611
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136612
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136613
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - COBS Bread - GA4 (web) find_a_bakery_page_click
+      - '*Custom.find A Bakery Click*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137055
+    element: kpi
+    title: Loyalty Sign Ups
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137058
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137059
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137060
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137061
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Cobs Bread: Evergreen'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Sign-up (Google Analytics event sign_up)
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: campaign_name
+      op: in
+      values:
+      - '*Conversion*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

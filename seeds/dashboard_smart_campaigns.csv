@@ -1,0 +1,39 @@
+dashboard_id,client,mode,smart_campaign,wildcard
+D001,Aquamar,include,Aquamar: Rouses,False
+D002,BDO,include,BDO: Brand,False
+D005,Cobs Bread,include,Cobs Bread: Evergreen,False
+D014,Conexus,include,Conexus: Always On Search,False
+D017,Conexus,include,Conexus: Investing,False
+D026,Kicking Horse Coffee,include,Kicking Horse Coffee: Retail,False
+D032,Kicking Horse Coffee,include,Kicking Horse Coffee: Hellbent,False
+D035,Kids Help Phone,include,Kids Help Phone: Counsellor in the Classroom,False
+D038,Kids Help Phone,include,Kids Help Phone: Good2Talk,False
+D039,Kids Help Phone,include,Kids Help Phone: Grants,False
+D041,Kids Help Phone,include,Kids Help Phone: Indigenous,False
+D043,Kids Help Phone,include,Kids Help Phone: Newcomers,False
+D043,Kids Help Phone,include,Kids Help Phone: Youth - Feel Out Loud - National,False
+D044,Kids Help Phone,include,Kids Help Phone: Peer to Peer,False
+D046,Kids Help Phone,include,Kids Help Phone: RiseUp,False
+D046,Kids Help Phone,include,Kids Help Phone: Peer to Peer,False
+D049,Kids Help Phone,include,Kids Help Phone: Youth - Feel Out Loud - National,False
+D049,Kids Help Phone,include,Kids Help Phone: Youth - Feel Out Loud - Alberta,False
+D049,Kids Help Phone,include,Kids Help Phone: Youth - Feel Out Loud 2.0,False
+D051,Kids Help Phone,include,Kids Help Phone: Feel Out Loud Adult,False
+D051,Kids Help Phone,include,Kids Help Phone: Public Fundraising,False
+D052,Kids Help Phone,include,Kids Help Phone: Grants,False
+D052,Kids Help Phone,exclude,Kids Help Phone: Grants,False
+D053,Nulo,exclude,Nulo: Canada,False
+D053,Nulo,exclude,Nulo: Non Epitaph Data,False
+D056,Nulo,include,Nulo: Freestyle,False
+D056,Nulo,include,Nulo: Frontrunner Lifestyle,False
+D056,Nulo,include,Nulo: Prowess,False
+D059,Ottawa Tourism,include,Ottawa Tourism: Always On Search,False
+D061,Ottawa Tourism,include,Ottawa Tourism: Fall 2024,False
+D061,Ottawa Tourism,include,*Ottawa Tourism: Fall*,True
+D061,Ottawa Tourism,include,Ottawa Tourism: Fall,False
+D074,Ottawa Tourism,include,Ottawa Tourism: Partnership Campaigns 2026,False
+D091,SiriusXM,include,SiriusXM: Streaming,False
+D092,SiriusXM,include,SiriusXM: Commuter Acquisition,False
+D092,SiriusXM,include,SiriusXM: Commuter Brand,False
+D095,Sysco,include,Sysco: QC,False
+D095,Sysco,include,Sysco: ROC,False

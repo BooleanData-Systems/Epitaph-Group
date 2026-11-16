@@ -1,0 +1,6 @@
+rule_id,measure_group,measures,grain_live,grain_history,tolerance_pct,exact,notes
+R02,delivery,"spend,impressions,clicks",client-platform-week,client-platform-month,1.0,false,Agreed 29 Oct 2026
+R03,video,"video_starts,completed_plays",client-platform-week,client-platform-month,2.0,false,Agreed 29 Oct 2026
+R04,conversions,conversions,client-platform-week,client-platform-month,0,true,Counted conversion actions only
+R05,rates,"cpm,cpc,ctr,cpa,vcr",n/a,n/a,,false,No separate tolerance: recalculated from the totals above
+R06,history,"spend,impressions,clicks,video_starts,completed_plays,conversions",source-day,source-day,0,true,History daily totals must match the TapClicks download exactly

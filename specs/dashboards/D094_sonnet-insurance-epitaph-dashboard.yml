@@ -1,0 +1,6701 @@
+id: D094
+title: Sonnet Insurance - Epitaph Dashboard
+client: Sonnet Insurance
+priority: Medium
+build_type: Custom
+move_group: '3'
+target_live_date: '2027-01-15'
+template: master-base-plus-custom
+tapclicks:
+  dashboard_id: 2936
+  client_account: Sonnet Insurance
+  built_from: freehand
+  data_widgets: 288
+scope:
+  smart_campaign_filter_values: (none - see scoping)
+  how_widgets_are_scoped: 'Data Source Name: 288'
+notes:
+- GA4 Test source excluded (Q22). Quotes come from Sonnet Raw Data (K22).
+- 'Not rebuilt: 1 widget, marked do-not-use in TapClicks'
+sections:
+- name: Amazon CTV
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 134749
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134750
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134751
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134752
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134753
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134754
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134755
+    element: kpi
+    title: Completed Plays
+    metrics:
+    - Completed Plays
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134756
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134759
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134760
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134761
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134762
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134765
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134767
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134768
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134769
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134772
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134774
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134775
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134776
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134779
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134781
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134782
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134783
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134786
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134788
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134789
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134790
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134793
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134795
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134796
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134799
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134801
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134802
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134803
+    element: table
+    title: Creative Raw Data Table
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135529
+    element: kpi
+    title: Impressions
+    metrics:
+    - Reach
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135530
+    element: kpi
+    title: Impressions
+    metrics:
+    - Frequency
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135533
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Reach
+    - Frequency
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135534
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Reach
+    - Frequency
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Reach
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135535
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Reach
+    - Frequency
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Reach
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Amazon StndDisplay
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 134807
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134808
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134809
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134810
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134811
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134812
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134815
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134816
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134817
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134818
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134821
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134822
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134823
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134824
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134827
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134828
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134829
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134830
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134833
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134834
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134835
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134836
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134845
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134846
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134847
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134850
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134851
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134852
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134854
+    element: table
+    title: Creative Raw Data Table
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Display*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Bing Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 135538
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135539
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135540
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135541
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135542
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135543
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135544
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135545
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135546
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135547
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135550
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Microsoft Advertising
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 135553
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135554
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135555
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135558
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135559
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135560
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135563
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135564
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135565
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135568
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135569
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135570
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135573
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135574
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135575
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Microsoft Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 134690
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134691
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134692
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134693
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134694
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134695
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134696
+    element: kpi
+    title: Completed Plays
+    metrics:
+    - Completed Plays
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134697
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134698
+    element: kpi
+    title: Total Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134699
+    element: kpi
+    title: Total Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134700
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134701
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134702
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134703
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Cross Network
+      - Display
+      - Paid Search
+      - Paid Video
+      - Social
+      - Direct
+      - Organic Search
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134708
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134709
+    element: combo-chart
+    title: By Channel & Platform
+    metrics:
+    - Spend
+    group_by:
+    - platform
+    - channel
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134710
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - source_name
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134711
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134712
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134715
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134716
+    element: combo-chart
+    title: By Channel & Platform
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - platform
+    - channel
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134717
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134718
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134719
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134722
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134723
+    element: combo-chart
+    title: By Channel & Platform
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - platform
+    - channel
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134724
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134725
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134726
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134729
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134730
+    element: combo-chart
+    title: By Channel & Platform
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - platform
+    - channel
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134731
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134732
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134733
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134736
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134737
+    element: combo-chart
+    title: By Channel & Platform
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - platform
+    - channel
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134738
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134739
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134743
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134744
+    element: combo-chart
+    title: By Channel & Platform
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - platform
+    - channel
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134745
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134746
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134958
+    element: table
+    title: Creative Raw Data Table (Epitaph Run Only)
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Completed Plays
+    - CPCV
+    group_by:
+    - source_name
+    - province
+    - creative_name
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Sonnet - DV360 Creative
+      - Amazon DSP
+      - HiveStack
+      - Silverpush - Automated Report
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+      - Display
+      - DOOH
+    - field: platform
+      op: in
+      values:
+      - Amazon DSP
+      - DV360
+      - HiveStack
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135896
+    element: table
+    title: By Channel & Platform
+    metrics:
+    - Spend
+    group_by:
+    - province
+    - channel
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135897
+    element: table
+    title: By Channel & Platform
+    metrics:
+    - Quotes
+    group_by:
+    - province
+    - channel
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: DOOH
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 134914
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134916
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134917
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134926
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134927
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134928
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134929
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134932
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134933
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134934
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134935
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134953
+    element: table
+    title: Creative Raw Data Table
+    metrics:
+    - Impressions
+    - Spend
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*DOOH*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - HiveStack
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Google Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 135478
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135479
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135480
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135481
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135482
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135483
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135486
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135487
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135488
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135489
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135492
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135493
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135494
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135498
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135499
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135500
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135504
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135505
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135506
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135516
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135517
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135518
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135521
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135522
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135523
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135527
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+- name: Meta
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 135377
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135378
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135379
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135380
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135381
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135382
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135383
+    element: kpi
+    title: Completed Plays
+    metrics:
+    - Completed Plays
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135384
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135385
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135386
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135387
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135388
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135391
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - Meta
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135392
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135393
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135394
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135397
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135398
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135399
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135400
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135403
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135404
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135405
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135406
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135409
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135410
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135411
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135412
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135415
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135416
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135417
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135420
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135421
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135422
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135424
+    element: table
+    title: Creative Raw Data Table
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Meta
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: Reddit
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 135428
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135429
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135430
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135431
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135432
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135433
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135434
+    element: kpi
+    title: Completed Plays
+    metrics:
+    - Completed Plays
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135435
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135436
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135437
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135438
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135439
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135442
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135443
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135444
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135445
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135448
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135449
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135450
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135451
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135454
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135455
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135456
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135457
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135460
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135461
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135462
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135463
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135466
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135467
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135468
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135471
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135472
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135473
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 135475
+    element: table
+    title: Creative Raw Data Table
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Social*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - Reddit
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+- name: YouTube
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 134857
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134858
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134859
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134860
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134861
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134862
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134863
+    element: kpi
+    title: Completed Plays
+    metrics:
+    - Completed Plays
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134864
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134865
+    element: kpi
+    title: Paid Quotes
+    metrics:
+    - Quotes
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134866
+    element: kpi
+    title: Paid Binds
+    metrics:
+    - Binds
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134867
+    element: kpi
+    title: Paid
+    metrics:
+    - CPQ
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134868
+    element: kpi
+    title: Paid
+    metrics:
+    - QTB
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134871
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: platform
+      op: in
+      values:
+      - DV360
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134872
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Spend
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134873
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Spend
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134874
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134877
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134878
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134879
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134880
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134883
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134884
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134885
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134886
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134889
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134890
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134891
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134892
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134895
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134896
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134897
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Quotes
+    - CPQ
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Quotes
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134900
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - date:day
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134901
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - province
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134902
+    element: combo-chart
+    title: By Product
+    metrics:
+    - Binds
+    - QTB
+    group_by:
+    - product
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Binds
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134904
+    element: table
+    title: Creative Raw Data Table
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Display & Video 360 IO
+    - field: channel
+      op: in
+      values:
+      - Paid Video
+    - field: platform
+      op: in
+      values:
+      - DV360
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134905
+    element: combo-chart
+    title: By Source
+    metrics:
+    - Spend
+    group_by:
+    - source_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134906
+    element: combo-chart
+    title: By Source
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - source_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134907
+    element: combo-chart
+    title: By Source
+    metrics:
+    - Clicks
+    - CTR
+    - CPC
+    group_by:
+    - source_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping
+  - tapclicks_widget_id: 134908
+    element: combo-chart
+    title: By Source
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - source_name
+    filters:
+    - field: source_name
+      op: not in
+      values:
+      - Sonnet - DV360 Creative
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: channel
+      op: in
+      values:
+      - '*Paid Video*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: platform
+      op: in
+      values:
+      - DV360
+    source_mapping_in_tapclicks: Sonnet - Custom Mapping

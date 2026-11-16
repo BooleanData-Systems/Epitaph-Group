@@ -1,0 +1,81 @@
+name: deploy
+
+# Runs after a pull request is merged to main, or by hand. Credentials are GitHub environment secrets,
+# approved by an Epitaph reviewer for the production environment. Logs show object names, pass/fail and counts.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "What to deploy"
+        type: choice
+        options: [all, snowflake, omni]
+        default: all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  snowflake:
+    if: github.event_name == 'push' || inputs.target != 'omni'
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+      SNOWFLAKE_USER: SVC_CI
+      SNOWFLAKE_PRIVATE_KEY_PATH: ${{ github.workspace }}/.ci_key.p8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt snowflake-cli
+      - name: Write key and Snowflake CLI connection
+        run: |
+          printf '%s' "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > .ci_key.p8 && chmod 600 .ci_key.p8
+          mkdir -p ~/.snowflake
+          cat > ~/.snowflake/config.toml <<EOF
+          [connections.epitaph]
+          account = "${SNOWFLAKE_ACCOUNT}"
+          user = "SVC_CI"
+          authenticator = "SNOWFLAKE_JWT"
+          private_key_file = "${SNOWFLAKE_PRIVATE_KEY_PATH}"
+          role = "EPITAPH_DEPLOYER"
+          warehouse = "WH_TRANSFORMATION"
+          EOF
+          chmod 600 ~/.snowflake/config.toml
+      - name: Deploy
+        run: ./scripts/deploy_snowflake.sh
+      - name: Schema check against Fivetran (names only)
+        run: python scripts/check_fivetran_schema.py || echo "Schema differences listed above; staging views need an update"
+      - if: always()
+        run: rm -f .ci_key.p8 ~/.snowflake/config.toml
+
+  omni:
+    if: github.event_name == 'push' || inputs.target != 'snowflake'
+    needs: [snowflake]
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      OMNI_BASE_URL: ${{ secrets.OMNI_BASE_URL }}
+      OMNI_API_KEY: ${{ secrets.OMNI_API_KEY }}
+      OMNI_MODEL_ID: ${{ secrets.OMNI_MODEL_ID }}
+      OMNI_BRANCH_ID: ${{ secrets.OMNI_BRANCH_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python scripts/omni_build.py
+      - name: Check every model reference (no network)
+        run: python scripts/omni_deploy.py validate
+      - name: Publish the model files to the Omni branch (merged in Omni through a reviewed pull request)
+        run: python scripts/omni_deploy.py publish
+      - name: Set each user's client code and column groups from the seeds
+        run: python scripts/omni_access.py apply

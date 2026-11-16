@@ -1,0 +1,323 @@
+dashboards:
+- id: D053
+  file: D053_nulo-usa.yml
+  title: Nulo - USA
+  client: Nulo
+  priority: High
+  build_type: Standard
+  move_group: '1'
+  target_live_date: '2026-12-11'
+  sections_rebuilt: 10
+  widgets_rebuilt: 234
+  widgets_retired: 1
+- id: D091
+  file: D091_siriusxm-streaming.yml
+  title: SiriusXM - Streaming
+  client: SiriusXM
+  priority: High
+  build_type: Custom
+  move_group: '1'
+  target_live_date: '2026-12-11'
+  sections_rebuilt: 8
+  widgets_rebuilt: 217
+  widgets_retired: 27
+- id: D092
+  file: D092_siriusxm-commuter-2-0.yml
+  title: SiriusXM - Commuter 2.0
+  client: SiriusXM
+  priority: High
+  build_type: Custom
+  move_group: '1'
+  target_live_date: '2026-12-11'
+  sections_rebuilt: 15
+  widgets_rebuilt: 300
+  widgets_retired: 0
+- id: D093
+  file: D093_sonnet-insurance-2026.yml
+  title: Sonnet Insurance - 2026
+  client: Sonnet Insurance
+  priority: High
+  build_type: Custom
+  move_group: '1'
+  target_live_date: '2026-12-11'
+  sections_rebuilt: 5
+  widgets_rebuilt: 173
+  widgets_retired: 3
+- id: D056
+  file: D056_nulo-product.yml
+  title: Nulo - Product
+  client: Nulo
+  priority: Medium
+  build_type: Standard
+  move_group: '1'
+  target_live_date: '2026-12-11'
+  sections_rebuilt: 4
+  widgets_rebuilt: 36
+  widgets_retired: 0
+- id: D014
+  file: D014_conexus-always-on.yml
+  title: Conexus - Always On
+  client: Conexus
+  priority: Medium
+  build_type: Standard
+  move_group: '1'
+  target_live_date: '2026-12-11'
+  sections_rebuilt: 14
+  widgets_rebuilt: 384
+  widgets_retired: 0
+- id: D017
+  file: D017_conexus-investing.yml
+  title: Conexus - Investing
+  client: Conexus
+  priority: Medium
+  build_type: Standard
+  move_group: '1'
+  target_live_date: '2026-12-11'
+  sections_rebuilt: 10
+  widgets_rebuilt: 215
+  widgets_retired: 1
+- id: D023
+  file: D023_embark-brand.yml
+  title: Embark - Brand
+  client: Embark
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 7
+  widgets_rebuilt: 171
+  widgets_retired: 20
+- id: D059
+  file: D059_ottawa-tourism-always-on-search.yml
+  title: Ottawa Tourism - Always on Search
+  client: Ottawa Tourism
+  priority: Medium
+  build_type: Standard
+  move_group: '3'
+  target_live_date: '2027-01-22'
+  sections_rebuilt: 5
+  widgets_rebuilt: 110
+  widgets_retired: 0
+- id: D061
+  file: D061_ottawa-tourism-fall.yml
+  title: Ottawa Tourism - Fall
+  client: Ottawa Tourism
+  priority: Medium
+  build_type: Standard
+  move_group: '3'
+  target_live_date: '2027-01-22'
+  sections_rebuilt: 9
+  widgets_rebuilt: 241
+  widgets_retired: 0
+- id: D074
+  file: D074_ottawa-tourism-partnership-campaigns-2026.yml
+  title: Ottawa Tourism - Partnership Campaigns 2026
+  client: Ottawa Tourism
+  priority: Medium
+  build_type: Standard
+  move_group: '3'
+  target_live_date: '2027-01-29'
+  sections_rebuilt: 13
+  widgets_rebuilt: 598
+  widgets_retired: 0
+- id: D026
+  file: D026_khc-retail.yml
+  title: KHC - Retail
+  client: Kicking Horse Coffee
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 2
+  widgets_rebuilt: 45
+  widgets_retired: 0
+- id: D035
+  file: D035_khp-counsellor-in-the-classroom.yml
+  title: KHP - Counsellor in the Classroom
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 6
+  widgets_rebuilt: 101
+  widgets_retired: 0
+- id: D038
+  file: D038_khp-good2talk.yml
+  title: KHP - Good2Talk
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 12
+  widgets_rebuilt: 264
+  widgets_retired: 8
+- id: D039
+  file: D039_khp-grants.yml
+  title: KHP - Grants
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 2
+  widgets_rebuilt: 34
+  widgets_retired: 0
+- id: D041
+  file: D041_khp-indigenous.yml
+  title: KHP - Indigenous
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 8
+  widgets_rebuilt: 186
+  widgets_retired: 1
+- id: D043
+  file: D043_khp-newcomers.yml
+  title: KHP - Newcomers
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 5
+  widgets_rebuilt: 115
+  widgets_retired: 1
+- id: D044
+  file: D044_khp-peer-to-peer.yml
+  title: KHP - Peer to Peer
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 6
+  widgets_rebuilt: 130
+  widgets_retired: 1
+- id: D046
+  file: D046_khp-riseup.yml
+  title: KHP - RiseUp
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 9
+  widgets_rebuilt: 166
+  widgets_retired: 1
+- id: D049
+  file: D049_khp-feel-out-loud-youth.yml
+  title: KHP - Feel Out Loud Youth
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 12
+  widgets_rebuilt: 233
+  widgets_retired: 1
+- id: D051
+  file: D051_khp-feel-out-loud-adult.yml
+  title: KHP - Feel Out Loud Adult
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 10
+  widgets_rebuilt: 197
+  widgets_retired: 0
+- id: D052
+  file: D052_khp-search.yml
+  title: KHP - Search
+  client: Kids Help Phone
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 4
+  widgets_rebuilt: 55
+  widgets_retired: 0
+- id: D005
+  file: D005_cobs-bread-evergreen.yml
+  title: Cobs Bread - Evergreen
+  client: Cobs Bread
+  priority: Medium
+  build_type: Standard
+  move_group: '3'
+  target_live_date: '2027-01-15'
+  sections_rebuilt: 8
+  widgets_rebuilt: 206
+  widgets_retired: 0
+- id: D095
+  file: D095_sysco-roc-qc.yml
+  title: Sysco - ROC & QC
+  client: Sysco
+  priority: Medium
+  build_type: Standard
+  move_group: '2'
+  target_live_date: '2026-12-18'
+  sections_rebuilt: 4
+  widgets_rebuilt: 98
+  widgets_retired: 0
+- id: D094
+  file: D094_sonnet-insurance-epitaph-dashboard.yml
+  title: Sonnet Insurance - Epitaph Dashboard
+  client: Sonnet Insurance
+  priority: Medium
+  build_type: Custom
+  move_group: '3'
+  target_live_date: '2027-01-15'
+  sections_rebuilt: 9
+  widgets_rebuilt: 287
+  widgets_retired: 1
+- id: D001
+  file: D001_aquamar-rouses-retail.yml
+  title: Aquamar - Rouses Retail
+  client: Aquamar
+  priority: Medium
+  build_type: Hand-built
+  move_group: '3'
+  target_live_date: '2027-01-22'
+  sections_rebuilt: 4
+  widgets_rebuilt: 102
+  widgets_retired: 0
+- id: D002
+  file: D002_bdo-brand.yml
+  title: BDO - Brand
+  client: BDO
+  priority: Medium
+  build_type: Hand-built
+  move_group: '3'
+  target_live_date: '2027-01-22'
+  sections_rebuilt: 4
+  widgets_rebuilt: 69
+  widgets_retired: 0
+- id: D097
+  file: D097_wurth-canada-2026.yml
+  title: Wurth Canada - 2026
+  client: Wurth Canada
+  priority: Medium
+  build_type: Hand-built
+  move_group: '3'
+  target_live_date: '2027-01-29'
+  sections_rebuilt: 10
+  widgets_rebuilt: 267
+  widgets_retired: 0
+- id: D032
+  file: D032_khc-hellbent.yml
+  title: KHC - Hellbent
+  client: Kicking Horse Coffee
+  priority: Medium
+  build_type: Hand-built
+  move_group: '3'
+  target_live_date: '2027-01-29'
+  sections_rebuilt: 5
+  widgets_rebuilt: 117
+  widgets_retired: 0
+totals:
+  kept: 5351
+  dropped: 66

@@ -1,0 +1,237 @@
+dashboard_id,field,pattern,sql_like,decision,resolution
+D005,conversion_tag,*Custom.find A Bakery Click*,%Custom.find A Bakery Click%,Q009,pattern kept as a rule; review matches in the check report
+D005,campaign_name,*Traffic*,%Traffic%,Q009,pattern kept as a rule; review matches in the check report
+D005,campaign_name,*Conversion*,%Conversion%,Q009,pattern kept as a rule; review matches in the check report
+D005,campaign_name,*Loyalty*,%Loyalty%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*Linkedin*,%Linkedin%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*Facebook + Instagram*,%Facebook + Instagram%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*TikTok*,%TikTok%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*Pinterest*,%Pinterest%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*Search - Amazon*,%Search - Amazon%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*Dooh*,%Dooh%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*Video*,%Video%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*DOOH*,%DOOH%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_type,*DemandGen*,%DemandGen%,Q009,pattern kept as a rule; review matches in the check report
+D014,media_buy_name,*Retargeting*,%Retargeting%,Q009,pattern kept as a rule; review matches in the check report
+D017,campaign_name,*Investing Awr*,%Investing Awr%,Q009,pattern kept as a rule; review matches in the check report
+D017,campaign_name,*Pinterest*,%Pinterest%,Q009,pattern kept as a rule; review matches in the check report
+D017,campaign_name,*Meta*,%Meta%,Q009,pattern kept as a rule; review matches in the check report
+D017,campaign_name,*Investing Cons*,%Investing Cons%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*SnapChat*,%SnapChat%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*Adobe*,%Adobe%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*Search*,%Search%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*Search - Bing*,%Search - Bing%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*DemandGen,%DemandGen,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D023,media_type,*LinkedIn*,%LinkedIn%,Q009,pattern kept as a rule; review matches in the check report
+D026,campaign_name,*Kicking Horse Coffee*,%Kicking Horse Coffee%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*Search*,%Search%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*Search - Bing*,%Search - Bing%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*linkedin*,%linkedin%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*Video*,%Video%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*DOOH*,%DOOH%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*TikTok*,%TikTok%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*Facebook*,%Facebook%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*Instagram*,%Instagram%,Q009,pattern kept as a rule; review matches in the check report
+D026,media_type,*snapchat*,%snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D035,campaign_name,*citc*,%citc%,Q009,pattern kept as a rule; review matches in the check report
+D035,campaign_name,*counsellor*,%counsellor%,Q009,pattern kept as a rule; review matches in the check report
+D035,ga4_session_campaign,*citc*,%citc%,Q009,pattern kept as a rule; review matches in the check report
+D038,campaign_name,*g2t*,%g2t%,Q009,pattern kept as a rule; review matches in the check report
+D038,campaign_name,*good2talk*,%good2talk%,Q009,pattern kept as a rule; review matches in the check report
+D038,campaign_name,*gt2*,%gt2%,Q009,pattern kept as a rule; review matches in the check report
+D038,campaign_name,*languageexpansion*,%languageexpansion%,Q009,pattern kept as a rule; review matches in the check report
+D038,ga4_session_campaign,*good2talk*,%good2talk%,Q009,pattern kept as a rule; review matches in the check report
+D038,ga4_session_campaign,*g2t*,%g2t%,Q009,pattern kept as a rule; review matches in the check report
+D038,ga4_session_campaign,*gt2*,%gt2%,Q009,pattern kept as a rule; review matches in the check report
+D038,ga4_session_campaign,*languageexpansion*,%languageexpansion%,Q009,pattern kept as a rule; review matches in the check report
+D038,campaign_name,*G2T - P2P*,%G2T - P2P%,Q009,pattern kept as a rule; review matches in the check report
+D038,media_type,*G2T - P2P*,%G2T - P2P%,Q009,pattern kept as a rule; review matches in the check report
+D041,media_type,*Audio*,%Audio%,Q009,pattern kept as a rule; review matches in the check report
+D041,campaign_name,*indigenous*,%indigenous%,Q009,pattern kept as a rule; review matches in the check report
+D041,campaign_name,*Kids Help Phone Paid_Indigenous 2025 Q2-Q4 National*,%Kids Help Phone Paid_Indigenous 2025 Q2-Q4 National%,Q009,pattern kept as a rule; review matches in the check report
+D041,campaign_name,*Kids Help Phone Paid_Indigenous 2025 Q2-Q4 Territories*,%Kids Help Phone Paid_Indigenous 2025 Q2-Q4 Territories%,Q009,pattern kept as a rule; review matches in the check report
+D041,ga4_session_campaign,*indigenous*,%indigenous%,Q009,pattern kept as a rule; review matches in the check report
+D041,ga4_session_source,*indigenous*,%indigenous%,Q009,pattern kept as a rule; review matches in the check report
+D041,media_buy_name,*ROC*,%ROC%,Q009,pattern kept as a rule; review matches in the check report
+D041,media_buy_name,*_Fr_*,%_Fr_%,Q009,pattern kept as a rule; review matches in the check report
+D041,media_buy_name,*National*,%National%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*newcomer*,%newcomer%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*Newcomers*,%Newcomers%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*Instagram*,%Instagram%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*SnapChat*,%SnapChat%,Q009,pattern kept as a rule; review matches in the check report
+D043,ga4_session_campaign,*newcomer*,%newcomer%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*StndDisplay*,%StndDisplay%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*folyouth*,%folyouth%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*fol youth*,%fol youth%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*Youth FOL 2.0*,%Youth FOL 2.0%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*FOL_Youth*,%FOL_Youth%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*Feel Out Loud Youth*,%Feel Out Loud Youth%,Q009,pattern kept as a rule; review matches in the check report
+D043,campaign_name,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D044,campaign_name,*2023-343*,%2023-343%,Q009,pattern kept as a rule; review matches in the check report
+D044,campaign_name,*Peer2Peer*,%Peer2Peer%,Q009,pattern kept as a rule; review matches in the check report
+D044,ga4_session_campaign,*peer2peer*,%peer2peer%,Q009,pattern kept as a rule; review matches in the check report
+D044,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D044,campaign_name,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D044,campaign_name,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D046,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D046,media_type,*Search - Amazon*,%Search - Amazon%,Q009,pattern kept as a rule; review matches in the check report
+D046,media_type,*Adobe*,%Adobe%,Q009,pattern kept as a rule; review matches in the check report
+D046,media_type,*DemandGen*,%DemandGen%,Q009,pattern kept as a rule; review matches in the check report
+D046,media_type,*LinkedIn*,%LinkedIn%,Q009,pattern kept as a rule; review matches in the check report
+D046,campaign_name,*rise*,%rise%,Q009,pattern kept as a rule; review matches in the check report
+D046,ga4_session_campaign,*riseup*,%riseup%,Q009,pattern kept as a rule; review matches in the check report
+D046,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D046,campaign_name,*RiseUp*,%RiseUp%,Q009,pattern kept as a rule; review matches in the check report
+D046,campaign_name,*Rise Up*,%Rise Up%,Q009,pattern kept as a rule; review matches in the check report
+D046,campaign_name,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D046,campaign_name,*TikTok*,%TikTok%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*folyouth*,%folyouth%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*fol youth*,%fol youth%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*FOL_Youth*,%FOL_Youth%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*Feel Out Loud Youth*,%Feel Out Loud Youth%,Q009,pattern kept as a rule; review matches in the check report
+D049,media_type,*Site Skin*,%Site Skin%,Q009,pattern kept as a rule; review matches in the check report
+D049,ga4_session_campaign,*feeloutloudnational*,%feeloutloudnational%,Q009,pattern kept as a rule; review matches in the check report
+D049,ga4_session_campaign,*feel-out-loud*,%feel-out-loud%,Q009,pattern kept as a rule; review matches in the check report
+D049,ga4_session_campaign,*folyouth*,%folyouth%,Q009,pattern kept as a rule; review matches in the check report
+D049,ga4_session_campaign,*Feel Out Loud Youth*,%Feel Out Loud Youth%,Q009,pattern kept as a rule; review matches in the check report
+D049,ga4_session_campaign,*FOL_Youth*,%FOL_Youth%,Q009,pattern kept as a rule; review matches in the check report
+D049,ga4_session_medium,*print*,%print%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*FOL Youth*,%FOL Youth%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*TikTok*,%TikTok%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*Youth FOL 2.0*,%Youth FOL 2.0%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*Search*,%Search%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*FOL Youth H2 Coupon*,%FOL Youth H2 Coupon%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*FOL Youth H2 Lens*,%FOL Youth H2 Lens%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*FOL Youth H2 N*,%FOL Youth H2 N%,Q009,pattern kept as a rule; review matches in the check report
+D049,campaign_name,*FOL Youth H2 NS*,%FOL Youth H2 NS%,Q009,pattern kept as a rule; review matches in the check report
+D051,campaign_name,*adult*,%adult%,Q009,pattern kept as a rule; review matches in the check report
+D051,campaign_name,*Adult*,%Adult%,Q009,pattern kept as a rule; review matches in the check report
+D051,campaign_name,*public*,%public%,Q009,pattern kept as a rule; review matches in the check report
+D051,campaign_name,*launch*,%launch%,Q009,pattern kept as a rule; review matches in the check report
+D051,campaign_name,*year*,%year%,Q009,pattern kept as a rule; review matches in the check report
+D051,ga4_session_campaign,*adult*,%adult%,Q009,pattern kept as a rule; review matches in the check report
+D051,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D051,campaign_name,*FOL Adult*,%FOL Adult%,Q009,pattern kept as a rule; review matches in the check report
+D051,campaign_name,*TikTok*,%TikTok%,Q009,pattern kept as a rule; review matches in the check report
+D053,conversion_tag,*where_to_buy*,%where_to_buy%,Q009,pattern kept as a rule; review matches in the check report
+D053,conversion_tag,*shop_now*,%shop_now%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*DemandGen*,%DemandGen%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*Search - Bing*,%Search - Bing%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*Search - Amazon*,%Search - Amazon%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*Pinterest*,%Pinterest%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*Linkedin*,%Linkedin%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*Audio*,%Audio%,Q009,pattern kept as a rule; review matches in the check report
+D053,media_type,*RichMed*,%RichMed%,Q009,pattern kept as a rule; review matches in the check report
+D056,campaign_name,*Prowess*,%Prowess%,Q009,pattern kept as a rule; review matches in the check report
+D056,campaign_name,*FreeStyle*,%FreeStyle%,Q009,pattern kept as a rule; review matches in the check report
+D056,campaign_name,*Frontrunner*,%Frontrunner%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Audio*,%Audio%,Q009,pattern kept as a rule; review matches in the check report
+D061,smart_campaign,*Ottawa Tourism: Fall*,%Ottawa Tourism: Fall%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*TikTok*,%TikTok%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Pinterest*,%Pinterest%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Search*,%Search%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Search - Bing*,%Search - Bing%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*StndDisplay*,%StndDisplay%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Linkedin*,%Linkedin%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*DOOH*,%DOOH%,Q009,pattern kept as a rule; review matches in the check report
+D061,conversion_tag,*Ottawa Pass Purchase*,%Ottawa Pass Purchase%,Q009,pattern kept as a rule; review matches in the check report
+D061,conversion_tag,*Booking Search*,%Booking Search%,Q009,pattern kept as a rule; review matches in the check report
+D061,conversion_tag,*Booking Confirmation*,%Booking Confirmation%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Display*,%Display%,Q009,pattern kept as a rule; review matches in the check report
+D061,media_type,*Display,%Display,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Canadian Museum of History*,%Canadian Museum of History%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Canadian Museum of Nature*,%Canadian Museum of Nature%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Casino Lac Le*,%Casino Lac Le%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Gananoque*,%Gananoque%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Franco Ontari*,%Franco Ontari%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Sam Glode*,%Sam Glode%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*River of Dreams*,%River of Dreams%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Unknown Soldier*,%Unknown Soldier%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Canadian War Museum*,%Canadian War Museum%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Lady Dive*,%Lady Dive%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Les Suites Hotel*,%Les Suites Hotel%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Les Suites*,%Les Suites%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Les Suites*.,%Les Suites%.,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*2026 Partnership - NAC*,%2026 Partnership - NAC%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Partnership NGC*,%Partnership NGC%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Parc Omega*,%Parc Omega%,Q009,pattern kept as a rule; review matches in the check report
+D074,campaign_name,*Social Boosting*,%Social Boosting%,Q009,pattern kept as a rule; review matches in the check report
+D091,site_key,*IAP*,%IAP%,Q009,pattern kept as a rule; review matches in the check report
+D091,site_key,*Satellite*,%Satellite%,Q009,pattern kept as a rule; review matches in the check report
+D091,site_key,*Other*,%Other%,Q009,pattern kept as a rule; review matches in the check report
+D091,conversion_tag,*SiriusXM - Streaming - Subscriber Confirmation*,%SiriusXM - Streaming - Subscriber Confirmation%,Q009,pattern kept as a rule; review matches in the check report
+D091,campaign_name,*Streaming*,%Streaming%,Q009,pattern kept as a rule; review matches in the check report
+D091,campaign_name,*_Offer_Test*,%_Offer_Test%,Q009,pattern kept as a rule; review matches in the check report
+D091,campaign_name,*Commuter*,%Commuter%,Q009,pattern kept as a rule; review matches in the check report
+D091,campaign_name,*IAP*,%IAP%,Q009,pattern kept as a rule; review matches in the check report
+D091,campaign_name,*Satellite*,%Satellite%,Q009,pattern kept as a rule; review matches in the check report
+D091,campaign_name,*Other*,%Other%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*Pinterest*,%Pinterest%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*DOOH*,%DOOH%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*Search - Bing*,%Search - Bing%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*Display*,%Display%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*DemandGen*,%DemandGen%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*Linkedin*,%Linkedin%,Q009,pattern kept as a rule; review matches in the check report
+D092,media_type,*Adobe*,%Adobe%,Q009,pattern kept as a rule; review matches in the check report
+D093,conversion_tag,*Purchase -*,%Purchase -%,Q009,pattern kept as a rule; review matches in the check report
+D093,conversion_tag,*get_quote*,%get_quote%,Q009,pattern kept as a rule; review matches in the check report
+D093,conversion_tag,*Custom.get Quote Any*,%Custom.get Quote Any%,Q009,pattern kept as a rule; review matches in the check report
+D093,campaign_name,*GDN*,%GDN%,Q009,pattern kept as a rule; review matches in the check report
+D093,campaign_name,*Programmatic_Display*,%Programmatic_Display%,Q009,pattern kept as a rule; review matches in the check report
+D093,campaign_name,*GoogleDGen*,%GoogleDGen%,Q009,pattern kept as a rule; review matches in the check report
+D093,campaign_name,*chan=Paid Display*,%chan=Paid Display%,Q009,pattern kept as a rule; review matches in the check report
+D093,province,*British Columbia*,%British Columbia%,Q009,pattern kept as a rule; review matches in the check report
+D093,province,*Ontario*,%Ontario%,Q009,pattern kept as a rule; review matches in the check report
+D093,province,*Quebec*,%Quebec%,Q009,pattern kept as a rule; review matches in the check report
+D094,channel,*Paid Video*,%Paid Video%,Q009,pattern kept as a rule; review matches in the check report
+D094,channel,*Display*,%Display%,Q009,pattern kept as a rule; review matches in the check report
+D094,channel,*Paid Search*,%Paid Search%,Q009,pattern kept as a rule; review matches in the check report
+D094,channel,*DOOH*,%DOOH%,Q009,pattern kept as a rule; review matches in the check report
+D094,channel,*Social*,%Social%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*Display*,%Display%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*Search - Bing*,%Search - Bing%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*DemandGen*,%DemandGen%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*Video*,%Video%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*TikTok*,%TikTok%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*DOOH*,%DOOH%,Q009,pattern kept as a rule; review matches in the check report
+D095,media_type,*Linkedin*,%Linkedin%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*YouTube*,%YouTube%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*CTV*,%CTV%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*Snapchat*,%Snapchat%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*Reddit*,%Reddit%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*DOOH*,%DOOH%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*NativeDis*,%NativeDis%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*Display*,%Display%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*DOOH,%DOOH,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*Search - Amazon*,%Search - Amazon%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*Search - Bing*,%Search - Bing%,Q009,pattern kept as a rule; review matches in the check report
+D097,media_type,*Pinterest*,%Pinterest%,Q009,pattern kept as a rule; review matches in the check report

@@ -1,0 +1,15 @@
+client_code,client_name,tapclicks_client_account,dashboards,reporting_currency
+C01,Aquamar,Aquamar Inc.,D001,CAD
+C02,BDO,BDO Canada LLP,D002,CAD
+C03,Cobs Bread,Cobs Bread,D005,CAD
+C04,Conexus,Conexus Credit Union,D014 D017,CAD
+C05,Embark,Embark Student Corp,D023,CAD
+C06,Kicking Horse Coffee,Kicking Horse Coffee,D026 D032,CAD
+C07,Kids Help Phone,Kids Help Phone,D035 D038 D039 D041 D043 D044 D046 D049 D051 D052,CAD
+C08,Nulo,Nulo,D053 D056,USD
+C09,Ottawa Tourism,Ottawa Tourism and Convention Authority,D059 D061 D074,CAD
+C10,SiriusXM,SiriusXM Canada Inc - Brand & Performance,D092,CAD
+C10,SiriusXM,SiriusXM Canada Inc - Performance,D091,CAD
+C11,Sonnet Insurance,Sonnet Insurance,D093 D094,CAD
+C12,Sysco,Sysco Canada,D095,CAD
+C13,Wurth Canada,Wurth Canada Limited,D097,CAD

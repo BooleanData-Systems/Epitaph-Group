@@ -1,0 +1,8 @@
+column_group,columns,default_for_clients,notes
+identity,"date_day,week_start,month_start,client_name,smart_campaign,campaign_name,media_type,channel,platform,tactic,audience,creative_name,creative_format,call_to_action,language,country",show,What every dashboard is filtered and grouped by
+delivery,"impressions,clicks,video_starts,completed_plays,post_shares,spots,sessions",show,Delivery counts
+spend,"spend,currency_code",show,Spend and every cost KPI built on it (CPM CPC CPA CPCV CPV CPL CPT CPQ ROAS)
+conversions,"conversions,platform_conversions,platform_all_conversions,click_through_conversions,view_through_conversions,conversion_tag,kpi_group,revenue",show,Conversions and revenue
+client_files,"quotes,binds,quality_band,line_type,trials,flow_starts,site_visits,bookings",show,Data the client itself sends (Sonnet quotes and quality; SiriusXM trials)
+goals,"goal_metric,goal_value",show,Goals beside actuals
+internal,"source_name,loaded_from,job_number,account_id,campaign_name_valid,counts_toward_kpi,row_type",hide,Epitaph-only: data routing and housekeeping

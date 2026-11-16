@@ -1,0 +1,6035 @@
+id: D092
+title: SiriusXM - Commuter 2.0
+client: SiriusXM
+priority: High
+build_type: Custom
+move_group: '1'
+target_live_date: '2026-12-11'
+template: master-base-plus-custom
+tapclicks:
+  dashboard_id: 2913
+  client_account: SiriusXM Canada Inc - Brand & Performance
+  built_from: freehand
+  data_widgets: 300
+scope:
+  smart_campaign_filter_values: 'SiriusXM: Commuter Brand; SiriusXM: Commuter Acquisition'
+  how_widgets_are_scoped: 'Smart Campaign: 284, Program Code: 10, Client only (no filter): 6'
+notes: []
+sections:
+- name: Acquisition
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 117244
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117245
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117246
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117247
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117248
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117249
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117254
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117255
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117256
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117257
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117258
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117260
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117261
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117262
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117263
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117264
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117266
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117267
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117268
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117269
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117270
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123869
+    element: kpi
+    title: Commuters Complete
+    metrics:
+    - Total Conversions
+    - CPA
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    - field: conversion_tag
+      op: in
+      values:
+      - SXM Commuters 5$ for 12 Months - Complete
+      - SXM Satellite Acquisition 2026 Complete
+      - SiriusXM - Commuters Complete
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123872
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    - field: conversion_tag
+      op: in
+      values:
+      - SXM Commuters 5$ for 12 Months - Complete
+      - SXM Satellite Acquisition 2026 Complete
+      - SiriusXM - Commuters Complete
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123873
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - media_type
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    - field: conversion_tag
+      op: in
+      values:
+      - SXM Commuters 5$ for 12 Months - Complete
+      - SXM Satellite Acquisition 2026 Complete
+      - SiriusXM - Commuters Complete
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123874
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    - field: conversion_tag
+      op: in
+      values:
+      - SXM Commuters 5$ for 12 Months - Complete
+      - SXM Satellite Acquisition 2026 Complete
+      - SiriusXM - Commuters Complete
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123875
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    - field: conversion_tag
+      op: in
+      values:
+      - SXM Commuters 5$ for 12 Months - Complete
+      - SXM Satellite Acquisition 2026 Complete
+      - SiriusXM - Commuters Complete
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 123876
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - creative_name
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    - field: conversion_tag
+      op: in
+      values:
+      - SXM Commuters 5$ for 12 Months - Complete
+      - SXM Satellite Acquisition 2026 Complete
+      - SiriusXM - Commuters Complete
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Adobe Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 119571
+    element: kpi
+    title: Total
+    metrics:
+    - Starts - Commuter
+    - Activations - Commuter
+    - Throughput
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - PERF1246
+      - PARTNER1246
+      - COMMCA1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 119572
+    element: kpi
+    title: COMMCA1246 Total
+    metrics:
+    - Starts - Commuter
+    - Activations - Commuter
+    - Throughput
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - COMMCA1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 119573
+    element: kpi
+    title: PERF1246 Total
+    metrics:
+    - Starts - Commuter
+    - Activations - Commuter
+    - Throughput
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - PERF1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 119578
+    element: combo-chart
+    title: COMMCA1246 Starts by Campaign
+    metrics:
+    - Starts - Commuter
+    - Throughput
+    group_by:
+    - media_type
+    - campaign_name
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - COMMCA1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    - metric_at_least:
+        metric: Starts - Commuter
+        value: 1.0
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 119579
+    element: combo-chart
+    title: PERF1246 Starts by Campaign
+    metrics:
+    - Starts - Commuter
+    - Throughput
+    group_by:
+    - media_type
+    - campaign_name
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - PERF1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    - metric_at_least:
+        metric: Starts - Commuter
+        value: 1.0
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 119581
+    element: bar-chart
+    title: COMMCA1246 Activations by Campaign
+    metrics:
+    - Activations - Commuter
+    group_by:
+    - campaign_name
+    - media_type
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - COMMCA1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    - metric_at_least:
+        metric: Activations - Commuter
+        value: 1.0
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 119582
+    element: bar-chart
+    title: PERF1246 Activations by Campaign
+    metrics:
+    - Activations - Commuter
+    group_by:
+    - campaign_name
+    - media_type
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - PERF1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    - metric_at_least:
+        metric: Activations - Commuter
+        value: 1.0
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 133938
+    element: kpi
+    title: PARTNER1246 Total
+    metrics:
+    - Starts - Commuter
+    - Activations - Commuter
+    - Throughput
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - PARTNER1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 133939
+    element: combo-chart
+    title: BRAND1246  Starts by Campaign
+    metrics:
+    - Starts - Commuter
+    - Throughput
+    group_by:
+    - media_type
+    - campaign_name
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - PARTNER1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    - metric_at_least:
+        metric: Starts - Commuter
+        value: 1.0
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+  - tapclicks_widget_id: 133940
+    element: bar-chart
+    title: PARTNER1246 Activations by Campaign
+    metrics:
+    - Activations - Commuter
+    group_by:
+    - campaign_name
+    - media_type
+    filters:
+    - field: program_code
+      op: in
+      values:
+      - PARTNER1246
+    - field: site_key
+      op: not in
+      values:
+      - Unclassified
+    - metric_at_least:
+        metric: Activations - Commuter
+        value: 1.0
+    source_mapping_in_tapclicks: SXM - Adobe Mapping
+- name: Brand Awareness
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 117175
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117176
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117177
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117178
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117179
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117180
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117182
+    element: kpi
+    title: Video Fully Played
+    metrics:
+    - Starts
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117183
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117185
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117186
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117187
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117188
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117189
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117191
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117192
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117193
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117194
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117195
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117197
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117198
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117199
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117200
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117201
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117203
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117204
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117205
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117206
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117208
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117209
+    element: kpi
+    title: Video Fully Played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    - field: campaign_name
+      op: not in
+      values:
+      - Commuter Acquisition Trailers
+      - Commuter Acquisition Trialers
+      - Commuter Acquisition Winback
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: CTV
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 132741
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132742
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132743
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132744
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132745
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132746
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132752
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132754
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132755
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132756
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132759
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132761
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132762
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132763
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132766
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132768
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132769
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132770
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 116950
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116951
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116952
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116953
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116954
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116955
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116956
+    element: kpi
+    title: Views
+    metrics:
+    - Starts
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116957
+    element: kpi
+    title: Video Fully Played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116958
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116968
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116969
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Snapchat
+      - Search
+      - StndDisplay
+      - TikTok
+      - Video
+      - CTV
+      - DOOH
+      - '*Pinterest*'
+      - '*DOOH*'
+      - '*Search - Bing*'
+      - '*Display*'
+      - '*NativeDis*'
+      - '*Reddit*'
+      - '*DemandGen*'
+      - '*YouTube*'
+      - '*Linkedin*'
+      - '*Adobe*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116970
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116971
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116972
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116974
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116975
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116976
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116977
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116978
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116980
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116981
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116982
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116983
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116984
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116986
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116987
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116988
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116989
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116991
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: DOOH
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 117059
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117060
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117061
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117063
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117064
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117065
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117066
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117068
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117069
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117070
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117071
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Display
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 117032
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117033
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117034
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117035
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117036
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117037
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117045
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+      - Direct Buys - One Time Uploads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117046
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117047
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117048
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117050
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117051
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117052
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117053
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117055
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117056
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117057
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117058
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131953
+    element: bar-chart
+    title: Platform
+    metrics:
+    - Spend
+    group_by:
+    - source_name
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131954
+    element: combo-chart
+    title: Platform
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131955
+    element: combo-chart
+    title: Platform
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: not in
+      values:
+      - Campaign Manager 360
+      - Direct Buys - One Time Uploads
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Jolt Media
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 132872
+    element: kpi
+    title: Planned Impressions: 23,809,524
+    metrics:
+    - Impressions
+    source_mapping_in_tapclicks: 'Direct: Jolt Media'
+  - tapclicks_widget_id: 132874
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - Spots
+    - Spend
+    group_by:
+    - date:day
+    source_mapping_in_tapclicks: 'Direct: Jolt Media'
+  - tapclicks_widget_id: 132875
+    element: combo-chart
+    title: By Province
+    metrics:
+    - Impressions
+    - Spots
+    - Spend
+    group_by:
+    - province
+    source_mapping_in_tapclicks: 'Direct: Jolt Media'
+  - tapclicks_widget_id: 132876
+    element: combo-chart
+    title: By Creative
+    metrics:
+    - Impressions
+    - Spots
+    - Spend
+    group_by:
+    - creative_name
+    source_mapping_in_tapclicks: 'Direct: Jolt Media'
+  - tapclicks_widget_id: 132877
+    element: kpi
+    title: Total Spend: $43,200.00
+    metrics:
+    - Spend
+    source_mapping_in_tapclicks: 'Direct: Jolt Media'
+  - tapclicks_widget_id: 132878
+    element: kpi
+    title: Untitled widget
+    metrics:
+    - Spots
+    source_mapping_in_tapclicks: 'Direct: Jolt Media'
+- name: Meta - Acquisition
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 131991
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131992
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131993
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131994
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131995
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 131996
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132002
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132003
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132004
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132005
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132008
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132009
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132010
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132011
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132014
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132015
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132016
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132017
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Meta - Brand
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 116992
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116993
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116994
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116995
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116996
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116997
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116998
+    element: kpi
+    title: Views
+    metrics:
+    - Starts
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 116999
+    element: kpi
+    title: Video fully played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117000
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117009
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117011
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117012
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117013
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117015
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117017
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117018
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117019
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117021
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117023
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117024
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117025
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117027
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117029
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117030
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117031
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132058
+    element: bar-chart
+    title: Campaign
+    metrics:
+    - Spend
+    group_by:
+    - campaign_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - Instagram
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132059
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - campaign_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132060
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - campaign_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132061
+    element: combo-chart
+    title: Campaign
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - campaign_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Instagram
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Pause Ads
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 132845
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132846
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132847
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132848
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132849
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132850
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132853
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132855
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132856
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132857
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132860
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132862
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132863
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132864
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132867
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132869
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - NativeDis
+      - StndDisplay
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132870
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132871
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - StndDisplay
+      - NativeDis
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+      - Netflix Pause Ads
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Reddit
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 117118
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117119
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117120
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117121
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117122
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117123
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Reddit
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117125
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117126
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117127
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117128
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117130
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117131
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117132
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117133
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117135
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117136
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117137
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117138
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - '*Reddit*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 117339
+    element: kpi
+    title: Impressions
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117340
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117341
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117342
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117343
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117344
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117346
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 117348
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117349
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117350
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117352
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117353
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Impressions
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117354
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117356
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117357
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 117358
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: TikTok
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 132025
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132026
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132027
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132028
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132029
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132030
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132031
+    element: kpi
+    title: Views
+    metrics:
+    - Starts
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132032
+    element: kpi
+    title: Video fully played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132033
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132036
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132037
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132038
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132039
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132042
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132043
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132044
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132045
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132048
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132049
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132050
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132051
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132054
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132055
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132056
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132057
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - TikTok
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+      - 'SiriusXM: Commuter Acquisition'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: YouTube
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 132779
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132780
+    element: kpi
+    title: Clicks
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132781
+    element: kpi
+    title: Spend
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132782
+    element: kpi
+    title: CPM
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132783
+    element: kpi
+    title: CTR
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132784
+    element: kpi
+    title: CPC
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132785
+    element: kpi
+    title: Views
+    metrics:
+    - Starts
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132786
+    element: kpi
+    title: Video fully played
+    metrics:
+    - Completed Plays
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132787
+    element: kpi
+    title: CPCV
+    metrics:
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132790
+    element: bar-chart
+    title: By Day
+    metrics:
+    - Spend
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132792
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132793
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132794
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132797
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132799
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132800
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132801
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132804
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132806
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132807
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132808
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132811
+    element: combo-chart
+    title: By Day
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:day
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132813
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132814
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 132815
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Youtube
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'SiriusXM: Commuter Brand'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

@@ -1,0 +1,5886 @@
+id: D049
+title: KHP - Feel Out Loud Youth
+client: Kids Help Phone
+priority: Medium
+build_type: Standard
+move_group: '2'
+target_live_date: '2026-12-18'
+template: master
+tapclicks:
+  dashboard_id: 2721
+  client_account: Kids Help Phone
+  built_from: template
+  data_widgets: 234
+scope:
+  smart_campaign_filter_values: 'Kids Help Phone: Youth - Feel Out Loud - National; Kids Help Phone: Youth - Feel Out Loud
+    - Alberta; Kids Help Phone: Youth - Feel Out Loud 2.0'
+  how_widgets_are_scoped: 'Smart Campaign: 219, Campaign Name: 12, Other filter: 3'
+notes:
+- 'Not rebuilt: 1 widget, marked do-not-use in TapClicks'
+sections:
+- name: CTV
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 122922
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Spend
+    - CPM
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122925
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122926
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122927
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122928
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122930
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122931
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122932
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122933
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122940
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122941
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122942
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 122943
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - CTV
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Campaign Overview
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110641
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110642
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - folyouth
+      - folyouthcoupon
+      - folyouthlens
+      - FOL Youth
+      - FOL Youth - Awareness
+      - FOL Youth - Coupon
+      - FOL Youth - Lens
+      - '*folyouth*'
+      - '*fol youth*'
+      - feeloutloudyouth1h
+      - Feel Out Loud Youth 1H
+      - Feel Out Loud Youth 1H-EG
+      - Feel Out Loud Youth 1H-SP
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110644
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110645
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Instagram
+      - StndDisplay
+      - TikTok
+      - Snapchat
+      - Search
+      - DOOH
+      - Video
+      - YouTube
+      - Reddit
+      - NativeDis
+      - Search - Bing
+      - SnapChat
+      - Snapchat Lens
+      - '*Site Skin*'
+      - CTV
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: language
+      op: in
+      values:
+      - En
+      - Fr
+      - Multi
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110646
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110647
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110648
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110650
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110651
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110652
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110653
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110654
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110656
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110657
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110658
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110659
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110660
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110662
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110663
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110664
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110665
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110666
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110668
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110669
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110670
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110671
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110672
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110674
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Sessions
+    - Cost Per Session
+    group_by:
+    - date:week
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - FOL Youth
+      - FOL Youth - Awareness
+      - FOL Youth - Coupon
+      - FOL Youth - Lens
+      - folyouth
+      - folyouthcoupon
+      - folyouthlens
+      - '*folyouth*'
+      - '*fol youth*'
+      - feeloutloudyouth1h
+      - Feel Out Loud Youth 1H
+      - Feel Out Loud Youth 1H-EG
+      - Feel Out Loud Youth 1H-SP
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110675
+    element: bar-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - folyouthcoupon
+      - folyouth
+      - folyouthlens
+      - FOL Youth
+      - FOL Youth - Awareness
+      - FOL Youth - Coupon
+      - FOL Youth - Lens
+      - '*folyouth*'
+      - '*fol youth*'
+      - feeloutloudyouth1h
+      - Feel Out Loud Youth 1H
+      - Feel Out Loud Youth 1H-EG
+      - Feel Out Loud Youth 1H-SP
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110676
+    element: bar-chart
+    title: Cost per Session by Media Type
+    metrics:
+    - Cost Per Session
+    group_by:
+    - site_key
+    filters:
+    - field: site_key
+      op: not in
+      values:
+      - Default Site Key
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - '*folyouth*'
+      - '*fol youth*'
+      - feeloutloudyouth1h
+      - Feel Out Loud Youth 1H
+      - Feel Out Loud Youth 1H-EG
+      - Feel Out Loud Youth 1H-SP
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Sessions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: DOOH
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110886
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Spend
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110888
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110889
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110890
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110891
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110893
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110894
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110895
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110896
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - DOOH
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Enthusiast Gaming
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110734
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110735
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paidvideo
+      - youtube
+      - programmatic / paiddisplay
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - '*folyouth*'
+      - '*fol youth*'
+      - feeloutloudyouth1h
+      - Feel Out Loud Youth 1H
+      - Feel Out Loud Youth 1H-EG
+      - Feel Out Loud Youth 1H-SP
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110737
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110738
+    element: bar-chart
+    title: Media Type
+    metrics:
+    - Spend
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110739
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110740
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110741
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110743
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110744
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110745
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110746
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110747
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110749
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110750
+    element: combo-chart
+    title: Media Type
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - media_type
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110751
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110752
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110753
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud Youth 1H-EG
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: GA4 - Live Call
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110704
+    element: kpi
+    title: Total Sessions
+    metrics:
+    - Sessions
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*feeloutloudnational*'
+      - '*feel-out-loud*'
+      - '*folyouth*'
+      - feeloutloudyouth1h
+      - '*Feel Out Loud Youth*'
+      - '*FOL_Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_medium
+      op: not in
+      values:
+      - print
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 110705
+    element: pie-chart
+    title: Sessions by Media Type
+    metrics:
+    - Sessions
+    group_by:
+    - ga4_session_source
+    - ga4_session_medium
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*feeloutloudnational*'
+      - '*feel-out-loud*'
+      - '*folyouth*'
+      - feeloutloudyouth1h
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: ga4_session_medium
+      op: not in
+      values:
+      - '*print*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+  - tapclicks_widget_id: 110706
+    element: bar-chart
+    title: Sessions by Day
+    metrics:
+    - Sessions
+    group_by:
+    - date:day
+    filters:
+    - field: ga4_session_campaign
+      op: in
+      values:
+      - '*feeloutloudnational*'
+      - '*feel-out-loud*'
+      - '*folyouth*'
+      - feeloutloudyouth1h
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: 'Direct: Google Analytics 4'
+- name: Search
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110707
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110708
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Clicks
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110709
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Spend
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110710
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPM
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110711
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CTR
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110712
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - CPC
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110713
+    element: kpi
+    title: Scrolls
+    metrics:
+    - Total Conversions
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: conversion_tag
+      op: in
+      values:
+      - Kids Help Phone (GA4 New) (web) scroll
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110714
+    element: kpi
+    title: CPA
+    metrics:
+    - CPA
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: conversion_tag
+      op: in
+      values:
+      - Kids Help Phone (GA4 New) (web) scroll
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110715
+    element: kpi
+    title: GA4 Metrics
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - paidsearch
+      - paidsearch - bing
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - '*folyouth*'
+      - '*fol youth*'
+      - '*Feel Out Loud Youth*'
+      - '*FOL_Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110717
+    element: table
+    title: Search Keywords
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    labels:
+      Impressions: Impression
+    group_by:
+    - keyword
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Keyword Mapping
+  - tapclicks_widget_id: 110719
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110720
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110721
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110723
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110724
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110725
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110727
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110728
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110729
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110731
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: conversion_tag
+      op: in
+      values:
+      - Kids Help Phone (GA4 New) (web) scroll
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110732
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Kids Help Phone (GA4 New) (web) scroll
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110733
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Total Conversions
+    - CPA
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Search
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - metric_at_least:
+        metric: Total Conversions
+        value: 1.0
+    - field: conversion_tag
+      op: in
+      values:
+      - Kids Help Phone (GA4 New) (web) scroll
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136626
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Google Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136627
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Google Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136628
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Google Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136629
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Google Ads
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*YouTube*'
+      - '*TikTok*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136630
+    element: kpi
+    title: 'Benchmark CPM: $80'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136631
+    element: kpi
+    title: 'Benchmark CPC: $1'
+    metrics:
+    - CPC
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    - field: source_name
+      op: in
+      values:
+      - Google Ads
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Silverpush
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110754
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110755
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - programmatic / paidvideo
+      - youtube
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - '*folyouth*'
+      - '*fol youth*'
+      - feeloutloudyouth1h
+      - Feel Out Loud Youth 1H
+      - Feel Out Loud Youth 1H-EG
+      - Feel Out Loud Youth 1H-SP
+      - '*Youth FOL 2.0*'
+      - '*FOL_Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110757
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110758
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110759
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110760
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110762
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110763
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110764
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110765
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110767
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110768
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110769
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110770
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110772
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110773
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110774
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110775
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136634
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      - '*Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136635
+    element: kpi-with-target
+    title: Jan 1-Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      - '*Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136636
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      - '*Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136637
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - Goal Smart Connector
+      - Campaign Manager 360
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      - '*Feel Out Loud Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*TikTok*'
+      - '*Search*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136638
+    element: kpi
+    title: 'Benchmark VCR: 92%'
+    metrics:
+    - VCR
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136639
+    element: kpi
+    title: 'Benchmark CPCV: $0.03'
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    - field: source_name
+      op: in
+      values:
+      - Campaign Manager 360
+    date_range:
+      was: 'Own relative range: thisyear'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 137089
+    element: table
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Clicks
+    - Spend
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    group_by:
+    - date
+    - source_name
+    - campaign_name
+    - media_buy_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - YouTube
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Snapchat - Awareness
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110802
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Spend
+    - Clicks
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110804
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110805
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110806
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110807
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110809
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110810
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110811
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110812
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110814
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110815
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110816
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110817
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110819
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110820
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110821
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110822
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110824
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110825
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110826
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110827
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Awareness_2025-056_Fr_CA
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Snapchat - Coupons
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110849
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Spend
+    - Clicks
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110851
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110852
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110853
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110854
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110856
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110857
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110858
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110859
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110861
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110862
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110863
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110864
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110866
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110867
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110868
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110869
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110872
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110875
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110877
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110879
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Coupon_2025-056_Fr_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth - Q2 Coupon_2025-056_Fr_CA
+      - '*FOL Youth H2 Coupon*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Snapchat - Shares
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110828
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Spend
+    - Clicks
+    - CPM
+    - CTR
+    - CPC
+    - Post Shares
+    - Share Rate
+    - Cost Per Share
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110830
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110831
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110832
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110833
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110835
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110836
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110837
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110838
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110840
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110841
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110842
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110843
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110845
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Post Shares
+    - Share Rate
+    - Cost Per Share
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110846
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Post Shares
+    - Share Rate
+    - Cost Per Share
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Post Shares
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110847
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Post Shares
+    - Share Rate
+    - Cost Per Share
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Post Shares
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110848
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Post Shares
+    - Share Rate
+    - Cost Per Share
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth - Lens_2025-056_En_CA
+      - '*FOL Youth H2 Lens*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - metric_at_least:
+        metric: Post Shares
+        value: 1.0
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Snapchat - Video Completes
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110776
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Spend
+    - Clicks
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 N*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110778
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 N*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110779
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 N*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110780
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 N*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110781
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 N*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110783
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 N*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110784
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 N*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110785
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110786
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110788
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110789
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110790
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110791
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110793
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110794
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110795
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110796
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110798
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110799
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110800
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110801
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Snapchat
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+    - field: campaign_name
+      op: in
+      values:
+      - Kids Help Phone Paid_FOL Youth_2025-056_En_CA
+      - Kids Help Phone Paid_FOL Youth_2025-056_Fr_CA
+      - '*FOL Youth H2 NS*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+- name: Social
+  rebuild: true
+  widgets:
+  - tapclicks_widget_id: 110677
+    element: kpi
+    title: Total Metrics
+    metrics:
+    - Impressions
+    - Spend
+    - Clicks
+    - CPM
+    - CTR
+    - CPC
+    - Starts
+    - Completed Plays
+    - VCR
+    - CPCV
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110678
+    element: kpi
+    title: GA4
+    metrics:
+    - Sessions
+    - Cost Per Session
+    filters:
+    - field: site_key
+      op: in
+      values:
+      - facebook
+      - snapchat
+      - tiktok
+    - field: campaign_name
+      op: in
+      values:
+      - Feel Out Loud - National
+      - feeloutloudnational
+      - feel-out-loud
+      - Feel Out Loud Youth
+      - '*folyouth*'
+      - '*fol youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110680
+    element: bar-chart
+    title: By Week
+    metrics:
+    - Spend
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110681
+    element: bar-chart
+    title: Audience
+    metrics:
+    - Spend
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110682
+    element: bar-chart
+    title: Tactic
+    metrics:
+    - Spend
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110683
+    element: bar-chart
+    title: Creative
+    metrics:
+    - Spend
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook+Instagram
+      - Facebook
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Spend
+        value: 0.01
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110685
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110686
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Pinterest
+      - Snapchat
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110687
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110688
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Impressions
+    - CPM
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Impressions
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110690
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Snapchat
+      - TikTok
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110691
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - Pinterest
+      - TikTok
+      - Snapchat
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110692
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110693
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Clicks
+    - CPC
+    - CTR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Clicks
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110695
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110696
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110697
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110698
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Starts
+    - VCR
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Starts
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110700
+    element: combo-chart
+    title: By Week
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - date:week
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110701
+    element: combo-chart
+    title: Audience
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - audience
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110702
+    element: combo-chart
+    title: Tactic
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - tactic
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 110703
+    element: combo-chart
+    title: Creative
+    metrics:
+    - Completed Plays
+    - CPCV
+    group_by:
+    - creative_name
+    filters:
+    - field: media_type
+      op: in
+      values:
+      - Facebook
+      - Facebook+Instagram
+      - TikTok
+      - Snapchat
+      - Pinterest
+      - Linkedin
+      - Instagram
+      - Snapchat Lens
+    - metric_at_least:
+        metric: Completed Plays
+        value: 1.0
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136615
+    element: kpi-with-target
+    title: Mar 1-Dec 31st 2026
+    metrics:
+    - Impressions Goal
+    - Impressions
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+      - Goal Smart Connector
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Search*'
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-03-01..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136617
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Impressions
+    - Impressions Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+      - Goal Smart Connector
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Search*'
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-03-01..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136618
+    element: kpi-with-target
+    title: Mar 1-Dec 31st 2026
+    metrics:
+    - Clicks Goal
+    - Clicks
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+      - Goal Smart Connector
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Search*'
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-03-01..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136619
+    element: kpi
+    title: 'TikTok Impressions Goal: 83,340,450 (Mar 1-Dec 31st 2026)'
+    metrics:
+    - Clicks
+    - Clicks Goal
+    filters:
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+      - Goal Smart Connector
+    - field: campaign_name
+      op: in
+      values:
+      - '*FOL Youth*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    - field: campaign_name
+      op: not in
+      values:
+      - '*Search*'
+      - '*YouTube*'
+      wildcard: true
+      note: 'wildcard (Q009): resolved to an exact list or a pattern rule in seeds/filter_rules.csv'
+    date_range:
+      was: 'Fixed: 2026-03-01..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Goals - Mapping
+  - tapclicks_widget_id: 136622
+    element: kpi
+    title: 'Benchmark CPM: $5'
+    metrics:
+    - CPM
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+    date_range:
+      was: 'Fixed: 2026-03-01..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping
+  - tapclicks_widget_id: 136623
+    element: kpi
+    title: 'Benchmark CPCV: $0.13'
+    metrics:
+    - CPCV
+    filters:
+    - field: smart_campaign
+      op: in
+      values:
+      - 'Kids Help Phone: Youth - Feel Out Loud - National'
+      - 'Kids Help Phone: Youth - Feel Out Loud - Alberta'
+      - 'Kids Help Phone: Youth - Feel Out Loud 2.0'
+    - field: source_name
+      op: in
+      values:
+      - TikTok Ads
+    date_range:
+      was: 'Fixed: 2026-03-01..2026-12-31'
+      now: dashboard date picker
+    source_mapping_in_tapclicks: Epitaph - Data Mapping

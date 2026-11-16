@@ -1,0 +1,139 @@
+source_name,route,cutover_date,status,owner,notes
+Adara - Ottawa Tourism,sharepoint,2026-12-07,planned,,SharePoint loader
+Adobe Organic - Streaming,sharepoint,2026-12-07,planned,,SharePoint loader
+Amazon Ads,fivetran,2026-12-07,planned,,Fivetran
+Amazon DSP,fivetran,2026-12-07,planned,,Fivetran (prove first)
+Amazon DSP - Sonnet Reach & Frequency Report,sharepoint,2026-12-07,planned,,SharePoint loader
+Campaign Manager 360,fivetran,2026-12-07,planned,,Fivetran
+Display & Video 360 IO,fivetran,2026-12-07,planned,,Fivetran
+Facebook Ads,fivetran,2026-12-07,planned,,Fivetran
+Goal Smart Connector,sharepoint,2026-12-07,planned,,SharePoint loader
+Google Ads,fivetran,2026-12-07,planned,,Fivetran
+Google Analytics 4,fivetran,2026-12-07,planned,,Fivetran
+Google Trends,out_of_scope,,out_of_scope,,Lagging
+HiveStack,sharepoint,2026-12-07,planned,,SharePoint loader
+Jolt Media,sharepoint,2026-12-07,planned,,SharePoint loader
+LinkedIn Ads,fivetran,2026-12-07,planned,,Fivetran
+Microsoft Advertising,fivetran,2026-12-07,planned,,Fivetran
+Netflix Pause Ads,sharepoint,2026-12-07,planned,,SharePoint loader
+Pinterest Ads,fivetran,2026-12-07,planned,,Fivetran
+Reddit Ads,fivetran,2026-12-07,planned,,Fivetran
+Scorecard - SiriusXM,sharepoint,2026-12-07,planned,,SharePoint loader
+Silverpush - Automated Report,sharepoint,2026-12-07,planned,,SharePoint loader
+Silverpush - CTV,sharepoint,2026-12-07,planned,,SharePoint loader
+SiriusXM - Adobe - Commuter Activations,sharepoint,2026-12-07,planned,,SharePoint loader
+SiriusXM - Adobe - Commuter Starts,sharepoint,2026-12-07,planned,,SharePoint loader
+SiriusXM - Adobe - Dual Offer Streaming,sharepoint,2026-12-07,planned,,SharePoint loader
+SiriusXM - Adobe - Streaming Starts (NEW),sharepoint,2026-12-07,planned,,SharePoint loader
+SnapChat,fivetran,2026-12-07,planned,,Fivetran
+Sonnet - DV360 Creative,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet - Direct Buy Offline Spend,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet - Google CDI Data - Auto Insurance Ontario,history_only,,history_only,,Future-dated
+Sonnet - Google CDI Data - Auto Insurance Quebec,history_only,,history_only,,Future-dated
+Sonnet - Google CDI Data - Brand Name Ontario,history_only,,history_only,,Future-dated
+Sonnet - Google CDI Data - Brand Name Quebec,history_only,,history_only,,Future-dated
+Sonnet - Google CDI Data - Home Insurance Ontario,history_only,,history_only,,Future-dated
+Sonnet - Google CDI Data - Home Insurance Quebec,history_only,,history_only,,Future-dated
+Sonnet - Group Breakdown Data,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet - Multiline Data,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet - Quote Quality Data,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet - Raw Data,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet Auction Pressure - Monthly V2,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet Auction Pressure - Weekly V2,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet Visibility - Monthly V2,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet Visibility - Weekly V2,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet vs. Competition - Monthly V2,sharepoint,2026-12-07,planned,,SharePoint loader
+Sonnet vs. Competition - Weekly V2,sharepoint,2026-12-07,planned,,SharePoint loader
+Spotify - Cobs Bread,sharepoint,2026-12-07,planned,,SharePoint loader
+Spotify Ads,fivetran,2026-12-07,planned,,Fivetran (prove first)
+TapOrders,out_of_scope,,out_of_scope,,Future-dated
+The Trade Desk,fivetran,2026-12-07,planned,,Fivetran
+TikTok Ads,fivetran,2026-12-07,planned,,Fivetran
+55 Rush - Kids Help Phone,history_only,,history_only,,Dormant
+Amazon Pause Ads,history_only,,history_only,,Dormant
+Amazon Vendor Central ASIN+,history_only,,history_only,,Dormant
+Apple Ads,history_only,,history_only,,Dormant
+Bell DSP,history_only,,history_only,,Dormant
+Bell DSP - KHP,history_only,,history_only,,Dormant
+Bell Media - #4,history_only,,history_only,,Dormant
+Bell Media - KHP #3,history_only,,history_only,,Dormant
+Billups - DOOH (CA),history_only,,history_only,,Dormant
+Billups - DOOH (US),history_only,,history_only,,Dormant
+Broadlab,history_only,,history_only,,Dormant
+Broadlab V2 - Creative,history_only,,history_only,,Dormant
+Chameleon - SiriusXM,history_only,,history_only,,Dormant
+Chewy - Nulo,history_only,,history_only,,Dormant
+Cobs Bread - Sales Data,history_only,,history_only,,Dormant
+Cobs Bread - Sales Data (Geo),history_only,,history_only,,Dormant
+Currency Exchange Rates (Daily),history_only,,history_only,,No date
+DV360 - Old Data Patch,history_only,,history_only,,Dormant
+Direct Buys - One Time Uploads,history_only,,history_only,,Dormant
+EQ Works - SiriusXM 2.0,history_only,,history_only,,Dormant
+Embark - EQ Works,history_only,,history_only,,Dormant
+Embark - Loblaws,history_only,,history_only,,Dormant
+Embark - TPX,history_only,,history_only,,Dormant
+Embark - WOIR,history_only,,history_only,,Dormant
+Embark Connected TV,history_only,,history_only,,Dormant
+Embark MMM Rush Data,history_only,,history_only,,Dormant
+FlashTalking - Wurth,history_only,,history_only,,Dormant
+Forecasting Document,history_only,,history_only,,Dormant
+GA4 Test,history_only,,history_only,,Dormant
+Google Analytics (Deprecated),history_only,,history_only,,Dormant
+HVC Heat Map,history_only,,history_only,,No date
+Ideon Media - Conexus,history_only,,history_only,,Dormant
+KHP - Conversations,history_only,,history_only,,Dormant
+KHP - P2P Patch - Creative Mapping,history_only,,history_only,,Dormant
+KHP - P2P Patch - Data Mapping,history_only,,history_only,,Dormant
+Kijiji,history_only,,history_only,,Dormant
+Kijiji - Embark - Display Ads,history_only,,history_only,,Dormant
+Kijiji - Embark - Youtube Ads,history_only,,history_only,,Dormant
+Netflix,history_only,,history_only,,Dormant
+Netflix - Cobs Bread,history_only,,history_only,,Dormant
+Netflix - Embark,history_only,,history_only,,Dormant
+Netflix - Maple Google Sheet,history_only,,history_only,,Dormant
+Nulo - Amazon Vendor Central - Shipped COGs,history_only,,history_only,,Dormant
+Nulo - GA Conversion Data Patch,history_only,,history_only,,Dormant
+Olympics Qualifier Test,history_only,,history_only,,Dormant
+Pelmorex - The Weather Network,history_only,,history_only,,Dormant
+Rec Media Reporting,history_only,,history_only,,Dormant
+Reddit,history_only,,history_only,,Dormant
+Regex Test,history_only,,history_only,,Dormant
+Rogers - Maple Google Sheet,history_only,,history_only,,Dormant
+Seedtag,history_only,,history_only,,Dormant
+ShareThrough,history_only,,history_only,,Dormant
+ShareThrough - Embark,history_only,,history_only,,Dormant
+ShareThrough - Stars (Creative),history_only,,history_only,,Dormant
+ShareThrough CTV,history_only,,history_only,,Dormant
+ShareThrough Pacing Report,history_only,,history_only,,Dormant
+Silverpush,history_only,,history_only,,Dormant
+Silverpush - Heavy (Geo),history_only,,history_only,,Dormant
+Silverpush - Maple Health,history_only,,history_only,,Dormant
+Silverpush Lite,history_only,,history_only,,Dormant
+SiriusXM - Adobe - 5 for 12 Satellite Activations,history_only,,history_only,,Dormant
+SiriusXM - Adobe - 5 for 12 Streaming Activations,history_only,,history_only,,Dormant
+SiriusXM - Adobe - Commuter Page Visits,history_only,,history_only,,Dormant
+SiriusXM - Adobe - Dual Offer Satellite,history_only,,history_only,,Dormant
+SiriusXM - Adobe - Dual Offer Satellite 6M,history_only,,history_only,,Dormant
+SiriusXM - Adobe - Satellite (NEW),history_only,,history_only,,Dormant
+SiriusXM - Adobe - Satellite (OLD),history_only,,history_only,,Dormant
+SiriusXM - Adobe - Streaming (NEW),history_only,,history_only,,Dormant
+SiriusXM - Adobe - Streaming (OLD),history_only,,history_only,,Dormant
+SiriusXM - Adobe - Streaming Starts (OLD),history_only,,history_only,,Dormant
+SiriusXM - GoLoot,history_only,,history_only,,Dormant
+SiriusXM - Maple Google Sheet,history_only,,history_only,,Dormant
+SiriusXM - Snapchat - Installs,history_only,,history_only,,Dormant
+Sonnet - Historic Data,history_only,,history_only,,Dormant
+Spotify,history_only,,history_only,,Dormant
+StackAdapt - Conexus Geo Split,history_only,,history_only,,No date
+Stackadapt - Conexus,history_only,,history_only,,Dormant
+TSN / Bell Media - Asahi,history_only,,history_only,,Dormant
+Teads Daily,history_only,,history_only,,Dormant
+The Score,history_only,,history_only,,Dormant
+The Trade Desk - Old Data Patch,history_only,,history_only,,Dormant
+Tiktok Geo Data (City) - Nulo,history_only,,history_only,,Dormant
+Tiktok Geo Data - Nulo,history_only,,history_only,,Dormant
+Warner Music - SiriusXM,history_only,,history_only,,Dormant
+Wattpad - In-App Video,history_only,,history_only,,Dormant
+Wattpad - Outstream,history_only,,history_only,,Dormant
+Wildbrain 2.0,history_only,,history_only,,No date
+Zefr - SiriusXM,history_only,,history_only,,Dormant

@@ -1,0 +1,87 @@
+kpi,widgets,dashboards,measures,fact,source,evidence,status
+Impressions,1101,29,impressions,fct_ad_delivery_daily,"Fivetran ads, vendor files",verified in TapClicks export,agreed
+Spend,1090,29,spend,fct_ad_delivery_daily,"Fivetran ads, vendor files, direct buy",verified in export,agreed
+CPM,1062,28,"impressions, spend",fct_ad_delivery_daily,"Fivetran ads, vendor files; Fivetran ads, vendor files, direct buy",verified in TapClicks export; verified in export,agreed
+Clicks,1009,29,clicks,fct_ad_delivery_daily,"Fivetran ads, vendor files",verified in export,agreed
+CPC,995,29,"clicks, spend",fct_ad_delivery_daily,"Fivetran ads, vendor files; Fivetran ads, vendor files, direct buy",verified in export,agreed
+CTR,968,28,"clicks, impressions",fct_ad_delivery_daily,"Fivetran ads, vendor files",verified in TapClicks export; verified in export,agreed
+Total Conversions,639,12,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+CPA,557,12,"conversions, spend",fct_ad_delivery_daily + fct_conversions_daily,"Fivetran ads, vendor files, direct buy; Fivetran conversion actions + tag decisions",export has tags; T01-T11 open; verified in export,agreed
+CPCV,471,20,"completed_plays, spend",fct_ad_delivery_daily,"Fivetran ads; Fivetran ads, vendor files, direct buy",verified in export,agreed
+Completed Plays,456,20,completed_plays,fct_ad_delivery_daily,Fivetran ads,verified in export,agreed
+VCR,130,10,"completed_plays, video_starts",fct_ad_delivery_daily,Fivetran ads,verified in export,agreed
+Starts,107,8,video_starts,fct_ad_delivery_daily,Fivetran ads,verified in export,agreed
+Sessions,88,8,sessions,fct_web_sessions_daily,GA4,schema assumed,agreed
+Quotes,69,2,quotes,fct_sonnet_quotes_daily,Sonnet Raw Data file,file unseen,agreed
+Cost Per Session,60,8,"sessions, spend",fct_ad_delivery_daily + fct_web_sessions_daily,"Fivetran ads, vendor files, direct buy; GA4",schema assumed; verified in export,agreed
+Search Impr. share (Auction Insights),55,1,(as reported),fct_auction_insights,,as reported: fct_auction_insights,agreed
+Binds,50,2,binds,fct_sonnet_quotes_daily,Sonnet Raw Data file,file unseen,agreed
+CPQ,49,2,"quotes, spend",fct_ad_delivery_daily + fct_sonnet_quotes_daily,"Fivetran ads, vendor files, direct buy; Sonnet Raw Data file",file unseen; verified in export,agreed
+Impressions Goal,45,8,goal_value,fct_goals,Goals file,file unseen,agreed
+QTB,41,2,"binds, quotes",fct_sonnet_quotes_daily,Sonnet Raw Data file,file unseen,agreed
+Revenue,34,1,revenue,fct_conversions_daily,Fivetran conversion value,schema assumed,agreed
+Performance Trials,32,1,performance_trials,fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+ROAS,29,1,"revenue, spend",fct_conversions_daily + fct_ad_delivery_daily,"Fivetran ads, vendor files, direct buy; Fivetran conversion value",schema assumed; verified in export,agreed
+Clicks Goal,22,5,goal_value,fct_goals,Goals file,file unseen,agreed
+CPLPV,17,3,"conversions, spend",fct_ad_delivery_daily + fct_conversions_daily,"Fivetran ads, vendor files, direct buy; Fivetran conversion actions + tag decisions",export has tags; T01-T11 open; verified in export,agreed
+Find a Retailer - Nulo,16,1,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+Find a Retailer - CPA,16,1,"conversions, spend",fct_ad_delivery_daily + fct_conversions_daily,"Fivetran ads, vendor files, direct buy; Fivetran conversion actions + tag decisions",export has tags; T01-T11 open; verified in export,agreed
+LPV,16,3,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+Quotes Goal,16,1,goal_value,fct_goals,Goals file,file unseen,agreed
+CPQ Goal,16,1,goal_value,fct_goals,Goals file,file unseen,agreed
+Organic Trials,13,1,organic_trials,fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Performance CPT,12,1,"performance_trials, spend",fct_ad_delivery_daily + fct_sxm_scorecard,"Fivetran ads, vendor files, direct buy; SXM Adobe files",file unseen; verified in export,agreed
+Orders,9,1,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+Cost per Order,9,1,"conversions, spend",fct_ad_delivery_daily + fct_conversions_daily,"Fivetran ads, vendor files, direct buy; Fivetran conversion actions + tag decisions",export has tags; T01-T11 open; verified in export,agreed
+Throughput Percentage,9,2,"organic_flow_starts, organic_trials, performance_flow_starts, performance_trials",fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Reach,8,2,(as reported),fct_reach_frequency,,as reported: fct_reach_frequency,open
+Frequency,8,2,(as reported),fct_reach_frequency,,as reported: fct_reach_frequency,open
+Trials - SC,8,1,scorecard_trials,fct_sxm_scorecard,SXM Scorecard file,file unseen,agreed
+Site Visits,7,2,site_visits,fct_adara_daily,Adara file,file unseen,agreed
+CPT,7,1,"organic_trials, performance_trials, spend",fct_ad_delivery_daily + fct_sxm_scorecard,"Fivetran ads, vendor files, direct buy; SXM Adobe files",file unseen; verified in export,agreed
+Starts - Commuter,7,1,commuter_starts,fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Activations - Commuter,7,1,commuter_activations,fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Click share,6,1,(as reported),fct_auction_insights,,as reported: fct_auction_insights,agreed
+Impr. (Abs. Top) %,6,1,(as reported),fct_auction_insights,,as reported: fct_auction_insights,agreed
+Search lost IS (budget),6,1,(as reported),fct_auction_insights,,as reported: fct_auction_insights,agreed
+Search lost IS (rank),6,1,(as reported),fct_auction_insights,,as reported: fct_auction_insights,agreed
+Leads,5,1,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+CPL,5,1,"conversions, spend",fct_ad_delivery_daily + fct_conversions_daily,"Fivetran ads, vendor files, direct buy; Fivetran conversion actions + tag decisions",export has tags; T01-T11 open; verified in export,agreed
+Completed Registration,5,1,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+Post Shares,5,1,post_shares,fct_ad_delivery_daily,Meta actions,schema assumed,agreed
+Share Rate,5,1,"impressions, post_shares",fct_ad_delivery_daily,"Fivetran ads, vendor files; Meta actions",schema assumed; verified in TapClicks export,agreed
+Cost Per Share,5,1,"post_shares, spend",fct_ad_delivery_daily,"Fivetran ads, vendor files, direct buy; Meta actions",schema assumed; verified in export,agreed
+Spend Goal,5,1,goal_value,fct_goals,Goals file,file unseen,agreed
+Total Trials,5,1,"organic_trials, performance_trials",fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Performance Flow Starts,5,1,performance_flow_starts,fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Organic Flow Starts,5,1,organic_flow_starts,fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Total Flow Starts,5,1,"organic_flow_starts, performance_flow_starts",fct_sxm_scorecard,SXM Adobe files,file unseen,agreed
+Flight Searches,4,2,flight_searches,fct_adara_daily,Adara file,file unseen,agreed
+Flight Bookings,4,2,flight_bookings,fct_adara_daily,Adara file,file unseen,agreed
+Hotel Searches,4,2,hotel_searches,fct_adara_daily,Adara file,file unseen,agreed
+Hotel Bookings,4,2,hotel_bookings,fct_adara_daily,Adara file,file unseen,agreed
+Spots,4,1,spots,fct_ad_delivery_daily,Jolt file,file unseen,agreed
+Scorecard CPT,4,1,"scorecard_trials, spend",fct_ad_delivery_daily + fct_sxm_scorecard,"Fivetran ads, vendor files, direct buy; SXM Scorecard file",file unseen; verified in export,agreed
+Platform Conversions,4,1,platform_conversions,fct_conversions_daily,Fivetran conversion actions,platform schema assumed,agreed
+PCPA,4,1,"platform_conversions, spend",fct_ad_delivery_daily + fct_conversions_daily,"Fivetran ads, vendor files, direct buy; Fivetran conversion actions",platform schema assumed; verified in export,agreed
+Uniques Reached,3,1,(as reported),fct_reach_frequency,,as reported: fct_reach_frequency,open
+Trials - Goal,3,1,goal_value,fct_goals,Goals file,file unseen,agreed
+Impressions / Clicks,3,1,(as reported),fct_adara_daily,,as reported: fct_adara_daily,open
+Travel Search Signals,3,1,travel_search_signals,fct_adara_daily,Adara file,formula open (K13),open
+Attributed Books,3,1,attributed_books,fct_adara_daily,Adara file,formula open (K13),open
+CPV,1,1,"spend, video_starts",fct_ad_delivery_daily,"Fivetran ads; Fivetran ads, vendor files, direct buy",verified in export,agreed
+Conversions,1,1,platform_conversions,fct_conversions_daily,Fivetran conversion actions,platform schema assumed,agreed
+All Conv.,1,1,platform_all_conversions,fct_conversions_daily,Google Ads,schema assumed,agreed
+Conversions - PerfMax,1,1,platform_conversions,fct_conversions_daily,Fivetran conversion actions,platform schema assumed,agreed
+Application,1,1,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+Application click-through conversions,1,1,click_through_conversions,fct_conversions_daily,Fivetran,schema assumed,agreed
+Application view-through conversions,1,1,view_through_conversions,fct_conversions_daily,Fivetran,schema assumed,agreed
+Checkouts,1,1,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+Video Fully Played Goal,1,1,goal_value,fct_goals,Goals file,file unseen,agreed
+Red,1,1,quality_quotes,fct_sonnet_quotes_daily,Sonnet Quote Quality file,file unseen,agreed
+Yellow,1,1,quality_quotes,fct_sonnet_quotes_daily,Sonnet Quote Quality file,file unseen,agreed
+Green,1,1,quality_quotes,fct_sonnet_quotes_daily,Sonnet Quote Quality file,file unseen,agreed
+Multiline Customer,1,1,customers,fct_sonnet_quotes_daily,Sonnet Multiline file,file unseen,agreed
+Monoline Customer,1,1,customers,fct_sonnet_quotes_daily,Sonnet Multiline file,file unseen,agreed
+Apple App Store,0,0,conversions,fct_conversions_daily,Fivetran conversion actions + tag decisions,export has tags; T01-T11 open,agreed
+Throughput,0,0,"commuter_activations, commuter_starts",fct_sxm_scorecard,SXM Adobe files,file unseen,agreed

@@ -1,0 +1,169 @@
+# Gold contract: the tables and columns the semantic layer and the 29 dashboards read.
+# Built top-down from the KPIs (config/kpis.yml) and the dashboard specs (filters and group-bys), so the semantic
+# layer and the Omni dashboards can be built and tested now, before the sources are connected.
+# Silver must fill these columns; scripts/check_gold_contract.py fails if snowflake/40_marts/*.sql drops one.
+#   status: built = produced by today's SQL | planned = in the contract, filled when its source is connected
+#   fed_by: where the column will come from
+
+version: 1
+tables:
+  FCT_AD_DELIVERY_DAILY:
+    grain: [date_key, source_key, campaign_key, media_buy_key, creative_key]
+    columns:
+      date_key:          {type: number, status: built}
+      source_key:        {type: varchar, status: built}
+      campaign_key:      {type: varchar, status: built}
+      media_buy_key:     {type: varchar, status: built}
+      creative_key:      {type: varchar, status: built}
+      platform:          {type: varchar, status: built}
+      media_type:        {type: varchar, status: built, fed_by: media buy name part 4 + map_media_type}
+      channel:           {type: varchar, status: built}
+      impressions:       {type: number, status: built, fed_by: all delivery sources; verified in TapClicks export}
+      clicks:            {type: number, status: built, fed_by: all delivery sources; verified in export}
+      spend:             {type: number, status: built, fed_by: all delivery sources (CAD where convert_to is set)}
+      spend_account_currency: {type: number, status: built}
+      currency_code:     {type: varchar, status: built}
+      video_starts:      {type: number, status: built}
+      completed_plays:   {type: number, status: built}
+      post_shares:       {type: number, status: built, fed_by: Meta actions}
+      spots:             {type: number, status: built, fed_by: Jolt Media file}
+      loaded_from:       {type: varchar, status: built}
+  FCT_CONVERSIONS_DAILY:
+    grain: [date_key, source_key, campaign_key, conversion_tag_name]
+    columns:
+      date_key:          {type: number, status: built}
+      source_key:        {type: varchar, status: built}
+      campaign_key:      {type: varchar, status: built}
+      platform:          {type: varchar, status: built}
+      campaign_type:     {type: varchar, status: built}
+      conversion_tag_name: {type: varchar, status: built}
+      conversion_tag_key: {type: varchar, status: built}
+      kpi_group:         {type: varchar, status: built, fed_by: seeds/map_conversion_tag.csv (T01 to T06 and T08 to T11 open)}
+      counts_toward_kpi: {type: boolean, status: built, fed_by: seeds/map_conversion_tag.csv}
+      conversions:       {type: number, status: built}
+      platform_conversions: {type: number, status: built}
+      platform_all_conversions: {type: number, status: built}
+      revenue:           {type: number, status: built}
+      click_through_conversions: {type: number, status: built}
+      view_through_conversions:  {type: number, status: built}
+      loaded_from:       {type: varchar, status: built}
+  FCT_KEYWORD_DAILY:
+    grain: [date_key, source_key, campaign_key, keyword]
+    columns:
+      date_key:     {type: number, status: planned}
+      source_key:   {type: varchar, status: planned}
+      campaign_key: {type: varchar, status: planned}
+      keyword:      {type: varchar, status: planned, fed_by: Google Ads and Microsoft keyword reports (17 dashboards)}
+      match_type:   {type: varchar, status: planned}
+      impressions:  {type: number, status: planned}
+      clicks:       {type: number, status: planned}
+      spend:        {type: number, status: planned}
+      conversions:  {type: number, status: planned}
+      revenue:      {type: number, status: planned}
+  FCT_WEB_SESSIONS_DAILY:
+    grain: [date_key, property_id, ga4_session_source, ga4_session_medium, ga4_session_campaign]
+    columns:
+      date_key:     {type: number, status: built}
+      client_code:  {type: varchar, status: built}
+      property_id:  {type: varchar, status: built}
+      ga4_session_source:   {type: varchar, status: built}
+      ga4_session_medium:   {type: varchar, status: built}
+      ga4_session_campaign: {type: varchar, status: built}
+      ga4_manual_ad_content: {type: varchar, status: built}
+      sessions:     {type: number, status: built}
+  FCT_SONNET_QUOTES_DAILY:
+    grain: [date_key, province, product, channel, segment, quality_band, line_type, file_type]
+    columns:
+      date_key: {type: number, status: built}
+      province: {type: varchar, status: built, fed_by: Sonnet Raw Data (file unseen)}
+      product:  {type: varchar, status: built}
+      channel:  {type: varchar, status: built}
+      segment:  {type: varchar, status: built}
+      site:     {type: varchar, status: planned, fed_by: Sonnet Raw Data or Group Breakdown}
+      quality_band: {type: varchar, status: built}
+      line_type: {type: varchar, status: built}
+      quotes:   {type: number, status: built}
+      quality_quotes: {type: number, status: built}
+      binds:    {type: number, status: built}
+      customers: {type: number, status: built}
+      file_type: {type: varchar, status: built}
+  FCT_SXM_SCORECARD:
+    grain: [date_key, channel, campaign_name, program_code]
+    columns:
+      date_key: {type: number, status: built}
+      channel: {type: varchar, status: built}
+      campaign_name: {type: varchar, status: built}
+      program_code: {type: varchar, status: planned, fed_by: Adobe files (F07)}
+      site_key: {type: varchar, status: planned, fed_by: to be defined by Epitaph}
+      performance_trials: {type: number, status: built}
+      organic_trials: {type: number, status: built}
+      performance_flow_starts: {type: number, status: built}
+      organic_flow_starts: {type: number, status: built}
+      commuter_starts: {type: number, status: built}
+      commuter_activations: {type: number, status: built}
+      scorecard_trials: {type: number, status: built}
+  FCT_AUCTION_INSIGHTS:
+    grain: [period_start, grain, feed_id, campaign_name, competitor_domain]
+    columns:
+      period_start: {type: date, status: built}
+      grain: {type: varchar, status: built}
+      feed_id: {type: varchar, status: built}
+      account_name: {type: varchar, status: planned, fed_by: auction report files}
+      campaign_name: {type: varchar, status: built}
+      competitor_domain: {type: varchar, status: built}
+      search_impr_share: {type: number, status: built}
+      click_share: {type: number, status: built}
+      impr_abs_top_pct: {type: number, status: built}
+      search_lost_is_budget: {type: number, status: built}
+      search_lost_is_rank: {type: number, status: built}
+  FCT_ADARA_DAILY:
+    grain: [date_key, campaign_name]
+    columns:
+      date_key: {type: number, status: built}
+      campaign_name: {type: varchar, status: built}
+      attribution_group: {type: varchar, status: planned, fed_by: Adara file (F14)}
+      site_visits: {type: number, status: built}
+      flight_searches: {type: number, status: built}
+      flight_bookings: {type: number, status: built}
+      hotel_searches: {type: number, status: built}
+      hotel_bookings: {type: number, status: built}
+      travel_search_signals: {type: number, status: built}
+      attributed_books: {type: number, status: built}
+      uniques_reached: {type: number, status: built}
+      impressions_per_clicks: {type: number, status: built}
+  FCT_GOALS:
+    grain: [period_month, client_code, smart_campaign, goal_metric]
+    columns:
+      period_month: {type: date, status: built}
+      client_code: {type: varchar, status: built}
+      smart_campaign: {type: varchar, status: built}
+      goal_metric: {type: varchar, status: built}
+      goal_value: {type: number, status: built}
+  DIM_CAMPAIGN:
+    grain: [campaign_key]
+    columns:
+      campaign_key: {type: varchar, status: built}
+      campaign_name: {type: varchar, status: built}
+      client_code: {type: varchar, status: built}
+      smart_campaign: {type: varchar, status: built}
+      job_number: {type: varchar, status: built}
+      language: {type: varchar, status: built}
+      country: {type: varchar, status: built}
+      campaign_name_valid: {type: boolean, status: built}
+  DIM_MEDIA_BUY:
+    grain: [media_buy_key]
+    columns:
+      media_buy_key: {type: varchar, status: built}
+      media_buy_name: {type: varchar, status: built}
+      media_type: {type: varchar, status: built}
+      tactic: {type: varchar, status: built}
+      audience: {type: varchar, status: built}
+      site_key: {type: varchar, status: planned, fed_by: to be defined by Epitaph (Kids Help Phone, SiriusXM)}
+      campaign_filter: {type: varchar, status: planned, fed_by: to be defined by Epitaph (KHP Search)}
+  DIM_CREATIVE:
+    grain: [creative_key]
+    columns:
+      creative_key: {type: varchar, status: built}
+      creative_name: {type: varchar, status: built}
+      creative_format: {type: varchar, status: built}
+      call_to_action: {type: varchar, status: built}
