@@ -34,11 +34,13 @@ from BRONZE.LOADER.LOAD_LOG
 where status = 'loaded'
 qualify row_number() over (partition by item_id order by logged_at desc) = 1;
 
--- Client names and the short names used in vendor campaign names (KHP, Sonnet, Kicking Horse)
+-- Client names and the short names used in vendor campaign names (KHP, Sonnet, Kicking Horse), from the
+-- Master Client Index (mci_identifiers.sql): whole-word identifiers only
 create or replace view SILVER.STG.CLIENT_NAME_MATCH as
-select distinct client_name, lower(client_name) as alias from GOLD.CONTROL.MAP_CLIENT_ACCOUNT
-union
-select client_name, lower(alias) from GOLD.CONTROL.MAP_CLIENT_ALIAS;
+select distinct c.client_name, i.id_norm as alias
+from SILVER.STG.MCI_IDENTIFIERS i
+join GOLD.CONTROL.MCI_CLIENT c on c.client_code = i.client_code
+where i.id_type in ('alias', 'campaign_token');
 
 -- ---------------------------------------------------------------- vendor delivery files -> ad delivery shape
 -- One block per file layout. client_hint: the client for single-client files; for shared vendor files the client
@@ -46,7 +48,7 @@ select client_name, lower(alias) from GOLD.CONTROL.MAP_CLIENT_ALIAS;
 -- naming convention. Spend is NULL where the vendor file has none (Silverpush, Jolt).
 create or replace view SILVER.STG.STG_VENDOR_DELIVERY as
 with v as (
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Silverpush - Automated Report' as source_name, 'Silverpush' as platform,
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Silverpush - Automated Report' as source_name, 'Silverpush' as platform,
          SILVER.STG.DAY(record:date) as activity_date, null::varchar as fixed_client,
          SILVER.STG.TXT(record:advertiser) as campaign_name, SILVER.STG.TXT(record:line_item) as media_buy_name,
          SILVER.STG.TXT(record:line_item_id) as media_buy_id, null::varchar as creative_name,
@@ -55,47 +57,47 @@ with v as (
          null::number as spots, null::varchar as currency
   from BRONZE.SHAREPOINT.SILVERPUSH r where feed_id = 'F09'
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Silverpush - CTV', 'Silverpush', SILVER.STG.DAY(record:date), null,
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Silverpush - CTV', 'Silverpush', SILVER.STG.DAY(record:date), null,
          SILVER.STG.TXT(record:advertiser), null, null, SILVER.STG.TXT(record:creative),
          SILVER.STG.NUM(record:impressions), null, null,
          SILVER.STG.NUM(record:player_starts), SILVER.STG.NUM(record:player_completed_views), null, null
   from BRONZE.SHAREPOINT.SILVERPUSH r where feed_id = 'F10'
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'HiveStack', 'HiveStack', SILVER.STG.DAY(record:date), null,
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'HiveStack', 'HiveStack', SILVER.STG.DAY(record:date), null,
          SILVER.STG.TXT(record:campaign), SILVER.STG.TXT(record:line_item), null, SILVER.STG.TXT(record:creative),
          SILVER.STG.NUM(record:impressions), null, SILVER.STG.NUM(record:spend),
          null, null, SILVER.STG.NUM(record:plays), null
   from BRONZE.SHAREPOINT.HIVESTACK r
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Netflix Pause Ads', 'Netflix', SILVER.STG.DAY(record:date), null,
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Netflix Pause Ads', 'Netflix', SILVER.STG.DAY(record:date), null,
          SILVER.STG.TXT(record:line_item), SILVER.STG.TXT(record:line_item), null, SILVER.STG.TXT(record:creative),
          SILVER.STG.NUM(record:ad_server_impressions), SILVER.STG.NUM(record:ad_server_clicks),
          SILVER.STG.NUM(record:ad_server_cpm_and_cpc_revenue), null, null, null, null
   from BRONZE.SHAREPOINT.NETFLIX_PAUSE_ADS r
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Jolt Media', 'Jolt Media', SILVER.STG.DAY(record:day), null,
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Jolt Media', 'Jolt Media', SILVER.STG.DAY(record:day), null,
          SILVER.STG.TXT(record:order_name), SILVER.STG.TXT(record:venue_name), SILVER.STG.TXT(record:venue_id), SILVER.STG.TXT(record:creative),
          SILVER.STG.NUM(record:impressions), null, null, null, null, SILVER.STG.NUM(record:spots), null
   from BRONZE.SHAREPOINT.JOLT_MEDIA r
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Spotify - Cobs Bread', 'Spotify', SILVER.STG.DAY(record:date), 'Cobs Bread',
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Spotify - Cobs Bread', 'Spotify', SILVER.STG.DAY(record:date), null,
          SILVER.STG.TXT(record:campaign_name), SILVER.STG.TXT(record:ad_set_name), SILVER.STG.TXT(record:ad_set_id), null,
          SILVER.STG.NUM(record:impressions), SILVER.STG.NUM(record:clicks), SILVER.STG.NUM(record:spend),
          null, null, null, null
   from BRONZE.SHAREPOINT.SPOTIFY_FILES r
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Sonnet - Direct Buy Offline Spend', 'Direct', SILVER.STG.DAY(record:date), 'Sonnet Insurance',
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Sonnet - Direct Buy Offline Spend', 'Direct', SILVER.STG.DAY(record:date), null,
          'Sonnet Direct Buy ' || coalesce(SILVER.STG.TXT(record:channel), ''), SILVER.STG.TXT(record:province), null, null,
          0, 0, SILVER.STG.NUM(coalesce(record:grouped_spend, record:spend)), null, null, null, null
   from BRONZE.SHAREPOINT.DIRECT_BUY_SPEND r
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Sonnet - DV360 Creative', 'DV360', SILVER.STG.DAY(record:date), 'Sonnet Insurance',
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Sonnet - DV360 Creative', 'DV360', SILVER.STG.DAY(record:date), null,
          SILVER.STG.TXT(record:insertion_order), SILVER.STG.TXT(record:line_item), SILVER.STG.TXT(record:line_item_id), SILVER.STG.TXT(record:youtube_ad),
          SILVER.STG.NUM(record:impressions), SILVER.STG.NUM(record:clicks), SILVER.STG.NUM(record:media_cost_advertiser_currency),
          null, SILVER.STG.NUM(record:complete_views_video), null, SILVER.STG.TXT(record:advertiser_currency)
   from BRONZE.SHAREPOINT.SONNET_DV360_CREATIVE r
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, 'Wildbrain 2.0', 'WildBrain', SILVER.STG.DAY(record:date), null,
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Wildbrain 2.0', 'WildBrain', SILVER.STG.DAY(record:date), null,
          coalesce(SILVER.STG.TXT(record:campaign_name), SILVER.STG.TXT(record:campaign)), SILVER.STG.TXT(record:line_item), null,
          coalesce(SILVER.STG.TXT(record:creative_name), SILVER.STG.TXT(record:creative)),
          SILVER.STG.NUM(record:impressions), SILVER.STG.NUM(record:clicks), SILVER.STG.NUM(record:spend),
@@ -108,12 +110,14 @@ newest as (
   qualify dense_rank() over (partition by v.source_name, v.activity_date order by f.logged_at desc, v.item_id desc) = 1
 ),
 named as (
-  select n.*, m.client_name as matched_client
+  -- a single-client feed takes its client from the MCI feed list; a shared vendor file from the client named in the campaign
+  select n.*, coalesce(fc.client_name, m.client_name) as matched_client
   from newest n
+  left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = n.feed_id
   left join SILVER.STG.CLIENT_NAME_MATCH m
-    on n.fixed_client is null
+    on fc.feed_id is null
    and ' ' || regexp_replace(lower(n.campaign_name), '[^a-z0-9]+', ' ') || ' '
-       like '% ' || regexp_replace(m.alias, '[^a-z0-9]+', ' ') || ' %'
+       like '% ' || m.alias || ' %'
   qualify row_number() over (partition by n.item_id, n.row_number order by length(m.alias) desc nulls last) = 1
 )
 select
@@ -130,16 +134,17 @@ select
   0 as post_shares, coalesce(spots, 0) as spots,
   coalesce(fixed_client, matched_client)                          as client_hint,
   spend is null                                                   as spend_missing,
-  file_name, item_id, logged_at
+  file_name, item_id, feed_id, logged_at
 from named;
 
 -- Amazon DSP reach and frequency (K09 open): kept apart, never summed with delivery
 create or replace view SILVER.STG.STG_AMAZON_DSP_REACH as
-select SILVER.STG.DAY(record:date) as activity_date, 'Amazon DSP' as source_name,
+select SILVER.STG.DAY(record:date) as activity_date, 'Amazon DSP' as source_name, fc.client_code,
        SILVER.STG.TXT(record:campaign_id) as campaign_id, SILVER.STG.TXT(record:campaign_name) as campaign_name,
        SILVER.STG.TXT(record:ad_group_id) as ad_group_id, SILVER.STG.TXT(record:ad_group_name) as ad_group_name,
        SILVER.STG.NUM(record:user_reach) as reach, SILVER.STG.NUM(record:average_user_impression_frequency) as frequency
 from BRONZE.SHAREPOINT.AMAZON_DSP_REACH r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
+left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = r.feed_id
 qualify dense_rank() over (partition by SILVER.STG.DAY(record:date) order by f.logged_at desc, r.item_id desc) = 1;
 
 -- ---------------------------------------------------------------- Sonnet (K20, K22)
@@ -152,38 +157,40 @@ with rows_ as (
          SILVER.STG.TXT(record:pol_province_cd) as province, SILVER.STG.TXT(record:product) as product,
          SILVER.STG.TXT(record:lob) as lob, SILVER.STG.TXT(record:channel_grouping) as channel,
          SILVER.STG.TXT(record:utm_source) as utm_source, null::varchar as segment,
-         SILVER.STG.NUM(record:quotes) as quotes, SILVER.STG.NUM(record:binds) as binds, r.item_id, f.logged_at
+         SILVER.STG.NUM(record:quotes) as quotes, SILVER.STG.NUM(record:binds) as binds, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_RAW_DATA r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
   select 'quote_quality', SILVER.STG.DAY(record:quote_date), SILVER.STG.TXT(record:pol_province_cd), null, null,
          SILVER.STG.TXT(record:channel_grouping), SILVER.STG.TXT(record:utm_source),
          upper(left(SILVER.STG.TXT(record:pvm), 1)) || lower(substr(SILVER.STG.TXT(record:pvm), 2)),  -- red -> Red
-         SILVER.STG.NUM(record:quotes), null, r.item_id, f.logged_at
+         SILVER.STG.NUM(record:quotes), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_QUOTE_QUALITY r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
   select 'group_breakdown', SILVER.STG.DAY(record:quote_date), SILVER.STG.TXT(record:pol_province_cd), null, null, null,
          SILVER.STG.TXT(record:utm_source), SILVER.STG.TXT(record:segment),
-         SILVER.STG.NUM(record:quotes), null, r.item_id, f.logged_at
+         SILVER.STG.NUM(record:quotes), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_GROUP_BREAKDOWN r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
   select 'multiline', date_trunc('month', SILVER.STG.DAY(record:month)), SILVER.STG.TXT(record:pol_province_cd), null, null,
          SILVER.STG.TXT(record:channel), SILVER.STG.TXT(record:utm_source), 'Multiline',
-         SILVER.STG.NUM(record:multiline_customer), null, r.item_id, f.logged_at
+         SILVER.STG.NUM(record:multiline_customer), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_MULTILINE r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
   select 'multiline', date_trunc('month', SILVER.STG.DAY(record:month)), SILVER.STG.TXT(record:pol_province_cd), null, null,
          SILVER.STG.TXT(record:channel), SILVER.STG.TXT(record:utm_source), 'Monoline',
-         SILVER.STG.NUM(record:customer_count) - coalesce(SILVER.STG.NUM(record:multiline_customer), 0), null, r.item_id, f.logged_at
+         SILVER.STG.NUM(record:customer_count) - coalesce(SILVER.STG.NUM(record:multiline_customer), 0), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_MULTILINE r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
 )
-select activity_date, province, product, lob, channel, utm_source, segment, quotes, binds, file_type
+select rows_.activity_date, fc.client_code, rows_.province, rows_.product, rows_.lob, rows_.channel, rows_.utm_source,
+       rows_.segment, rows_.quotes, rows_.binds, rows_.file_type
 from rows_
-qualify dense_rank() over (partition by file_type, activity_date order by logged_at desc, item_id desc) = 1;
+left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = rows_.feed_id
+qualify dense_rank() over (partition by rows_.file_type, rows_.activity_date order by rows_.logged_at desc, rows_.item_id desc) = 1;
 
 -- Auction Insights (K17, K18). Google shows small and large shares as "< 10%" and "> 90%": the text is kept as
 -- reported (what the dashboards show) and the number is NULL for those rows, so nothing is ever averaged from a bound.
 create or replace view SILVER.STG.STG_SONNET_AUCTION as
-select r.feed_id, r.grain,
+select r.feed_id, fc.client_code, r.grain,
        SILVER.STG.DAY(coalesce(record:week, record:month, record:date)) as period_start,
        SILVER.STG.TXT(record:account_name) as account_name,
        SILVER.STG.TXT(record:customer_id)  as customer_id,
@@ -204,6 +211,7 @@ from (
   union all select * from BRONZE.SHAREPOINT.SONNET_VISIBILITY
   union all select * from BRONZE.SHAREPOINT.SONNET_VS_COMPETITION
 ) r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
+left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = r.feed_id
 qualify dense_rank() over (partition by r.feed_id, SILVER.STG.DAY(coalesce(record:week, record:month, record:date))
                            order by f.logged_at desc, r.item_id desc) = 1;
 
@@ -215,7 +223,7 @@ qualify dense_rank() over (partition by r.feed_id, SILVER.STG.DAY(coalesce(recor
 -- Adobe repeats some values ("paidsearch,paidsearch"): the first value is used.
 create or replace view SILVER.STG.STG_SXM as
 with a as (
-  select r.report, SILVER.STG.DAY(coalesce(record:date, record:day)) as activity_date,
+  select r.report, r.feed_id, SILVER.STG.DAY(coalesce(record:date, record:day)) as activity_date,
          split_part(SILVER.STG.TXT(record:utm_medium_v27_evar27), ',', 1) as channel,
          coalesce(split_part(SILVER.STG.TXT(record:online_campaign_code_v70_evar70), ',', 1),
                   SILVER.STG.TXT(record:program_code_v98_evar98), SILVER.STG.TXT(record:segment)) as campaign_name,
@@ -227,7 +235,7 @@ with a as (
   qualify dense_rank() over (partition by r.report, SILVER.STG.DAY(coalesce(record:date, record:day))
                              order by f.logged_at desc, r.item_id desc) = 1
 )
-select activity_date, report, channel, campaign_name, utm_source,
+select a.activity_date, fc.client_code, a.report, a.channel, a.campaign_name, a.utm_source,
        iff(report in ('streaming_starts', 'dual_offer_streaming'), orders, null) as performance_trials,
        iff(report = 'organic_streaming', trials, null)                          as organic_trials,
        iff(report in ('streaming_starts', 'dual_offer_streaming'), visits, null) as performance_flow_starts,
@@ -236,18 +244,20 @@ select activity_date, report, channel, campaign_name, utm_source,
        iff(report = 'commuter_activations', visits, null)                       as commuter_activations,
        null::number                                                             as scorecard_trials
 from a
+left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = a.feed_id
 union all
-select SILVER.STG.DAY(record:activation_date), 'scorecard', SILVER.STG.TXT(record:plan_description),
+select SILVER.STG.DAY(record:activation_date), fc.client_code, 'scorecard', SILVER.STG.TXT(record:plan_description),
        SILVER.STG.TXT(record:promo_code), null,
        null, null, null, null, null, null, SILVER.STG.NUM(record:total_trial_starts)
 from BRONZE.SHAREPOINT.SXM_SCORECARD r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
+left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = r.feed_id
 qualify dense_rank() over (partition by SILVER.STG.DAY(record:activation_date) order by f.logged_at desc, r.item_id desc) = 1;
 
 -- ---------------------------------------------------------------- Adara (Ottawa Tourism, K13)
 -- K13 as agreed: Travel Search Signals = enriched flight + enriched hotel searches;
 -- Attributed Books = enriched flight + enriched hotel bookings. One row per tracker and attribution type (cl / imp).
 create or replace view SILVER.STG.STG_ADARA as
-select SILVER.STG.DAY(record:date) as activity_date,
+select SILVER.STG.DAY(record:date) as activity_date, fc.client_code,
        SILVER.STG.TXT(record:attribution_group_name) as campaign_name,
        SILVER.STG.TXT(record:tracker_name)           as tracker_name,
        SILVER.STG.TXT(record:attribution_type)       as attribution_type,
@@ -258,6 +268,7 @@ select SILVER.STG.DAY(record:date) as activity_date,
        coalesce(SILVER.STG.NUM(record:enriched_flight_searches), 0) + coalesce(SILVER.STG.NUM(record:enriched_hotel_searches), 0) as travel_search_signals,
        coalesce(SILVER.STG.NUM(record:enriched_flight_bookings), 0) + coalesce(SILVER.STG.NUM(record:enriched_hotel_bookings), 0) as attributed_books
 from BRONZE.SHAREPOINT.ADARA r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
+left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = r.feed_id
 qualify dense_rank() over (partition by SILVER.STG.DAY(record:date) order by f.logged_at desc, r.item_id desc) = 1;
 
 -- ---------------------------------------------------------------- Goals (K12)

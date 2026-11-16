@@ -5,8 +5,8 @@ It reads new or changed files from the Epitaph Reporting SharePoint site through
 and writes every row to BRONZE.SHAREPOINT.<table> as it arrived (one VARIANT per row plus file details).
 
 Access: an Entra app with the Sites.Selected permission, granted to this one site only. Its client secret is a
-Snowflake secret; network access is limited by an external access integration to login.microsoftonline.com and
-graph.microsoft.com.
+Snowflake secret; network access is limited by an external access integration to login.microsoftonline.com,
+graph.microsoft.com and the tenant's SharePoint host (file downloads redirect there).
 
 Rules
 - A file is loaded once per version. BRONZE.LOADER.LOAD_LOG holds (drive item id, eTag); a changed file is loaded
@@ -242,6 +242,21 @@ class Notifier(Protocol):
 
 # ---------------------------------------------------------------- run
 
+def staged_csv(feed: dict, rows: list[dict]) -> bytes:
+    """The checked rows as CSV with only the feed's required columns, in the order listed in feeds.yml.
+
+    Used for staged feeds (TapClicks history), whose COPY INTO reads columns by position: extra export columns
+    (CPM, CTR, CPC), a different column order, banner lines and totals rows can then never shift a value into the
+    wrong column."""
+    cols = [norm_header(c) for c in feed["required"]]
+    out = io.StringIO()
+    w = csv.writer(out, quoting=csv.QUOTE_MINIMAL, lineterminator="\n")
+    w.writerow(cols)
+    for r in rows:
+        w.writerow(["" if r.get(c) is None else r.get(c) for c in cols])
+    return out.getvalue().encode("utf-8")
+
+
 def run(graph: Graph, store: Store, notifier: Notifier, config: dict, feed_id: str | None = None,
         today: dt.date | None = None) -> dict:
     feeds = [f for f in config["feeds"] if f.get("status") != "retired" and (feed_id is None or f["id"] == feed_id)]
@@ -269,8 +284,9 @@ def run(graph: Graph, store: Store, notifier: Notifier, config: dict, feed_id: s
                     summary["rejected"] += 1
                     continue
                 if feed.get("mode") == "stage":
-                    # Large history files: copy the file to a stage and bulk-load it with COPY INTO.
-                    n = store.stage_file(feed["stage"], item["name"], content, len(res.rows))
+                    # Large history files: stage the checked rows and bulk-load them with COPY INTO. COPY maps columns
+                    # by position, so the file is rewritten with only the required columns, in their listed order.
+                    n = store.stage_file(feed["stage"], item["name"], staged_csv(feed, res.rows), len(res.rows))
                 else:
                     n = store.write_rows(feed["table"], res.rows, {**entry, "report": feed.get("report"), "grain": feed.get("grain", "day")})
                 store.log({**entry, "status": "loaded", "reason": "", "rows": n,

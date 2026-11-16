@@ -35,9 +35,9 @@ def connect():
     con.execute("""insert into DIM_DATE select cast(strftime(d, '%Y%m%d') as double), d, date_trunc('week', d), date_trunc('month', d)
                    from range(date '2024-01-01', date '2027-12-31', interval 1 day) t(d)""")
     con.execute("create table DIM_SOURCE (source_key VARCHAR, source_name VARCHAR)")
-    con.execute("create table DIM_CLIENT (client_code VARCHAR, client_name VARCHAR)")
-    con.executemany("insert into DIM_CLIENT values (?, ?)", sorted({(r["client_code"], r["client_name"]) for r in
-                    csv.DictReader(open(ROOT / "seeds" / "map_client_account.csv"))}))
+    # DIM_CLIENT is in the contract: fill it from the Master Client Index seed
+    con.executemany("insert into DIM_CLIENT (client_code, client_name) values (?, ?)", sorted({(r["client_code"], r["client_name"]) for r in
+                    csv.DictReader(open(ROOT / "seeds" / "mci_client.csv"))}))
     con.execute(semantic_sql())
     return con
 
@@ -109,7 +109,7 @@ def num(v):
 
 def load_tapclicks(con, path, media_types=None):
     media_types = media_types or {r["raw_value"]: r for r in csv.DictReader(open(ROOT / "seeds" / "map_media_type.csv"))}
-    clients = {r["client_name"].lower(): r["client_code"] for r in csv.DictReader(open(ROOT / "seeds" / "map_client_account.csv"))}
+    clients = {r["client_name"].lower(): r["client_code"] for r in csv.DictReader(open(ROOT / "seeds" / "mci_client.csv"))}
     deliv, conv, camps, mbs, crs, srcs, printed = {}, {}, {}, {}, {}, set(), []
     import datetime as dt
     for r in csv.DictReader(open(path, encoding="utf-8-sig")):
@@ -136,7 +136,8 @@ def load_tapclicks(con, path, media_types=None):
                 v[i] += num(r.get(col))
             printed.append((num(r.get("Impressions")), num(r.get("Clicks")), num(r.get("Spend")), r.get("CPM"), r.get("CTR"), r.get("CPC")))
     con.executemany("insert into DIM_SOURCE values (?, ?)", list(srcs))
-    con.executemany("insert into DIM_CAMPAIGN values (?, ?, ?, ?, ?, ?, ?, ?)", list(camps.values()))
+    con.executemany("""insert into DIM_CAMPAIGN (campaign_key, campaign_name, client_code, smart_campaign, job_number, language,
+                       country, campaign_name_valid) values (?, ?, ?, ?, ?, ?, ?, ?)""", list(camps.values()))
     con.executemany("insert into DIM_MEDIA_BUY values (?, ?, ?, ?, ?, ?, ?)", list(mbs.values()))
     con.executemany("insert into DIM_CREATIVE values (?, ?, ?, ?)", list(crs.values()))
     con.executemany("""insert into FCT_AD_DELIVERY_DAILY (date_key, source_key, campaign_key, media_buy_key, creative_key, media_type,

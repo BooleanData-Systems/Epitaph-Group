@@ -1,0 +1,24 @@
+client_code,id_type,system,id_value,status,valid_from,valid_to,approved_by,notes
+C07,campaign_prefix,*,Kids Help Phone Paid,approved,2000-01-01,9999-12-31,Nathan Sennema,Client part used in Snapchat campaign names
+C09,campaign_token,Google Ads,ohtoah,proposed,2000-01-01,9999-12-31,,Seen in 2026 Google Ads Search campaign names (2026_ohtoah_mkt); Epitaph to confirm the client
+C11,sharepoint_feed,SharePoint,F01a,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Raw Data
+C11,sharepoint_feed,SharePoint,F01b,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Quote Quality Data
+C11,sharepoint_feed,SharePoint,F01c,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Group Breakdown Data
+C11,sharepoint_feed,SharePoint,F01d,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Multiline Data
+C11,sharepoint_feed,SharePoint,F02,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Direct Buy Offline Spend
+C11,sharepoint_feed,SharePoint,F03,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet DV360 Creative
+C11,sharepoint_feed,SharePoint,F05a,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Auction Pressure Weekly
+C11,sharepoint_feed,SharePoint,F05b,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Auction Pressure Monthly
+C11,sharepoint_feed,SharePoint,F05c,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Visibility Weekly
+C11,sharepoint_feed,SharePoint,F05d,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet Visibility Monthly
+C11,sharepoint_feed,SharePoint,F05e,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet vs Competition Weekly
+C11,sharepoint_feed,SharePoint,F05f,approved,2000-01-01,9999-12-31,Nathan Sennema,Sonnet vs Competition Monthly
+C11,sharepoint_feed,SharePoint,F06,approved,2000-01-01,9999-12-31,Nathan Sennema,Amazon DSP Sonnet Reach and Frequency
+C10,sharepoint_feed,SharePoint,F07a,approved,2000-01-01,9999-12-31,Nathan Sennema,SXM Commuter Activations
+C10,sharepoint_feed,SharePoint,F07b,approved,2000-01-01,9999-12-31,Nathan Sennema,SXM Commuter Starts
+C10,sharepoint_feed,SharePoint,F07c,approved,2000-01-01,9999-12-31,Nathan Sennema,SXM Dual Offer Streaming
+C10,sharepoint_feed,SharePoint,F07d,approved,2000-01-01,9999-12-31,Nathan Sennema,SXM Streaming Starts
+C10,sharepoint_feed,SharePoint,F07e,approved,2000-01-01,9999-12-31,Nathan Sennema,SXM Organic Streaming
+C10,sharepoint_feed,SharePoint,F08,approved,2000-01-01,9999-12-31,Nathan Sennema,SiriusXM Scorecard
+C09,sharepoint_feed,SharePoint,F14,approved,2000-01-01,9999-12-31,Nathan Sennema,Adara Ottawa Tourism
+C03,sharepoint_feed,SharePoint,F15,approved,2000-01-01,9999-12-31,Nathan Sennema,Spotify Cobs Bread (Cobs runs in Spotify's own account)

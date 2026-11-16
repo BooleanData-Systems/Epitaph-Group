@@ -12,6 +12,8 @@ tables:
     columns:
       date_key:          {type: number, status: built}
       source_key:        {type: varchar, status: built}
+      client_key:        {type: varchar, status: built, fed_by: Master Client Index (SILVER.STG.MCI_CLIENT_RESOLUTION)}
+      client_code:       {type: varchar, status: built, fed_by: Master Client Index (SILVER.STG.MCI_CLIENT_RESOLUTION)}
       campaign_key:      {type: varchar, status: built}
       media_buy_key:     {type: varchar, status: built}
       creative_key:      {type: varchar, status: built}
@@ -33,6 +35,8 @@ tables:
     columns:
       date_key:          {type: number, status: built}
       source_key:        {type: varchar, status: built}
+      client_key:        {type: varchar, status: built, fed_by: Master Client Index (SILVER.STG.MCI_CLIENT_RESOLUTION)}
+      client_code:       {type: varchar, status: built, fed_by: Master Client Index (SILVER.STG.MCI_CLIENT_RESOLUTION)}
       campaign_key:      {type: varchar, status: built}
       platform:          {type: varchar, status: built}
       campaign_type:     {type: varchar, status: built}
@@ -75,6 +79,7 @@ tables:
     grain: [date_key, province, product, channel, segment, quality_band, line_type, file_type]
     columns:
       date_key: {type: number, status: built}
+      client_code: {type: varchar, status: built, fed_by: Master Client Index (single-client SharePoint feed)}
       province: {type: varchar, status: built, fed_by: Sonnet Raw Data (file unseen)}
       product:  {type: varchar, status: built}
       channel:  {type: varchar, status: built}
@@ -91,6 +96,7 @@ tables:
     grain: [date_key, channel, campaign_name, program_code]
     columns:
       date_key: {type: number, status: built}
+      client_code: {type: varchar, status: built, fed_by: Master Client Index (single-client SharePoint feed)}
       channel: {type: varchar, status: built}
       campaign_name: {type: varchar, status: built}
       program_code: {type: varchar, status: planned, fed_by: Adobe files (F07)}
@@ -108,6 +114,7 @@ tables:
       period_start: {type: date, status: built}
       grain: {type: varchar, status: built}
       feed_id: {type: varchar, status: built}
+      client_code: {type: varchar, status: built, fed_by: Master Client Index (single-client SharePoint feed)}
       account_name: {type: varchar, status: planned, fed_by: auction report files}
       campaign_name: {type: varchar, status: built}
       competitor_domain: {type: varchar, status: built}
@@ -120,6 +127,7 @@ tables:
     grain: [date_key, campaign_name]
     columns:
       date_key: {type: number, status: built}
+      client_code: {type: varchar, status: built, fed_by: Master Client Index (single-client SharePoint feed)}
       campaign_name: {type: varchar, status: built}
       attribution_group: {type: varchar, status: planned, fed_by: Adara file (F14)}
       site_visits: {type: number, status: built}
@@ -150,6 +158,7 @@ tables:
       language: {type: varchar, status: built}
       country: {type: varchar, status: built}
       campaign_name_valid: {type: boolean, status: built}
+      client_from: {type: varchar, status: built, fed_by: mci or smart_campaign (fallback)}
   DIM_MEDIA_BUY:
     grain: [media_buy_key]
     columns:
@@ -167,3 +176,32 @@ tables:
       creative_name: {type: varchar, status: built}
       creative_format: {type: varchar, status: built}
       call_to_action: {type: varchar, status: built}
+  DIM_CLIENT:
+    grain: [client_key]
+    columns:
+      client_key:         {type: varchar, status: built, fed_by: sha2 of client_code}
+      client_code:        {type: varchar, status: built, fed_by: seeds/mci_client.csv}
+      client_name:        {type: varchar, status: built}
+      legal_name:         {type: varchar, status: built}
+      reporting_currency: {type: varchar, status: built}
+      home_country:       {type: varchar, status: built}
+      status:             {type: varchar, status: built}
+      effective_from:     {type: date, status: built}
+      effective_to:       {type: date, status: built}
+      steward:            {type: varchar, status: built}
+      tapclicks_accounts: {type: varchar, status: built, fed_by: seeds/map_client_account.csv}
+      dashboards:         {type: varchar, status: built, fed_by: seeds/map_client_account.csv}
+  DIM_CLIENT_IDENTIFIER:
+    grain: [id_type, system, id_value, valid_from]
+    columns:
+      client_key:  {type: varchar, status: built}
+      client_code: {type: varchar, status: built}
+      id_type:     {type: varchar, status: built, fed_by: platform_account, sharepoint_feed, tapclicks_account, campaign_prefix, alias, campaign_token}
+      system:      {type: varchar, status: built}
+      id_value:    {type: varchar, status: built}
+      match_rule:  {type: varchar, status: built}
+      match_rank:  {type: number, status: built}
+      valid_from:  {type: date, status: built}
+      valid_to:    {type: date, status: built}
+      held_in:     {type: varchar, status: built}
+      status:      {type: varchar, status: built, fed_by: approved or proposed}

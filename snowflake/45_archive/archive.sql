@@ -43,7 +43,7 @@ select r.client_code,
        any_value(m.client_name) as client_name,
        least(r.archive_before, dateadd(month, -24, date_trunc('month', current_date()))) as archive_before
 from GOLD.CONTROL.CTL_ARCHIVE_REQUESTS r
-join GOLD.CONTROL.MAP_CLIENT_ACCOUNT m on m.client_code = r.client_code
+join GOLD.CONTROL.MCI_CLIENT m on m.client_code = r.client_code
 left join GOLD.CONTROL.CTL_ARCHIVE_STATE s on s.client_code = r.client_code
 where r.action = 'archive' and r.approved_by is not null
   and (s.client_code is null or s.state <> 'archived')

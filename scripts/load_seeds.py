@@ -13,6 +13,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SEEDS = {   # file -> table
+    "mci_client.csv": "GOLD.CONTROL.MCI_CLIENT",
+    "mci_client_identifier.csv": "GOLD.CONTROL.MCI_CLIENT_IDENTIFIER",
     "map_client_account.csv": "GOLD.CONTROL.MAP_CLIENT_ACCOUNT",
     "map_client_alias.csv": "GOLD.CONTROL.MAP_CLIENT_ALIAS",
     "map_media_type.csv": "GOLD.CONTROL.MAP_MEDIA_TYPE",

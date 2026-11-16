@@ -1,0 +1,99 @@
+# Data product contract: Epitaph Media Performance
+# The public interface of the product. Everything here is enforced somewhere: the gold contract (validate.py),
+# the data checks (snowflake/60_checks), the tests and the e2e run. Changes after Nov 13, 2026 go through change control.
+
+product:
+  name: Epitaph Media Performance
+  version: 1.0
+  domain: Paid media delivery and outcomes for Epitaph's clients
+  owner: Epitaph Group (Nathan Sennema, product owner and data steward)
+  sponsor: Mike DeOliveira
+  built_by: Boolean Data (Phani D, principal architect)
+  platform: Epitaph's Snowflake account (Canada Central); reporting in Omni
+  answers:
+    - What did each client's media deliver, by day, platform, campaign, media buy and creative?
+    - What did it cost, in the client's reporting currency?
+    - Which outcomes did it drive (conversions, sessions, quotes, trials, travel signals) against goals?
+    - Do the numbers match TapClicks for the same period (reconciliation within R02 to R06)?
+  does_not_cover:
+    - Finance and invoicing (Simpli.fi spend or invoices)
+    - Dashboards outside the 20 Catalyst dashboards (Phase 2 is a separate SOW)
+    - Any data before November 2024
+
+consumers:
+  - {who: Epitaph staff, through: Omni dashboards and the Data Checks page, sees: every client}
+  - {who: Client users, through: Omni dashboards (shared links and scheduled PDFs), sees: own client only (RAP_CLIENT)}
+  - {who: Analysts, through: GOLD.SEMANTIC views in Snowflake, sees: per role}
+
+master_client_index:
+  purpose: One golden record per client and every identifier that points to it, so every row of every fact belongs to exactly one client or is held back and listed.
+  golden_record: GOLD.CONTROL.MCI_CLIENT (seeds/mci_client.csv), published as GOLD.MARTS.DIM_CLIENT
+  identifiers: SILVER.STG.MCI_IDENTIFIERS, published as GOLD.MARTS.DIM_CLIENT_IDENTIFIER
+  resolution: SILVER.STG.MCI_CLIENT_RESOLUTION (one row per source, account, campaign and vendor file client)
+  rules:
+    - {rank: 10, id_type: platform_account, match: exact, held_in: MAP_PLATFORM_ACCOUNT}
+    - {rank: 20, id_type: sharepoint_feed, match: exact, held_in: MCI_CLIENT_IDENTIFIER}
+    - {rank: 30, id_type: tapclicks_account, match: exact, held_in: MAP_CLIENT_ACCOUNT, note: reference only}
+    - {rank: 40, id_type: campaign_prefix, match: exact on the client part of the campaign name, held_in: MCI_CLIENT and MCI_CLIENT_IDENTIFIER}
+    - {rank: 50, id_type: alias, match: whole word in the campaign name, held_in: MCI_CLIENT and MAP_CLIENT_ALIAS}
+    - {rank: 60, id_type: campaign_token, match: whole word in the campaign name, held_in: MCI_CLIENT_IDENTIFIER}
+  conflicts: Two clients at the best rank leave the row without a client; it is listed in DQ_UNRESOLVED_CLIENTS
+  stewardship: Nathan Sennema approves every new client and identifier; proposed identifiers never resolve a client
+  checks: [DQ_UNRESOLVED_CLIENTS, DQ_MCI_CONFLICTS, tests/test_mci.py]
+
+layers:
+  raw_bronze:
+    database: BRONZE
+    rule: Every row exactly as delivered, with the file or sync it came from. Never edited or deleted.
+    schemas:
+      FIVETRAN_*: one schema per ad platform and GA4 (15 connector routes, every 6 hours)
+      SHAREPOINT: one table per file layout (27 feeds, hourly), each row in RECORD with item_id, etag, feed_id, row_number
+      TAPCLICKS: TAPCLICKS_HISTORY, the history downloads from November 2024
+      REFERENCE: FX_RATES (Bank of Canada, daily)
+      LOADER: LOAD_LOG, one row per file version seen
+  silver:
+    database: SILVER
+    rule: Typed and cleaned; newest file per feed and day; cut-over dates; one source per client and day; client from the MCI
+    objects: [STG_* (one view per source), MCI_IDENTIFIERS, MCI_FEED_CLIENT, INT_AD_DELIVERY, INT_CONVERSIONS, MCI_CLIENT_RESOLUTION]
+  gold:
+    database: GOLD
+    rule: Thin facts and conformed dimensions; measures only, no rates; every fact row carries client_code from the MCI
+    schemas:
+      MARTS: [DIM_DATE, DIM_CLIENT, DIM_CLIENT_IDENTIFIER, DIM_CAMPAIGN, DIM_SMART_CAMPAIGN, DIM_MEDIA_BUY, DIM_CREATIVE, DIM_SOURCE,
+              DIM_CONVERSION_TAG, DIM_FX_RATE, FCT_AD_DELIVERY_DAILY, FCT_CONVERSIONS_DAILY, FCT_WEB_SESSIONS_DAILY,
+              FCT_REACH_FREQUENCY, FCT_AUCTION_INSIGHTS, FCT_SONNET_QUOTES_DAILY, FCT_SXM_SCORECARD, FCT_ADARA_DAILY,
+              FCT_GOALS, FCT_BUDGET]
+      CONTROL: every decision a person makes (mapping, cut-over, access, tolerances, MCI)
+      ARCHIVE: former clients' rows older than 24 months, moved only on approval
+      CHECKS: data checks, zero rows means healthy
+  semantic:
+    schema: GOLD.SEMANTIC
+    rule: KPIs defined once (config/kpis.yml); rates from totals; row access by client_code
+    objects: [V_MEDIA_PERFORMANCE_DAILY, V_WEB_SESSIONS_DAILY, V_SONNET_DAILY, V_SONNET_AUCTION, V_SXM_DAILY, V_ADARA_DAILY,
+              V_REACH_FREQUENCY, V_GOALS, V_DATA_FRESHNESS, V_KPI_DEFINITIONS]
+
+service_levels:
+  freshness: Silver and Gold refresh within 1 hour of new data (dynamic tables, target lag 1 hour)
+  sources: Fivetran every 6 hours; SharePoint hourly; exchange rates daily
+  checks: Daily data checks and email by 7:30 AM ET to Epitaph and Boolean
+  reconciliation: Every check within the signed-off tolerances (R02 to R06) before a dashboard is accepted
+  history: November 2024 onward
+
+access:
+  roles: 9 roles; key-pair service users for loaders, Fivetran and Omni
+  rows: GOLD.CONTROL.RAP_CLIENT on client_code in every client-facing view
+  columns: per-client column groups (seeds/client_column_access.csv)
+  data_stays_in: Epitaph's Snowflake and Omni accounts; engineering uses synthetic files
+
+change_control:
+  code: every change is a reviewed pull request with tests; deployed on Epitaph's approval
+  definitions: KPI and conversion changes after Nov 13, 2026 by change request
+  master_data: new clients and identifiers by a reviewed change to the MCI seeds, approved by Nathan Sennema
+
+artifacts:
+  gold_contract: specs/gold_contract.yml
+  kpis: config/kpis.yml
+  feeds: config/feeds.yml
+  connectors: config/connectors.yml
+  data_mapping: specs/data_mapping.csv
+  stewardship: docs/master_client_index.md

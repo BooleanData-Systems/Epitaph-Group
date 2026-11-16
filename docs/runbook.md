@@ -5,7 +5,7 @@
 | # | Step | Who | Done when |
 |---|---|---|---|
 | 1 | Create the Snowflake account (Enterprise, Canada Central) | Epitaph | Account URL shared |
-| 2 | Run `snowflake/00_setup/01_account.sql`, `02_integrations.sql`, `03_grants.sql`, `04_monitoring.sql` as ACCOUNTADMIN | Epitaph admin with the Boolean pod lead | `call GOLD.ADMIN.CHECK_WAREHOUSE_STANDARD()` says all warehouses meet the standard |
+| 2 | Run `snowflake/00_setup/01_account.sql`, `02_integrations.sql` (first replace TENANT with the tenant's SharePoint name), `03_grants.sql` as ACCOUNTADMIN; run `04_monitoring.sql` after step 3a, since resource monitors email a verified address | Epitaph admin with the Boolean pod lead | `call GOLD.ADMIN.CHECK_WAREHOUSE_STANDARD()` says all warehouses meet the standard |
 | 3 | Create key pairs for SVC_LOADER, SVC_TRANSFORMER, SVC_REPORTER and SVC_CI; set each public key on its user; keep the private keys in Epitaph's vault (CI key also in GitHub secrets) | Epitaph admin | `desc user` shows a key; keys rotated after setup |
 | 3a | Set the email of DL_EPITAPH_DATA_ALERTS to the alert distribution list and verify it in Snowsight; add the DL and named contacts to GOLD.CONTROL.ALERT_RECIPIENTS for each alert (ingestion, transformation, publishing, downstream, freshness, check_failures, streams) | Epitaph admin | Test alerts received (see `docs/monitoring_and_escalation.md`) |
 | 4 | Create the SharePoint site "Epitaph Reporting" and the folders in `config/feeds.yml` | Epitaph IT | Folders exist |

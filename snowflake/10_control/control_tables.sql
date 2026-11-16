@@ -3,6 +3,37 @@
 use role EPITAPH_TRANSFORMER;
 use schema GOLD.CONTROL;
 
+-- ---------------------------------------------------------------- Master Client Index (MCI)
+-- One golden record per Epitaph client, and every identifier that points to it. Every fact gets its client from the
+-- MCI (SILVER.STG.MCI_CLIENT_RESOLUTION), never from a name match written into a view. Nathan Sennema is the data
+-- steward: a new client or identifier is a reviewed change to seeds/mci_client.csv or seeds/mci_client_identifier.csv.
+create table if not exists MCI_CLIENT (
+  client_code         varchar not null,     -- C01 to C13; never reused
+  client_name         varchar not null,     -- the name shown on every dashboard
+  legal_name          varchar,              -- as named in TapClicks; Epitaph to confirm
+  reporting_currency  varchar(3) not null,  -- currency every dashboard shows for this client
+  home_country        varchar(2),
+  status              varchar not null default 'active',   -- active | paused | former
+  effective_from      date not null,        -- first day of data the product holds for the client
+  effective_to        date default '9999-12-31',
+  steward             varchar,              -- who approves changes to this client's identifiers
+  notes               varchar,
+  primary key (client_code)
+) comment = 'seeds/mci_client.csv. Golden record per client';
+
+create table if not exists MCI_CLIENT_IDENTIFIER (
+  client_code   varchar not null,
+  id_type       varchar not null,   -- campaign_prefix | campaign_token | sharepoint_feed | ga4_property | platform_account
+  system        varchar not null,   -- source the identifier belongs to; '*' = any source
+  id_value      varchar not null,
+  status        varchar not null default 'proposed',   -- approved | proposed (proposed rows never resolve a client)
+  valid_from    date default '2000-01-01',
+  valid_to      date default '9999-12-31',
+  approved_by   varchar,
+  notes         varchar,
+  primary key (id_type, system, id_value, valid_from)
+) comment = 'seeds/mci_client_identifier.csv. Identifiers not already held in MAP_CLIENT_ACCOUNT, MAP_CLIENT_ALIAS or MAP_PLATFORM_ACCOUNT';
+
 create table if not exists MAP_CLIENT_ACCOUNT (
   client_code               varchar not null,
   client_name               varchar not null,

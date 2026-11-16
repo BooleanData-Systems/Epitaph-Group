@@ -6,6 +6,10 @@ use role accountadmin;
 -- ---------------------------------------------------------------- Microsoft Graph (SharePoint loader)
 create network rule if not exists BRONZE.LOADER.NR_MICROSOFT_GRAPH
   mode = egress type = host_port value_list = ('login.microsoftonline.com:443', 'graph.microsoft.com:443');
+-- Graph answers a file download with a redirect to the tenant's own SharePoint host, so that host must be allowed
+-- too. Replace TENANT with the tenant's SharePoint name (TENANT.sharepoint.com) before running this statement.
+alter network rule BRONZE.LOADER.NR_MICROSOFT_GRAPH set value_list =
+  ('login.microsoftonline.com:443', 'graph.microsoft.com:443', 'TENANT.sharepoint.com:443');
 
 create secret if not exists BRONZE.LOADER.GRAPH_APP
   type = generic_string

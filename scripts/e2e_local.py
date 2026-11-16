@@ -112,7 +112,7 @@ def run_sql(con):
 def load_seeds(con):
     import yaml  # noqa: F401
     for f in sorted((ROOT / "seeds").glob("*.csv")):
-        table = {"map_client_account": "MAP_CLIENT_ACCOUNT", "map_client_alias": "MAP_CLIENT_ALIAS", "map_media_type": "MAP_MEDIA_TYPE", "ctl_cutover": "CTL_CUTOVER",
+        table = {"mci_client": "MCI_CLIENT", "mci_client_identifier": "MCI_CLIENT_IDENTIFIER", "map_client_account": "MAP_CLIENT_ACCOUNT", "map_client_alias": "MAP_CLIENT_ALIAS", "map_media_type": "MAP_MEDIA_TYPE", "ctl_cutover": "CTL_CUTOVER",
                  "ctl_source_precedence": "CTL_SOURCE_PRECEDENCE", "dq_tolerances": "DQ_TOLERANCES",
                  "map_smart_campaign_rule": "MAP_SMART_CAMPAIGN_RULE", "map_smart_campaign_override": "MAP_SMART_CAMPAIGN_OVERRIDE",
                  "map_conversion_tag": "MAP_CONVERSION_TAG", "map_platform_account": "MAP_PLATFORM_ACCOUNT",
@@ -278,6 +278,21 @@ def main():
     dk = con.execute("""select count(*) from GOLD.MARTS.FCT_AD_DELIVERY_DAILY f left join GOLD.MARTS.DIM_DATE d using (date_key)
                         where d.date_key is null""").fetchone()[0]
     check("every fact row has a date", dk == 0)
+
+    print("4b. Master Client Index")
+    check("no identifier points to two clients", con.execute("select count(*) from GOLD.CHECKS.DQ_MCI_CONFLICTS").fetchone()[0] == 0)
+    unres_fact = float(con.execute("select coalesce(sum(spend), 0) from GOLD.MARTS.FCT_AD_DELIVERY_DAILY where client_code is null").fetchone()[0])
+    unres_dq = float(con.execute("select coalesce(sum(spend), 0) from GOLD.CHECKS.DQ_UNRESOLVED_CLIENTS").fetchone()[0])
+    check("every row without a client is listed on the Data Checks page", abs(unres_fact - unres_dq) < 0.01,
+          f"spend without a client {unres_fact:,.2f}")
+    mism = con.execute("""select count(*) from GOLD.MARTS.FCT_AD_DELIVERY_DAILY f join GOLD.MARTS.DIM_CAMPAIGN c using (campaign_key)
+                          where f.client_code is not null and c.client_code is not null and f.client_code <> c.client_code""").fetchone()[0]
+    check("fact client and campaign client agree", mism == 0, f"{mism} rows differ")
+    keyed = con.execute("""select count(*) from GOLD.MARTS.FCT_AD_DELIVERY_DAILY f left join GOLD.MARTS.DIM_CLIENT c using (client_key)
+                           where f.client_key is not null and c.client_key is null""").fetchone()[0]
+    check("every client_key on a fact exists in DIM_CLIENT", keyed == 0)
+    for row in con.execute("""select matched_by, count(*) from SILVER.STG.MCI_CLIENT_RESOLUTION group by 1 order by 2 desc""").fetchall():
+        print(f"  {row[1]:>6}  source/campaign keys resolved by {row[0]}")
 
     print("5. Per source: semantic layer vs file")
     by_src_file = {}
