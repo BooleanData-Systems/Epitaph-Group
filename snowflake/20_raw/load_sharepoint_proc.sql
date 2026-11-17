@@ -12,8 +12,8 @@ imports = ('@BRONZE.LOADER.CODE/sharepoint_loader.py', '@BRONZE.LOADER.CODE/feed
 handler = 'sharepoint_loader.main'
 external_access_integrations = (EAI_MICROSOFT_GRAPH)
 secrets = ('graph_app' = BRONZE.LOADER.GRAPH_APP)
-execute as owner
-comment = 'Loads new or changed SharePoint files to BRONZE.SHAREPOINT. See loader/sharepoint_loader.py';
+comment = 'Loads new or changed SharePoint files to BRONZE.SHAREPOINT. See loader/sharepoint_loader.py'
+execute as owner;
 
 -- Make sure every feed table exists (names from config/feeds.yml; CI regenerates this list)
 call BRONZE.LOADER.ENSURE_FEED_TABLE('SONNET_RAW_DATA');

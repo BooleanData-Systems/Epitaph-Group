@@ -359,6 +359,22 @@ class GraphClient:
         r.raise_for_status()
 
 
+def batch_records(rows: list[dict], max_chars: int = 8_000_000) -> list[str]:
+    """JSON arrays of {"n": row number, "r": record}, each under max_chars (a bind variable holds up to 16 MB)."""
+    out, cur, size = [], [], 2
+    for r in rows:
+        item = json.dumps({"n": r["_row_number"], "r": {k: v for k, v in r.items() if k != "_row_number"}},
+                          default=str, ensure_ascii=False)
+        if cur and size + len(item) + 1 > max_chars:
+            out.append("[" + ",".join(cur) + "]")
+            cur, size = [], 2
+        cur.append(item)
+        size += len(item) + 1
+    if cur:
+        out.append("[" + ",".join(cur) + "]")
+    return out
+
+
 class SnowflakeStore:
     def __init__(self, session, run_id: str):
         self.s = session
@@ -369,20 +385,18 @@ class SnowflakeStore:
                           params=[item_id, etag]).collect() != []
 
     def write_rows(self, table, rows, meta):
+        # The procedure runs with owner's rights, which cannot create temporary tables, and Snowpark's create_dataframe
+        # makes one for more than 512 rows. So each batch goes in as one JSON array (a bind variable) and is flattened.
         if not rows:
             return 0
-        from snowflake.snowpark.types import StructType, StructField, StringType, VariantType, IntegerType
-        schema = StructType([StructField("ITEM_ID", StringType()), StructField("ETAG", StringType()),
-                             StructField("FILE_NAME", StringType()), StructField("FEED_ID", StringType()),
-                             StructField("REPORT", StringType()), StructField("GRAIN", StringType()),
-                             StructField("ROW_NUMBER", IntegerType()), StructField("RECORD", VariantType()),
-                             StructField("RUN_ID", StringType())])
-        data = [(meta["item_id"], meta["etag"], meta["file_name"], meta["feed_id"], meta.get("report"), meta.get("grain"),
-                 r["_row_number"], {k: v for k, v in r.items() if k != "_row_number"}, self.run_id)   # dict: Snowpark encodes VARIANT itself
-                for r in rows]
-        df = self.s.create_dataframe(data, schema=schema)
-        df.write.mode("append").save_as_table(f"BRONZE.SHAREPOINT.{table}", column_order="name")
-        return len(data)
+        sql = (f"insert into BRONZE.SHAREPOINT.{table} "
+               "(item_id, etag, file_name, feed_id, report, grain, row_number, record, run_id) "
+               "select ?, ?, ?, ?, ?, ?, f.value:n::number, f.value:r, ? "
+               "from table(flatten(input => parse_json(?))) f")
+        for batch in batch_records(rows):
+            self.s.sql(sql, params=[meta["item_id"], meta["etag"], meta["file_name"], meta["feed_id"], meta.get("report"),
+                                    meta.get("grain"), self.run_id, batch]).collect()
+        return len(rows)
 
     def stage_file(self, stage, name, content, rows):
         self.s.file.put_stream(io.BytesIO(content), f"@{stage}/{name}", auto_compress=True, overwrite=True)

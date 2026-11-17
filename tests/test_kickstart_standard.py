@@ -52,7 +52,7 @@ def test_resource_monitors_alert_80_suspend_100():
         m = re.search(rf"create or replace resource monitor {rm} (.*?);", MONITOR, re.S)
         assert m, rm
         assert "on 80 percent do notify" in m.group(1) and "on 100 percent do suspend" in m.group(1), rm
-        assert "notify_users = (dl_epitaph_data_alerts)" in m.group(1), rm
+        assert "notify_users = (dl_epitaph_data_alerts, nathanepitaph)" in m.group(1), rm
     assert "alter account set resource_monitor = rm_epitaph_account" in MONITOR
 
 

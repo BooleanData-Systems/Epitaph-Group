@@ -13,7 +13,7 @@ How Snowflake spend is limited and watched (Kickstart Checklist 3, "Document cos
 | RM_WH_ADHOC | WH_ADHOC (X-Small) | 20 | Email | Suspend |
 | RM_WH_HISTORY | WH_HISTORY (Small, one-off) | 150 in total | Email | Suspend |
 
-Emails go to the alert distribution list (user DL_EPITAPH_DATA_ALERTS). Expected use is 260 to 295 credits a month,
+Emails go to the alert distribution list (user DL_EPITAPH_DATA_ALERTS, epitaph@booleandata.ai) and to Nathan Sennema (user NATHANEPITAPH; his address is set by the Epitaph admin). Expected use is 260 to 295 credits a month,
 so the account limit leaves about 35% headroom.
 
 Every warehouse suspends after 60 seconds idle, resumes on demand, and stops any statement after 300 seconds.

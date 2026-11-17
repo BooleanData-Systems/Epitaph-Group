@@ -91,10 +91,17 @@ grant role EPITAPH_DEPLOYER    to user SVC_CI;
 -- Set each public key outside this script: alter user SVC_LOADER set rsa_public_key = '...';
 -- Rotation: set rsa_public_key_2, switch the client, then unset rsa_public_key (no downtime). Every 12 months.
 
--- Alert distribution list as a user, so resource monitors and alerts can email it (address verified in Snowsight).
+-- Alert recipients as users, so resource monitors and alerts can email them (each address verified in Snowsight).
 create user if not exists DL_EPITAPH_DATA_ALERTS type = person login_name = 'DL_EPITAPH_DATA_ALERTS'
-  comment = 'Email-only user for the alert distribution list. No password or key is ever set, so it cannot log in. Set EMAIL to the DL and verify it';
--- alter user DL_EPITAPH_DATA_ALERTS set email = '<distribution list>';   (set by the Epitaph admin, not stored here)
+  comment = 'Email-only user for the alert distribution list. No password or key is ever set, so it cannot log in';
+alter user DL_EPITAPH_DATA_ALERTS set email = 'epitaph@booleandata.ai';
+
+-- Nathan Sennema, Epitaph product owner. If the user does not exist yet it is created without a password or key,
+-- so it only receives email until the Epitaph admin sets up his sign-in. His email is personal data, so it is not
+-- stored here: the Epitaph admin sets and verifies it (runbook step 3a) before 04_monitoring.sql runs.
+create user if not exists NATHANEPITAPH type = person login_name = 'NATHANEPITAPH'
+  comment = 'Nathan Sennema, Epitaph product owner; receives monitor and alert emails';
+-- alter user NATHANEPITAPH set email = '<Nathan''s email>';   (set by the Epitaph admin, not stored here)
 
 -- Network policy: Omni, Fivetran and GitHub runner egress ranges are added by the admin, not stored here.
 -- create network policy NP_EPITAPH_SERVICES allowed_network_rule_list = (...);

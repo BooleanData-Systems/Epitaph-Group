@@ -1,6 +1,7 @@
 -- Control tables: everything a person decides (mapping, cut-over, access, tolerances) lives here, not in code.
 -- Seeds in /seeds are loaded into these tables by scripts/load_seeds.py on every deploy (merge on the key).
 use role EPITAPH_TRANSFORMER;
+use warehouse WH_TRANSFORMATION;   -- the transformer role's warehouse (the ALERT_RECIPIENTS merge needs one)
 use schema GOLD.CONTROL;
 
 -- ---------------------------------------------------------------- Master Client Index (MCI)
@@ -15,7 +16,7 @@ create table if not exists MCI_CLIENT (
   home_country        varchar(2),
   status              varchar not null default 'active',   -- active | paused | former
   effective_from      date not null,        -- first day of data the product holds for the client
-  effective_to        date default '9999-12-31',
+  effective_to        date default '9999-12-31'::date,
   steward             varchar,              -- who approves changes to this client's identifiers
   notes               varchar,
   primary key (client_code)
@@ -27,8 +28,8 @@ create table if not exists MCI_CLIENT_IDENTIFIER (
   system        varchar not null,   -- source the identifier belongs to; '*' = any source
   id_value      varchar not null,
   status        varchar not null default 'proposed',   -- approved | proposed (proposed rows never resolve a client)
-  valid_from    date default '2000-01-01',
-  valid_to      date default '9999-12-31',
+  valid_from    date default '2000-01-01'::date,
+  valid_to      date default '9999-12-31'::date,
   approved_by   varchar,
   notes         varchar,
   primary key (id_type, system, id_value, valid_from)
@@ -56,8 +57,8 @@ create table if not exists MAP_PLATFORM_ACCOUNT (
   client_code     varchar not null,
   account_currency varchar(3) not null,
   convert_to      varchar(3),           -- Q20: Kids Help Phone USD accounts shown in CAD
-  valid_from      date default '2000-01-01',
-  valid_to        date default '9999-12-31',
+  valid_from      date default '2000-01-01'::date,
+  valid_to        date default '9999-12-31'::date,
   primary key (platform, account_id, valid_from)
 ) comment = 'Ad account to client. Filled at connector setup from the Fivetran account list';
 
@@ -108,8 +109,8 @@ create table if not exists MAP_CONVERSION_TAG (
   kpi_group         varchar,              -- find_a_retailer, lead, order, landing_page_view ...
   counts_toward_kpi boolean not null,
   approved_by       varchar,
-  valid_from        date default '2000-01-01',
-  valid_to          date default '9999-12-31',
+  valid_from        date default '2000-01-01'::date,
+  valid_to          date default '9999-12-31'::date,
   primary key (client_code, platform, tag_name, valid_from)
 ) comment = 'From the Conversion tags sheet (T01 to T11). platform * = any platform; * in tag_name = any text (most specific row wins). Changes after 13 Nov by change request (R01)';
 
@@ -151,7 +152,19 @@ create table if not exists FEED_OWNERS (
 
 create table if not exists ALERT_RECIPIENTS (
   alert_name varchar, email varchar
-) comment = 'Filled by the Epitaph admin. Not in the repo';
+) comment = 'Who gets each pipeline alert email. Addresses must match verified Snowflake user emails';
+
+-- Every alert goes to the distribution list (DL_EPITAPH_DATA_ALERTS) and to Nathan Sennema, Epitaph product owner
+-- (NATHANEPITAPH). Each address must be the verified email of a Snowflake user (01_account.sql, runbook step 3a).
+-- This merge only adds missing rows, so it never removes anyone added later. At handover, replace the Boolean list
+-- with Epitaph's own.
+merge into ALERT_RECIPIENTS t
+using (select a.column1 as alert_name, e.column1 as email
+       from values ('ingestion'), ('transformation'), ('publishing'), ('downstream'), ('freshness'),
+                   ('check_failures'), ('streams') a
+       cross join values ('epitaph@booleandata.ai') e) s
+on t.alert_name = s.alert_name and lower(t.email) = s.email
+when not matched then insert (alert_name, email) values (s.alert_name, s.email);
 
 create table if not exists CTL_HISTORY_LOAD (
   source_name   varchar not null,

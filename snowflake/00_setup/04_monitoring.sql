@@ -1,23 +1,23 @@
 -- Kickstart Checklist section 3: resource monitors, cost visibility and query auditing.
--- Run as ACCOUNTADMIN after 01 to 03. Monitor emails go to the alert distribution list user (verified email).
+-- Run as ACCOUNTADMIN after 01 to 03. Monitor emails go to DL_EPITAPH_DATA_ALERTS and NATHANEPITAPH (verified emails).
 use role accountadmin;
 
 -- ================================================================ Resource monitors: alert at 80%, suspend at 100%
 create or replace resource monitor RM_EPITAPH_ACCOUNT with credit_quota = 400 frequency = monthly start_timestamp = immediately
-  notify_users = (DL_EPITAPH_DATA_ALERTS)
+  notify_users = (DL_EPITAPH_DATA_ALERTS, NATHANEPITAPH)
   triggers on 80 percent do notify on 100 percent do suspend;
 alter account set resource_monitor = RM_EPITAPH_ACCOUNT;
 
 create or replace resource monitor RM_WH_LOAD with credit_quota = 100 frequency = monthly start_timestamp = immediately
-  notify_users = (DL_EPITAPH_DATA_ALERTS) triggers on 80 percent do notify on 100 percent do suspend;
+  notify_users = (DL_EPITAPH_DATA_ALERTS, NATHANEPITAPH) triggers on 80 percent do notify on 100 percent do suspend;
 create or replace resource monitor RM_WH_TRANSFORMATION with credit_quota = 120 frequency = monthly start_timestamp = immediately
-  notify_users = (DL_EPITAPH_DATA_ALERTS) triggers on 80 percent do notify on 100 percent do suspend;
+  notify_users = (DL_EPITAPH_DATA_ALERTS, NATHANEPITAPH) triggers on 80 percent do notify on 100 percent do suspend;
 create or replace resource monitor RM_WH_ADHOC with credit_quota = 20 frequency = monthly start_timestamp = immediately
-  notify_users = (DL_EPITAPH_DATA_ALERTS) triggers on 80 percent do notify on 100 percent do suspend;
+  notify_users = (DL_EPITAPH_DATA_ALERTS, NATHANEPITAPH) triggers on 80 percent do notify on 100 percent do suspend;
 create or replace resource monitor RM_WH_REPORTING with credit_quota = 160 frequency = monthly start_timestamp = immediately
-  notify_users = (DL_EPITAPH_DATA_ALERTS) triggers on 80 percent do notify on 100 percent do suspend;
+  notify_users = (DL_EPITAPH_DATA_ALERTS, NATHANEPITAPH) triggers on 80 percent do notify on 100 percent do suspend;
 create or replace resource monitor RM_WH_HISTORY with credit_quota = 150 frequency = never start_timestamp = immediately
-  notify_users = (DL_EPITAPH_DATA_ALERTS) triggers on 80 percent do notify on 100 percent do suspend;
+  notify_users = (DL_EPITAPH_DATA_ALERTS, NATHANEPITAPH) triggers on 80 percent do notify on 100 percent do suspend;
 
 alter warehouse WH_LOAD           set resource_monitor = RM_WH_LOAD;
 alter warehouse WH_TRANSFORMATION set resource_monitor = RM_WH_TRANSFORMATION;

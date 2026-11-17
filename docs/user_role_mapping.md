@@ -25,7 +25,7 @@ Named people are added by the Epitaph admin; this file lists the role each kind 
 | SVC_TRANSFORMER | EPITAPH_TRANSFORMER | WH_TRANSFORMATION | Transformation workloads | Epitaph vault | Every 12 months |
 | SVC_REPORTER | EPITAPH_REPORTER | WH_REPORTING | Omni connection | Epitaph vault and Omni | Every 12 months |
 | SVC_CI | EPITAPH_DEPLOYER | WH_TRANSFORMATION | GitHub Actions deploys | Epitaph vault and GitHub secrets | Every 12 months |
-| DL_EPITAPH_DATA_ALERTS | none | none | Receives monitor and alert emails; cannot sign in | Not applicable | Not applicable |
+| DL_EPITAPH_DATA_ALERTS | none | none | Receives monitor and alert emails at epitaph@booleandata.ai; cannot sign in | Not applicable | Not applicable |
 
 Keys are rotated once after setup and then yearly: set the new public key as `rsa_public_key_2`, switch the client,
 then unset the old key, with no downtime.
@@ -35,6 +35,7 @@ then unset the old key, with no downtime.
 | Person or group | Roles | Notes |
 |---|---|---|
 | Epitaph platform owner | EPITAPH_ADMIN | Named by Epitaph at kickoff |
+| Nathan Sennema (NATHANEPITAPH) | Set by the Epitaph admin | Product owner; receives monitor and alert emails (address set by the Epitaph admin) |
 | Epitaph analysts | EPITAPH_READER, EPITAPH_MONITOR | Query GOLD in Snowsight |
 | Boolean pod engineers (during the engagement) | EPITAPH_DEVELOPER, EPITAPH_READER | Removed at handover unless Epitaph decides otherwise |
 | Boolean pod lead (during the engagement) | EPITAPH_DEVELOPER, EPITAPH_MONITOR | Removed at handover unless Epitaph decides otherwise |
