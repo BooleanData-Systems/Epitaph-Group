@@ -2,7 +2,7 @@
 # destination: Snowflake BRONZE, schema fivetran_<name>. Sync every 6 hours. Historical sync: see history_from.
 # tables: the report tables each staging view reads. scripts/check_fivetran_schema.py compares these with the
 # real schema after the first sync (column names only).
-#   staging: the view in snowflake/30_staging, or "to build" when the connector is set up
+#   staging: the view in snowflake/30_staging (runs its stub in stubs/ until the first sync)
 #   history_from: how far back Fivetran pulls; earlier months come from TapClicks downloads (plans/)
 
 connectors:
@@ -10,14 +10,14 @@ connectors:
   - {name: microsoft_ads, source_name: Microsoft Advertising, schema: FIVETRAN_MICROSOFT_ADS, tables: [AD_PERFORMANCE_DAILY_REPORT], staging: STG_MICROSOFT_ADS, history_from: 2024-11-01, status: build}
   - {name: facebook_ads, source_name: Facebook Ads, schema: FIVETRAN_FACEBOOK_ADS, tables: [BASIC_AD, BASIC_AD_ACTIONS, BASIC_AD_VIDEO_ACTIONS, AD_HISTORY, AD_SET_HISTORY, CAMPAIGN_HISTORY, CREATIVE_HISTORY, ACCOUNT_HISTORY], staging: STG_FACEBOOK_ADS, history_from: 2024-11-01, status: build, notes: "Meta keeps 37 months of insights"}
   - {name: ga4, source_name: Google Analytics 4, schema: FIVETRAN_GA4, tables: [TRAFFIC_ACQUISITION_SESSION_SOURCE_MEDIUM_REPORT], staging: STG_GA4_SESSIONS, history_from: 2024-11-01, status: build, notes: "GA4 Test property not connected (Q22)"}
-  - {name: linkedin_ads, source_name: LinkedIn Ads, schema: FIVETRAN_LINKEDIN_ADS, tables: [AD_ANALYTICS_BY_CREATIVE, CREATIVE_HISTORY, CAMPAIGN_HISTORY, CAMPAIGN_GROUP_HISTORY], staging: to build, history_from: 2024-11-01, status: build}
-  - {name: tiktok_ads, source_name: TikTok Ads, schema: FIVETRAN_TIKTOK_ADS, tables: [AD_REPORT_DAILY, AD_HISTORY, ADGROUP_HISTORY, CAMPAIGN_HISTORY], staging: to build, history_from: 2024-11-01, status: build}
-  - {name: snapchat_ads, source_name: SnapChat, schema: FIVETRAN_SNAPCHAT_ADS, tables: [AD_DAILY_REPORT, AD_HISTORY, AD_SQUAD_HISTORY, CAMPAIGN_HISTORY], staging: to build, history_from: 2024-11-01, status: build}
-  - {name: reddit_ads, source_name: Reddit Ads, schema: FIVETRAN_REDDIT_ADS, tables: [AD_REPORT, AD, AD_GROUP, CAMPAIGN], staging: to build, history_from: 2024-11-01, status: build, notes: "Preferred over the old Reddit upload source (Q001)"}
-  - {name: pinterest_ads, source_name: Pinterest Ads, schema: FIVETRAN_PINTEREST_ADS, tables: [PIN_PROMOTION_REPORT, PIN_PROMOTION_HISTORY, AD_GROUP_HISTORY, CAMPAIGN_HISTORY], staging: to build, history_from: 2024-11-01, status: build}
-  - {name: amazon_ads, source_name: Amazon Ads, schema: FIVETRAN_AMAZON_ADS, tables: [AD_GROUP_LEVEL_REPORT, CAMPAIGN_HISTORY, AD_GROUP_HISTORY], staging: to build, history_from: 2026-10-01, status: build, notes: "Amazon keeps about 60 to 90 days; older months from TapClicks downloads"}
-  - {name: cm360, source_name: Campaign Manager 360, schema: FIVETRAN_CM360, tables: [CUSTOM_REPORT], staging: to build, history_from: 2024-11-01, status: build}
-  - {name: dv360, source_name: Display & Video 360 IO, schema: FIVETRAN_DV360, tables: [CUSTOM_REPORT], staging: to build, history_from: 2024-11-01, status: build}
-  - {name: the_trade_desk, source_name: The Trade Desk, schema: FIVETRAN_THE_TRADE_DESK, tables: [CUSTOM_REPORT], staging: to build, history_from: 2026-10-01, status: waiting, notes: "Needs the API addendum from The Trade Desk"}
-  - {name: amazon_dsp, source_name: Amazon DSP, schema: FIVETRAN_AMAZON_DSP, tables: [CUSTOM_REPORT], staging: to build, history_from: 2026-10-01, status: prove-first, notes: "Reach and frequency may need the F06 file"}
-  - {name: spotify_ads, source_name: Spotify Ads, schema: FIVETRAN_SPOTIFY_ADS, tables: [AD_REPORT], staging: to build, history_from: 2026-10-01, status: prove-first, notes: "Cobs Bread runs in Spotify's own account, so its file (F15) stays"}
+  - {name: linkedin_ads, source_name: LinkedIn Ads, schema: FIVETRAN_LINKEDIN_ADS, tables: [AD_ANALYTICS_BY_CREATIVE, CREATIVE_HISTORY, CAMPAIGN_HISTORY, CAMPAIGN_GROUP_HISTORY], staging: STG_LINKEDIN_ADS, history_from: 2024-11-01, status: build}
+  - {name: tiktok_ads, source_name: TikTok Ads, schema: FIVETRAN_TIKTOK_ADS, tables: [AD_REPORT_DAILY, AD_HISTORY, ADGROUP_HISTORY, CAMPAIGN_HISTORY], staging: STG_TIKTOK_ADS, history_from: 2024-11-01, status: build}
+  - {name: snapchat_ads, source_name: SnapChat, schema: FIVETRAN_SNAPCHAT_ADS, tables: [AD_DAILY_REPORT, AD_HISTORY, AD_SQUAD_HISTORY, CAMPAIGN_HISTORY], staging: STG_SNAPCHAT_ADS, history_from: 2024-11-01, status: build}
+  - {name: reddit_ads, source_name: Reddit Ads, schema: FIVETRAN_REDDIT_ADS, tables: [AD_REPORT, AD, AD_GROUP, CAMPAIGN], staging: STG_REDDIT_ADS, history_from: 2024-11-01, status: build, notes: "Preferred over the old Reddit upload source (Q001)"}
+  - {name: pinterest_ads, source_name: Pinterest Ads, schema: FIVETRAN_PINTEREST_ADS, tables: [PIN_PROMOTION_REPORT, PIN_PROMOTION_HISTORY, AD_GROUP_HISTORY, CAMPAIGN_HISTORY], staging: STG_PINTEREST_ADS, history_from: 2024-11-01, status: build}
+  - {name: amazon_ads, source_name: Amazon Ads, schema: FIVETRAN_AMAZON_ADS, tables: [AD_GROUP_LEVEL_REPORT, CAMPAIGN_HISTORY, AD_GROUP_HISTORY], staging: STG_AMAZON_ADS, history_from: 2026-10-01, status: build, notes: "Amazon keeps about 60 to 90 days; older months from TapClicks downloads"}
+  - {name: cm360, source_name: Campaign Manager 360, schema: FIVETRAN_CM360, tables: [CUSTOM_REPORT], staging: STG_CM360, history_from: 2024-11-01, status: build}
+  - {name: dv360, source_name: Display & Video 360 IO, schema: FIVETRAN_DV360, tables: [CUSTOM_REPORT], staging: STG_DV360, history_from: 2024-11-01, status: build}
+  - {name: the_trade_desk, source_name: The Trade Desk, schema: FIVETRAN_THE_TRADE_DESK, tables: [CUSTOM_REPORT], staging: STG_THE_TRADE_DESK, history_from: 2026-10-01, status: waiting, notes: "Needs the API addendum from The Trade Desk"}
+  - {name: amazon_dsp, source_name: Amazon DSP, schema: FIVETRAN_AMAZON_DSP, tables: [CUSTOM_REPORT], staging: STG_AMAZON_DSP, history_from: 2026-10-01, status: prove-first, notes: "Reach and frequency may need the F06 file"}
+  - {name: spotify_ads, source_name: Spotify Ads, schema: FIVETRAN_SPOTIFY_ADS, tables: [AD_REPORT], staging: STG_SPOTIFY_ADS, history_from: 2026-10-01, status: prove-first, notes: "Cobs Bread runs in Spotify's own account, so its file (F15) stays"}
