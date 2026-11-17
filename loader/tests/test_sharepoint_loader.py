@@ -280,3 +280,14 @@ def test_one_failing_file_does_not_stop_the_run():
     assert [l["status"] for l in store.logs] == ["error", "loaded"]
     # the failed file is tried again next run (only 'loaded' counts as done)
     assert not store.already_loaded("1", "v1")
+
+
+def test_batch_records_split_and_round_trip():
+    import json
+    rows = [{"_row_number": i, "date": dt.date(2026, 10, 1), "spend": "1.5", "name": "Café"} for i in range(1, 1001)]
+    batches = sl.batch_records(rows, max_chars=20_000)
+    assert len(batches) > 1
+    back = [x for b in batches for x in json.loads(b)]
+    assert [x["n"] for x in back] == list(range(1, 1001))
+    assert back[0]["r"] == {"date": "2026-10-01", "spend": "1.5", "name": "Café"}
+    assert all(len(b) <= 20_000 for b in batches)

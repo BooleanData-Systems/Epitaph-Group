@@ -11,8 +11,8 @@ packages = ('snowflake-snowpark-python', 'requests')
 imports = ('@BRONZE.LOADER.CODE/fx_loader.py')
 handler = 'fx_loader.main'
 external_access_integrations = (EAI_BANK_OF_CANADA)
-execute as owner
-comment = 'Bank of Canada Valet API. First run loads from 2020-01-01';
+comment = 'Bank of Canada Valet API. First run loads from 2020-01-01'
+execute as owner;
 
 create or replace task BRONZE.REFERENCE.T_LOAD_FX_RATES
   warehouse = WH_LOAD
