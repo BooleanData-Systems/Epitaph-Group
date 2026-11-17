@@ -1,7 +1,7 @@
 name: deploy
 
-# Runs after a pull request is merged to main, or by hand. Credentials are GitHub environment secrets,
-# approved by an Epitaph reviewer for the production environment. Logs show object names, pass/fail and counts.
+# Runs after a pull request is merged to main, or by hand. Credentials are GitHub repository secrets
+# (Settings > Secrets and variables > Actions). Logs show object names, pass/fail and counts.
 on:
   push:
     branches: [main]
@@ -24,7 +24,6 @@ jobs:
   snowflake:
     if: github.event_name == 'push' || inputs.target != 'omni'
     runs-on: ubuntu-latest
-    environment: production
     env:
       SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
       SNOWFLAKE_USER: SVC_CI
@@ -60,7 +59,6 @@ jobs:
     if: github.event_name == 'push' || inputs.target != 'snowflake'
     needs: [snowflake]
     runs-on: ubuntu-latest
-    environment: production
     env:
       OMNI_BASE_URL: ${{ secrets.OMNI_BASE_URL }}
       OMNI_API_KEY: ${{ secrets.OMNI_API_KEY }}

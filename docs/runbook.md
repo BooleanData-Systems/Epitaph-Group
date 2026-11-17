@@ -14,7 +14,7 @@
 | 7 | Fill GOLD.CONTROL.FEED_OWNERS and ALERT_RECIPIENTS; verify each address in Snowflake | Epitaph admin | Test email received |
 | 8 | Set up Power Automate flows that save emailed reports (Sonnet, SiriusXM, vendors) into their folders | Epitaph IT | A test email lands as a file |
 | 9 | Create the Fivetran connectors in `config/connectors.yml` to the BRONZE database | Boolean pod (data engineering) | First sync complete |
-| 10 | GitHub: create the repo under Epitaph's organisation; add secrets SNOWFLAKE_ACCOUNT, SNOWFLAKE_PRIVATE_KEY, OMNI_BASE_URL, OMNI_API_KEY, OMNI_MODEL_ID, OMNI_BRANCH_ID to the "production" environment with a required reviewer | Epitaph admin | Deploy workflow runs |
+| 10 | GitHub: Epitaph's repo (Nathan-Epitaph/EpitaphGroup); allow Actions; add repository secrets SNOWFLAKE_ACCOUNT, SNOWFLAKE_PRIVATE_KEY, OMNI_BASE_URL, OMNI_API_KEY, OMNI_MODEL_ID, OMNI_BRANCH_ID (Settings > Secrets and variables > Actions). Changes go in through pull requests | Epitaph admin | Deploy workflow runs |
 | 11 | Omni: Snowflake connection, git-connected model with required pull requests, user attributes, client user groups, theme, logos, master dashboard (see `omni/README.md`) | Boolean pod (dashboard build) | Master approved by Epitaph |
 
 ## Every day (automatic)
