@@ -15,14 +15,20 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def connector_schemas():
+    """Fivetran destination schemas, from config/connectors.yml (they have no common prefix)."""
+    return {c["schema"].upper() for c in yaml.safe_load(open(ROOT / "config" / "connectors.yml"))["connectors"]}
+
+
 def expected_columns():
-    """Columns referenced as alias.column for each BRONZE.FIVETRAN_* table in the staging SQL."""
+    """Columns referenced as alias.column for each table in a connector schema, from the staging SQL."""
+    schemas = connector_schemas()
     out = {}
     for f in (ROOT / "snowflake" / "30_staging").glob("*.sql"):
         for sql in f.read_text().split(";"):            # one statement at a time, so aliases do not mix
-            for m in re.finditer(r"BRONZE\.(FIVETRAN_\w+)\.(\w+)\s+(?:as\s+)?(\w+)", sql, re.I):
+            for m in re.finditer(r"BRONZE\.(\w+)\.(\w+)\s+(?:as\s+)?(\w+)", sql, re.I):
                 schema, table, alias = m.group(1).upper(), m.group(2).upper(), m.group(3)
-                if alias.lower() in ("qualify", "where", "on", "group", "join", "left"):
+                if schema not in schemas or alias.lower() in ("qualify", "where", "on", "group", "join", "left"):
                     continue
                 cols = {c.upper() for c in re.findall(rf"\b{alias}\.(\w+)", sql)}
                 out.setdefault((schema, table), set()).update(cols)
@@ -36,7 +42,9 @@ def main():
                                       authenticator="SNOWFLAKE_JWT", private_key_file=os.environ["SNOWFLAKE_PRIVATE_KEY_PATH"],
                                       role="EPITAPH_STRUCTURE", warehouse="WH_TRANSFORMATION")
     cur = con.cursor()
-    cur.execute("select table_schema, table_name, column_name from BRONZE.INFORMATION_SCHEMA.COLUMNS where table_schema like 'FIVETRAN_%'")
+    schemas = sorted(connector_schemas())
+    cur.execute("select table_schema, table_name, column_name from BRONZE.INFORMATION_SCHEMA.COLUMNS "
+                f"where table_schema in ({', '.join(['%s'] * len(schemas))})", schemas)
     have = {}
     for s, t, c in cur.fetchall():
         have.setdefault((s, t), set()).add(c)

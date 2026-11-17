@@ -1,4 +1,4 @@
--- requires: BRONZE.FIVETRAN_THE_TRADE_DESK
+-- requires: BRONZE.THE_TRADE_DESK
 -- Until the connector's first sync lands, deploy runs stubs/stg_the_trade_desk.sql instead (same columns, no rows).
 -- Every ad view has the same columns: activity_date, source_name, platform, account_id, account_currency, campaign_id,
 -- campaign_name, media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend, video_starts,
@@ -19,4 +19,4 @@ select
   r.impressions, r.clicks, r.advertiser_cost_adv_currency as spend,
   coalesce(r.player_starts, 0) as video_starts, coalesce(r.player_completed_views, 0) as completed_plays,
   0 as post_shares, 0 as spots
-from BRONZE.FIVETRAN_THE_TRADE_DESK.CUSTOM_REPORT r;
+from BRONZE.THE_TRADE_DESK.CUSTOM_REPORT r;

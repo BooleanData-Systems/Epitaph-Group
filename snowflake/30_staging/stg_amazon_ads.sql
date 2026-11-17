@@ -1,4 +1,4 @@
--- requires: BRONZE.FIVETRAN_AMAZON_ADS
+-- requires: BRONZE.AMAZON_ADS
 -- Until the connector's first sync lands, deploy runs stubs/stg_amazon_ads.sql instead (same columns, no rows).
 -- Every ad view has the same columns: activity_date, source_name, platform, account_id, account_currency, campaign_id,
 -- campaign_name, media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend, video_starts,
@@ -16,6 +16,6 @@ select
   r.ad_group_id::varchar as creative_id, g.name as creative_name,
   r.impressions, r.clicks, r.cost as spend,
   0 as video_starts, 0 as completed_plays, 0 as post_shares, 0 as spots
-from BRONZE.FIVETRAN_AMAZON_ADS.AD_GROUP_LEVEL_REPORT r
-left join (select * from BRONZE.FIVETRAN_AMAZON_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) c on c.id = r.campaign_id
-left join (select * from BRONZE.FIVETRAN_AMAZON_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) g on g.id = r.ad_group_id;
+from BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT r
+left join (select * from BRONZE.AMAZON_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) c on c.id = r.campaign_id
+left join (select * from BRONZE.AMAZON_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) g on g.id = r.ad_group_id;

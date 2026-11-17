@@ -1,4 +1,4 @@
--- requires: BRONZE.FIVETRAN_SPOTIFY_ADS
+-- requires: BRONZE.SPOTIFY_ADS
 -- Until the connector's first sync lands, deploy runs stubs/stg_spotify_ads.sql instead (same columns, no rows).
 -- Every ad view has the same columns: activity_date, source_name, platform, account_id, account_currency, campaign_id,
 -- campaign_name, media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend, video_starts,
@@ -16,4 +16,4 @@ select
   r.ad_id::varchar as creative_id, r.ad_name as creative_name,
   r.impressions, r.clicks, r.spend,
   0 as video_starts, 0 as completed_plays, 0 as post_shares, 0 as spots
-from BRONZE.FIVETRAN_SPOTIFY_ADS.AD_REPORT r;
+from BRONZE.SPOTIFY_ADS.AD_REPORT r;
