@@ -129,6 +129,24 @@ dimensions:
     label: Line type
     required_access_grants:
     - cg_client_files
+  campaign_filter:
+    sql: '"CAMPAIGN_FILTER"'
+    label: Campaign filter
+  site_key:
+    sql: '"SITE_KEY"'
+    label: Site key
+  program_code:
+    sql: '"PROGRAM_CODE"'
+    label: Program code
+  size_khc:
+    sql: '"SIZE_KHC"'
+    label: Size khc
+  category_khc:
+    sql: '"CATEGORY_KHC"'
+    label: Category khc
+  bulk_status_khc:
+    sql: '"BULK_STATUS_KHC"'
+    label: Bulk status khc
   goal_metric:
     sql: '"GOAL_METRIC"'
     label: Goal metric
@@ -179,6 +197,11 @@ dimensions:
     label: Media type (filter)
     hidden: true
     description: 'Use this, not media_type, in tile filters: outcome rows read ''All outcomes'' so they stay in.'
+  filter_site_key:
+    sql: CASE WHEN "ROW_TYPE" = 'delivery' THEN "SITE_KEY" ELSE 'All outcomes' END
+    label: Site key (filter)
+    hidden: true
+    description: 'Use this, not site_key, in tile filters: outcome rows read ''All outcomes'' so they stay in.'
   filter_tactic:
     sql: CASE WHEN "ROW_TYPE" = 'delivery' THEN "TACTIC" ELSE 'All outcomes' END
     label: Tactic (filter)

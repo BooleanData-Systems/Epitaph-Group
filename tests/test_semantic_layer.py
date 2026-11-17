@@ -97,3 +97,15 @@ def test_delivery_filters_keep_outcome_rows():
             "sections": [{"name": "s", "rebuild": True, "widgets": [{"element": "kpi", "title": "x", "metrics": ["Spend"],
                           "tapclicks_widget_id": 1, "filters": [{"field": "media_type", "op": "in", "values": ["CTV"]}]}]}]}
     assert "filter_media_type in [CTV, All outcomes]" in omni_build.build_sheet(spec, {"Spend": "spend"})
+    spec["sections"][0]["widgets"][0]["filters"] = [{"field": "media_type", "op": "not in", "values": ["CTV"]}]
+    assert "filter_media_type not in [CTV]" in omni_build.build_sheet(spec, {"Spend": "spend"})   # outcome rows stay in
+
+def test_site_key_and_campaign_filter(con):
+    """Site Key comes from map_site_key (one value for the whole source here); Campaign Filter drops the client."""
+    rows = dict(con.execute("""select media_type, any_value(site_key) from V_MEDIA_PERFORMANCE_DAILY
+                               where row_type = 'delivery' group by 1""").fetchall())
+    assert rows == {"Search": "paidsearch", "Social": "facebook"}    # Google Ads and Facebook Ads rules in the seed
+    goal = con.execute("select campaign_filter from V_MEDIA_PERFORMANCE_DAILY where row_type = 'goal'").fetchone()[0]
+    assert goal == "Brand"                                           # "Nulo: Brand"
+    import omni_build
+    assert "site_key" in omni_build.DELIVERY_ONLY                    # a site key filter keeps outcome rows

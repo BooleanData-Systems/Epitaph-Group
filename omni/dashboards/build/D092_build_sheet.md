@@ -40,16 +40,16 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 
 | Done | Element | Title | Metrics (Omni field) | Group by | Filters |
 |---|---|---|---|---|---|
-| [ ] | kpi | Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [PERF1246, PARTNER1246, COMMCA1246]; site_key not in [Unclassified] |
-| [ ] | kpi | COMMCA1246 Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [COMMCA1246]; site_key not in [Unclassified] |
-| [ ] | kpi | PERF1246 Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [PERF1246]; site_key not in [Unclassified] |
-| [ ] | combo-chart | COMMCA1246 Starts by Campaign | Starts - Commuter (starts_commuter), Throughput (throughput) | media_type, campaign_name | program_code in [COMMCA1246]; site_key not in [Unclassified]; Starts - Commuter >= 1.0 |
-| [ ] | combo-chart | PERF1246 Starts by Campaign | Starts - Commuter (starts_commuter), Throughput (throughput) | media_type, campaign_name | program_code in [PERF1246]; site_key not in [Unclassified]; Starts - Commuter >= 1.0 |
-| [ ] | bar-chart | COMMCA1246 Activations by Campaign | Activations - Commuter (activations_commuter) | campaign_name, media_type | program_code in [COMMCA1246]; site_key not in [Unclassified]; Activations - Commuter >= 1.0 |
-| [ ] | bar-chart | PERF1246 Activations by Campaign | Activations - Commuter (activations_commuter) | campaign_name, media_type | program_code in [PERF1246]; site_key not in [Unclassified]; Activations - Commuter >= 1.0 |
-| [ ] | kpi | PARTNER1246 Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [PARTNER1246]; site_key not in [Unclassified] |
-| [ ] | combo-chart | BRAND1246  Starts by Campaign | Starts - Commuter (starts_commuter), Throughput (throughput) | media_type, campaign_name | program_code in [PARTNER1246]; site_key not in [Unclassified]; Starts - Commuter >= 1.0 |
-| [ ] | bar-chart | PARTNER1246 Activations by Campaign | Activations - Commuter (activations_commuter) | campaign_name, media_type | program_code in [PARTNER1246]; site_key not in [Unclassified]; Activations - Commuter >= 1.0 |
+| [ ] | kpi | Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [PERF1246, PARTNER1246, COMMCA1246]; filter_site_key not in [Unclassified] |
+| [ ] | kpi | COMMCA1246 Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [COMMCA1246]; filter_site_key not in [Unclassified] |
+| [ ] | kpi | PERF1246 Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [PERF1246]; filter_site_key not in [Unclassified] |
+| [ ] | combo-chart | COMMCA1246 Starts by Campaign | Starts - Commuter (starts_commuter), Throughput (throughput) | media_type, campaign_name | program_code in [COMMCA1246]; filter_site_key not in [Unclassified]; Starts - Commuter >= 1.0 |
+| [ ] | combo-chart | PERF1246 Starts by Campaign | Starts - Commuter (starts_commuter), Throughput (throughput) | media_type, campaign_name | program_code in [PERF1246]; filter_site_key not in [Unclassified]; Starts - Commuter >= 1.0 |
+| [ ] | bar-chart | COMMCA1246 Activations by Campaign | Activations - Commuter (activations_commuter) | campaign_name, media_type | program_code in [COMMCA1246]; filter_site_key not in [Unclassified]; Activations - Commuter >= 1.0 |
+| [ ] | bar-chart | PERF1246 Activations by Campaign | Activations - Commuter (activations_commuter) | campaign_name, media_type | program_code in [PERF1246]; filter_site_key not in [Unclassified]; Activations - Commuter >= 1.0 |
+| [ ] | kpi | PARTNER1246 Total | Starts - Commuter (starts_commuter), Activations - Commuter (activations_commuter), Throughput (throughput) |  | program_code in [PARTNER1246]; filter_site_key not in [Unclassified] |
+| [ ] | combo-chart | BRAND1246  Starts by Campaign | Starts - Commuter (starts_commuter), Throughput (throughput) | media_type, campaign_name | program_code in [PARTNER1246]; filter_site_key not in [Unclassified]; Starts - Commuter >= 1.0 |
+| [ ] | bar-chart | PARTNER1246 Activations by Campaign | Activations - Commuter (activations_commuter) | campaign_name, media_type | program_code in [PARTNER1246]; filter_site_key not in [Unclassified]; Activations - Commuter >= 1.0 |
 
 ## Brand Awareness
 

@@ -26,10 +26,10 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | Media Type | Completed Plays (completed_plays), CPCV (cpcv) | media_type | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key not in [Default Site Key]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | combo-chart | By Week | Sessions (sessions), Cost Per Session (cost_per_session) | date:week | site_key not in [Default Site Key]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | bar-chart | Sessions by Media Type | Sessions (sessions) | site_key | site_key not in [Default Site Key]; Sessions >= 1.0; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | bar-chart | Cost per Session by Media Type | Cost Per Session (cost_per_session) | site_key | site_key not in [Default Site Key]; Sessions >= 1.0; Spend >= 0.01; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key not in [Default Site Key]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | combo-chart | By Week | Sessions (sessions), Cost Per Session (cost_per_session) | date:week | filter_site_key not in [Default Site Key]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | bar-chart | Sessions by Media Type | Sessions (sessions) | site_key | filter_site_key not in [Default Site Key]; Sessions >= 1.0; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | bar-chart | Cost per Session by Media Type | Cost Per Session (cost_per_session) | site_key | filter_site_key not in [Default Site Key]; Sessions >= 1.0; Spend >= 0.01; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | smart_campaign in [Kids Help Phone: RiseUp] |
@@ -70,7 +70,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_type in [StndDisplay, NativeDis, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | filter_media_type in [NativeDis, StndDisplay, All outcomes]; Clicks >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | filter_media_type in [StndDisplay, NativeDis, All outcomes]; Clicks >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [programmatic / paiddisplay, programmatic / paidnative]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [programmatic / paiddisplay, programmatic / paidnative, All outcomes]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
@@ -98,7 +98,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_type in [Reddit, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | CTR (ctr) |  | filter_media_type in [Reddit, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | CPC (cpc) |  | filter_media_type in [Reddit, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [reddit / paiddisplay, reddit / paidvideo]; campaign_name in [Peer to Peer, Peer to Peer FR, peer2peer, peer2peerfr, peertopeer, peertopeerfr, ...]; smart_campaign in [Kids Help Phone: Peer to Peer] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [reddit / paiddisplay, reddit / paidvideo, All outcomes]; campaign_name in [Peer to Peer, Peer to Peer FR, peer2peer, peer2peerfr, peertopeer, peertopeerfr, ...]; smart_campaign in [Kids Help Phone: Peer to Peer] |
 | [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_media_type in [*Reddit*, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | bar-chart | Audience | Spend (spend) | audience | filter_media_type in [*Reddit*, All outcomes]; Spend >= 0.01; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | bar-chart | Tactic | Spend (spend) | tactic | filter_media_type in [*Reddit*, All outcomes]; Spend >= 0.01; smart_campaign in [Kids Help Phone: RiseUp] |
@@ -124,7 +124,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | Tactic | Impressions (impressions), CPM (cpm) | tactic | filter_media_type in [Search, All outcomes]; Impressions >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_type in [Search, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | filter_media_type in [Search, All outcomes]; Clicks >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [paidsearch]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [paidsearch, All outcomes]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_type in [Search, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_type in [Search, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_type in [Search, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
@@ -151,7 +151,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | By Week | Completed Plays (completed_plays), CPCV (cpcv) | date:week | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [facebook, snapchat, tiktok]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [facebook, snapchat, tiktok, All outcomes]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Clicks | Clicks (clicks) |  | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Linkedin, Pinterest, Snapchat, ..., All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Spend | Spend (spend) |  | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Linkedin, Pinterest, Snapchat, ..., All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | CPM | CPM (cpm) |  | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Linkedin, Pinterest, Snapchat, ..., All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
@@ -185,7 +185,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | By Week | Completed Plays (completed_plays), CPCV (cpcv) | date:week | filter_media_type in [CTV, YouTube, Video, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | filter_media_type in [Video, CTV, YouTube, All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | filter_media_type in [CTV, YouTube, Video, All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: RiseUp] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [programmatic / paidvideo, youtube]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [programmatic / paidvideo, youtube, All outcomes]; campaign_name in [*rise*]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_type in [Video, YouTube, CTV, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_type in [Video, YouTube, CTV, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_type in [Video, YouTube, CTV, All outcomes]; smart_campaign in [Kids Help Phone: RiseUp] |

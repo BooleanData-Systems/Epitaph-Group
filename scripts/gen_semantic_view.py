@@ -24,6 +24,8 @@ DIMS = [
     ("conversion_tag", "varchar"), ("kpi_group", "varchar"), ("counts_toward_kpi", "boolean"), ("campaign_type", "varchar"),
     ("ga4_session_source", "varchar"), ("ga4_session_medium", "varchar"), ("ga4_session_campaign", "varchar"),
     ("province", "varchar"), ("product", "varchar"), ("segment", "varchar"), ("quality_band", "varchar"), ("line_type", "varchar"),
+    ("campaign_filter", "varchar"), ("site_key", "varchar"), ("program_code", "varchar"),
+    ("size_khc", "varchar"), ("category_khc", "varchar"), ("bulk_status_khc", "varchar"),
     ("goal_metric", "varchar"), ("currency_code", "varchar"), ("loaded_from", "varchar"),
 ]
 MEASURES = [
@@ -39,6 +41,8 @@ CAMPAIGN_DIMS = {
     "client_code": "coalesce(f.client_code, c.client_code)", "client_name": "cl.client_name", "smart_campaign": "c.smart_campaign",
     "campaign_name": "c.campaign_name", "job_number": "c.job_number", "language": "c.language", "country": "c.country",
     "campaign_name_valid": "c.campaign_name_valid", "source_name": "s.source_name", "platform": "f.platform",
+    "campaign_filter": "c.campaign_filter", "product": "c.product", "province": "c.province",
+    "size_khc": "c.size_khc", "category_khc": "c.category_khc", "bulk_status_khc": "c.bulk_status_khc",
 }
 DATE_DIMS = {"date_day": "d.date_day", "week_start": "d.week_start", "month_start": "d.month_start"}
 # Every fact carries its client from the Master Client Index (f.client_code); no client is named in this view
@@ -52,8 +56,11 @@ left join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key
 left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = coalesce(f.client_code, c.client_code)
 left join GOLD.MARTS.DIM_SOURCE s on s.source_key = f.source_key
 left join GOLD.MARTS.DIM_MEDIA_BUY mb on mb.media_buy_key = f.media_buy_key
-left join GOLD.MARTS.DIM_CREATIVE cr on cr.creative_key = f.creative_key""",
+left join GOLD.MARTS.DIM_CREATIVE cr on cr.creative_key = f.creative_key
+left join GOLD.CONTROL.MAP_SITE_KEY sk on sk.source_name = s.source_name and sk.media_type = f.media_type
+left join GOLD.CONTROL.MAP_SITE_KEY ska on ska.source_name = s.source_name and ska.media_type = '*'""",
      "cols": {**DATE_DIMS, **CAMPAIGN_DIMS, "media_type": "f.media_type", "channel": "f.channel",
+              "site_key": "coalesce(sk.site_key, ska.site_key)",
               "media_buy_name": "mb.media_buy_name", "tactic": "mb.tactic", "audience": "mb.audience",
               "creative_name": "cr.creative_name", "creative_format": "cr.creative_format", "call_to_action": "cr.call_to_action",
               "currency_code": "f.currency_code", "loaded_from": "f.loaded_from",
@@ -87,6 +94,7 @@ left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code""",
              + CLIENT_JOIN,
      "cols": {**DATE_DIMS, "client_code": "f.client_code", "client_name": "cl.client_name", "source_name": "'SiriusXM files'",
               "channel": "f.channel", "campaign_name": "f.campaign_name",
+              "program_code": "f.campaign_name",   # the Adobe offer code (online campaign code or program code eVar)
               **{m: f"f.{m}" for m in ("performance_trials", "organic_trials", "scorecard_trials", "performance_flow_starts",
                                        "organic_flow_starts", "commuter_starts", "commuter_activations")}}},
     {"row_type": "adara",
@@ -100,6 +108,7 @@ left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code""",
      "from": "GOLD.MARTS.FCT_GOALS f\nleft join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code",
      "cols": {"date_day": "f.period_month", "week_start": "f.period_month", "month_start": "f.period_month",
               "client_code": "f.client_code", "client_name": "cl.client_name", "smart_campaign": "f.smart_campaign",
+              "campaign_filter": "nullif(trim(split_part(f.smart_campaign, ':', 2)), '')",
               "source_name": "'Goals'", "goal_metric": "f.goal_metric", "goal_value": "f.goal_value"}},
 ]
 

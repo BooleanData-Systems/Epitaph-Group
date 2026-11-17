@@ -244,7 +244,10 @@ def build_sheet(spec, kpi_names):
                     vals = list(f["values"][:6]) + (["..."] if len(f["values"]) > 6 else [])
                     field = f["field"]
                     if field in DELIVERY_ONLY:
-                        field, vals = f"filter_{field}", vals + [OUTCOMES]
+                        # outcome rows read OUTCOMES: add it to an "in" list to keep them; a "not in" list keeps them as is
+                        field = f"filter_{field}"
+                        if f["op"] == "in":
+                            vals = vals + [OUTCOMES]
                     fl.append(f"{field} {f['op']} [{', '.join(vals)}]")
             mets = ", ".join(f"{m} ({kpi_names[m]})" if m in kpi_names else m for m in w["metrics"])
             if w.get("labels"):

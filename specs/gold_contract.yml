@@ -159,6 +159,12 @@ tables:
       country: {type: varchar, status: built}
       campaign_name_valid: {type: boolean, status: built}
       client_from: {type: varchar, status: built, fed_by: mci or smart_campaign (fallback)}
+      campaign_filter: {type: varchar, status: built, fed_by: Smart Campaign name without the client}
+      product: {type: varchar, status: built, fed_by: map_campaign_product (Kicking Horse Coffee); prod= in Sonnet campaign names}
+      province: {type: varchar, status: built, fed_by: geo= in Sonnet campaign names}
+      size_khc: {type: varchar, status: built, fed_by: map_campaign_product}
+      category_khc: {type: varchar, status: built, fed_by: map_campaign_product}
+      bulk_status_khc: {type: varchar, status: built, fed_by: map_campaign_product}
   DIM_MEDIA_BUY:
     grain: [media_buy_key]
     columns:

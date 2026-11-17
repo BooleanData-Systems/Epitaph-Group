@@ -49,10 +49,10 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | Media Type | Completed Plays (completed_plays), CPCV (cpcv) | media_type | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key not in [Default Site Key]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | By Week | Sessions (sessions), Cost Per Session (cost_per_session) | date:week | site_key not in [Default Site Key]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | bar-chart | Sessions by Media Type | Sessions (sessions) | site_key | site_key not in [Default Site Key]; campaign_name in [*indigenous*]; Sessions >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | bar-chart | Cost per Session by Media Type | Cost Per Session (cost_per_session) | site_key | site_key not in [Default Site Key]; Spend >= 0.01; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key not in [Default Site Key]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | By Week | Sessions (sessions), Cost Per Session (cost_per_session) | date:week | filter_site_key not in [Default Site Key]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | bar-chart | Sessions by Media Type | Sessions (sessions) | site_key | filter_site_key not in [Default Site Key]; campaign_name in [*indigenous*]; Sessions >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | bar-chart | Cost per Session by Media Type | Cost Per Session (cost_per_session) | site_key | filter_site_key not in [Default Site Key]; Spend >= 0.01; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | smart_campaign in [Kids Help Phone: Indigenous] |
@@ -84,7 +84,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_type in [StndDisplay, NativeDis, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | filter_media_type in [NativeDis, StndDisplay, All outcomes]; Clicks >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | filter_media_type in [StndDisplay, NativeDis, All outcomes]; Clicks >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [programmatic / paiddisplay, programmatic / paidnative]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [programmatic / paiddisplay, programmatic / paidnative, All outcomes]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
@@ -154,7 +154,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | By Week | Completed Plays (completed_plays), CPCV (cpcv) | date:week | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [facebook, snapchat, tiktok]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [facebook, snapchat, tiktok, All outcomes]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
@@ -170,36 +170,36 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 
 | Done | Element | Title | Metrics (Omni field) | Group by | Filters |
 |---|---|---|---|---|---|
-| [ ] | kpi | Total Metrics | Impressions (impressions) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | bar-chart | Media Type | Spend (spend) | media_type | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | bar-chart | Audience | Spend (spend) | audience | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | bar-chart | Tactic | Spend (spend) | tactic | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | By Week | Impressions (impressions), CPM (cpm) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Media Type | Impressions (impressions), CPM (cpm) | media_type | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Audience | Impressions (impressions), CPM (cpm) | audience | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Tactic | Impressions (impressions), CPM (cpm) | tactic | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Media Type | Clicks (clicks), CPC (cpc), CTR (ctr) | media_type | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | By Week | Completed Plays (completed_plays), CPCV (cpcv) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Media Type | Completed Plays (completed_plays), CPCV (cpcv) | media_type | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | Total Metrics | CPC (cpc) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | Total Metrics | CTR (ctr) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | Total Metrics | CPCV (cpcv) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | Total Metrics | Impressions (impressions) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | bar-chart | Media Type | Spend (spend) | media_type | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | bar-chart | Audience | Spend (spend) | audience | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | bar-chart | Tactic | Spend (spend) | tactic | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | By Week | Impressions (impressions), CPM (cpm) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Media Type | Impressions (impressions), CPM (cpm) | media_type | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Audience | Impressions (impressions), CPM (cpm) | audience | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Tactic | Impressions (impressions), CPM (cpm) | tactic | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | By Week | Clicks (clicks), CPC (cpc), CTR (ctr) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Media Type | Clicks (clicks), CPC (cpc), CTR (ctr) | media_type | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Audience | Clicks (clicks), CPC (cpc), CTR (ctr) | audience | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Tactic | Clicks (clicks), CPC (cpc), CTR (ctr) | tactic | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | By Week | Completed Plays (completed_plays), CPCV (cpcv) | date:week | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Media Type | Completed Plays (completed_plays), CPCV (cpcv) | media_type | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | Total Metrics | CPC (cpc) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | Total Metrics | CTR (ctr) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | Total Metrics | CPCV (cpcv) |  | filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi-with-target | TikTok Impressions Territories Goal: 1,934,066 | Impressions Goal (impressions_goal), Impressions (impressions) |  | source_name in [Goal Smart Connector, TikTok Ads]; campaign_name in [KHP - Indigenous Territories TikTok Impressions Goal, Kids Help Phone Paid_Indigenous Initiative - Trendzi Regions_2024-060_En_CA, Kids Help Phone Paid_Indigenous Initiative Regions_2024-060_En_CA, Kids Help Phone Paid_Indigenous _2024-253_EN_CA_Region Specific, Kids Help Phone Paid_Indigenous Initiative Regions_2024-276_En_CA, *Kids Help Phone Paid_Indigenous 2025 Q2-Q4 Territories*] |
 | [ ] | kpi-with-target | Meta Impressions Territories Goal: 2,000,000 | Impressions Goal (impressions_goal), Impressions (impressions) |  | source_name in [Goal Smart Connector, Facebook Ads]; campaign_name in [Kids Help Phone Paid_Indigenous Initiative - Trendzi Regions_2024-060_En_CA, Kids Help Phone Paid_Indigenous Initiative Regions_2024-060_En_CA, Kids Help Phone Paid_Indigenous _2024-253_EN_CA_Region Specific, Kids Help Phone Paid_Indigenous Initiative Regions_2024-276_En_CA, KHP - Indigenous Territories Meta Impressions Goal, *Kids Help Phone Paid_Indigenous 2025 Q2-Q4 Territories*] |
 | [ ] | kpi-with-target | SnapChat Impressions Territories Goal: 725,275 | Impressions Goal (impressions_goal), Impressions (impressions) |  | source_name in [Goal Smart Connector, SnapChat]; campaign_name in [Kids Help Phone Paid_Indigenous Initiative - Trendzi Regions_2024-060_En_CA, Kids Help Phone Paid_Indigenous Initiative Regions_2024-060_En_CA, Kids Help Phone Paid_Indigenous _2024-253_EN_CA_Region Specific, Kids Help Phone Paid_Indigenous Initiative Regions_2024-276_En_CA, KHP - Indigenous Territories SnapChat Impressions Goal, *Kids Help Phone Paid_Indigenous 2025 Q2-Q4 Territories*] |
-| [ ] | bar-chart | Creative | Spend (spend) | creative_name | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Creative | Impressions (impressions), CPM (cpm) | creative_name | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Creative | Clicks (clicks), CPC (cpc), CTR (ctr) | creative_name | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | combo-chart | Creative | Completed Plays (completed_plays), CPCV (cpcv) | creative_name | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | bar-chart | Creative | Spend (spend) | creative_name | Spend >= 0.01; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Creative | Impressions (impressions), CPM (cpm) | creative_name | Impressions >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Creative | Clicks (clicks), CPC (cpc), CTR (ctr) | creative_name | Clicks >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | combo-chart | Creative | Completed Plays (completed_plays), CPCV (cpcv) | creative_name | Completed Plays >= 1.0; filter_media_buy_name not in [*ROC*, *_Fr_*, *National*]; smart_campaign in [Kids Help Phone: Indigenous] |
 
 ## Video
 
@@ -218,7 +218,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | By Week | Completed Plays (completed_plays), CPCV (cpcv) | date:week | filter_media_type in [CTV, YouTube, Video, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | filter_media_type in [Video, CTV, YouTube, All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | filter_media_type in [CTV, YouTube, Video, All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Indigenous] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [youtube, programmatic / paidvideo]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [youtube, programmatic / paidvideo, All outcomes]; campaign_name in [*indigenous*]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Clicks (clicks) |  | filter_media_type in [Video, YouTube, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | Spend (spend) |  | filter_media_type in [Video, YouTube, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |
 | [ ] | kpi | Total Metrics | CPM (cpm) |  | filter_media_type in [Video, YouTube, All outcomes]; smart_campaign in [Kids Help Phone: Indigenous] |

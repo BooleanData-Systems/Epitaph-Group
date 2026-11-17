@@ -26,10 +26,10 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | Media Type | Completed Plays (completed_plays), CPCV (cpcv) | media_type | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key not in [Default Site Key]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
-| [ ] | combo-chart | By Week | Sessions (sessions), Cost Per Session (cost_per_session) | date:week | site_key not in [Default Site Key]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
-| [ ] | bar-chart | Sessions by Media Type | Sessions (sessions) | site_key | site_key not in [Default Site Key]; Sessions >= 1.0; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
-| [ ] | bar-chart | Cost per Session by Media Type | Cost Per Session (cost_per_session) | site_key | site_key not in [Default Site Key]; Sessions >= 1.0; Spend >= 0.01; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key not in [Default Site Key]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
+| [ ] | combo-chart | By Week | Sessions (sessions), Cost Per Session (cost_per_session) | date:week | filter_site_key not in [Default Site Key]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
+| [ ] | bar-chart | Sessions by Media Type | Sessions (sessions) | site_key | filter_site_key not in [Default Site Key]; Sessions >= 1.0; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
+| [ ] | bar-chart | Cost per Session by Media Type | Cost Per Session (cost_per_session) | site_key | filter_site_key not in [Default Site Key]; Sessions >= 1.0; Spend >= 0.01; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | bar-chart | Creative | Spend (spend) | creative_name | Spend >= 0.01; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Creative | Impressions (impressions), CPM (cpm) | creative_name | Impressions >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Creative | Clicks (clicks), CPC (cpc), CTR (ctr) | creative_name | Clicks >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
@@ -45,7 +45,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | Done | Element | Title | Metrics (Omni field) | Group by | Filters |
 |---|---|---|---|---|---|
 | [ ] | kpi | Impressions | Impressions (impressions) |  | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: Newcomers] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [programmatic / paiddisplay, programmatic / paidnative]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [programmatic / paiddisplay, programmatic / paidnative, All outcomes]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_media_type in [NativeDis, StndDisplay, All outcomes]; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | bar-chart | Audience | Spend (spend) | audience | filter_media_type in [NativeDis, StndDisplay, All outcomes]; Spend >= 0.01; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | bar-chart | Tactic | Spend (spend) | tactic | filter_media_type in [StndDisplay, NativeDis, All outcomes]; Spend >= 0.01; smart_campaign in [Kids Help Phone: Newcomers] |
@@ -87,7 +87,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | kpi | Benchmark CPM: $22 | CPM (cpm) |  | smart_campaign in [Kids Help Phone: Newcomers]; source_name in [Campaign Manager 360] |
 | [ ] | kpi | Benchmark VCR: 89% | VCR (vcr) |  | smart_campaign in [Kids Help Phone: Newcomers]; source_name in [Campaign Manager 360] |
 | [ ] | kpi | Total Metrics | Impressions (impressions), Clicks (clicks), Spend (spend), CPM (cpm), CTR (ctr), CPC (cpc), Starts (starts), Completed Plays (completed_plays), VCR (vcr), CPCV (cpcv) |  | filter_media_type in [YouTube, All outcomes]; smart_campaign in [Kids Help Phone: Newcomers] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [programmatic / paidvideo, youtube]; campaign_name in [Feel Out Loud - National, feeloutloudnational, feel-out-loud, Feel Out Loud Youth, *folyouth*, *fol youth*, ...]; smart_campaign in [Kids Help Phone: Youth - Feel Out Loud - National] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [programmatic / paidvideo, youtube, All outcomes]; campaign_name in [Feel Out Loud - National, feeloutloudnational, feel-out-loud, Feel Out Loud Youth, *folyouth*, *fol youth*, ...]; smart_campaign in [Kids Help Phone: Youth - Feel Out Loud - National] |
 | [ ] | bar-chart | By Week | Spend (spend) | date:week | filter_media_type in [YouTube, All outcomes]; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | bar-chart | Audience | Spend (spend) | audience | filter_media_type in [YouTube, All outcomes]; Spend >= 0.01; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | bar-chart | Tactic | Spend (spend) | tactic | filter_media_type in [YouTube, All outcomes]; Spend >= 0.01; smart_campaign in [Kids Help Phone: Newcomers] |
@@ -122,7 +122,7 @@ Omni topic: media_performance. Fields are the measure names in omni/model/media_
 | [ ] | combo-chart | By Week | Completed Plays (completed_plays), CPCV (cpcv) | date:week | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Audience | Completed Plays (completed_plays), CPCV (cpcv) | audience | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Tactic | Completed Plays (completed_plays), CPCV (cpcv) | tactic | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Completed Plays >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
-| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | site_key in [facebook, snapchat, tiktok]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
+| [ ] | kpi | GA4 | Sessions (sessions), Cost Per Session (cost_per_session) |  | filter_site_key in [facebook, snapchat, tiktok, All outcomes]; campaign_name in [*newcomer*]; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | bar-chart | Creative | Spend (spend) | creative_name | filter_media_type in [Facebook+Instagram, Facebook, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Spend >= 0.01; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Creative | Impressions (impressions), CPM (cpm) | creative_name | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Impressions >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |
 | [ ] | combo-chart | Creative | Clicks (clicks), CPC (cpc), CTR (ctr) | creative_name | filter_media_type in [Facebook, Facebook+Instagram, TikTok, Snapchat, Pinterest, Linkedin, ..., All outcomes]; Clicks >= 1.0; smart_campaign in [Kids Help Phone: Newcomers] |

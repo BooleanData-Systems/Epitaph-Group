@@ -38,6 +38,9 @@ def connect():
     # DIM_CLIENT is in the contract: fill it from the Master Client Index seed
     con.executemany("insert into DIM_CLIENT (client_code, client_name) values (?, ?)", sorted({(r["client_code"], r["client_name"]) for r in
                     csv.DictReader(open(ROOT / "seeds" / "mci_client.csv"))}))
+    con.execute("create table MAP_SITE_KEY (source_name VARCHAR, media_type VARCHAR, site_key VARCHAR)")
+    con.executemany("insert into MAP_SITE_KEY values (?, ?, ?)", [(r["source_name"], r["media_type"], r["site_key"]) for r in
+                    csv.DictReader(open(ROOT / "seeds" / "map_site_key.csv", encoding="utf-8"))])
     con.execute(semantic_sql())
     return con
 
@@ -47,7 +50,7 @@ def semantic_sql():
     text = (ROOT / "snowflake" / "50_semantic" / "v_media_performance_daily.sql").read_text()
     stmt = text[text.index("create or replace view GOLD.SEMANTIC.V_MEDIA_PERFORMANCE_DAILY"):]
     stmt = stmt[:stmt.index(";")]
-    stmt = stmt.replace("GOLD.SEMANTIC.", "").replace("GOLD.MARTS.", "")
+    stmt = stmt.replace("GOLD.SEMANTIC.", "").replace("GOLD.MARTS.", "").replace("GOLD.CONTROL.", "")
     stmt = re.sub(r"\s+with row access policy \S+ on \(\w+\)", "", stmt)
     return stmt
 

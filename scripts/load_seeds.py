@@ -27,6 +27,8 @@ SEEDS = {   # file -> table
     "map_smart_campaign_override.csv": "GOLD.CONTROL.MAP_SMART_CAMPAIGN_OVERRIDE",
     "map_conversion_tag.csv": "GOLD.CONTROL.MAP_CONVERSION_TAG",
     "map_platform_account.csv": "GOLD.CONTROL.MAP_PLATFORM_ACCOUNT",
+    "map_site_key.csv": "GOLD.CONTROL.MAP_SITE_KEY",
+    "map_campaign_product.csv": "GOLD.CONTROL.MAP_CAMPAIGN_PRODUCT",
     "column_groups.csv": "GOLD.CONTROL.COLUMN_GROUPS",
     "client_column_access.csv": "GOLD.CONTROL.CLIENT_COLUMN_ACCESS",
     "mon_schedule.csv": "GOLD.CONTROL.MON_SCHEDULE",
