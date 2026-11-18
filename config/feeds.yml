@@ -2,7 +2,7 @@
 # One entry per file type. The loader reads new or changed files from each folder, checks the columns,
 # writes every row to BRONZE.SHAREPOINT.<table> with the file name, version and load time, and moves bad files to Rejected.
 #
-#   folder      path under the site's document library (Epitaph Reporting > Feeds)
+#   folder      path under base_folder (DATA MIGRATION/Feeds in the admin OneDrive)
 #   match       file name pattern (case-insensitive)
 #   table       BRONZE.SHAREPOINT table the rows land in
 #   required    columns that must be present (after trimming and lower-casing headers)
@@ -13,8 +13,11 @@
 #   arrives     how files get to the folder
 #   status      live | standby (no flight booked; loader runs but expects nothing) | prove-first (Fivetran may replace it)
 
-site: "Epitaph Reporting"
-library: "Feeds"
+# Files live in the Epitaph admin account's OneDrive (netorgft4478664-my.sharepoint.com/personal/admin_epitaphgroup_com),
+# under DATA MIGRATION/Feeds. The Graph secret's site_id is that OneDrive; every feed folder below is relative to base_folder.
+site: "OneDrive of admin@epitaphgroup.com"
+library: ""                         # empty = the site's default document library (a OneDrive has only one)
+base_folder: "DATA MIGRATION/Feeds"
 rejected_folder: "Rejected"
 history_folder: "History"           # TapClicks CSV downloads for the history load go here
 max_file_mb: 200
