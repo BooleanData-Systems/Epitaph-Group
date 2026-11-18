@@ -46,7 +46,7 @@ layers:
     database: BRONZE
     rule: Every row exactly as delivered, with the file or sync it came from. Never edited or deleted.
     schemas:
-      FIVETRAN_*: one schema per ad platform and GA4 (15 connector routes, every 6 hours)
+      <connector schemas>: one schema per ad platform and GA4, named in config/connectors.yml (15 connector routes, every 6 hours)
       SHAREPOINT: one table per file layout (27 feeds, hourly), each row in RECORD with item_id, etag, feed_id, row_number
       TAPCLICKS: TAPCLICKS_HISTORY, the history downloads from November 2024
       REFERENCE: FX_RATES (Bank of Canada, daily)

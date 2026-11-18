@@ -80,7 +80,7 @@ def sp(table, field):
 
 
 # ------------------------------------------------------------------ Fivetran: Google Ads
-G = "BRONZE.FIVETRAN_GOOGLE_ADS."
+G = "BRONZE.GOOGLE_ADS."
 ACC = "MCI rank 10 ad account (MAP_PLATFORM_ACCOUNT), else campaign name (rank 40 to 60)"
 ad_source("Google Ads", "Fivetran", ACC, "STG_GOOGLE_ADS", [
     (G + "AD_STATS", "date", "date", "activity_date", "cast to date"),
@@ -113,7 +113,7 @@ conv_source("Google Ads", ACC, "STG_GOOGLE_ADS_CONVERSIONS", [
 ])
 
 # ------------------------------------------------------------------ Fivetran: Facebook Ads (Meta)
-F = "BRONZE.FIVETRAN_FACEBOOK_ADS."
+F = "BRONZE.FACEBOOK_ADS."
 ad_source("Facebook Ads", "Fivetran", ACC, "STG_FACEBOOK_ADS", [
     (F + "BASIC_AD", "date", "date", "activity_date", "cast to date"),
     ("constant", "'Facebook Ads'", "", "source_name", "set in staging"),
@@ -145,7 +145,7 @@ add("Facebook Ads", "Fivetran", ACC, F + "BASIC_AD", "reach", F + "BASIC_AD", "r
     ("FCT_REACH_FREQUENCY", "reach", "reach", "number", "never summed across platforms or periods (K09 open); frequency = impressions / reach"))
 
 # ------------------------------------------------------------------ Fivetran: Microsoft Advertising
-M = "BRONZE.FIVETRAN_MICROSOFT_ADS.AD_PERFORMANCE_DAILY_REPORT"
+M = "BRONZE.MICROSOFT_ADS.AD_PERFORMANCE_DAILY_REPORT"
 ad_source("Microsoft Advertising", "Fivetran", ACC, "STG_MICROSOFT_ADS", [
     (M, "date", "date", "activity_date", "cast to date"),
     ("constant", "'Microsoft Advertising'", "", "source_name", "set in staging"),
@@ -163,8 +163,196 @@ ad_source("Microsoft Advertising", "Fivetran", ACC, "STG_MICROSOFT_ADS", [
     (M, "spend", "spend", "spend", ""),
 ])
 
+# ------------------------------------------------------------------ Fivetran: the other 11 ad connectors (config/connectors.yml)
+# Columns as written in their staging views; checked against the real tables by check_fivetran_schema.py after the first sync
+ad_source("LinkedIn Ads", "Fivetran", ACC, "STG_LINKEDIN_ADS", [
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "day", "day", "activity_date", "cast to date"),
+    ("constant", "'LinkedIn Ads'", "", "source_name", "set in staging"),
+    ("constant", "'LinkedIn'", "", "platform", "set in staging"),
+    ("BRONZE.LINKEDIN_ADS.CAMPAIGN_HISTORY", "account_id", "account_id", "account_id", "cast to text; latest row per id"),
+    ("BRONZE.LINKEDIN_ADS.CAMPAIGN_HISTORY", "id", "id", "campaign_id", "cast to text; latest row per id"),
+    ("BRONZE.LINKEDIN_ADS.CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per id"),
+    ("BRONZE.LINKEDIN_ADS.CAMPAIGN_HISTORY", "id", "id", "media_buy_id", "cast to text; latest row per id; LinkedIn has no ad set level: the campaign is the media buy"),
+    ("BRONZE.LINKEDIN_ADS.CAMPAIGN_HISTORY", "name", "name", "media_buy_name", "latest row per id; LinkedIn has no ad set level: the campaign is the media buy"),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "creative_id", "creative_id", "creative_id", "cast to text"),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "creative_id", "creative_id", "creative_name", "creative id (LinkedIn reports have no creative name)"),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "cost_in_local_currency", "cost_in_local_currency", "spend", ""),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "video_starts", "video_starts", "video_starts", "null as 0"),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "video_completions", "video_completions", "completed_plays", "null as 0"),
+    ("BRONZE.LINKEDIN_ADS.AD_ANALYTICS_BY_CREATIVE", "shares", "shares", "post_shares", "null as 0"),
+])
+ad_source("TikTok Ads", "Fivetran", ACC, "STG_TIKTOK_ADS", [
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "stat_time_day", "stat_time_day", "activity_date", "cast to date"),
+    ("constant", "'TikTok Ads'", "", "source_name", "set in staging"),
+    ("constant", "'TikTok'", "", "platform", "set in staging"),
+    ("BRONZE.TIKTOK_ADS.AD_HISTORY", "advertiser_id", "advertiser_id", "account_id", "cast to text; latest row per id"),
+    ("BRONZE.TIKTOK_ADS.AD_HISTORY", "campaign_id", "campaign_id", "campaign_id", "cast to text; latest row per id"),
+    ("BRONZE.TIKTOK_ADS.CAMPAIGN_HISTORY", "campaign_name", "campaign_name", "campaign_name", "latest row per id"),
+    ("BRONZE.TIKTOK_ADS.AD_HISTORY", "adgroup_id", "adgroup_id", "media_buy_id", "cast to text; latest row per id"),
+    ("BRONZE.TIKTOK_ADS.ADGROUP_HISTORY", "adgroup_name", "adgroup_name", "media_buy_name", "latest row per id"),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "ad_id", "ad_id", "creative_id", "cast to text"),
+    ("BRONZE.TIKTOK_ADS.AD_HISTORY", "ad_name", "ad_name", "creative_name", "latest row per id"),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "spend", "spend", "spend", ""),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "video_play_actions", "video_play_actions", "video_starts", "null as 0"),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "video_watched_p_100", "video_watched_p_100", "completed_plays", "null as 0"),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "shares", "shares", "post_shares", "null as 0"),
+])
+ad_source("SnapChat", "Fivetran", ACC, "STG_SNAPCHAT_ADS", [
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'SnapChat'", "", "source_name", "set in staging"),
+    ("constant", "'Snapchat'", "", "platform", "set in staging"),
+    ("BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY", "ad_account_id", "ad_account_id", "account_id", "cast to text; latest row per id"),
+    ("BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY", "id", "id", "campaign_id", "cast to text; latest row per id"),
+    ("BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per id"),
+    ("BRONZE.SNAPCHAT_ADS.AD_SQUAD_HISTORY", "id", "id", "media_buy_id", "cast to text; latest row per id"),
+    ("BRONZE.SNAPCHAT_ADS.AD_SQUAD_HISTORY", "name", "name", "media_buy_name", "latest row per id"),
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "ad_id", "ad_id", "creative_id", "cast to text"),
+    ("BRONZE.SNAPCHAT_ADS.AD_HISTORY", "name", "name", "creative_name", "latest row per id"),
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "swipes", "swipes", "clicks", ""),
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "spend", "spend", "spend", "divided by 1,000,000"),
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "video_views", "video_views", "video_starts", "null as 0"),
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "view_completion", "view_completion", "completed_plays", "null as 0"),
+    ("BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT", "shares", "shares", "post_shares", "null as 0"),
+])
+ad_source("Reddit Ads", "Fivetran", ACC, "STG_REDDIT_ADS", [
+    ("BRONZE.REDDIT_ADS.AD_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Reddit Ads'", "", "source_name", "set in staging"),
+    ("constant", "'Reddit'", "", "platform", "set in staging"),
+    ("BRONZE.REDDIT_ADS.AD", "account_id", "account_id", "account_id", "cast to text; latest row per id"),
+    ("BRONZE.REDDIT_ADS.AD", "campaign_id", "campaign_id", "campaign_id", "cast to text; latest row per id"),
+    ("BRONZE.REDDIT_ADS.CAMPAIGN", "name", "name", "campaign_name", "latest row per id"),
+    ("BRONZE.REDDIT_ADS.AD", "ad_group_id", "ad_group_id", "media_buy_id", "cast to text; latest row per id"),
+    ("BRONZE.REDDIT_ADS.AD_GROUP", "name", "name", "media_buy_name", "latest row per id"),
+    ("BRONZE.REDDIT_ADS.AD_REPORT", "ad_id", "ad_id", "creative_id", "cast to text"),
+    ("BRONZE.REDDIT_ADS.AD", "name", "name", "creative_name", "latest row per id"),
+    ("BRONZE.REDDIT_ADS.AD_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.REDDIT_ADS.AD_REPORT", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.REDDIT_ADS.AD_REPORT", "spend", "spend", "spend", "divided by 1,000,000"),
+])
+ad_source("Pinterest Ads", "Fivetran", ACC, "STG_PINTEREST_ADS", [
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Pinterest Ads'", "", "source_name", "set in staging"),
+    ("constant", "'Pinterest'", "", "platform", "set in staging"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "advertiser_id", "advertiser_id", "account_id", "cast to text"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "campaign_id", "campaign_id", "campaign_id", "cast to text"),
+    ("BRONZE.PINTEREST_ADS.CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per id"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "ad_group_id", "ad_group_id", "media_buy_id", "cast to text"),
+    ("BRONZE.PINTEREST_ADS.AD_GROUP_HISTORY", "name", "name", "media_buy_name", "latest row per id"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "pin_promotion_id", "pin_promotion_id", "creative_id", "cast to text"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_HISTORY", "name", "name", "creative_name", "latest row per id"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "impression_1 + impression_2", "impression_1 + impression_2", "impressions", "paid and earned impressions; null as 0"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "clickthrough_1 + clickthrough_2", "clickthrough_1 + clickthrough_2", "clicks", "paid and earned clicks; null as 0"),
+    ("BRONZE.PINTEREST_ADS.PIN_PROMOTION_REPORT", "spend_in_micro_dollar", "spend_in_micro_dollar", "spend", "divided by 1,000,000"),
+])
+ad_source("Amazon Ads", "Fivetran", ACC, "STG_AMAZON_ADS", [
+    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Amazon Ads'", "", "source_name", "set in staging"),
+    ("constant", "'Amazon'", "", "platform", "set in staging"),
+    ("BRONZE.AMAZON_ADS.CAMPAIGN_HISTORY", "profile_id", "profile_id", "account_id", "cast to text; latest row per id"),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "campaign_id", "campaign_id", "campaign_id", "cast to text"),
+    ("BRONZE.AMAZON_ADS.CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per id"),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "ad_group_id", "ad_group_id", "media_buy_id", "cast to text"),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_HISTORY", "name", "name", "media_buy_name", "latest row per id"),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "ad_group_id", "ad_group_id", "creative_id", "cast to text; ad group level (no ad level in the report)"),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_HISTORY", "name", "name", "creative_name", "latest row per id; ad group level (no ad level in the report)"),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "cost", "cost", "spend", ""),
+])
+ad_source("Campaign Manager 360", "Fivetran", ACC, "STG_CM360", [
+    ("BRONZE.CM360.CUSTOM_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Campaign Manager 360'", "", "source_name", "set in staging"),
+    ("constant", "'CM360'", "", "platform", "set in staging"),
+    ("BRONZE.CM360.CUSTOM_REPORT", "advertiser_id", "advertiser_id", "account_id", "cast to text"),
+    ("BRONZE.CM360.CUSTOM_REPORT", "campaign_id", "campaign_id", "campaign_id", "cast to text"),
+    ("BRONZE.CM360.CUSTOM_REPORT", "campaign", "campaign", "campaign_name", ""),
+    ("BRONZE.CM360.CUSTOM_REPORT", "placement_id", "placement_id", "media_buy_id", "cast to text"),
+    ("BRONZE.CM360.CUSTOM_REPORT", "placement", "placement", "media_buy_name", ""),
+    ("BRONZE.CM360.CUSTOM_REPORT", "ad_id", "ad_id", "creative_id", "cast to text"),
+    ("BRONZE.CM360.CUSTOM_REPORT", "ad", "ad", "creative_name", ""),
+    ("BRONZE.CM360.CUSTOM_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.CM360.CUSTOM_REPORT", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.CM360.CUSTOM_REPORT", "media_cost", "media_cost", "spend", ""),
+    ("BRONZE.CM360.CUSTOM_REPORT", "video_plays", "video_plays", "video_starts", "null as 0"),
+    ("BRONZE.CM360.CUSTOM_REPORT", "video_completions", "video_completions", "completed_plays", "null as 0"),
+])
+ad_source("Display & Video 360 IO", "Fivetran", ACC, "STG_DV360", [
+    ("BRONZE.DV360.CUSTOM_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Display & Video 360 IO'", "", "source_name", "set in staging"),
+    ("constant", "'DV360'", "", "platform", "set in staging"),
+    ("BRONZE.DV360.CUSTOM_REPORT", "advertiser_id", "advertiser_id", "account_id", "cast to text"),
+    ("BRONZE.DV360.CUSTOM_REPORT", "advertiser_currency", "advertiser_currency", "account_currency", ""),
+    ("BRONZE.DV360.CUSTOM_REPORT", "insertion_order_id", "insertion_order_id", "campaign_id", "cast to text"),
+    ("BRONZE.DV360.CUSTOM_REPORT", "insertion_order", "insertion_order", "campaign_name", ""),
+    ("BRONZE.DV360.CUSTOM_REPORT", "line_item_id", "line_item_id", "media_buy_id", "cast to text"),
+    ("BRONZE.DV360.CUSTOM_REPORT", "line_item", "line_item", "media_buy_name", ""),
+    ("BRONZE.DV360.CUSTOM_REPORT", "creative_id", "creative_id", "creative_id", "cast to text"),
+    ("BRONZE.DV360.CUSTOM_REPORT", "creative", "creative", "creative_name", ""),
+    ("BRONZE.DV360.CUSTOM_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.DV360.CUSTOM_REPORT", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.DV360.CUSTOM_REPORT", "revenue_adv_currency", "revenue_adv_currency", "spend", ""),
+    ("BRONZE.DV360.CUSTOM_REPORT", "starts_video", "starts_video", "video_starts", "null as 0"),
+    ("BRONZE.DV360.CUSTOM_REPORT", "complete_views_video", "complete_views_video", "completed_plays", "null as 0"),
+])
+ad_source("The Trade Desk", "Fivetran", ACC, "STG_THE_TRADE_DESK", [
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'The Trade Desk'", "", "source_name", "set in staging"),
+    ("constant", "'The Trade Desk'", "", "platform", "set in staging"),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "advertiser_id", "advertiser_id", "account_id", "cast to text"),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "advertiser_currency_code", "advertiser_currency_code", "account_currency", ""),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "campaign_id", "campaign_id", "campaign_id", "cast to text"),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "campaign", "campaign", "campaign_name", ""),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "ad_group_id", "ad_group_id", "media_buy_id", "cast to text"),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "ad_group", "ad_group", "media_buy_name", ""),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "creative_id", "creative_id", "creative_id", "cast to text"),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "creative", "creative", "creative_name", ""),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "advertiser_cost_adv_currency", "advertiser_cost_adv_currency", "spend", ""),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "player_starts", "player_starts", "video_starts", "null as 0"),
+    ("BRONZE.THE_TRADE_DESK.CUSTOM_REPORT", "player_completed_views", "player_completed_views", "completed_plays", "null as 0"),
+])
+ad_source("Amazon DSP", "Fivetran", ACC, "STG_AMAZON_DSP", [
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Amazon DSP'", "", "source_name", "set in staging"),
+    ("constant", "'Amazon DSP'", "", "platform", "set in staging"),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "advertiser_id", "advertiser_id", "account_id", "cast to text"),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "currency", "currency", "account_currency", ""),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "order_id", "order_id", "campaign_id", "cast to text"),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "order_name", "order_name", "campaign_name", "the DSP order is the campaign, as in TapClicks"),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "line_item_id", "line_item_id", "media_buy_id", "cast to text"),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "line_item_name", "line_item_name", "media_buy_name", ""),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "creative_id", "creative_id", "creative_id", "cast to text"),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "creative_name", "creative_name", "creative_name", ""),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "click_throughs", "click_throughs", "clicks", ""),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "total_cost", "total_cost", "spend", ""),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "video_start", "video_start", "video_starts", "null as 0"),
+    ("BRONZE.AMAZON_DSP.CUSTOM_REPORT", "video_complete", "video_complete", "completed_plays", "null as 0"),
+])
+ad_source("Spotify Ads", "Fivetran", ACC, "STG_SPOTIFY_ADS", [
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Spotify Ads'", "", "source_name", "set in staging"),
+    ("constant", "'Spotify'", "", "platform", "set in staging"),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "ad_account_id", "ad_account_id", "account_id", "cast to text"),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "campaign_id", "campaign_id", "campaign_id", "cast to text"),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "campaign_name", "campaign_name", "campaign_name", ""),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "ad_set_id", "ad_set_id", "media_buy_id", "cast to text"),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "ad_set_name", "ad_set_name", "media_buy_name", ""),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "ad_id", "ad_id", "creative_id", "cast to text"),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "ad_name", "ad_name", "creative_name", ""),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "impressions", "impressions", "impressions", ""),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "clicks", "clicks", "clicks", ""),
+    ("BRONZE.SPOTIFY_ADS.AD_REPORT", "spend", "spend", "spend", ""),
+])
+
 # ------------------------------------------------------------------ Fivetran: GA4
-GA = "BRONZE.FIVETRAN_GA4.TRAFFIC_ACQUISITION_SESSION_SOURCE_MEDIUM_REPORT"
+GA = "BRONZE.GA4.TRAFFIC_ACQUISITION_SESSION_SOURCE_MEDIUM_REPORT"
 for f, s, g, rule in (("date", "activity_date", "date_key", "cast to date; YYYYMMDD key"),
                       ("property", "property_id", "client_code", "MCI rank 10: GA4 property in MAP_PLATFORM_ACCOUNT (platform GA4); GA4 Test property excluded (Q22)"),
                       ("session_source", "ga4_session_source", "ga4_session_source", ""),

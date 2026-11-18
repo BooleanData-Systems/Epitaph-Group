@@ -1,4 +1,4 @@
--- requires: BRONZE.FIVETRAN_GOOGLE_ADS
+-- requires: BRONZE.GOOGLE_ADS
 -- Until the connector's first sync lands, deploy runs stubs/stg_google_ads.sql instead (same columns, no rows).
 -- Every ad view has the same columns: activity_date, source_name, platform, account_id, account_currency, campaign_id,
 -- campaign_name, media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend, video_starts,
@@ -25,11 +25,11 @@ select
   coalesce(s.video_views, 0)                     as video_starts,
   coalesce(s.video_quartile_p_100_rate * s.impressions, 0) as completed_plays,
   0 as post_shares, 0 as spots
-from BRONZE.FIVETRAN_GOOGLE_ADS.AD_STATS s
-left join (select * from BRONZE.FIVETRAN_GOOGLE_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) c on c.id = s.campaign_id
-left join (select * from BRONZE.FIVETRAN_GOOGLE_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) g on g.id = s.ad_group_id
-left join (select * from BRONZE.FIVETRAN_GOOGLE_ADS.AD_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) ad on ad.id = s.ad_id
-left join (select * from BRONZE.FIVETRAN_GOOGLE_ADS.ACCOUNT_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) a on a.id = s.customer_id;
+from BRONZE.GOOGLE_ADS.AD_STATS s
+left join (select * from BRONZE.GOOGLE_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) c on c.id = s.campaign_id
+left join (select * from BRONZE.GOOGLE_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) g on g.id = s.ad_group_id
+left join (select * from BRONZE.GOOGLE_ADS.AD_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) ad on ad.id = s.ad_id
+left join (select * from BRONZE.GOOGLE_ADS.ACCOUNT_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) a on a.id = s.customer_id;
 
 create or replace view SILVER.STG.STG_GOOGLE_ADS_CONVERSIONS as
 select
@@ -39,5 +39,5 @@ select
   s.conversion_action_name as conversion_tag_name,
   s.conversions, s.all_conversions, s.conversions_value as conversion_value,
   s.view_through_conversions
-from BRONZE.FIVETRAN_GOOGLE_ADS.CAMPAIGN_CONVERSION_ACTION_STATS s
-left join (select * from BRONZE.FIVETRAN_GOOGLE_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) c on c.id = s.campaign_id;
+from BRONZE.GOOGLE_ADS.CAMPAIGN_CONVERSION_ACTION_STATS s
+left join (select * from BRONZE.GOOGLE_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) c on c.id = s.campaign_id;
