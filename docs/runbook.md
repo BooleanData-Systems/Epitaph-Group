@@ -5,11 +5,11 @@
 | # | Step | Who | Done when |
 |---|---|---|---|
 | 1 | Create the Snowflake account (Enterprise, Canada Central) | Epitaph | Account URL shared |
-| 2 | Run `snowflake/00_setup/01_account.sql`, `02_integrations.sql` (first replace TENANT with the tenant's SharePoint name), `03_grants.sql` as ACCOUNTADMIN; run `04_monitoring.sql` after step 3a, since resource monitors email a verified address | Epitaph admin with the Boolean pod lead | `call GOLD.ADMIN.CHECK_WAREHOUSE_STANDARD()` says all warehouses meet the standard |
+| 2 | Run `snowflake/00_setup/01_account.sql`, `02_integrations.sql`, `03_grants.sql` as ACCOUNTADMIN; run `04_monitoring.sql` after step 3a, since resource monitors email a verified address | Epitaph admin with the Boolean pod lead | `call GOLD.ADMIN.CHECK_WAREHOUSE_STANDARD()` says all warehouses meet the standard |
 | 3 | Create key pairs for SVC_LOADER, SVC_TRANSFORMER, SVC_REPORTER and SVC_CI; set each public key on its user; keep the private keys in Epitaph's vault (CI key also in GitHub secrets) | Epitaph admin | `desc user` shows a key; keys rotated after setup |
 | 3a | Set Nathan's email: `alter user NATHANEPITAPH set email = '...'`. Verify the emails of DL_EPITAPH_DATA_ALERTS (epitaph@booleandata.ai, set by `01_account.sql`) and NATHANEPITAPH in Snowsight. After `control_tables.sql` has run, add Nathan and any other named contacts to GOLD.CONTROL.ALERT_RECIPIENTS for each alert (ingestion, transformation, publishing, downstream, freshness, check_failures, streams); the DL is added by the script. At handover, replace epitaph@booleandata.ai with Epitaph's own list | Epitaph admin | Test alerts received (see `docs/monitoring_and_escalation.md`) |
-| 4 | Create the SharePoint site "Epitaph Reporting" and the folders in `config/feeds.yml` | Epitaph IT | Folders exist |
-| 5 | Register an Entra app with Microsoft Graph Sites.Selected; grant it read and write on that site only | Epitaph IT | Admin consent given |
+| 4 | Create the folders in `config/feeds.yml` under DATA MIGRATION/Feeds in the admin account's OneDrive (done 18 Nov 2026) | Boolean | Folders exist |
+| 5 | Register an Entra app with Microsoft Graph Sites.Selected; grant it write on the admin OneDrive (netorgft4478664-my.sharepoint.com/personal/admin_epitaphgroup_com) only | Epitaph IT | Admin consent given |
 | 6 | Put tenant id, client id, secret and site id in BRONZE.LOADER.GRAPH_APP (`alter secret ... set secret_string = ...`) | Epitaph admin | Loader test run lists files |
 | 7 | Fill GOLD.CONTROL.FEED_OWNERS and ALERT_RECIPIENTS; verify each address in Snowflake | Epitaph admin | Test email received |
 | 8 | Set up Power Automate flows that save emailed reports (Sonnet, SiriusXM, vendors) into their folders | Epitaph IT | A test email lands as a file |

@@ -1,10 +1,10 @@
 """SharePoint to Snowflake BRONZE loader.
 
 Runs inside Snowflake as a Python stored procedure (BRONZE.LOADER.LOAD_SHAREPOINT), called by a task every hour.
-It reads new or changed files from the Epitaph Reporting SharePoint site through Microsoft Graph, checks them,
+It reads new or changed files from DATA MIGRATION/Feeds in the Epitaph admin OneDrive through Microsoft Graph, checks them,
 and writes every row to BRONZE.SHAREPOINT.<table> as it arrived (one VARIANT per row plus file details).
 
-Access: an Entra app with the Sites.Selected permission, granted to this one site only. Its client secret is a
+Access: an Entra app with the Sites.Selected permission, granted to that one OneDrive only. Its client secret is a
 Snowflake secret; network access is limited by an external access integration to login.microsoftonline.com,
 graph.microsoft.com and the tenant's SharePoint host (file downloads redirect there).
 
@@ -307,7 +307,8 @@ def run(graph: Graph, store: Store, notifier: Notifier, config: dict, feed_id: s
 class GraphClient:
     """Microsoft Graph with app-only (client credentials) access to one site."""
 
-    def __init__(self, tenant_id: str, client_id: str, client_secret: str, site_id: str, library: str):
+    def __init__(self, tenant_id: str, client_id: str, client_secret: str, site_id: str, library: str = "",
+                 base_folder: str = ""):
         import requests
         self._s = requests.Session()
         tok = self._s.post(f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token", data={
@@ -315,8 +316,20 @@ class GraphClient:
             "scope": "https://graph.microsoft.com/.default"}, timeout=30)
         tok.raise_for_status()
         self._s.headers["Authorization"] = "Bearer " + tok.json()["access_token"]
+        self.drive = self._pick_drive(site_id, library)
+        self.base = base_folder.strip("/")
+
+    def _pick_drive(self, site_id, library):
+        """The named document library, or the site's default one (a OneDrive has only one) when no name is set."""
+        if not library:
+            return self._get(f"{GRAPH}/sites/{site_id}/drive")["id"]
         drives = self._get(f"{GRAPH}/sites/{site_id}/drives")["value"]
-        self.drive = next(d["id"] for d in drives if d["name"] == library)
+        return next(d["id"] for d in drives if d["name"] == library)
+
+    def _full(self, folder):
+        """Folder path inside the drive: feed folders are relative to base_folder."""
+        folder = folder.strip("/")
+        return f"{self.base}/{folder}" if self.base and folder else (self.base or folder)
 
     def _get(self, url):
         r = self._s.get(url, timeout=60)
@@ -324,7 +337,7 @@ class GraphClient:
         return r.json()
 
     def list_files(self, folder):
-        url = f"{GRAPH}/drives/{self.drive}/root:/{folder}:/children?$top=200"
+        url = f"{GRAPH}/drives/{self.drive}/root:/{self._full(folder)}:/children?$top=200"
         while url:
             page = self._get(url)
             for it in page.get("value", []):
@@ -341,7 +354,7 @@ class GraphClient:
     def ensure_folder(self, folder):
         """Create each part of the folder path if it is missing (Rejected/<feed folder> is made on first use)."""
         path = ""
-        for part in folder.strip("/").split("/"):
+        for part in self._full(folder).split("/"):
             parent = f"{GRAPH}/drives/{self.drive}/root:/{path}:/children" if path else f"{GRAPH}/drives/{self.drive}/root/children"
             path = f"{path}/{part}" if path else part
             r = self._s.get(f"{GRAPH}/drives/{self.drive}/root:/{path}", timeout=60)
@@ -350,7 +363,7 @@ class GraphClient:
                              timeout=60).raise_for_status()
             else:
                 r.raise_for_status()
-        return self._get(f"{GRAPH}/drives/{self.drive}/root:/{folder}")
+        return self._get(f"{GRAPH}/drives/{self.drive}/root:/{self._full(folder)}")
 
     def move(self, item_id, folder, new_name):
         parent = self.ensure_folder(folder)
@@ -432,6 +445,7 @@ def main(session, feed_id: str = None) -> str:
     with open(f"{import_dir}/feeds.yml") as fh:
         config = yaml.safe_load(fh)
     secret = json.loads(_snowflake.get_generic_secret_string("graph_app"))
-    graph = GraphClient(secret["tenant_id"], secret["client_id"], secret["client_secret"], secret["site_id"], config["library"])
+    graph = GraphClient(secret["tenant_id"], secret["client_id"], secret["client_secret"], secret["site_id"],
+                        config.get("library", ""), config.get("base_folder", ""))
     summary = run(graph, SnowflakeStore(session, str(uuid.uuid4())), SnowflakeNotifier(session), config, feed_id)
     return json.dumps(summary)

@@ -291,3 +291,65 @@ def test_batch_records_split_and_round_trip():
     assert [x["n"] for x in back] == list(range(1, 1001))
     assert back[0]["r"] == {"date": "2026-10-01", "spend": "1.5", "name": "Café"}
     assert all(len(b) <= 20_000 for b in batches)
+
+
+class _Resp:
+    def __init__(self, status=200, body=None):
+        self.status_code, self._body = status, body or {}
+
+    def json(self):
+        return self._body
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise RuntimeError(self.status_code)
+
+
+class _Session:
+    """Records Graph calls; every folder exists and every listing is empty."""
+    def __init__(self):
+        self.calls = []
+
+    def get(self, url, timeout=None):
+        self.calls.append(("GET", url))
+        return _Resp(body={"id": "folder-id", "value": []})
+
+    def post(self, url, json=None, timeout=None):
+        self.calls.append(("POST", url))
+        return _Resp(201)
+
+    def patch(self, url, json=None, timeout=None):
+        self.calls.append(("PATCH", url, json))
+        return _Resp()
+
+
+def _graph(base, library=""):
+    g = sl.GraphClient.__new__(sl.GraphClient)
+    g._s = _Session()
+    g.drive = g._pick_drive("site-1", library)
+    g.base = base.strip("/")
+    return g
+
+
+def test_graph_uses_default_drive_and_base_folder():
+    g = _graph("DATA MIGRATION/Feeds")
+    G = sl.GRAPH
+    assert g._s.calls[0] == ("GET", f"{G}/sites/site-1/drive")          # no library name: the OneDrive's own library
+    list(g.list_files("Sonnet/Raw Data"))
+    assert g._s.calls[-1][1] == f"{G}/drives/folder-id/root:/DATA MIGRATION/Feeds/Sonnet/Raw Data:/children?$top=200"
+    g.move("item-1", "Rejected/Sonnet/Raw Data", "x.csv")
+    gets = [c[1] for c in g._s.calls if c[0] == "GET"]
+    assert f"{G}/drives/folder-id/root:/DATA MIGRATION/Feeds/Rejected/Sonnet/Raw Data" in gets
+    assert not any(c[1].endswith("root:/Rejected") for c in g._s.calls)   # Rejected sits inside Feeds, not at the root
+
+
+def test_graph_without_base_folder_keeps_paths():
+    g = _graph("")
+    list(g.list_files("Vendors/Adara"))
+    assert g._s.calls[-1][1].endswith("/root:/Vendors/Adara:/children?$top=200")
+
+
+def test_feeds_config_points_at_onedrive_folder():
+    import yaml
+    cfg = yaml.safe_load(open(Path(__file__).resolve().parents[2] / "config" / "feeds.yml"))
+    assert cfg["base_folder"] == "DATA MIGRATION/Feeds" and cfg["library"] == ""

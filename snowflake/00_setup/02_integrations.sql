@@ -6,15 +6,16 @@ use role accountadmin;
 -- ---------------------------------------------------------------- Microsoft Graph (SharePoint loader)
 create network rule if not exists BRONZE.LOADER.NR_MICROSOFT_GRAPH
   mode = egress type = host_port value_list = ('login.microsoftonline.com:443', 'graph.microsoft.com:443');
--- Graph answers a file download with a redirect to the tenant's own SharePoint host, so that host must be allowed
--- too. Replace TENANT with the tenant's SharePoint name (TENANT.sharepoint.com) before running this statement.
+-- Graph answers a file download with a redirect to the tenant's own SharePoint hosts, so those must be allowed too.
+-- The feed files are in a OneDrive, which is served from the -my host.
 alter network rule BRONZE.LOADER.NR_MICROSOFT_GRAPH set value_list =
-  ('login.microsoftonline.com:443', 'graph.microsoft.com:443', 'TENANT.sharepoint.com:443');
+  ('login.microsoftonline.com:443', 'graph.microsoft.com:443',
+   'netorgft4478664.sharepoint.com:443', 'netorgft4478664-my.sharepoint.com:443');
 
 create secret if not exists BRONZE.LOADER.GRAPH_APP
   type = generic_string
   secret_string = '{"tenant_id":"SET_BY_ADMIN","client_id":"SET_BY_ADMIN","client_secret":"SET_BY_ADMIN","site_id":"SET_BY_ADMIN"}'
-  comment = 'Entra app with Sites.Selected on the Epitaph Reporting site only. Rotate every 12 months';
+  comment = 'Entra app with Sites.Selected on the admin OneDrive holding DATA MIGRATION/Feeds only. Rotate every 12 months';
 
 create external access integration if not exists EAI_MICROSOFT_GRAPH
   allowed_network_rules = (BRONZE.LOADER.NR_MICROSOFT_GRAPH)
