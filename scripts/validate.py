@@ -91,7 +91,7 @@ def check_sql():
         print("sqlglot not installed; SQL parse check skipped")
         return
     skip = re.compile(r"^\s*(create\s+(or\s+replace\s+)?(procedure|task|alert|network rule|secret|external access|notification|"
-                      r"resource monitor|warehouse|role|user|row access|masking policy|stage|function)|alter|grant|call|use|create (database|schema))",
+                      r"resource monitor|warehouse|role|user|row access|masking policy|stage|function)|alter|grant|revoke|call|use|create (database|schema))",
                       re.I)
     for f in sorted((ROOT / "snowflake").rglob("*.sql")):
         text = f.read_text()
