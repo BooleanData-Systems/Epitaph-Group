@@ -60,7 +60,7 @@ def matrix():
     out = ROOT / "omni" / "access_matrix.csv"
     out.parent.mkdir(exist_ok=True)
     with open(out, "w", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")   # same bytes as the committed file on Linux CI (csv defaults to \r\n)
         w.writerow(["client_code", "omni_user_group", "user_attribute_client_code", "dashboards"] + groups)
         for code, c in sorted(clients.items()):
             w.writerow([code, f"Client - {c['name']}", code, " ".join(sorted(set(c["dashboards"])))]
