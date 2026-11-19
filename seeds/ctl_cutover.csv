@@ -17,7 +17,7 @@ LinkedIn Ads,fivetran,2026-12-07,planned,,Fivetran
 Microsoft Advertising,fivetran,2026-12-07,planned,,Fivetran
 Netflix Pause Ads,sharepoint,2026-12-07,planned,,SharePoint loader
 Pinterest Ads,fivetran,2026-12-07,planned,,Fivetran
-Reddit Ads,fivetran,2026-12-07,planned,,Fivetran
+Reddit Ads,fivetran,2024-11-18,testing,,Fivetran. Testing against TapClicks; first day in Fivetran is 2024-11-18
 Scorecard - SiriusXM,sharepoint,2026-12-07,planned,,SharePoint loader
 Silverpush - Automated Report,sharepoint,2026-12-07,planned,,SharePoint loader
 Silverpush - CTV,sharepoint,2026-12-07,planned,,SharePoint loader
