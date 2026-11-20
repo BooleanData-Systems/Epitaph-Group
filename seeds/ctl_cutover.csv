@@ -1,22 +1,22 @@
 source_name,route,cutover_date,status,owner,notes
 Adara - Ottawa Tourism,sharepoint,2026-12-07,planned,,SharePoint loader
 Adobe Organic - Streaming,sharepoint,2026-12-07,planned,,SharePoint loader
-Amazon Ads,fivetran,2026-12-07,planned,,Fivetran
+Amazon Ads,fivetran,2026-08-17,testing,,Fivetran. Testing against TapClicks; Amazon keeps about 90 days, earlier months from TapClicks
 Amazon DSP,fivetran,2026-12-07,planned,,Fivetran (prove first)
 Amazon DSP - Sonnet Reach & Frequency Report,sharepoint,2026-12-07,planned,,SharePoint loader
 Campaign Manager 360,fivetran,2026-12-07,planned,,Fivetran
 Display & Video 360 IO,fivetran,2026-12-07,planned,,Fivetran
 Facebook Ads,fivetran,2026-12-07,planned,,Fivetran
 Goal Smart Connector,sharepoint,2026-12-07,planned,,SharePoint loader
-Google Ads,fivetran,2026-12-07,planned,,Fivetran
+Google Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
 Google Analytics 4,fivetran,2026-12-07,planned,,Fivetran
 Google Trends,out_of_scope,,out_of_scope,,Lagging
 HiveStack,sharepoint,2026-12-07,planned,,SharePoint loader
 Jolt Media,sharepoint,2026-12-07,planned,,SharePoint loader
-LinkedIn Ads,fivetran,2026-12-07,planned,,Fivetran
+LinkedIn Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
 Microsoft Advertising,fivetran,2026-12-07,planned,,Fivetran
 Netflix Pause Ads,sharepoint,2026-12-07,planned,,SharePoint loader
-Pinterest Ads,fivetran,2026-12-07,planned,,Fivetran
+Pinterest Ads,fivetran,2026-08-20,testing,,Fivetran. Testing against TapClicks; the API returned data from 2026-08-20, earlier months from TapClicks
 Reddit Ads,fivetran,2024-11-18,testing,,Fivetran. Testing against TapClicks; first day in Fivetran is 2024-11-18
 Scorecard - SiriusXM,sharepoint,2026-12-07,planned,,SharePoint loader
 Silverpush - Automated Report,sharepoint,2026-12-07,planned,,SharePoint loader
