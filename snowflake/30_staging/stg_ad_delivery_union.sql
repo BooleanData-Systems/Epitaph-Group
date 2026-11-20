@@ -6,6 +6,14 @@ use role EPITAPH_TRANSFORMER;
 
 -- Every live-route source in one shape, before the cut-over rule. Also used by the comparison checks.
 create or replace view SILVER.STG.STG_LIVE_DELIVERY as
+-- Measures get fixed types here: INT_AD_DELIVERY is a dynamic table and fails to refresh when a source's type changes
+-- (a stub's NUMBER becomes a connector's FLOAT when it goes live). These match INT_AD_DELIVERY's columns.
+select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+       media_buy_id, media_buy_name, creative_id, creative_name,
+       impressions::number(38,6) as impressions, clicks::number(38,6) as clicks, spend::number(38,6) as spend,
+       video_starts::number(38,6) as video_starts, completed_plays::number(38,6) as completed_plays,
+       post_shares::number(38,0) as post_shares, spots::number(38,6) as spots, client_hint, loaded_from
+from (
   select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
          media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
          video_starts, completed_plays, post_shares, spots, null::varchar as client_hint, 'new_route' as loaded_from
@@ -81,6 +89,7 @@ create or replace view SILVER.STG.STG_LIVE_DELIVERY as
          media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
          video_starts, completed_plays, post_shares, spots, client_hint, 'new_route'
   from SILVER.STG.STG_VENDOR_DELIVERY
+)
 ;
 
 create or replace dynamic table SILVER.STG.INT_AD_DELIVERY
@@ -149,6 +158,12 @@ where pd.suppressed_source is null and ar.client_code is null;
 
 -- Every live-route conversion source in one shape, before the cut-over rule
 create or replace view SILVER.STG.STG_LIVE_CONVERSIONS as
+-- Fixed types for the same reason as STG_LIVE_DELIVERY; they match INT_CONVERSIONS
+select activity_date, source_name, platform, account_id, campaign_id, campaign_name, campaign_type, conversion_tag_name,
+       conversions::number(30,4) as conversions, all_conversions::number(30,4) as all_conversions,
+       conversion_value::number(18,4) as conversion_value, view_through_conversions::number(18,4) as view_through_conversions,
+       loaded_from
+from (
   select activity_date, source_name, platform, account_id, campaign_id, campaign_name, campaign_type, conversion_tag_name,
          conversions, all_conversions, conversion_value, view_through_conversions, 'new_route' as loaded_from
   from SILVER.STG.STG_GOOGLE_ADS_CONVERSIONS
@@ -156,6 +171,7 @@ create or replace view SILVER.STG.STG_LIVE_CONVERSIONS as
   select activity_date, source_name, platform, account_id, campaign_id, campaign_name, campaign_type, conversion_tag_name,
          conversions, all_conversions, conversion_value, view_through_conversions, 'new_route'
   from SILVER.STG.STG_FACEBOOK_ADS_CONVERSIONS
+)
 ;
 
 create or replace dynamic table SILVER.STG.INT_CONVERSIONS
