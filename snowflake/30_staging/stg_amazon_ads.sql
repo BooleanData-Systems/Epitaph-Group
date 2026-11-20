@@ -11,11 +11,11 @@ create or replace view SILVER.STG.STG_AMAZON_ADS as
 select
   r.date::date as activity_date, 'Amazon Ads' as source_name, 'Amazon' as platform,
   c.profile_id::varchar as account_id, null::varchar as account_currency,
-  r.campaign_id::varchar as campaign_id, c.name as campaign_name,
+  g.campaign_id::varchar as campaign_id, c.name as campaign_name,   -- the report has no campaign_id; it comes from the ad group
   r.ad_group_id::varchar as media_buy_id, g.name as media_buy_name,
   r.ad_group_id::varchar as creative_id, g.name as creative_name,
   r.impressions, r.clicks, r.cost as spend,
   0 as video_starts, 0 as completed_plays, 0 as post_shares, 0 as spots
 from BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT r
-left join (select * from BRONZE.AMAZON_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) c on c.id = r.campaign_id
-left join (select * from BRONZE.AMAZON_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) g on g.id = r.ad_group_id;
+left join (select * from BRONZE.AMAZON_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) g on g.id = r.ad_group_id
+left join (select * from BRONZE.AMAZON_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) c on c.id = g.campaign_id;

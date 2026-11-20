@@ -253,7 +253,7 @@ ad_source("Amazon Ads", "Fivetran", ACC, "STG_AMAZON_ADS", [
     ("constant", "'Amazon Ads'", "", "source_name", "set in staging"),
     ("constant", "'Amazon'", "", "platform", "set in staging"),
     ("BRONZE.AMAZON_ADS.CAMPAIGN_HISTORY", "profile_id", "profile_id", "account_id", "cast to text; latest row per id"),
-    ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "campaign_id", "campaign_id", "campaign_id", "cast to text"),
+    ("BRONZE.AMAZON_ADS.AD_GROUP_HISTORY", "campaign_id", "campaign_id", "campaign_id", "from the ad group; cast to text"),
     ("BRONZE.AMAZON_ADS.CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per id"),
     ("BRONZE.AMAZON_ADS.AD_GROUP_LEVEL_REPORT", "ad_group_id", "ad_group_id", "media_buy_id", "cast to text"),
     ("BRONZE.AMAZON_ADS.AD_GROUP_HISTORY", "name", "name", "media_buy_name", "latest row per id"),
