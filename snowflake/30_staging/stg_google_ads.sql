@@ -5,7 +5,8 @@
 -- completed_plays, post_shares, spots. Column names follow the Fivetran connector schema (checked by check_fivetran_schema.py).
 use role EPITAPH_TRANSFORMER;
 
--- Google Ads
+-- Google Ads. Conversions by action are in stg_google_ads_conversions.sql: they come from a custom report that
+-- syncs separately, so the delivery view does not wait for it.
 create or replace view SILVER.STG.STG_GOOGLE_ADS as
 select
   s.date::date                                   as activity_date,
@@ -22,22 +23,11 @@ select
   coalesce(ad.name, ad.id::varchar)              as creative_name,
   s.impressions, s.clicks,
   s.cost_micros / 1e6                            as spend,
-  coalesce(s.video_views, 0)                     as video_starts,
-  coalesce(s.video_quartile_p_100_rate * s.impressions, 0) as completed_plays,
+  coalesce(s.video_trueview_views, 0)            as video_starts,
+  0                                              as completed_plays,  -- AD_STATS has no completion metric; see notes in connectors.yml
   0 as post_shares, 0 as spots
 from BRONZE.GOOGLE_ADS.AD_STATS s
 left join (select * from BRONZE.GOOGLE_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) c on c.id = s.campaign_id
 left join (select * from BRONZE.GOOGLE_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) g on g.id = s.ad_group_id
 left join (select * from BRONZE.GOOGLE_ADS.AD_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) ad on ad.id = s.ad_id
 left join (select * from BRONZE.GOOGLE_ADS.ACCOUNT_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) a on a.id = s.customer_id;
-
-create or replace view SILVER.STG.STG_GOOGLE_ADS_CONVERSIONS as
-select
-  s.date::date as activity_date, 'Google Ads' as source_name, 'Google Ads' as platform,
-  s.customer_id::varchar as account_id, s.campaign_id::varchar as campaign_id, c.name as campaign_name,
-  c.advertising_channel_type as campaign_type,
-  s.conversion_action_name as conversion_tag_name,
-  s.conversions, s.all_conversions, s.conversions_value as conversion_value,
-  s.view_through_conversions
-from BRONZE.GOOGLE_ADS.CAMPAIGN_CONVERSION_ACTION_STATS s
-left join (select * from BRONZE.GOOGLE_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) c on c.id = s.campaign_id;

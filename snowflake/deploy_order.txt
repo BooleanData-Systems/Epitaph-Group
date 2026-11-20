@@ -9,6 +9,7 @@
 20_raw/load_fx_rates.sql
 30_staging/stg_tapclicks_history.sql
 30_staging/stg_google_ads.sql
+30_staging/stg_google_ads_conversions.sql
 30_staging/stg_microsoft_ads.sql
 30_staging/stg_facebook_ads.sql
 30_staging/stg_ga4_sessions.sql
