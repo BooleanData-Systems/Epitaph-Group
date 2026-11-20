@@ -6,7 +6,9 @@
 use role EPITAPH_TRANSFORMER;
 
 -- Google Ads. Conversions by action are in stg_google_ads_conversions.sql: they come from a custom report that
--- syncs separately, so the delivery view does not wait for it.
+-- syncs separately, so the delivery view does not wait for it. Video completions come from the AD_VIDEO_STATS custom
+-- report (ad_group_ad: customer.id, campaign.id, ad_group.id, ad_group_ad.ad.id, segments.date, metrics.impressions,
+-- metrics.video_quartile_p100_rate).
 create or replace view SILVER.STG.STG_GOOGLE_ADS as
 select
   s.date::date                                   as activity_date,
@@ -24,10 +26,13 @@ select
   s.impressions, s.clicks,
   s.cost_micros / 1e6                            as spend,
   coalesce(s.video_trueview_views, 0)            as video_starts,
-  0                                              as completed_plays,  -- AD_STATS has no completion metric; see notes in connectors.yml
+  coalesce(round(v.video_quartile_p_100_rate * s.impressions), 0) as completed_plays,
   0 as post_shares, 0 as spots
 from BRONZE.GOOGLE_ADS.AD_STATS s
 left join (select * from BRONZE.GOOGLE_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) c on c.id = s.campaign_id
 left join (select * from BRONZE.GOOGLE_ADS.AD_GROUP_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) g on g.id = s.ad_group_id
 left join (select * from BRONZE.GOOGLE_ADS.AD_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) ad on ad.id = s.ad_id
-left join (select * from BRONZE.GOOGLE_ADS.ACCOUNT_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) a on a.id = s.customer_id;
+left join (select * from BRONZE.GOOGLE_ADS.ACCOUNT_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) a on a.id = s.customer_id
+-- AD_VIDEO_STATS (custom report) has the 100% quartile rate per ad and day; AD_STATS splits the day by device and network,
+-- so completions are the rate times each row's impressions
+left join BRONZE.GOOGLE_ADS.AD_VIDEO_STATS v on v.ad_group_id = s.ad_group_id and v.ad_id = s.ad_id and v.date = s.date;
