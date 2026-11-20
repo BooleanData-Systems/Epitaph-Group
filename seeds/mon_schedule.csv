@@ -2,7 +2,7 @@ job_name,stage,kind,schedule,time_zone,expected_minutes,max_minutes,missed_after
 T_LOAD_SHAREPOINT,source_to_bronze,task,hourly at :15,America/Toronto,3,5,135,Boolean then Epitaph analyst,SharePoint files to BRONZE.SHAREPOINT
 T_LOAD_FX_RATES,source_to_bronze,task,daily 18:00,America/Toronto,1,5,1560,Boolean then Epitaph analyst,Bank of Canada rates
 GOOGLE_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Google Ads (build)
-MICROSOFT_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Microsoft Advertising (build)
+BINGADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Microsoft Advertising (build)
 FACEBOOK_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Facebook Ads (build)
 GA4,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Google Analytics 4 (build)
 LINKEDIN_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,LinkedIn Ads (build)
@@ -11,8 +11,8 @@ SNAPCHAT_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,
 REDDIT_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Reddit Ads (build)
 PINTEREST_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Pinterest Ads (build)
 AMAZON_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Amazon Ads (build)
-CM360,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Campaign Manager 360 (build)
-DV360,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Display & Video 360 IO (build)
+DOUBLE_CLICK_CAMPAIGN_MANAGER,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Campaign Manager 360 (build)
+GOOGLE_DISPLAY_AND_VIDEO_360,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Display & Video 360 IO (build)
 THE_TRADE_DESK,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,The Trade Desk (waiting)
 AMAZON_DSP,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Amazon DSP (prove-first)
 SPOTIFY_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Spotify Ads (prove-first)

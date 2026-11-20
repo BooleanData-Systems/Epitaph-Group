@@ -1,4 +1,4 @@
--- requires: BRONZE.MICROSOFT_ADS
+-- requires: BRONZE.BINGADS
 -- Until the connector's first sync lands, deploy runs stubs/stg_microsoft_ads.sql instead (same columns, no rows).
 -- Every ad view has the same columns: activity_date, source_name, platform, account_id, account_currency, campaign_id,
 -- campaign_name, media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend, video_starts,
@@ -14,4 +14,4 @@ select
   r.ad_group_id::varchar as media_buy_id, r.ad_group_name as media_buy_name,
   r.ad_id::varchar as creative_id, coalesce(r.ad_title, r.ad_id::varchar) as creative_name,
   r.impressions, r.clicks, r.spend, 0 as video_starts, 0 as completed_plays, 0 as post_shares, 0 as spots
-from BRONZE.MICROSOFT_ADS.AD_PERFORMANCE_DAILY_REPORT r;
+from BRONZE.BINGADS.AD_PERFORMANCE_DAILY_REPORT r;
