@@ -97,8 +97,7 @@ ad_source("Google Ads", "Fivetran", ACC, "STG_GOOGLE_ADS", [
     (G + "AD_STATS", "impressions", "impressions", "impressions", ""),
     (G + "AD_STATS", "clicks", "clicks", "clicks", ""),
     (G + "AD_STATS", "cost_micros", "cost_micros", "spend", "divided by 1,000,000"),
-    (G + "AD_STATS", "video_views", "video_views", "video_starts", "null as 0"),
-    (G + "AD_STATS", "video_quartile_p_100_rate", "video_quartile_p_100_rate", "completed_plays", "rate x impressions; null as 0"),
+    (G + "AD_STATS", "video_trueview_views", "video_trueview_views", "video_starts", "null as 0"),
 ])
 conv_source("Google Ads", ACC, "STG_GOOGLE_ADS_CONVERSIONS", [
     (G + "CAMPAIGN_CONVERSION_ACTION_STATS", "date", "activity_date", "cast to date"),
