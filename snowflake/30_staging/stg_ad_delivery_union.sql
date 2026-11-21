@@ -87,6 +87,11 @@ from (
   union all
   select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
          media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
+         video_starts, completed_plays, post_shares, spots, null, 'new_route'
+  from SILVER.STG.STG_APPLE_SEARCH_ADS
+  union all
+  select activity_date, source_name, platform, account_id, account_currency, campaign_id, campaign_name,
+         media_buy_id, media_buy_name, creative_id, creative_name, impressions, clicks, spend,
          video_starts, completed_plays, post_shares, spots, client_hint, 'new_route'
   from SILVER.STG.STG_VENDOR_DELIVERY
 )

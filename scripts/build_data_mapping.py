@@ -130,8 +130,8 @@ ad_source("Facebook Ads", "Fivetran", ACC, "STG_FACEBOOK_ADS", [
     (F + "BASIC_AD", "impressions", "impressions", "impressions", ""),
     (F + "BASIC_AD", "inline_link_clicks", "inline_link_clicks", "clicks", "link clicks, as TapClicks showed"),
     (F + "BASIC_AD", "spend", "spend", "spend", ""),
-    (F + "BASIC_AD_VIDEO_ACTIONS", "value (action_type video_view)", "value", "video_starts", "video ads only (creative object_type VIDEO or a video id), K06"),
-    (F + "BASIC_AD_VIDEO_ACTIONS", "value (action_type video_p100_watched_actions)", "value", "completed_plays", "video ads only, K06"),
+    (F + "BASIC_AD_VIDEO_ACTIONS_VIDEO_PLAY_ACTIONS", "value", "value", "video_starts", "video custom report; video ads only (creative object_type VIDEO or a video id), K06"),
+    (F + "BASIC_AD_VIDEO_ACTIONS_VIDEO_P_100_WATCHED_ACTIONS", "value", "value", "completed_plays", "video custom report; video ads only, K06"),
     (F + "BASIC_AD_ACTIONS", "value (action_type post)", "value", "post_shares", "sum per ad and day"),
 ])
 conv_source("Facebook Ads", ACC, "STG_FACEBOOK_ADS_CONVERSIONS", [
@@ -152,16 +152,18 @@ ad_source("Microsoft Advertising", "Fivetran", ACC, "STG_MICROSOFT_ADS", [
     ("constant", "'Microsoft Advertising'", "", "source_name", "set in staging"),
     ("constant", "'Microsoft Ads'", "", "platform", "set in staging"),
     (M, "account_id", "account_id", "account_id", "cast to text"),
-    (M, "currency_code", "currency_code", "account_currency", ""),
+    (M, "currency_code", "currency_code", "account_currency", "else ACCOUNT_HISTORY.currency_code"),
     (M, "campaign_id", "campaign_id", "campaign_id", ""),
-    (M, "campaign_name", "campaign_name", "campaign_name", ""),
+    ("BRONZE.BINGADS.CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per campaign"),
     (M, "ad_group_id", "ad_group_id", "media_buy_id", ""),
-    (M, "ad_group_name", "ad_group_name", "media_buy_name", ""),
+    ("BRONZE.BINGADS.AD_GROUP_HISTORY", "name", "name", "media_buy_name", "latest row per ad group"),
     (M, "ad_id", "ad_id", "creative_id", ""),
-    (M, "ad_title", "ad_title", "creative_name", "ad id when the ad has no title"),
+    ("BRONZE.BINGADS.AD_HISTORY", "title", "title", "creative_name", "latest row per ad; else title_part_1, else the ad id"),
     (M, "impressions", "impressions", "impressions", ""),
     (M, "clicks", "clicks", "clicks", ""),
     (M, "spend", "spend", "spend", ""),
+    (M, "video_views", "video_views", "video_starts", "null as 0"),
+    (M, "completed_video_views", "completed_video_views", "completed_plays", "null as 0"),
 ])
 
 # ------------------------------------------------------------------ Fivetran: the other 11 ad connectors (config/connectors.yml)
@@ -199,7 +201,7 @@ ad_source("TikTok Ads", "Fivetran", ACC, "STG_TIKTOK_ADS", [
     ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "clicks", "clicks", "clicks", ""),
     ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "spend", "spend", "spend", ""),
     ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "video_play_actions", "video_play_actions", "video_starts", "null as 0"),
-    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "video_watched_p_100", "video_watched_p_100", "completed_plays", "null as 0"),
+    ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "video_views_p_100", "video_views_p_100", "completed_plays", "null as 0"),
     ("BRONZE.TIKTOK_ADS.AD_REPORT_DAILY", "shares", "shares", "post_shares", "null as 0"),
 ])
 ad_source("SnapChat", "Fivetran", ACC, "STG_SNAPCHAT_ADS", [
@@ -352,10 +354,29 @@ ad_source("Spotify Ads", "Fivetran", ACC, "STG_SPOTIFY_ADS", [
     ("BRONZE.SPOTIFY_ADS.AD_REPORT", "spend", "spend", "spend", ""),
 ])
 
+# ------------------------------------------------------------------ Fivetran: Apple Search Ads
+AP = "BRONZE.APPLE_SEARCH_ADS."
+ad_source("Apple Ads", "Fivetran", ACC, "STG_APPLE_SEARCH_ADS", [
+    (AP + "AD_GROUP_REPORT", "date", "date", "activity_date", "cast to date"),
+    ("constant", "'Apple Ads'", "", "source_name", "set in staging; the TapClicks source name"),
+    ("constant", "'Apple'", "", "platform", "set in staging"),
+    (AP + "CAMPAIGN_HISTORY", "organization_id", "organization_id", "account_id", "the Apple Ads organization; latest row per campaign"),
+    (AP + "AD_GROUP_REPORT", "local_spend_currency", "local_spend_currency", "account_currency", "else ORGANIZATION.currency"),
+    (AP + "AD_GROUP_HISTORY", "campaign_id", "campaign_id", "campaign_id", "latest row per ad group"),
+    (AP + "CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per campaign"),
+    (AP + "AD_GROUP_REPORT", "ad_group_id", "ad_group_id", "media_buy_id", "cast to text"),
+    (AP + "AD_GROUP_HISTORY", "name", "name", "media_buy_name", "latest row per ad group"),
+    (AP + "AD_GROUP_REPORT", "ad_group_id", "ad_group_id", "creative_id", "no ad level synced: the ad group"),
+    (AP + "AD_GROUP_HISTORY", "name", "name", "creative_name", "no ad level synced: the ad group"),
+    (AP + "AD_GROUP_REPORT", "impressions", "impressions", "impressions", ""),
+    (AP + "AD_GROUP_REPORT", "taps", "taps", "clicks", "taps are clicks"),
+    (AP + "AD_GROUP_REPORT", "local_spend_amount", "local_spend_amount", "spend", ""),
+])
+
 # ------------------------------------------------------------------ Fivetran: GA4
-GA = "BRONZE.GA4.TRAFFIC_ACQUISITION_SESSION_SOURCE_MEDIUM_REPORT"
+GA = "BRONZE.GOOGLE_ANALYTICS_4.SESSION_CAMPAIGN_REPORT"
 for f, s, g, rule in (("date", "activity_date", "date_key", "cast to date; YYYYMMDD key"),
-                      ("property", "property_id", "client_code", "MCI rank 10: GA4 property in MAP_PLATFORM_ACCOUNT (platform GA4); GA4 Test property excluded (Q22)"),
+                      ("property", "property_id", "client_code", "properties/ prefix removed; MCI rank 10: GA4 property in MAP_PLATFORM_ACCOUNT (platform GA4); GA4 Test property excluded (Q22)"),
                       ("session_source", "ga4_session_source", "ga4_session_source", ""),
                       ("session_medium", "ga4_session_medium", "ga4_session_medium", ""),
                       ("session_campaign_name", "ga4_session_campaign", "ga4_session_campaign", ""),
