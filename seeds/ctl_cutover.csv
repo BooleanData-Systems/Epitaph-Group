@@ -5,7 +5,7 @@ Amazon Ads,fivetran,2026-08-17,testing,,Fivetran. Testing against TapClicks; Ama
 Amazon DSP,fivetran,2026-08-17,testing,,Fivetran (prove first). Amazon keeps about 90 days; earlier months from TapClicks
 Amazon DSP - Sonnet Reach & Frequency Report,sharepoint,2026-12-07,planned,,SharePoint loader
 Campaign Manager 360,fivetran,2026-12-07,planned,,Fivetran
-Display & Video 360 IO,fivetran,2026-12-07,planned,,Fivetran
+Display & Video 360 IO,fivetran,2024-12-11,testing,,Fivetran. Testing against TapClicks; first day in the custom report is 2024-12-11
 Facebook Ads,fivetran,2026-12-07,planned,,Fivetran
 Goal Smart Connector,sharepoint,2026-12-07,planned,,SharePoint loader
 Google Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks

@@ -271,7 +271,7 @@ ad_source("Campaign Manager 360", "Fivetran", ACC, "STG_CM360", [
     ("BRONZE.DOUBLE_CLICK_CAMPAIGN_MANAGER.CUSTOM_REPORT", "date", "date", "activity_date", "cast to date"),
     ("constant", "'Campaign Manager 360'", "", "source_name", "set in staging"),
     ("constant", "'CM360'", "", "platform", "set in staging"),
-    ("BRONZE.DOUBLE_CLICK_CAMPAIGN_MANAGER.CUSTOM_REPORT", "advertiser_id", "advertiser_id", "account_id", "cast to text"),
+    ("BRONZE.DOUBLE_CLICK_CAMPAIGN_MANAGER.CUSTOM_REPORT", "advertiser_id", "advertiser_id", "account_id", "cast to text; only advertisers mapped in MAP_PLATFORM_ACCOUNT (network profiles see other advertisers); one row per key across user profiles"),
     ("BRONZE.DOUBLE_CLICK_CAMPAIGN_MANAGER.CUSTOM_REPORT", "campaign_id", "campaign_id", "campaign_id", "cast to text"),
     ("BRONZE.DOUBLE_CLICK_CAMPAIGN_MANAGER.CUSTOM_REPORT", "campaign", "campaign", "campaign_name", ""),
     ("BRONZE.DOUBLE_CLICK_CAMPAIGN_MANAGER.CUSTOM_REPORT", "placement_id", "placement_id", "media_buy_id", "cast to text"),
