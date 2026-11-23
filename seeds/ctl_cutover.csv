@@ -25,7 +25,7 @@ SiriusXM - Adobe - Commuter Activations,sharepoint,2026-12-07,planned,,SharePoin
 SiriusXM - Adobe - Commuter Starts,sharepoint,2026-12-07,planned,,SharePoint loader
 SiriusXM - Adobe - Dual Offer Streaming,sharepoint,2026-12-07,planned,,SharePoint loader
 SiriusXM - Adobe - Streaming Starts (NEW),sharepoint,2026-12-07,planned,,SharePoint loader
-SnapChat,fivetran,2026-12-07,planned,,Fivetran
+SnapChat,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
 Sonnet - DV360 Creative,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet - Direct Buy Offline Spend,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet - Google CDI Data - Auto Insurance Ontario,history_only,,history_only,,Future-dated
