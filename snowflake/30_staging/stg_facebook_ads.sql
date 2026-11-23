@@ -15,7 +15,7 @@ select
   b.ad_id::varchar as creative_id, ad.name as creative_name,
   b.impressions, b.inline_link_clicks as clicks, b.spend,
   iff(cr.object_type = 'VIDEO' or cr.video_id is not null, coalesce(v.video_play, 0), 0) as video_starts,
-  iff(cr.object_type = 'VIDEO' or cr.video_id is not null, coalesce(v.video_p100, 0), 0) as completed_plays,
+  iff(cr.object_type = 'VIDEO' or cr.video_id is not null, coalesce(v100.video_p100, 0), 0) as completed_plays,
   coalesce(sh.post_shares, 0) as post_shares, 0 as spots
 from BRONZE.FACEBOOK_ADS.BASIC_AD b
 left join (select * from BRONZE.FACEBOOK_ADS.AD_HISTORY qualify row_number() over (partition by id order by updated_time desc) = 1) ad on ad.id = b.ad_id
@@ -23,9 +23,11 @@ left join (select * from BRONZE.FACEBOOK_ADS.AD_SET_HISTORY qualify row_number()
 left join (select * from BRONZE.FACEBOOK_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by updated_time desc) = 1) cmp on cmp.id = ad.campaign_id
 left join (select * from BRONZE.FACEBOOK_ADS.CREATIVE_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) cr on cr.id = ad.creative_id
 left join (select * from BRONZE.FACEBOOK_ADS.ACCOUNT_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) acc on acc.id = b.account_id
-left join (select ad_id, date, sum(iff(action_type = 'video_view', value, 0)) as video_play,
-                  sum(iff(action_type = 'video_p100_watched_actions', value, 0)) as video_p100
-           from BRONZE.FACEBOOK_ADS.BASIC_AD_VIDEO_ACTIONS group by 1, 2) v on v.ad_id = b.ad_id and v.date = b.date
+-- video custom report (basic_ad_video_actions): Fivetran lands each action field as its own child table
+left join (select ad_id, date, sum(value) as video_play
+           from BRONZE.FACEBOOK_ADS.BASIC_AD_VIDEO_ACTIONS_VIDEO_PLAY_ACTIONS group by 1, 2) v on v.ad_id = b.ad_id and v.date = b.date
+left join (select ad_id, date, sum(value) as video_p100
+           from BRONZE.FACEBOOK_ADS.BASIC_AD_VIDEO_ACTIONS_VIDEO_P_100_WATCHED_ACTIONS group by 1, 2) v100 on v100.ad_id = b.ad_id and v100.date = b.date
 left join (select ad_id, date, sum(value) as post_shares from BRONZE.FACEBOOK_ADS.BASIC_AD_ACTIONS
            where action_type = 'post' group by 1, 2) sh on sh.ad_id = b.ad_id and sh.date = b.date;
 

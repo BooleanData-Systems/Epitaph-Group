@@ -4,7 +4,7 @@ T_LOAD_FX_RATES,source_to_bronze,task,daily 18:00,America/Toronto,1,5,1560,Boole
 GOOGLE_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Google Ads (build)
 BINGADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Microsoft Advertising (build)
 FACEBOOK_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Facebook Ads (build)
-GA4,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Google Analytics 4 (build)
+GOOGLE_ANALYTICS_4,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Google Analytics 4 (build)
 LINKEDIN_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,LinkedIn Ads (build)
 TIKTOK_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,TikTok Ads (build)
 SNAPCHAT_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,SnapChat (build)
@@ -16,6 +16,7 @@ GOOGLE_DISPLAY_AND_VIDEO_360,source_to_bronze,fivetran,every 6 hours,UTC (Fivetr
 THE_TRADE_DESK,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,The Trade Desk (waiting)
 AMAZON_DSP,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Amazon DSP (prove-first)
 SPOTIFY_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Spotify Ads (prove-first)
+APPLE_SEARCH_ADS,source_to_bronze,fivetran,every 6 hours,UTC (Fivetran schedule),15,60,480,Boolean then Epitaph analyst,Apple Ads (build)
 STG_TAPCLICKS_HISTORY,bronze_to_silver,dynamic_table,when downstream refreshes,n/a,2,5,1440,Boolean,"History, refreshes with its consumers"
 INT_AD_DELIVERY,bronze_to_silver,dynamic_table,target lag 1 hour,n/a,2,5,180,Boolean,Cut-over and source rules applied
 INT_CONVERSIONS,bronze_to_silver,dynamic_table,target lag 1 hour,n/a,2,5,180,Boolean,
