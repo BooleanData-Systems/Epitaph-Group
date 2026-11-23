@@ -22,6 +22,8 @@ select
 from BRONZE.DOUBLE_CLICK_CAMPAIGN_MANAGER.CUSTOM_REPORT r
 -- Some CM360 user profiles are network logins that also see advertisers outside Epitaph, so only advertisers mapped
 -- to a client in map_platform_account.csv pass. An advertiser appears once someone adds it there.
+-- Never map a "BidManager_Advertiser_DO_NOT_EDIT_<id>" advertiser: it mirrors a DV360 advertiser, whose spend
+-- already comes from the DV360 connector, so mapping it would count that spend twice.
 where r.advertiser_id::varchar in (select account_id from GOLD.CONTROL.MAP_PLATFORM_ACCOUNT where platform = 'Campaign Manager 360')
 -- The report runs once per CM360 user profile, and profiles that see the same advertiser return the same rows
 -- (two profiles carried identical data on the first sync), so keep one row per day, advertiser, campaign, placement and ad
