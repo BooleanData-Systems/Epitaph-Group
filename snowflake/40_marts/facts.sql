@@ -97,8 +97,11 @@ left join SILVER.STG.MCI_IDENTIFIERS pa
  and s.activity_date between pa.valid_from and pa.valid_to
 group by all;
 
--- Reach and frequency (K09, open): never summed across platforms or periods in the semantic layer
-create or replace dynamic table FCT_REACH_FREQUENCY target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
+-- Reach and frequency (K09, open): never summed across platforms or periods in the semantic layer.
+-- A view, not a dynamic table: while Facebook runs on its stub, STG_FACEBOOK_REACH reads no table, and Snowflake
+-- refuses a dynamic table with no base table. The rows are few (one per Facebook campaign and day), so a view is enough
+-- and the deploy works the same before and after the connector syncs.
+create or replace view FCT_REACH_FREQUENCY as
 select to_number(to_char(activity_date, 'YYYYMMDD')) as date_key, source_name, platform,
        sha2(campaign_name, 256) as campaign_key, reach, impressions,
        impressions / nullif(reach, 0) as frequency

@@ -2,7 +2,10 @@
 use role EPITAPH_TRANSFORMER;
 use schema GOLD.MARTS;
 
-create or replace dynamic table DIM_DATE target_lag = downstream warehouse = WH_TRANSFORMATION as
+-- A plain table: Snowflake refuses a dynamic table with no base table ("Dynamic Tables must have at least one base
+-- table"), and a generated calendar has none. "if not exists" keeps the table on re-runs, so DIM_FX_RATE (a dynamic
+-- table that reads it) is never broken by a deploy. To extend the calendar past 2030, drop it and re-run this file.
+create table if not exists DIM_DATE as
 select
   to_number(to_char(d, 'YYYYMMDD'))           as date_key,
   d                                           as date_day,
