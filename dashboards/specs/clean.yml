@@ -1,0 +1,201 @@
+# Epitaph Clean dashboard (from Epitaph_Omni_Dashboard_Demo.html). Same tiles as cockpit.yml without the
+# funnel and best-day row. Field rules: see cockpit.yml.
+id: epitaph-clean
+name: EPITAPH | Campaign Overview (Clean)
+description: Single-page media performance dashboard (clean layout). Built from dashboards/specs/clean.yml.
+model:
+  view: media_performance_daily
+  topic: media_performance
+tiles:
+- key: kpi_impressions
+  page: Overview
+  title: Impressions
+  chart: kpi
+  fields:
+  - impressions
+- key: kpi_clicks
+  page: Overview
+  title: Clicks
+  chart: kpi
+  fields:
+  - clicks
+- key: kpi_ctr
+  page: Overview
+  title: CTR
+  chart: kpi
+  fields:
+  - ctr
+- key: kpi_spend
+  page: Overview
+  title: Spend
+  chart: kpi
+  fields:
+  - spend
+- key: kpi_cpm
+  page: Overview
+  title: CPM
+  chart: kpi
+  fields:
+  - cpm
+- key: kpi_cpc
+  page: Overview
+  title: CPC
+  chart: kpi
+  fields:
+  - cpc
+- key: kpi_plays
+  page: Overview
+  title: Completed Plays
+  chart: kpi
+  fields:
+  - completed_plays
+- key: kpi_cpcv
+  page: Overview
+  title: CPCV
+  chart: kpi
+  fields:
+  - cpcv
+- key: kpi_conversions
+  page: Overview
+  title: Conversions
+  chart: kpi
+  fields:
+  - total_conversions
+- key: kpi_cpa
+  page: Overview
+  title: Cost per conversion
+  chart: kpi
+  fields:
+  - cpa
+- key: trend
+  page: Overview
+  title: Spend by day
+  chart: line
+  fields:
+  - date_day[date]
+  - spend
+  sorts:
+  - field: date_day[date]
+- key: media_type
+  page: Overview
+  title: Media type
+  chart: pie
+  fields:
+  - media_type
+  - spend
+  sorts:
+  - field: spend
+    desc: true
+- key: audience
+  page: Overview
+  title: Audience
+  chart: bar
+  fields:
+  - audience
+  - spend
+  sorts:
+  - field: spend
+    desc: true
+- key: tactic
+  page: Overview
+  title: Tactic
+  chart: table
+  fields:
+  - tactic
+  - spend
+  - impressions
+  - clicks
+  - ctr
+  - cpm
+  sorts:
+  - field: spend
+    desc: true
+- key: creative_top
+  page: Overview
+  title: Creative (top 5)
+  chart: bar
+  fields:
+  - creative_name
+  - spend
+  sorts:
+  - field: spend
+    desc: true
+  limit: 5
+- key: channel_table
+  page: Channels
+  title: Channel performance
+  chart: table
+  fields:
+  - channel
+  - media_type
+  - audience
+  - tactic
+  - impressions
+  - clicks
+  - ctr
+  - spend
+  - cpm
+  - cpc
+  sorts:
+  - field: spend
+    desc: true
+- key: video_table
+  page: Channels
+  title: Video and CTV
+  chart: table
+  fields:
+  - channel
+  - platform
+  - completed_plays
+  - vcr
+  - cpcv
+  - spend
+  filters:
+    filter_media_type:
+    - Video
+  sorts:
+  - field: spend
+    desc: true
+- key: keywords
+  page: Search Keywords
+  title: Search keywords
+  chart: table
+  fields:
+  - media_buy_name
+  - impressions
+  - clicks
+  - ctr
+  - spend
+  - cpc
+  filters:
+    channel:
+    - Search
+  sorts:
+  - field: spend
+    desc: true
+  limit: 50
+- key: creative_table
+  page: Creative
+  title: Creative performance
+  chart: table
+  fields:
+  - creative_name
+  - impressions
+  - clicks
+  - ctr
+  - spend
+  - cpm
+  - completed_plays
+  - cpcv
+  sorts:
+  - field: spend
+    desc: true
+manual_steps:
+- 'Arrange tiles: KPI strip in one row, then funnel and best day, then trend (2/3) beside media type (1/3), then audience, tactic, creative.'
+- 'Pages: move Channels, Search Keywords and Creative tiles to their own pages (Overview stays the landing page).'
+- 'Filters: date_day (default last 7 days, presets Yesterday, 14/30 days, this/last week, this/last month, last quarter, YTD), smart_campaign,
+  filter_media_type, channel, filter_audience, filter_tactic, filter_creative_name. Apply to all tiles.'
+- 'Controls: Period over period (KPI change vs prior period), Field switcher over spend/impressions/clicks/ctr/cpm/cpc for trend, media type,
+  audience, creative; Timeframe switcher day/week/month on the trend.'
+- 'Theme: Epitaph colours and logo. Cross-filtering on.'
+- 'Budget pacing ($285,000) and ''What stands out'' are not in the model yet: add as calculation / markdown tiles if wanted.'
