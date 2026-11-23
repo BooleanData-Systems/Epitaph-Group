@@ -209,6 +209,7 @@ ad_source("SnapChat", "Fivetran", ACC, "STG_SNAPCHAT_ADS", [
     ("constant", "'SnapChat'", "", "source_name", "set in staging"),
     ("constant", "'Snapchat'", "", "platform", "set in staging"),
     ("BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY", "ad_account_id", "ad_account_id", "account_id", "cast to text; latest row per id"),
+    ("BRONZE.SNAPCHAT_ADS.AD_ACCOUNT_HISTORY", "currency", "currency", "account_currency", "latest row per account"),
     ("BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY", "id", "id", "campaign_id", "cast to text; latest row per id"),
     ("BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY", "name", "name", "campaign_name", "latest row per id"),
     ("BRONZE.SNAPCHAT_ADS.AD_SQUAD_HISTORY", "id", "id", "media_buy_id", "cast to text; latest row per id"),

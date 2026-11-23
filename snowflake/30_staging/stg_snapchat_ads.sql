@@ -10,7 +10,7 @@ use role EPITAPH_TRANSFORMER;
 create or replace view SILVER.STG.STG_SNAPCHAT_ADS as
 select
   r.date::date as activity_date, 'SnapChat' as source_name, 'Snapchat' as platform,
-  c.ad_account_id::varchar as account_id, null::varchar as account_currency,
+  c.ad_account_id::varchar as account_id, acc.currency as account_currency,
   c.id::varchar as campaign_id, c.name as campaign_name,
   sq.id::varchar as media_buy_id, sq.name as media_buy_name,
   r.ad_id::varchar as creative_id, ad.name as creative_name,
@@ -20,4 +20,5 @@ select
 from BRONZE.SNAPCHAT_ADS.AD_DAILY_REPORT r
 left join (select * from BRONZE.SNAPCHAT_ADS.AD_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) ad on ad.id = r.ad_id
 left join (select * from BRONZE.SNAPCHAT_ADS.AD_SQUAD_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) sq on sq.id = ad.ad_squad_id
-left join (select * from BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) c on c.id = sq.campaign_id;
+left join (select * from BRONZE.SNAPCHAT_ADS.CAMPAIGN_HISTORY qualify row_number() over (partition by id order by _fivetran_synced desc) = 1) c on c.id = sq.campaign_id
+left join (select * from BRONZE.SNAPCHAT_ADS.AD_ACCOUNT_HISTORY qualify row_number() over (partition by id order by updated_at desc) = 1) acc on acc.id = c.ad_account_id;
