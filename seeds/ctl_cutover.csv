@@ -48,7 +48,7 @@ Spotify - Cobs Bread,sharepoint,2026-12-07,planned,,SharePoint loader
 Spotify Ads,fivetran,2026-12-07,planned,,Fivetran (prove first)
 TapOrders,out_of_scope,,out_of_scope,,Future-dated
 The Trade Desk,fivetran,2026-12-07,planned,,Fivetran
-TikTok Ads,fivetran,2026-12-07,planned,,Fivetran
+TikTok Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks; ads missing from AD_HISTORY are kept at campaign level
 55 Rush - Kids Help Phone,history_only,,history_only,,Dormant
 Amazon Pause Ads,history_only,,history_only,,Dormant
 Amazon Vendor Central ASIN+,history_only,,history_only,,Dormant
