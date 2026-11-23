@@ -4,7 +4,7 @@ Adobe Organic - Streaming,sharepoint,2026-12-07,planned,,SharePoint loader
 Amazon Ads,fivetran,2026-08-17,testing,,Fivetran. Testing against TapClicks; Amazon keeps about 90 days; earlier months from TapClicks
 Amazon DSP,fivetran,2026-08-17,testing,,Fivetran (prove first). Amazon keeps about 90 days; earlier months from TapClicks
 Amazon DSP - Sonnet Reach & Frequency Report,sharepoint,2026-12-07,planned,,SharePoint loader
-Campaign Manager 360,fivetran,2026-12-07,planned,,Fivetran
+Campaign Manager 360,fivetran,2024-11-20,testing,,Fivetran. Testing against TapClicks; the 24-month report starts 2024-11-20. BidManager advertisers (DV360 mirrors) stay unmapped
 Display & Video 360 IO,fivetran,2024-12-11,testing,,Fivetran. Testing against TapClicks; first day in the custom report is 2024-12-11
 Facebook Ads,fivetran,2026-12-07,planned,,Fivetran
 Goal Smart Connector,sharepoint,2026-12-07,planned,,SharePoint loader
