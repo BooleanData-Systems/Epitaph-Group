@@ -1,0 +1,124 @@
+# Omni dashboards from git, run entirely from GitHub (no local terminal needed).
+#
+# Pull requests: every spec in dashboards/specs/ is validated against omni/model and the planned payloads are
+# attached to the run.
+# Actions > omni-dashboard-build > Run workflow: pick the Omni account (environment) and the action.
+#   test     run every tile query of the spec against Omni (limit 5)
+#   create   test, then create the dashboard from the spec (new identifier: spec id + version)
+#   capture  save the chart styling of a dashboard built in the UI into dashboards/templates (committed to a branch)
+#   export   save a finished dashboard as JSON into dashboards/exports (committed to a branch)
+#   import   create a dashboard in this Omni account from an export JSON in the repo
+#
+# One GitHub environment per Omni account (Settings > Environments), each with required reviewers and 3 secrets:
+#   OMNI_BASE_URL   e.g. https://booleandata.omniapp.co
+#   OMNI_API_KEY    Organization API key of that Omni account
+#   OMNI_MODEL_ID   shared model id of that Omni account
+# export / import need scripts/omni_dashboard.py, scripts/omni_api.py and scripts/common.py (in the client repo).
+name: omni-dashboard-build
+
+on:
+  pull_request:
+    paths: ["dashboards/specs/**", "omni/model/**", "scripts/omni_dashboard_build.py"]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Omni account"
+        type: choice
+        options: [omni-trial, omni-client]
+        default: omni-trial
+      action:
+        description: "What to do"
+        type: choice
+        options: [test, create, capture, export, import]
+        default: test
+      spec:
+        description: "test/create: spec file"
+        default: dashboards/specs/cockpit.yml
+      version:
+        description: "create: identifier suffix, new each time (v1, v2 ...)"
+        default: v1
+      dashboard:
+        description: "capture/export: dashboard id or identifier from its Omni URL"
+        default: ""
+      export_file:
+        description: "export: file to write / import: file to read"
+        default: dashboards/exports/cockpit.json
+      folder:
+        description: "import: Omni folder"
+        default: Master
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pyyaml
+      - name: Validate and plan every spec
+        run: |
+          for s in dashboards/specs/*.yml; do
+            python scripts/omni_dashboard_build.py plan "$s"
+          done
+      - uses: actions/upload-artifact@v4
+        with: {name: dashboard-payloads, path: dashboards/build/}
+
+  omni:
+    if: github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    env:
+      OMNI_BASE_URL: ${{ secrets.OMNI_BASE_URL }}
+      OMNI_API_KEY: ${{ secrets.OMNI_API_KEY }}
+      OMNI_MODEL_ID: ${{ secrets.OMNI_MODEL_ID }}
+      # names used by scripts/omni_dashboard.py
+      OMNI_SOURCE_BASE_URL: ${{ secrets.OMNI_BASE_URL }}
+      OMNI_SOURCE_API_KEY: ${{ secrets.OMNI_API_KEY }}
+      OMNI_TARGET_BASE_URL: ${{ secrets.OMNI_BASE_URL }}
+      OMNI_TARGET_API_KEY: ${{ secrets.OMNI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pyyaml requests
+
+      - name: Test tile queries
+        if: inputs.action == 'test' || inputs.action == 'create'
+        run: python scripts/omni_dashboard_build.py test "${{ inputs.spec }}"
+
+      - name: Create dashboard
+        if: inputs.action == 'create'
+        run: python scripts/omni_dashboard_build.py create "${{ inputs.spec }}" --version "${{ inputs.version }}"
+
+      - name: Capture chart styling
+        if: inputs.action == 'capture'
+        run: python scripts/omni_dashboard_build.py capture "${{ inputs.dashboard }}"
+
+      - name: Export dashboard
+        if: inputs.action == 'export'
+        run: |
+          python scripts/omni_dashboard.py export --dashboard-id "${{ inputs.dashboard }}" --out "${{ inputs.export_file }}"
+          python scripts/omni_dashboard.py inspect "${{ inputs.export_file }}"
+
+      - name: Import dashboard (dry run, then for real)
+        if: inputs.action == 'import'
+        run: |
+          python scripts/omni_dashboard.py import "${{ inputs.export_file }}" --model-id "$OMNI_MODEL_ID" --folder "${{ inputs.folder }}" --dry-run
+          python scripts/omni_dashboard.py import "${{ inputs.export_file }}" --model-id "$OMNI_MODEL_ID" --folder "${{ inputs.folder }}"
+
+      - name: Commit capture / export to a new branch
+        if: inputs.action == 'capture' || inputs.action == 'export'
+        run: |
+          BR="omni-${{ inputs.action }}-${{ github.run_number }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BR"
+          git add dashboards/templates dashboards/exports 2>/dev/null || true
+          if git diff --cached --quiet; then echo "Nothing new to commit"; exit 0; fi
+          git commit -m "Omni ${{ inputs.action }}: ${{ inputs.dashboard }}"
+          git push origin "$BR"
+          echo "Pushed branch $BR. Open a pull request from it to keep the file." >> "$GITHUB_STEP_SUMMARY"
