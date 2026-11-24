@@ -70,7 +70,7 @@ layers:
     schema: GOLD.SEMANTIC
     rule: KPIs defined once (config/kpis.yml); rates from totals; row access by client_code
     objects: [V_MEDIA_PERFORMANCE_DAILY, V_WEB_SESSIONS_DAILY, V_SONNET_DAILY, V_SONNET_AUCTION, V_SXM_DAILY, V_ADARA_DAILY,
-              V_REACH_FREQUENCY, V_GOALS, V_DATA_FRESHNESS, V_KPI_DEFINITIONS]
+              V_REACH_FREQUENCY, V_KEYWORD_DAILY, V_GOALS, V_DATA_FRESHNESS, V_KPI_DEFINITIONS]
 
 service_levels:
   freshness: Silver and Gold refresh within 1 hour of new data (dynamic tables, target lag 1 hour)

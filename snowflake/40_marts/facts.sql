@@ -87,6 +87,43 @@ left join tag_match t
  and c.activity_date between t.valid_from and t.valid_to
 group by all;
 
+-- Search keywords (Search Keywords tables). Kept out of the main semantic view: keyword rows are a breakdown of the
+-- same delivery, so adding them to FCT_AD_DELIVERY_DAILY totals would count spend twice. Only sources at 'testing' or
+-- 'live' in CTL_CUTOVER, from their cut-over date, the same rule as delivery. Client from the Master Client Index on
+-- the same key as delivery (source | account | campaign), falling back to the campaign's client. Spend converted
+-- the same way as FCT_AD_DELIVERY_DAILY.
+create or replace dynamic table FCT_KEYWORD_DAILY target_lag = '1 hour' warehouse = WH_TRANSFORMATION
+  cluster by (date_key) as
+select
+  to_number(to_char(k.activity_date, 'YYYYMMDD'))                            as date_key,
+  sha2(k.source_name, 256)                                                   as source_key,
+  coalesce(r.client_code, dc.client_code)                                    as client_code,
+  sha2(k.campaign_name, 256)                                                 as campaign_key,
+  sha2(coalesce(k.media_buy_name, '(none)') || '|' || k.campaign_name, 256)  as media_buy_key,
+  k.platform,
+  k.keyword,
+  any_value(k.match_type)                                                    as match_type,
+  sum(k.impressions)                                                         as impressions,
+  sum(k.clicks)                                                              as clicks,
+  sum(k.spend)                                                               as spend_account_currency,
+  sum(iff(pa.convert_to = 'CAD' and coalesce(pa.account_currency, k.account_currency) = 'USD',
+          k.spend * fx.rate, k.spend))                                       as spend,
+  any_value(coalesce(pa.convert_to, pa.account_currency, k.account_currency, 'CAD')) as currency_code,
+  sum(k.conversions)                                                         as conversions,
+  sum(k.revenue)                                                             as revenue,
+  'new_route'                                                                as loaded_from
+from SILVER.STG.STG_LIVE_KEYWORDS k
+join GOLD.CONTROL.CTL_CUTOVER c
+  on c.source_name = k.source_name and c.status in ('testing', 'live') and k.activity_date >= c.cutover_date
+left join GOLD.CONTROL.MAP_PLATFORM_ACCOUNT pa
+  on pa.platform = k.source_name and pa.account_id = k.account_id
+ and k.activity_date between pa.valid_from and pa.valid_to
+left join DIM_FX_RATE fx on fx.date_day = k.activity_date
+left join SILVER.STG.MCI_CLIENT_RESOLUTION r
+  on r.mci_key = sha2(coalesce(k.source_name, '') || '|' || coalesce(k.account_id, '') || '|' || coalesce(k.campaign_name, '') || '|', 256)
+left join DIM_CAMPAIGN dc on dc.campaign_name = k.campaign_name
+group by all;
+
 create or replace dynamic table FCT_WEB_SESSIONS_DAILY target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
 select to_number(to_char(s.activity_date, 'YYYYMMDD')) as date_key,
        pa.client_code, s.property_id, s.ga4_session_source, s.ga4_session_medium, s.ga4_session_campaign,
