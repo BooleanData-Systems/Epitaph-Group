@@ -25,6 +25,10 @@
 30_staging/stg_amazon_dsp.sql
 30_staging/stg_spotify_ads.sql
 30_staging/stg_apple_search_ads.sql
+30_staging/stg_google_ads_keywords.sql
+30_staging/stg_microsoft_ads_keywords.sql
+30_staging/stg_amazon_ads_keywords.sql
+30_staging/stg_keyword_union.sql
 30_staging/mci_identifiers.sql
 30_staging/stg_sharepoint_feeds.sql
 30_staging/stg_ad_delivery_union.sql

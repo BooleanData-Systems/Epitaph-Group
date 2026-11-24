@@ -52,18 +52,24 @@ tables:
       view_through_conversions:  {type: number, status: built}
       loaded_from:       {type: varchar, status: built}
   FCT_KEYWORD_DAILY:
-    grain: [date_key, source_key, campaign_key, keyword]
+    grain: [date_key, source_key, client_code, campaign_key, media_buy_key, keyword]
     columns:
-      date_key:     {type: number, status: planned}
-      source_key:   {type: varchar, status: planned}
-      campaign_key: {type: varchar, status: planned}
-      keyword:      {type: varchar, status: planned, fed_by: Google Ads and Microsoft keyword reports (17 dashboards)}
-      match_type:   {type: varchar, status: planned}
-      impressions:  {type: number, status: planned}
-      clicks:       {type: number, status: planned}
-      spend:        {type: number, status: planned}
-      conversions:  {type: number, status: planned}
-      revenue:      {type: number, status: planned}
+      date_key:     {type: number, status: built}
+      source_key:   {type: varchar, status: built}
+      client_code:  {type: varchar, status: built, fed_by: Master Client Index (same key as delivery)}
+      campaign_key: {type: varchar, status: built}
+      media_buy_key: {type: varchar, status: built}
+      platform:     {type: varchar, status: built}
+      keyword:      {type: varchar, status: built, fed_by: Google Ads KEYWORD_STATS, Microsoft KEYWORD_PERFORMANCE_DAILY_REPORT, Amazon Ads TARGETING_KEYWORD_REPORT (16 dashboards)}
+      match_type:   {type: varchar, status: built}
+      impressions:  {type: number, status: built}
+      clicks:       {type: number, status: built}
+      spend_account_currency: {type: number, status: built}
+      spend:        {type: number, status: built}
+      currency_code: {type: varchar, status: built}
+      conversions:  {type: number, status: built}
+      revenue:      {type: number, status: built}
+      loaded_from:  {type: varchar, status: built}
   FCT_WEB_SESSIONS_DAILY:
     grain: [date_key, property_id, ga4_session_source, ga4_session_medium, ga4_session_campaign]
     columns:

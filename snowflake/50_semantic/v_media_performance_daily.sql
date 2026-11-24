@@ -612,6 +612,21 @@ select d.date_day, f.source_name, f.platform, c.client_code, c.smart_campaign, c
 from GOLD.MARTS.FCT_REACH_FREQUENCY f join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
 left join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key;
 
+-- Search Keywords tables. Its own view, never stacked into V_MEDIA_PERFORMANCE_DAILY (keyword rows repeat delivery
+-- spend). Rates (CTR, CPC, CPM, CPA, ROAS) are computed from these totals in Omni, as in the main view.
+create or replace view GOLD.SEMANTIC.V_KEYWORD_DAILY with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as
+select d.date_day, d.week_start, d.month_start,
+       coalesce(f.client_code, c.client_code) as client_code, cl.client_name, c.smart_campaign, c.campaign_name,
+       c.campaign_filter, s.source_name, f.platform, mb.media_buy_name, mb.tactic, mb.audience,
+       f.keyword, f.match_type, f.currency_code, f.loaded_from,
+       f.impressions, f.clicks, f.spend, f.conversions, f.revenue
+from GOLD.MARTS.FCT_KEYWORD_DAILY f
+join GOLD.MARTS.DIM_DATE d on d.date_key = f.date_key
+left join GOLD.MARTS.DIM_CAMPAIGN c on c.campaign_key = f.campaign_key
+left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = coalesce(f.client_code, c.client_code)
+left join GOLD.MARTS.DIM_SOURCE s on s.source_key = f.source_key
+left join GOLD.MARTS.DIM_MEDIA_BUY mb on mb.media_buy_key = f.media_buy_key;
+
 create or replace view GOLD.SEMANTIC.V_GOALS with row access policy GOLD.CONTROL.RAP_CLIENT on (client_code) as
 select * from GOLD.MARTS.FCT_GOALS;
 
