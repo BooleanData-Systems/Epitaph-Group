@@ -75,7 +75,7 @@ with v as (
          SILVER.STG.NUM(record:ad_server_cpm_and_cpc_revenue), null, null, null, null
   from BRONZE.SHAREPOINT.NETFLIX_PAUSE_ADS r
   union all
-  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Jolt Media', 'Jolt Media', SILVER.STG.DAY(record:day), null,
+  select r.item_id, r.etag, r.file_name, r.row_number, r.feed_id, 'Jolt Media', 'Jolt Media', SILVER.STG.DAY(coalesce(record:date, record:day)), null,   -- the export says Date; older files said Day
          SILVER.STG.TXT(record:order_name), SILVER.STG.TXT(record:venue_name), SILVER.STG.TXT(record:venue_id), SILVER.STG.TXT(record:creative),
          SILVER.STG.NUM(record:impressions), null, null, null, null, SILVER.STG.NUM(record:spots), null
   from BRONZE.SHAREPOINT.JOLT_MEDIA r

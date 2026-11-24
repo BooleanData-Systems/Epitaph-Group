@@ -440,7 +440,7 @@ vendor("Netflix Pause Ads", "F12", "NETFLIX_PAUSE_ADS", SHARED, [
     ("creative", "creative_name", ""), ("ad_server_impressions", "impressions", ""), ("ad_server_clicks", "clicks", ""),
     ("ad_server_cpm_and_cpc_revenue", "spend", "")])
 vendor("Jolt Media", "F13", "JOLT_MEDIA", SHARED, [
-    ("day", "activity_date", COMMON), ("order_name", "campaign_name", ""), ("venue_name", "media_buy_name", ""),
+    ("date", "activity_date", COMMON), ("order_name", "campaign_name", ""), ("venue_name", "media_buy_name", ""),
     ("venue_id", "media_buy_id", ""), ("creative", "creative_name", ""), ("impressions", "impressions", ""),
     ("spots", "spots", ""), ("-", "spend", "no spend in the file: 0, flagged spend_missing")])
 FEED = "MCI rank 20: single-client feed ({})"

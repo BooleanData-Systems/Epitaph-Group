@@ -11,3 +11,7 @@ review/
 mask_map*.csv
 *.parquet
 *.zip
+
+# Client file downloads (client data; never committed)
+OneDrive_*/
+OneDrive_*.zip
