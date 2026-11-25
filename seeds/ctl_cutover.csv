@@ -11,16 +11,16 @@ Goal Smart Connector,sharepoint,2026-12-07,planned,,SharePoint loader
 Google Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
 Google Analytics 4,fivetran,2026-12-07,planned,,Fivetran
 Google Trends,out_of_scope,,out_of_scope,,Lagging
-HiveStack,sharepoint,2026-12-07,planned,,SharePoint loader
-Jolt Media,sharepoint,2026-12-07,planned,,SharePoint loader
+HiveStack,sharepoint,2025-08-01,testing,,SharePoint loader. Testing against TapClicks; the file starts 2025-05-12 but has no July 2025 rows; it starts after the gap
+Jolt Media,sharepoint,2026-05-21,testing,,SharePoint loader. Testing against TapClicks; first day in the file is 2026-05-21
 LinkedIn Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
 Microsoft Advertising,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
-Netflix Pause Ads,sharepoint,2026-12-07,planned,,SharePoint loader
+Netflix Pause Ads,sharepoint,2026-09-01,testing,,SharePoint loader. Testing against TapClicks; the file starts 2026-04-14 but has no August 2026 rows; it starts after the gap
 Pinterest Ads,fivetran,2026-08-20,testing,,Fivetran. Testing against TapClicks; the API returned data from 2026-08-20; earlier months from TapClicks
 Reddit Ads,fivetran,2024-11-18,testing,,Fivetran. Testing against TapClicks; first day in Fivetran is 2024-11-18
 Scorecard - SiriusXM,sharepoint,2026-12-07,planned,,SharePoint loader
 Silverpush - Automated Report,sharepoint,2026-12-07,planned,,SharePoint loader
-Silverpush - CTV,sharepoint,2026-12-07,planned,,SharePoint loader
+Silverpush - CTV,sharepoint,2026-06-05,testing,,SharePoint loader. Testing against TapClicks; first day in the file is 2026-06-05
 SiriusXM - Adobe - Commuter Activations,sharepoint,2026-12-07,planned,,SharePoint loader
 SiriusXM - Adobe - Commuter Starts,sharepoint,2026-12-07,planned,,SharePoint loader
 SiriusXM - Adobe - Dual Offer Streaming,sharepoint,2026-12-07,planned,,SharePoint loader
@@ -44,7 +44,7 @@ Sonnet Visibility - Monthly V2,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet Visibility - Weekly V2,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet vs. Competition - Monthly V2,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet vs. Competition - Weekly V2,sharepoint,2026-12-07,planned,,SharePoint loader
-Spotify - Cobs Bread,sharepoint,2026-12-07,planned,,SharePoint loader
+Spotify - Cobs Bread,sharepoint,2026-08-10,testing,,SharePoint loader. Testing against TapClicks; first day in the file is 2026-08-10
 Spotify Ads,fivetran,2026-12-07,planned,,Fivetran (prove first)
 TapOrders,out_of_scope,,out_of_scope,,Future-dated
 The Trade Desk,fivetran,2026-12-07,planned,,Fivetran
