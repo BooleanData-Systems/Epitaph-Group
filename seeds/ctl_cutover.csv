@@ -11,11 +11,11 @@ Goal Smart Connector,sharepoint,2026-12-07,planned,,SharePoint loader
 Google Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
 Google Analytics 4,fivetran,2026-12-07,planned,,Fivetran
 Google Trends,out_of_scope,,out_of_scope,,Lagging
-HiveStack,sharepoint,2025-08-01,testing,,SharePoint loader. Testing against TapClicks; the file starts 2025-05-12 but has no July 2025 rows; it starts after the gap
+HiveStack,sharepoint,2025-05-12,testing,,SharePoint loader. Testing against TapClicks; first day in the file is 2025-05-12 (no July 2025 rows: confirm in the comparison)
 Jolt Media,sharepoint,2026-05-21,testing,,SharePoint loader. Testing against TapClicks; first day in the file is 2026-05-21
 LinkedIn Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
 Microsoft Advertising,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks
-Netflix Pause Ads,sharepoint,2026-09-01,testing,,SharePoint loader. Testing against TapClicks; the file starts 2026-04-14 but has no August 2026 rows; it starts after the gap
+Netflix Pause Ads,sharepoint,2026-04-14,testing,,SharePoint loader. Testing against TapClicks; first day in the file is 2026-04-14 (no August 2026 rows: confirm in the comparison)
 Pinterest Ads,fivetran,2026-08-20,testing,,Fivetran. Testing against TapClicks; the API returned data from 2026-08-20; earlier months from TapClicks
 Reddit Ads,fivetran,2024-11-18,testing,,Fivetran. Testing against TapClicks; first day in Fivetran is 2024-11-18
 Scorecard - SiriusXM,sharepoint,2026-12-07,planned,,SharePoint loader
