@@ -73,23 +73,23 @@ def test_parse_date(value, expected):
 # ---------- checks
 
 def test_valid_file_passes():
-    res = sl.check_file(FEEDS["F01a"], "Sonnet Raw Data 2026-10-21.csv", csv_bytes("Quote Date,Channel Grouping,Product,LOB,Pol Province Cd,utm_source,Quotes,Binds,Q2B\n\"Oct 20, 2026\",Direct,Auto,X,ON,null,4,1,0.25\n\"Oct 21, 2026\",Direct,Auto,X,ON,null,6,0.5,0.08\n"), today=TODAY)
+    res = sl.check_file(FEEDS["F01a"], "Sonnet Raw Data 2026-10-21.csv", csv_bytes("Date,Channel Grouping,Product,LOB,Pol Province Cd,utm_source,Quotes,Binds,Q2B\n\"Oct 20, 2026\",Direct,Auto,X,ON,null,4,1,0.25\n\"Oct 21, 2026\",Direct,Auto,X,ON,null,6,0.5,0.08\n"), today=TODAY)
     assert res.ok and len(res.rows) == 2 and res.max_date == dt.date(2026, 10, 21)
 
 
 def test_missing_required_column_rejected():
-    res = sl.check_file(FEEDS["F01a"], "raw data.csv", csv_bytes("Quote Date,Leads,Binds\n2026-10-20,4,1\n"), today=TODAY)
+    res = sl.check_file(FEEDS["F01a"], "raw data.csv", csv_bytes("Date,Leads,Binds\n2026-10-20,4,1\n"), today=TODAY)
     assert not res.ok and "quotes" in res.reason
 
 
 def test_unreadable_dates_rejected():
-    body = "Quote Date,Quotes,Binds\n" + "\n".join("someday,1,0" for _ in range(10))
+    body = "Date,Quotes,Binds\n" + "\n".join("someday,1,0" for _ in range(10))
     res = sl.check_file(FEEDS["F01a"], "raw data.csv", csv_bytes(body), today=TODAY)
     assert not res.ok and "readable date" in res.reason
 
 
 def test_wrong_file_name_rejected():
-    res = sl.check_file(FEEDS["F01a"], "holiday photo.csv", csv_bytes("Quote Date,Quotes,Binds\n2026-10-20,4,1\n"), today=TODAY)
+    res = sl.check_file(FEEDS["F01a"], "holiday photo.csv", csv_bytes("Date,Quotes,Binds\n2026-10-20,4,1\n"), today=TODAY)
     assert not res.ok and "does not match" in res.reason
 
 
@@ -222,8 +222,8 @@ def item(i, name, folder, etag="v1"):
 
 
 def test_run_loads_skips_and_rejects():
-    good = csv_bytes("Quote Date,Quotes,Binds\n\"Oct 20, 2026\",4,1\n")
-    bad = csv_bytes("Quote Date,Leads\n2026-10-20,4\n")
+    good = csv_bytes("Date,Quotes,Binds\n\"Oct 20, 2026\",4,1\n")
+    bad = csv_bytes("Date,Leads\n2026-10-20,4\n")
     g = FakeGraph({"Sonnet/Raw Data": [(item("1", "raw data a.csv", "Sonnet/Raw Data"), good),
                                        (item("2", "raw data b.csv", "Sonnet/Raw Data"), bad)]})
     store, note = MemStore(), MemNotifier()
@@ -271,7 +271,7 @@ def test_one_failing_file_does_not_stop_the_run():
             if item_id == "1":
                 raise ConnectionError("timeout")
             return super().download(item_id)
-    good = csv_bytes("Quote Date,Quotes,Binds\n2026-10-20,4,1\n")
+    good = csv_bytes("Date,Quotes,Binds\n2026-10-20,4,1\n")
     g = BrokenGraph({"Sonnet/Raw Data": [(item("1", "raw data a.csv", "Sonnet/Raw Data"), good),
                                          (item("2", "raw data b.csv", "Sonnet/Raw Data"), good)]})
     store = MemStore()

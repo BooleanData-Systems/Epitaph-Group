@@ -151,32 +151,33 @@ qualify dense_rank() over (partition by SILVER.STG.DAY(record:date) order by f.l
 -- Raw Data is the source of truth for Quotes and Binds (K22; quotes and binds can be fractional, as Sonnet sends them).
 -- Quote Quality and Group Breakdown split quotes by band and by segment; their totals differ from Raw Data, so each
 -- keeps its own column in the fact. Multiline is monthly: customers in the month, split into multiline and monoline.
+-- The Sonnet exports name their date column Date (older samples said Quote Date, and Month for Multiline); both are read.
 create or replace view SILVER.STG.STG_SONNET_QUOTES as
 with rows_ as (
-  select 'raw_data' as file_type, SILVER.STG.DAY(record:quote_date) as activity_date,
+  select 'raw_data' as file_type, SILVER.STG.DAY(coalesce(record:quote_date, record:date)) as activity_date,
          SILVER.STG.TXT(record:pol_province_cd) as province, SILVER.STG.TXT(record:product) as product,
          SILVER.STG.TXT(record:lob) as lob, SILVER.STG.TXT(record:channel_grouping) as channel,
          SILVER.STG.TXT(record:utm_source) as utm_source, null::varchar as segment,
          SILVER.STG.NUM(record:quotes) as quotes, SILVER.STG.NUM(record:binds) as binds, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_RAW_DATA r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
-  select 'quote_quality', SILVER.STG.DAY(record:quote_date), SILVER.STG.TXT(record:pol_province_cd), null, null,
+  select 'quote_quality', SILVER.STG.DAY(coalesce(record:quote_date, record:date)), SILVER.STG.TXT(record:pol_province_cd), null, null,
          SILVER.STG.TXT(record:channel_grouping), SILVER.STG.TXT(record:utm_source),
          upper(left(SILVER.STG.TXT(record:pvm), 1)) || lower(substr(SILVER.STG.TXT(record:pvm), 2)),  -- red -> Red
          SILVER.STG.NUM(record:quotes), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_QUOTE_QUALITY r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
-  select 'group_breakdown', SILVER.STG.DAY(record:quote_date), SILVER.STG.TXT(record:pol_province_cd), null, null, null,
+  select 'group_breakdown', SILVER.STG.DAY(coalesce(record:quote_date, record:date)), SILVER.STG.TXT(record:pol_province_cd), null, null, null,
          SILVER.STG.TXT(record:utm_source), SILVER.STG.TXT(record:segment),
          SILVER.STG.NUM(record:quotes), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_GROUP_BREAKDOWN r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
-  select 'multiline', date_trunc('month', SILVER.STG.DAY(record:month)), SILVER.STG.TXT(record:pol_province_cd), null, null,
+  select 'multiline', date_trunc('month', SILVER.STG.DAY(coalesce(record:month, record:date))), SILVER.STG.TXT(record:pol_province_cd), null, null,
          SILVER.STG.TXT(record:channel), SILVER.STG.TXT(record:utm_source), 'Multiline',
          SILVER.STG.NUM(record:multiline_customer), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_MULTILINE r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   union all
-  select 'multiline', date_trunc('month', SILVER.STG.DAY(record:month)), SILVER.STG.TXT(record:pol_province_cd), null, null,
+  select 'multiline', date_trunc('month', SILVER.STG.DAY(coalesce(record:month, record:date))), SILVER.STG.TXT(record:pol_province_cd), null, null,
          SILVER.STG.TXT(record:channel), SILVER.STG.TXT(record:utm_source), 'Monoline',
          SILVER.STG.NUM(record:customer_count) - coalesce(SILVER.STG.NUM(record:multiline_customer), 0), null, r.item_id, r.feed_id, f.logged_at
   from BRONZE.SHAREPOINT.SONNET_MULTILINE r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
