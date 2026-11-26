@@ -43,3 +43,4 @@
 60_checks/dq_checks.sql
 70_tasks/tasks_and_alerts.sql
 70_tasks/pipeline_monitoring.sql
+70_tasks/consumption_report.sql

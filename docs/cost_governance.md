@@ -27,7 +27,20 @@ WH_HISTORY allows 3,600 seconds for the bulk history load and is dropped once hi
 | GOLD.ADMIN.V_CREDITS_MONTH_TO_DATE | Month to date per warehouse against its limit |
 | GOLD.ADMIN.V_QUERY_HISTORY_TOP | The 500 most expensive or longest queries of the last 30 days |
 | GOLD.ADMIN.V_LOGIN_HISTORY, V_FAILED_LOGINS_24H | Who signed in, when and from where; failed sign-ins |
+| GOLD.ADMIN.V_LOGIN_SUMMARY_DAILY | Last 24 hours per user: attempts, failures, last sign-in, client types |
+| GOLD.ADMIN.V_QUERY_PERFORMANCE_SUMMARY | Last 24 hours per warehouse: query count, average and longest time, slow (over 60 s) and queued queries |
+| GOLD.ADMIN.WAREHOUSE_ALERT_CONFIG, WH_ALERT_HISTORY | Daily credit limit per warehouse for the daily report; what each report showed |
 | GOLD.ADMIN.WAREHOUSE_STANDARD_CHECK | Daily record that each warehouse still meets the standard |
+
+## Daily consumption report
+
+Every day at 09:30 Toronto time, task `GOLD.ADMIN.T_DAILY_CONSUMPTION_REPORT` emails the Warehouse Consumption Report
+(`snowflake/70_tasks/consumption_report.sql`) to the alert distribution list and Nathan Sennema. It shows, per
+warehouse, credits and cost for the last 24 hours against a daily limit, plus month to date, year to date and storage.
+Rows are green (within limit), red (exceeded) or yellow (no limit set). Recipients are the `consumption_report` rows in
+`GOLD.CONTROL.ALERT_RECIPIENTS`. The daily limits start at each monthly quota divided by 30 and are changed with an
+`update` on `GOLD.ADMIN.WAREHOUSE_ALERT_CONFIG`. A new warehouse appears as "Not Configured" until its limit is set.
+Unlike the monitors above, this report never suspends anything: it shows a bad day before the monthly 80% email.
 
 ## When a limit is reached
 
