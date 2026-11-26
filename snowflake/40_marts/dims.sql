@@ -54,6 +54,14 @@ with campaigns as (
   left join SILVER.STG.MCI_CLIENT_RESOLUTION r on r.mci_key = a.mci_key
   group by a.campaign_name
 ),
+-- Overrides match on the name with runs of whitespace collapsed: TapClicks keeps Windows line breaks (CR LF) in Instagram
+-- boosted-post names where Facebook sends LF only, and some exports double a space, so an exact match would leave
+-- those campaigns Unmapped.
+overrides as (
+  select regexp_replace(trim(campaign_name), '[[:space:]]+', ' ') as name_key, any_value(smart_campaign) as smart_campaign
+  from GOLD.CONTROL.MAP_SMART_CAMPAIGN_OVERRIDE
+  group by 1
+),
 by_rule as (
   select c.campaign_name, r.smart_campaign, r.client,
          row_number() over (partition by c.campaign_name order by r.priority, length(r.pattern) desc) as rn
@@ -87,7 +95,7 @@ select
   kp.size_khc, kp.category_khc, kp.bulk_status_khc,
   c.first_seen, c.last_seen, c.spend_to_date
 from campaigns c
-left join GOLD.CONTROL.MAP_SMART_CAMPAIGN_OVERRIDE o on o.campaign_name = c.campaign_name
+left join overrides o on o.name_key = regexp_replace(trim(c.campaign_name), '[[:space:]]+', ' ')
 left join by_rule br on br.campaign_name = c.campaign_name and br.rn = 1
 left join GOLD.CONTROL.MAP_CAMPAIGN_PRODUCT kp on kp.campaign_name = c.campaign_name
 -- fallback only: the client named in an approved Smart Campaign ("Nulo: Product")
