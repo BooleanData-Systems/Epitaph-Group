@@ -148,7 +148,9 @@ declare n integer default 0;
 begin
   show streams in account;
   select count(*) into :n from table(result_scan(last_query_id()))
-   where "stale" = 'true' or try_to_timestamp_ltz("stale_after") < dateadd(day, 2, current_timestamp());
+   -- SHOW returns stale_after as a timestamp, and try_to_timestamp_ltz rejects timestamp input (the task failed on
+   -- 24 and 25 Nov and was suspended), so both columns go through varchar first
+   where "stale"::varchar = 'true' or try_to_timestamp_ltz("stale_after"::varchar) < dateadd(day, 2, current_timestamp());
   if (n > 0) then
     call GOLD.CONTROL.NOTIFY('alert', 'streams', 'Epitaph data: ' || n || ' stream(s) stale or close to stale',
       'Run SHOW STREAMS IN ACCOUNT and read a stream before its stale_after time.');
@@ -158,8 +160,12 @@ end;
 $$;
 
 -- ---------------------------------------------------------------- send open issues once, then every 6 hours
+-- Caller's rights: the health views read INFORMATION_SCHEMA table functions (dynamic table refresh history and lag,
+-- query history), which Snowflake refuses inside an owner's-rights procedure ("Requested information on the current
+-- user is not accessible in stored procedure"). The alerts that call it are owned by EPITAPH_TRANSFORMER, which also
+-- owns MON_ALERT_LOG and NOTIFY, so the caller has every privilege needed.
 create or replace procedure GOLD.CONTROL.SEND_ISSUES(alert_name varchar, view_name varchar, subject varchar)
-returns varchar language sql execute as owner as
+returns varchar language sql execute as caller as
 $$
 declare
   body varchar;
