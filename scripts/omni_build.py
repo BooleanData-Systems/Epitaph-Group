@@ -42,6 +42,9 @@ OUTCOMES = "All outcomes"
 DIM_NAMES = [d for d, _ in DIMS]
 # Dimensions only delivery rows carry (every other row type leaves them null).
 DELIVERY_ONLY = sorted((set(BLOCKS[0]["cols"]) - {c for b in BLOCKS[1:] for c in b["cols"]}) & set(DIM_NAMES))
+# Columns that get a hidden filter_<column> field: the delivery-only ones, plus site_key, which SiriusXM commuter rows also
+# carry (their own site key, so a site key filter applies to them); other outcome rows read OUTCOMES and stay in.
+FILTER_FIELDS = sorted(set(DELIVERY_ONLY) | {"site_key"})
 FORMATS = {"integer": "number_0", "decimal": "number_2", "currency": "currency_2", "percent": "percent_2"}
 CHECK_COLUMNS = [("run_id", "string"), ("check_name", "string"), ("rule_id", "string"), ("client_part", "string"),
                  ("source_name", "string"), ("period_start", "date"), ("period_grain", "string"), ("measure", "string"),
@@ -175,9 +178,10 @@ def build_view(groups_of):
         if groups_of[d] != "identity":
             x["required_access_grants"] = [f"cg_{groups_of[d]}"]
         dims[d] = x
-    for d in DELIVERY_ONLY:
+    for d in FILTER_FIELDS:
         dims[f"filter_{d}"] = {
-            "sql": f"CASE WHEN {col_sql('row_type')} = 'delivery' THEN {col_sql(d)} ELSE '{OUTCOMES}' END",
+            "sql": (f"CASE WHEN {col_sql('row_type')} = 'delivery' THEN {col_sql(d)} ELSE '{OUTCOMES}' END" if d in DELIVERY_ONLY
+                    else f"CASE WHEN {col_sql('row_type')} = 'delivery' THEN {col_sql(d)} ELSE COALESCE({col_sql(d)}, '{OUTCOMES}') END"),
             "label": f"{d.replace('_', ' ').capitalize()} (filter)", "hidden": True,
             "description": f"Use this, not {d}, in tile filters: outcome rows read '{OUTCOMES}' so they stay in."}
     helpers, measures, names = build_measures(groups_of)
@@ -243,7 +247,7 @@ def build_sheet(spec, kpi_names):
                 elif "field" in f:
                     vals = list(f["values"][:6]) + (["..."] if len(f["values"]) > 6 else [])
                     field = f["field"]
-                    if field in DELIVERY_ONLY:
+                    if field in FILTER_FIELDS:
                         # outcome rows read OUTCOMES: add it to an "in" list to keep them; a "not in" list keeps them as is
                         field = f"filter_{field}"
                         if f["op"] == "in":

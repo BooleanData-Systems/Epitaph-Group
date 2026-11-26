@@ -169,7 +169,7 @@ from SILVER.STG.STG_SONNET_QUOTES
 group by all;
 
 create or replace dynamic table FCT_SXM_SCORECARD target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
-select to_number(to_char(activity_date, 'YYYYMMDD')) as date_key, client_code, report, channel, campaign_name,
+select to_number(to_char(activity_date, 'YYYYMMDD')) as date_key, client_code, report, channel, campaign_name, site_key,
        sum(performance_trials) as performance_trials, sum(organic_trials) as organic_trials,
        sum(performance_flow_starts) as performance_flow_starts, sum(organic_flow_starts) as organic_flow_starts,
        sum(commuter_starts) as commuter_starts, sum(commuter_activations) as commuter_activations,

@@ -231,6 +231,12 @@ qualify dense_rank() over (partition by r.feed_id, SILVER.STG.DAY(coalesce(recor
 --   organic_streaming: Streaming Starts = organic flow starts, Streaming Visits = organic trials (Oct 2026: 201 and 39,
 --     as TapClicks). Older exports had Day, Starts and an unnamed trials column (kept by the coalesces below).
 -- Adobe repeats some values ("paidsearch,paidsearch"): the first value is used.
+-- Commuter site key (as TapClicks 'SXM - Adobe Mapping'; checked against TapClicks for every month and program code,
+-- Aug 2025 to Nov 2026). First value of each comma list. Medium = leading letters of utm medium, lower-cased, so
+-- 'paidsearch{ignore}' and 'paidsocial://' count. Family from utm source: eptph-satellite-perf1246 = Commuter Acquisition;
+-- eptph-commuteraquisition-commuterperf = Commuter Winback; eptph-commuteraquisition-commuterl2 or -na = Commuter Trialer;
+-- eptph-commuterbrand-na = Commuter Brand. Site key = '<family> - Paid Display | Paid Search | Paid Social'; anything else
+-- is 'Unclassified' (the D092 commuter widgets leave Unclassified out, D092-09). Other Adobe reports: no site key here.
 create or replace view SILVER.STG.STG_SXM as
 with a as (
   select r.report, r.feed_id, SILVER.STG.DAY(coalesce(record:date, record:day)) as activity_date,
@@ -238,6 +244,8 @@ with a as (
          coalesce(split_part(SILVER.STG.TXT(record:online_campaign_code_v70_evar70), ',', 1),
                   SILVER.STG.TXT(record:program_code_v98_evar98), SILVER.STG.TXT(record:adobe_trial_type), SILVER.STG.TXT(record:segment)) as campaign_name,
          split_part(SILVER.STG.TXT(record:utm_source_v26_evar26), ',', 1) as utm_source,
+         lower(regexp_substr(trim(split_part(SILVER.STG.TXT(record:utm_medium_v27_evar27), ',', 1)), '^[A-Za-z]+')) as medium_key,
+         lower(trim(split_part(SILVER.STG.TXT(record:utm_source_v26_evar26), ',', 1))) as source_key,
          SILVER.STG.NUM(record:visits) as visits, SILVER.STG.NUM(record:orders) as orders,
          SILVER.STG.NUM(coalesce(record:streaming_starts, record:starts)) as starts,
          SILVER.STG.NUM(coalesce(record:streaming_visits, record:trials)) as trials,
@@ -247,6 +255,15 @@ with a as (
                              order by f.logged_at desc, r.item_id desc) = 1
 )
 select a.activity_date, fc.client_code, a.report, a.channel, a.campaign_name, a.utm_source,
+       iff(a.report in ('commuter_starts', 'commuter_activations'),
+           coalesce(case when source_key like '%eptph-satellite-perf1246%' then 'Commuter Acquisition'
+                         when source_key like '%eptph-commuteraquisition-commuterperf%' then 'Commuter Winback'
+                         when source_key like '%eptph-commuteraquisition-commuterl2%'
+                           or source_key like '%eptph-commuteraquisition-na%' then 'Commuter Trialer'
+                         when source_key like '%eptph-commuterbrand-na%' then 'Commuter Brand' end
+                    || ' - ' || decode(medium_key, 'paiddisplay', 'Paid Display', 'paidsearch', 'Paid Search', 'paidsocial', 'Paid Social'),
+                    'Unclassified'),
+           null)                                                                as site_key,
        iff(report = 'dual_offer_streaming', visits, null)                       as performance_trials,
        iff(report = 'organic_streaming', trials, null)                          as organic_trials,
        iff(report = 'streaming_starts', visits, null)                           as performance_flow_starts,
@@ -258,7 +275,7 @@ from a
 left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = a.feed_id
 union all
 select SILVER.STG.DAY(coalesce(record:activation_date, record:date)), fc.client_code, 'scorecard', SILVER.STG.TXT(record:plan_description),
-       SILVER.STG.TXT(record:promo_code), null,
+       SILVER.STG.TXT(record:promo_code), null, null,
        null, null, null, null, null, null, SILVER.STG.NUM(record:total_trial_starts)
 from BRONZE.SHAREPOINT.SXM_SCORECARD r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
 left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = r.feed_id

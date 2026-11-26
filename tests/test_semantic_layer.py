@@ -108,4 +108,5 @@ def test_site_key_and_campaign_filter(con):
     goal = con.execute("select campaign_filter from V_MEDIA_PERFORMANCE_DAILY where row_type = 'goal'").fetchone()[0]
     assert goal == "Brand"                                           # "Nulo: Brand"
     import omni_build
-    assert "site_key" in omni_build.DELIVERY_ONLY                    # a site key filter keeps outcome rows
+    assert "site_key" in omni_build.FILTER_FIELDS                    # a site key filter keeps outcome rows without one
+    assert "site_key" not in omni_build.DELIVERY_ONLY                # SiriusXM commuter rows carry their own site key
