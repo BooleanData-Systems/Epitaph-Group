@@ -6,7 +6,7 @@
 -- campaign_name is the level TapClicks calls the campaign, so the Smart Campaign mapping matches on the same names.
 use role EPITAPH_TRANSFORMER;
 
--- Spotify Ads (prove first; Cobs Bread stays on its file, F15)
+-- Spotify Ads (prove first). Carries Cobs Bread too; its file F15 is retired (CTL_CUTOVER 'Spotify - Cobs Bread' = retired)
 -- AD_REPORT is the custom report set up in the connector (dimension AD, granularity DAY). It holds ids and metrics only:
 -- one row per ad (entity_id) and day, where start_time is midnight UTC and end_time is 24 hours later. Names come from
 -- the AD > AD_SET > CAMPAIGN tables and the currency from AD_ACCOUNT (Cobs Bread USA reports in USD).

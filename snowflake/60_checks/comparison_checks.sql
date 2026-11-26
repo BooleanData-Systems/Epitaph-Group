@@ -96,7 +96,7 @@ begin
     from raw_rows r
     left join GOLD.CONTROL.CTL_CUTOVER c on c.source_name = r.source_name
     where coalesce(r.conversion_tag_name, '') = ''
-      and (c.cutover_date is null or c.status not in ('testing', 'live') or r.d < c.cutover_date)
+      and (c.cutover_date is null or c.status not in ('testing', 'live', 'retired') or r.d < c.cutover_date)
     group by all
   ),
   model_totals as (        -- what the model holds for history days

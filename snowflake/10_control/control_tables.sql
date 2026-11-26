@@ -133,7 +133,8 @@ create table if not exists CTL_CUTOVER (
   source_name   varchar not null primary key,
   route         varchar not null,          -- fivetran | sharepoint | history_only
   cutover_date  date,                      -- TapClicks history before this date, new route from it
-  status        varchar default 'planned', -- planned | testing | live | fallback
+  status        varchar default 'planned', -- planned | testing | live | fallback | retired (history before the date, then
+                                           -- nothing: another source carries the data, e.g. Cobs Spotify file F15)
   owner         varchar,
   notes         varchar
 ) comment = 'One row per source. Filled from the source register';
