@@ -190,6 +190,11 @@ qualify dense_rank() over (partition by rows_.file_type, rows_.activity_date ord
 
 -- Auction Insights (K17, K18). Google shows small and large shares as "< 10%" and "> 90%": the text is kept as
 -- reported (what the dashboards show) and the number is NULL for those rows, so nothing is ever averaged from a bound.
+-- Shares are stored as fractions (kpis.yml format: percent): .xlsx exports give 0.6102, CSV exports give "61.02%".
+-- In the .xlsx Competition exports Google's "< 10%" arrives as 0, so a 0 there is kept as "< 10%" with no number.
+create or replace function SILVER.STG.SHARE(v variant) returns number(38,6) as
+$$ iff(contains(v::varchar, '%'), SILVER.STG.NUM(v) / 100, SILVER.STG.NUM(v)) $$;
+
 create or replace view SILVER.STG.STG_SONNET_AUCTION as
 select r.feed_id, fc.client_code, r.grain,
        SILVER.STG.DAY(coalesce(record:week, record:month, record:date)) as period_start,
@@ -197,12 +202,14 @@ select r.feed_id, fc.client_code, r.grain,
        SILVER.STG.TXT(record:customer_id)  as customer_id,
        SILVER.STG.TXT(record:display_url_domain) as competitor_domain,
        SILVER.STG.TXT(coalesce(record:campaign, record:campaign_name)) as campaign_name,
-       SILVER.STG.NUM(coalesce(record:search_impr_share, record:search_impr_share_auction_insights)) as search_impr_share,
-       SILVER.STG.NUM(record:click_share)              as click_share,
-       SILVER.STG.NUM(record:impr_abs_top)             as impr_abs_top_pct,
-       SILVER.STG.NUM(record:search_lost_is_budget)    as search_lost_is_budget,
-       SILVER.STG.NUM(record:search_lost_is_rank)      as search_lost_is_rank,
-       SILVER.STG.TXT(coalesce(record:search_impr_share, record:search_impr_share_auction_insights)) as search_impr_share_reported,
+       iff(r.feed_id in ('F05e', 'F05f') and SILVER.STG.SHARE(record:search_impr_share_auction_insights) = 0, null,
+           SILVER.STG.SHARE(coalesce(record:search_impr_share, record:search_impr_share_auction_insights))) as search_impr_share,
+       SILVER.STG.SHARE(record:click_share)              as click_share,
+       SILVER.STG.SHARE(record:impr_abs_top)             as impr_abs_top_pct,
+       SILVER.STG.SHARE(record:search_lost_is_budget)    as search_lost_is_budget,
+       SILVER.STG.SHARE(record:search_lost_is_rank)      as search_lost_is_rank,
+       iff(r.feed_id in ('F05e', 'F05f') and SILVER.STG.SHARE(record:search_impr_share_auction_insights) = 0, '< 10%',
+           SILVER.STG.TXT(coalesce(record:search_impr_share, record:search_impr_share_auction_insights))) as search_impr_share_reported,
        SILVER.STG.TXT(record:click_share)              as click_share_reported,
        SILVER.STG.TXT(record:impr_abs_top)             as impr_abs_top_reported,
        SILVER.STG.TXT(record:search_lost_is_budget)    as search_lost_is_budget_reported,
@@ -219,27 +226,30 @@ qualify dense_rank() over (partition by r.feed_id, SILVER.STG.DAY(coalesce(recor
 -- ---------------------------------------------------------------- SiriusXM (Adobe and Scorecard)
 -- Adobe reports (feed setting "report"):
 --   commuter_activations, commuter_starts: Visits by campaign code (PERF1246, COMMCA1246, PARTNER1246)
---   streaming_starts, dual_offer_streaming: Visits = performance flow starts, Orders = performance trials
---   organic_streaming: Starts = organic flow starts, 4th column = organic trials (header row holds a total; see feeds.yml)
+--   streaming_starts: Visits = performance flow starts (Orders is empty)
+--   dual_offer_streaming: Visits = performance trials (as TapClicks: Oct 2026 Visits 279 = TapClicks performance trials)
+--   organic_streaming: Streaming Starts = organic flow starts, Streaming Visits = organic trials (Oct 2026: 201 and 39,
+--     as TapClicks). Older exports had Day, Starts and an unnamed trials column (kept by the coalesces below).
 -- Adobe repeats some values ("paidsearch,paidsearch"): the first value is used.
 create or replace view SILVER.STG.STG_SXM as
 with a as (
   select r.report, r.feed_id, SILVER.STG.DAY(coalesce(record:date, record:day)) as activity_date,
          split_part(SILVER.STG.TXT(record:utm_medium_v27_evar27), ',', 1) as channel,
          coalesce(split_part(SILVER.STG.TXT(record:online_campaign_code_v70_evar70), ',', 1),
-                  SILVER.STG.TXT(record:program_code_v98_evar98), SILVER.STG.TXT(record:segment)) as campaign_name,
+                  SILVER.STG.TXT(record:program_code_v98_evar98), SILVER.STG.TXT(record:adobe_trial_type), SILVER.STG.TXT(record:segment)) as campaign_name,
          split_part(SILVER.STG.TXT(record:utm_source_v26_evar26), ',', 1) as utm_source,
          SILVER.STG.NUM(record:visits) as visits, SILVER.STG.NUM(record:orders) as orders,
-         SILVER.STG.NUM(record:starts) as starts, SILVER.STG.NUM(record:trials) as trials,
+         SILVER.STG.NUM(coalesce(record:streaming_starts, record:starts)) as starts,
+         SILVER.STG.NUM(coalesce(record:streaming_visits, record:trials)) as trials,
          r.item_id, f.logged_at
   from BRONZE.SHAREPOINT.SXM_ADOBE r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
   qualify dense_rank() over (partition by r.report, SILVER.STG.DAY(coalesce(record:date, record:day))
                              order by f.logged_at desc, r.item_id desc) = 1
 )
 select a.activity_date, fc.client_code, a.report, a.channel, a.campaign_name, a.utm_source,
-       iff(report in ('streaming_starts', 'dual_offer_streaming'), orders, null) as performance_trials,
+       iff(report = 'dual_offer_streaming', visits, null)                       as performance_trials,
        iff(report = 'organic_streaming', trials, null)                          as organic_trials,
-       iff(report in ('streaming_starts', 'dual_offer_streaming'), visits, null) as performance_flow_starts,
+       iff(report = 'streaming_starts', visits, null)                           as performance_flow_starts,
        iff(report = 'organic_streaming', starts, null)                          as organic_flow_starts,
        iff(report = 'commuter_starts', visits, null)                            as commuter_starts,
        iff(report = 'commuter_activations', visits, null)                       as commuter_activations,
@@ -247,12 +257,12 @@ select a.activity_date, fc.client_code, a.report, a.channel, a.campaign_name, a.
 from a
 left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = a.feed_id
 union all
-select SILVER.STG.DAY(record:activation_date), fc.client_code, 'scorecard', SILVER.STG.TXT(record:plan_description),
+select SILVER.STG.DAY(coalesce(record:activation_date, record:date)), fc.client_code, 'scorecard', SILVER.STG.TXT(record:plan_description),
        SILVER.STG.TXT(record:promo_code), null,
        null, null, null, null, null, null, SILVER.STG.NUM(record:total_trial_starts)
 from BRONZE.SHAREPOINT.SXM_SCORECARD r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
 left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = r.feed_id
-qualify dense_rank() over (partition by SILVER.STG.DAY(record:activation_date) order by f.logged_at desc, r.item_id desc) = 1;
+qualify dense_rank() over (partition by SILVER.STG.DAY(coalesce(record:activation_date, record:date)) order by f.logged_at desc, r.item_id desc) = 1;
 
 -- ---------------------------------------------------------------- Adara (Ottawa Tourism, K13)
 -- K13 as agreed: Travel Search Signals = enriched flight + enriched hotel searches;
