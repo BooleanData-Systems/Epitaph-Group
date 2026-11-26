@@ -142,14 +142,16 @@ def test_excel_text_guard_on_ids_removed():
     assert res.ok and res.rows[0]["campaign_id"] == "1234567890123"
 
 
-def test_adobe_organic_header_override():
-    text = "Segment X,Day,Starts,123\nSegment X,\"November 1, 2026\",4,2\n"
-    res = sl.check_file(FEEDS["F07e"], "Adobe Organic - Streaming.csv", csv_bytes(text), today=TODAY)
-    assert res.ok and res.rows[0]["day"] == "November 1, 2026" and res.rows[0]["trials"] == "2"
+def test_adobe_organic_export_columns():
+    # The Adobe organic export (26 Nov 2026) has a proper header row: Date, Adobe Trial Type, Streaming Starts, Streaming Visits.
+    text = "Date,Adobe Trial Type,Streaming Starts,Streaming Visits\n2026-11-01,Segment X,4,2\n"
+    res = sl.check_file(FEEDS["F07e"], "Organic Streaming Export.csv", csv_bytes(text), today=TODAY)
+    assert res.ok and res.rows[0]["streaming_starts"] == "4" and res.rows[0]["streaming_visits"] == "2"
+    assert res.min_date == dt.date(2026, 11, 1)
 
 
 def test_google_ads_bounded_shares_load_as_text():
-    text = "Account name,Customer ID,Month,Search impr. share,Click share,Impr. (Abs. Top) %\nRegion,000-000-0000,10/01/26,< 10%,> 90%,0\n"
+    text = "Account name,Customer ID,Date,Search impr. share,Click share,Impr. (Abs. Top) %\nRegion,000-000-0000,10/01/26,< 10%,> 90%,0\n"
     res = sl.check_file(FEEDS["F05d"], "Visibility - Monthly.csv", csv_bytes(text), today=TODAY)
     assert res.ok and res.rows[0]["search_impr_share"] == "< 10%" and res.min_date == dt.date(2026, 10, 1)
 
