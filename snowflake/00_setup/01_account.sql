@@ -103,5 +103,11 @@ create user if not exists NATHANEPITAPH type = person login_name = 'NATHANEPITAP
   comment = 'Nathan Sennema, Epitaph product owner; receives monitor and alert emails';
 -- alter user NATHANEPITAPH set email = '<Nathan''s email>';   (set by the Epitaph admin, not stored here)
 
+-- Mike DeOliveira, Nathan's manager and the escalation contact after handover. Same arrangement as Nathan: email-only
+-- unless the Epitaph admin sets up his sign-in, and his email is set and verified by the admin, not stored here.
+create user if not exists MIKEEPITAPH type = person login_name = 'MIKEEPITAPH'
+  comment = 'Mike DeOliveira, Epitaph platform owner; receives monitor and alert emails';
+-- alter user MIKEEPITAPH set email = '<Mike''s email>';   (set by the Epitaph admin, not stored here)
+
 -- Network policy: Omni, Fivetran and GitHub runner egress ranges are added by the admin, not stored here.
 -- create network policy NP_EPITAPH_SERVICES allowed_network_rule_list = (...);
