@@ -198,7 +198,7 @@ dimensions:
     hidden: true
     description: 'Use this, not media_type, in tile filters: outcome rows read ''All outcomes'' so they stay in.'
   filter_site_key:
-    sql: CASE WHEN "ROW_TYPE" = 'delivery' THEN "SITE_KEY" ELSE 'All outcomes' END
+    sql: CASE WHEN "ROW_TYPE" = 'delivery' THEN "SITE_KEY" ELSE COALESCE("SITE_KEY", 'All outcomes') END
     label: Site key (filter)
     hidden: true
     description: 'Use this, not site_key, in tile filters: outcome rows read ''All outcomes'' so they stay in.'

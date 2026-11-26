@@ -95,6 +95,7 @@ left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code""",
      "cols": {**DATE_DIMS, "client_code": "f.client_code", "client_name": "cl.client_name", "source_name": "'SiriusXM files'",
               "channel": "f.channel", "campaign_name": "f.campaign_name",
               "program_code": "f.campaign_name",   # the Adobe offer code (online campaign code or program code eVar)
+              "site_key": "f.site_key",            # commuter reports only (STG_SXM); streaming site keys follow from the mapping
               **{m: f"f.{m}" for m in ("performance_trials", "organic_trials", "scorecard_trials", "performance_flow_starts",
                                        "organic_flow_starts", "commuter_starts", "commuter_activations")}}},
     {"row_type": "adara",

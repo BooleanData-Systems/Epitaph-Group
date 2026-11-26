@@ -380,7 +380,7 @@ select
   null::varchar as quality_band,
   null::varchar as line_type,
   null::varchar as campaign_filter,
-  null::varchar as site_key,
+  f.site_key as site_key,
   f.campaign_name as program_code,
   null::varchar as size_khc,
   null::varchar as category_khc,
