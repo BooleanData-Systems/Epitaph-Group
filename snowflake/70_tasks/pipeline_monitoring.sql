@@ -221,13 +221,10 @@ create or replace alert GOLD.ADMIN.A_DATA_FRESHNESS warehouse = WH_TRANSFORMATIO
 create or replace task GOLD.ADMIN.T_DAILY_PLATFORM_CHECKS warehouse = WH_TRANSFORMATION
   schedule = 'USING CRON 30 6 * * * America/Toronto'
 as
--- Wrapped in execute immediate (dollar-quoted) so snow sql -f sends the block as one statement (see tasks_and_alerts.sql)
-execute immediate $$
 begin
   call GOLD.ADMIN.CHECK_STREAM_STALENESS();
   call GOLD.ADMIN.CHECK_WAREHOUSE_STANDARD();
 end;
-$$;
 
 alter alert GOLD.ADMIN.A_SOURCE_TO_BRONZE resume;
 alter alert GOLD.ADMIN.A_BRONZE_TO_SILVER resume;

@@ -6,14 +6,10 @@ create or replace task GOLD.CHECKS.T_DAILY_CHECKS
   schedule = 'USING CRON 0 7 * * * America/Toronto'
   comment = 'Quality checks every morning; comparison for the last full week during the parallel run'
 as
--- The block is wrapped in execute immediate (dollar-quoted) so snow sql -f (and deploy_snowflake.sh) sends it as one
--- statement; a bare begin ... end is split at its first semicolon and the task is never recreated.
-execute immediate $$
 begin
   call GOLD.CHECKS.RUN_DQ_CHECKS();
   call GOLD.CHECKS.RUN_LIVE_COMPARISON(dateadd(day, -14, date_trunc('week', current_date())), dateadd(day, -1, date_trunc('week', current_date())));
 end;
-$$;
 
 alter task GOLD.CHECKS.T_DAILY_CHECKS resume;
 
