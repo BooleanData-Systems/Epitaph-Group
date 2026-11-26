@@ -121,7 +121,8 @@ cut as (
   select h.* from hist h
   left join GOLD.CONTROL.CTL_CUTOVER c on c.source_name = h.source_name
   -- history until the new route is actually live: a source still 'planned' after its date keeps its history (no gap)
-  where c.cutover_date is null or c.status not in ('testing', 'live') or h.activity_date < c.cutover_date
+  -- 'retired': the source's own new route is dropped (another route carries it), history still stops at the date
+  where c.cutover_date is null or c.status not in ('testing', 'live', 'retired') or h.activity_date < c.cutover_date
 ),
 parsed as (
   select cut.*,
@@ -198,7 +199,8 @@ cut as (
   union all
   select h.* from hist h
   left join GOLD.CONTROL.CTL_CUTOVER c on c.source_name = h.source_name
-  where c.cutover_date is null or c.status not in ('testing', 'live') or h.activity_date < c.cutover_date
+  -- 'retired': the source's own new route is dropped (another route carries it), history still stops at the date
+  where c.cutover_date is null or c.status not in ('testing', 'live', 'retired') or h.activity_date < c.cutover_date
 ),
 withclient as (
   select cut.*, split_part(campaign_name, '_', 1) as client_part from cut

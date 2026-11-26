@@ -44,8 +44,8 @@ Sonnet Visibility - Monthly V2,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet Visibility - Weekly V2,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet vs. Competition - Monthly V2,sharepoint,2026-12-07,planned,,SharePoint loader
 Sonnet vs. Competition - Weekly V2,sharepoint,2026-12-07,planned,,SharePoint loader
-Spotify - Cobs Bread,sharepoint,2026-08-10,testing,,SharePoint loader. Testing against TapClicks; first day in the file is 2026-08-10
-Spotify Ads,fivetran,2026-12-07,planned,,Fivetran (prove first)
+Spotify - Cobs Bread,sharepoint,2025-02-25,retired,,Retired: the Spotify Ads connector carries Cobs Bread (accounts Cobs Bread and Cobs Bread USA). File and connector identical for 2026-08-10 to 2026-09-27 (impressions and clicks; spend within rounding); TapClicks history before 2025-02-25
+Spotify Ads,fivetran,2025-02-25,testing,,Fivetran. Testing against TapClicks; first day in Fivetran is 2025-02-25 (all accounts incl. Cobs Bread)
 TapOrders,out_of_scope,,out_of_scope,,Future-dated
 The Trade Desk,fivetran,2026-12-07,planned,,Fivetran
 TikTok Ads,fivetran,2024-11-01,testing,,Fivetran. Testing against TapClicks; ads missing from AD_HISTORY are kept at campaign level
