@@ -41,10 +41,10 @@ client dashboards stay fast, and WH_HISTORY (S, 3,600 s timeout) runs the one-of
 | LOAD warehouse monitor | same | RM_WH_LOAD (100) | same | Built |
 | TRANSFORMATION warehouse monitor | same | RM_WH_TRANSFORMATION (120) | same | Built |
 | ADHOC warehouse monitor | same | RM_WH_ADHOC (20) | same | Built (also RM_WH_REPORTING 160, RM_WH_HISTORY 150) |
-| Email notifications | To the DL | Users DL_EPITAPH_DATA_ALERTS (epitaph@booleandata.ai, set in `01_account.sql`) and NATHANEPITAPH (address set by the Epitaph admin); notification integration EPITAPH_EMAIL | Test email received | Both: set Nathan's address; verify both |
+| Email notifications | To the DL | Users DL_EPITAPH_DATA_ALERTS (epitaph@booleandata.ai, set in `01_account.sql`), NATHANEPITAPH and MIKEEPITAPH (addresses set by the Epitaph admin); notification integration EPITAPH_EMAIL | Test email received | Both: set Nathan's address; verify both |
 | LOGIN_HISTORY view | Who, when, where | GOLD.ADMIN.V_LOGIN_HISTORY, V_FAILED_LOGINS_24H, V_LOGIN_SUMMARY_DAILY | Returns rows | Built |
 | QUERY_HISTORY view | Top queries by cost and duration | GOLD.ADMIN.V_QUERY_HISTORY_TOP, V_QUERY_PERFORMANCE_SUMMARY | Returns rows | Built |
-| Consumption report | Credits per warehouse per day | GOLD.ADMIN.V_CREDITS_DAILY, V_CREDITS_MONTH_TO_DATE; daily email from `70_tasks/consumption_report.sql` (09:30 Toronto) to the DL and Nathan; a page in Omni for Epitaph | Client reviews | Built |
+| Consumption report | Credits per warehouse per day | GOLD.ADMIN.V_CREDITS_DAILY, V_CREDITS_MONTH_TO_DATE; daily email from `70_tasks/consumption_report.sql` (09:30 Toronto) to the DL, Nathan and Mike; a page in Omni for Epitaph | Client reviews | Built |
 | Statement timeout | 300 s on every warehouse | All warehouses; WH_HISTORY 3,600 s by agreement | CHECK_WAREHOUSE_STANDARD, daily | Built |
 | Validate monitoring views | Run each, confirm accurate | Runbook step | Epitaph reviews consumption report | Both: after week 1 |
 | Cost governance standards | Thresholds, contacts, escalation | `docs/cost_governance.md` | Handed over | Built |

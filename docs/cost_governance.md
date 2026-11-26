@@ -13,7 +13,7 @@ How Snowflake spend is limited and watched (Kickstart Checklist 3, "Document cos
 | RM_WH_ADHOC | WH_ADHOC (X-Small) | 20 | Email | Suspend |
 | RM_WH_HISTORY | WH_HISTORY (Small, one-off) | 150 in total | Email | Suspend |
 
-Emails go to the alert distribution list (user DL_EPITAPH_DATA_ALERTS, epitaph@booleandata.ai) and to Nathan Sennema (user NATHANEPITAPH; his address is set by the Epitaph admin). Expected use is 260 to 295 credits a month,
+Emails go to the alert distribution list (user DL_EPITAPH_DATA_ALERTS, epitaph@booleandata.ai), to Nathan Sennema (user NATHANEPITAPH) and to Mike DeOliveira (user MIKEEPITAPH); their addresses are set by the Epitaph admin. Expected use is 260 to 295 credits a month,
 so the account limit leaves about 35% headroom.
 
 Every warehouse suspends after 60 seconds idle, resumes on demand, and stops any statement after 300 seconds.
@@ -35,7 +35,7 @@ WH_HISTORY allows 3,600 seconds for the bulk history load and is dropped once hi
 ## Daily consumption report
 
 Every day at 09:30 Toronto time, task `GOLD.ADMIN.T_DAILY_CONSUMPTION_REPORT` emails the Warehouse Consumption Report
-(`snowflake/70_tasks/consumption_report.sql`) to the alert distribution list and Nathan Sennema. It shows, per
+(`snowflake/70_tasks/consumption_report.sql`) to the alert distribution list, Nathan Sennema and Mike DeOliveira. It shows, per
 warehouse, credits and cost for the last 24 hours against a daily limit, plus month to date, year to date and storage.
 Rows are green (within limit), red (exceeded) or yellow (no limit set). Recipients are the `consumption_report` rows in
 `GOLD.CONTROL.ALERT_RECIPIENTS`. The daily limits start at each monthly quota divided by 30 and are changed with an
