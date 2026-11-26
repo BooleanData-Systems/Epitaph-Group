@@ -110,3 +110,32 @@ begin
   return iff(bad = 0, 'all warehouses meet the standard', bad || ' settings differ: see GOLD.ADMIN.WAREHOUSE_STANDARD_CHECK');
 end;
 $$;
+
+-- Kickstart template summaries, kept in GOLD.ADMIN with the other monitoring views (the template's ADMIN.MONITORING
+-- schema is not used here). Last 24 hours; account usage lags up to about 2 hours.
+-- Login summary: one row per user, failures first
+create or replace view GOLD.ADMIN.V_LOGIN_SUMMARY_DAILY as
+select user_name,
+       count(*)                                          as total_attempts,
+       count(case when is_success = 'YES' then 1 end)    as success_count,
+       count(case when is_success = 'NO' then 1 end)     as fail_count,
+       max(event_timestamp)                              as last_login,
+       listagg(distinct reported_client_type, ', ') within group (order by reported_client_type) as client_types
+from SNOWFLAKE.ACCOUNT_USAGE.LOGIN_HISTORY
+where event_timestamp >= dateadd(day, -1, current_timestamp())
+group by user_name;
+
+-- Query performance per warehouse: volume, speed, slow (over 60 s) and queued queries
+create or replace view GOLD.ADMIN.V_QUERY_PERFORMANCE_SUMMARY as
+select warehouse_name,
+       count(*)                                                   as query_count,
+       round(avg(total_elapsed_time) / 1000, 2)                   as avg_duration_sec,
+       round(max(total_elapsed_time) / 1000, 2)                   as max_duration_sec,
+       round(avg(bytes_scanned) / power(1024, 3), 4)              as avg_gb_scanned,
+       count(case when total_elapsed_time > 60000 then 1 end)     as slow_queries,
+       count(case when queued_overload_time > 0 then 1 end)       as queued_queries
+from SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY
+where start_time >= dateadd(day, -1, current_timestamp())
+  and execution_status = 'SUCCESS'
+  and warehouse_name is not null
+group by warehouse_name;
