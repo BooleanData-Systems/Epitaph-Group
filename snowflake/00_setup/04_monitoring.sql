@@ -98,11 +98,12 @@ begin
       select current_timestamp(), :wh, 'statement_timeout_in_seconds', "value", :expected_timeout, "value" = :expected_timeout
       from table(result_scan(last_query_id()));
     execute immediate 'show warehouses like ''' || wh || '''';
+    -- auto_suspend is a number and auto_resume text: both go to varchar, or the union reads 'true' as a number
     insert into GOLD.ADMIN.WAREHOUSE_STANDARD_CHECK
-      select current_timestamp(), :wh, 'auto_suspend', "auto_suspend", '60', "auto_suspend" = '60'
+      select current_timestamp(), :wh, 'auto_suspend', "auto_suspend"::varchar, '60', "auto_suspend"::varchar = '60'
       from table(result_scan(last_query_id()))
       union all
-      select current_timestamp(), :wh, 'auto_resume', "auto_resume", 'true', "auto_resume" = 'true'
+      select current_timestamp(), :wh, 'auto_resume', "auto_resume"::varchar, 'true', "auto_resume"::varchar = 'true'
       from table(result_scan(last_query_id()));   -- same SHOW result: last_query_id() is fixed for the whole statement
   end for;
   select count(*) into :bad from GOLD.ADMIN.WAREHOUSE_STANDARD_CHECK
