@@ -2,16 +2,37 @@ name: deploy
 
 # Runs after a pull request is merged to main, or by hand. Credentials are GitHub repository secrets
 # (Settings > Secrets and variables > Actions). Logs show object names, pass/fail and counts.
+#
+# On a merge it deploys only what the merge changed (scripts/deploy_snowflake.sh --changed-since), and only when the
+# merge touches the Snowflake side: Omni's own model commits (Omni Git sync) do not start it. By hand: choose a full
+# deploy or the changes in the last commit on main.
+#
+# The Omni model is changed through Omni's Git sync (Omni opens the pull requests; the webhook updates Omni when they
+# merge), so the Omni job runs only when started by hand.
 on:
   push:
     branches: [main]
+    paths:
+      - "snowflake/**"
+      - "loader/*.py"
+      - "config/feeds.yml"
+      - "config/kpis.yml"
+      - "seeds/*.csv"
+      - "scripts/deploy_snowflake.sh"
+      - "scripts/load_seeds.py"
+      - "scripts/gen_semantic.py"
   workflow_dispatch:
     inputs:
       target:
         description: "What to deploy"
         type: choice
-        options: [all, snowflake, omni]
-        default: all
+        options: [snowflake, omni]
+        default: snowflake
+      scope:
+        description: "Snowflake: everything, or only the last commit on main"
+        type: choice
+        options: [changes in last commit, everything]
+        default: changes in last commit
 
 permissions:
   contents: read
@@ -22,7 +43,7 @@ concurrency:
 
 jobs:
   snowflake:
-    if: github.event_name == 'push' || inputs.target != 'omni'
+    if: github.event_name == 'push' || inputs.target == 'snowflake'
     runs-on: ubuntu-latest
     env:
       SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
@@ -30,13 +51,17 @@ jobs:
       SNOWFLAKE_PRIVATE_KEY_PATH: ${{ github.workspace }}/.ci_key.p8
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # the whole history, so the deploy can compare with the commit before the merge
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt snowflake-cli
       - name: Write key and Snowflake CLI connection
+        env:
+          KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
         run: |
-          printf '%s' "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > .ci_key.p8 && chmod 600 .ci_key.p8
+          printf '%s' "$KEY" > .ci_key.p8 && chmod 600 .ci_key.p8
           mkdir -p ~/.snowflake
           cat > ~/.snowflake/config.toml <<EOF
           [connections.epitaph]
@@ -49,15 +74,24 @@ jobs:
           EOF
           chmod 600 ~/.snowflake/config.toml
       - name: Deploy
-        run: ./scripts/deploy_snowflake.sh
+        env:
+          BEFORE: ${{ github.event.before }}
+          SCOPE: ${{ inputs.scope }}
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            ./scripts/deploy_snowflake.sh --changed-since "$BEFORE"
+          elif [ "$SCOPE" = "everything" ]; then
+            ./scripts/deploy_snowflake.sh
+          else
+            ./scripts/deploy_snowflake.sh --changed-since HEAD~1
+          fi
       - name: Schema check against Fivetran (names only)
         run: python scripts/check_fivetran_schema.py || echo "Schema differences listed above; staging views need an update"
       - if: always()
         run: rm -f .ci_key.p8 ~/.snowflake/config.toml
 
   omni:
-    if: github.event_name == 'push' || inputs.target != 'snowflake'
-    needs: [snowflake]
+    if: github.event_name == 'workflow_dispatch' && inputs.target == 'omni'
     runs-on: ubuntu-latest
     env:
       OMNI_BASE_URL: ${{ secrets.OMNI_BASE_URL }}
