@@ -12,7 +12,9 @@
 #     read a changed object do not need to run again.
 #   - A change to deploy_order.txt or to this script runs everything.
 #   - Loader code goes to the stage only when loader/*.py or config/feeds.yml changed.
-#   - Seeds: only the seed files that changed are reloaded.
+#   - Seeds: all of them, every deploy (as before). They are small (about 3,400 rows), and a full reload puts every
+#     GOLD.CONTROL table back to what the repo says, so a manual edit in Snowflake never outlives the next deploy.
+#     The cost is one refresh of the dynamic tables downstream, a few minutes of WH_TRANSFORMATION.
 #   - snowflake/00_setup is one-time setup (account, integrations, grants, resource monitors) and is never run here:
 #     a change there is applied by an admin, statement by statement (rerunning 04_monitoring.sql would reset the
 #     resource monitors' monthly counters).
@@ -62,7 +64,6 @@ sql_due() {   # $1 = path in deploy_order.txt; true when the file is part of thi
 }
 
 ORDER=$(grep -v '^#' snowflake/deploy_order.txt | tr -d '\r' | grep -v '^$')
-SEED_FILES=$(echo "$CHANGED" | grep -E '^seeds/[^/]+\.csv$' | xargs -r -n1 basename | paste -sd, - || true)
 
 if [ "$PLAN" = yes ]; then
   if [ "$FULL" = yes ]; then echo "Plan: full deploy"; else echo "Plan: changed since ${BASE}"; fi
@@ -70,7 +71,7 @@ if [ "$PLAN" = yes ]; then
   for f in loader/sharepoint_loader.py loader/fx_loader.py config/feeds.yml; do changed "$f" && echo "   $f"; done
   echo "SQL files to run (a file whose source is not synced yet runs its stub):"
   while read -r f; do sql_due "$f" && echo "   $f"; done <<< "$ORDER"
-  if [ "$FULL" = yes ]; then echo "Seeds: all"; else echo "Seeds: ${SEED_FILES:-none}"; fi
+  echo "Seeds: all"
   exit 0
 fi
 
@@ -139,11 +140,7 @@ while read -r f; do
 done <<< "$ORDER"
 [ "$ran" -gt 0 ] || echo "   nothing changed"
 
-echo "4. Load seeds"
-if [ "$FULL" = yes ]; then
-  python scripts/load_seeds.py
-else
-  if [ -n "$SEED_FILES" ]; then python scripts/load_seeds.py --only "$SEED_FILES"; else echo "   nothing changed"; fi
-fi
+echo "4. Load seeds (all of them, every deploy)"
+python scripts/load_seeds.py
 
 echo "Done"

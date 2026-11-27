@@ -3,7 +3,7 @@ reviewed like code, and this script replaces the table contents on deploy. Print
 
 Runs in CI with the deploy key (env SNOWFLAKE_ACCOUNT, SNOWFLAKE_USER, SNOWFLAKE_PRIVATE_KEY_PATH).
     python scripts/load_seeds.py            # all seeds
-    python scripts/load_seeds.py --only ctl_cutover.csv,map_platform_account.csv   # just these (deploy of changes)
+    python scripts/load_seeds.py --only ctl_cutover.csv,map_platform_account.csv   # just these, by hand (a deploy loads all)
     python scripts/load_seeds.py --dry-run  # check files and columns, no connection
 """
 import argparse

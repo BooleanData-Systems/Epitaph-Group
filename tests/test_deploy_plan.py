@@ -43,8 +43,8 @@ def test_unknown_commit_falls_back_to_full():
     assert "deploying everything" in out and "Seeds: all" in out
 
 
-def test_no_change_plans_nothing():
+def test_no_change_runs_no_sql_but_still_reloads_every_seed():
     code, out = plan("--changed-since", "HEAD", "--to", "HEAD")
     assert code == 0
     assert not [l for l in out.splitlines() if l.startswith("   ")]
-    assert "Seeds: none" in out
+    assert "Seeds: all" in out
