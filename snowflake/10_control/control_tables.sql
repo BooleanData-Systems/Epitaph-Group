@@ -170,17 +170,10 @@ create table if not exists ALERT_RECIPIENTS (
   alert_name varchar, email varchar
 ) comment = 'Who gets each pipeline alert email. Addresses must match verified Snowflake user emails';
 
--- Every alert goes to the distribution list (DL_EPITAPH_DATA_ALERTS) and to Nathan Sennema, Epitaph product owner
--- (NATHANEPITAPH). Each address must be the verified email of a Snowflake user (01_account.sql, runbook step 3a).
--- This merge only adds missing rows, so it never removes anyone added later. At handover, replace the Boolean list
--- with Epitaph's own.
-merge into ALERT_RECIPIENTS t
-using (select a.column1 as alert_name, e.column1 as email
-       from values ('ingestion'), ('transformation'), ('publishing'), ('downstream'), ('freshness'),
-                   ('check_failures'), ('streams') a
-       cross join values ('epitaph@booleandata.ai') e) s
-on t.alert_name = s.alert_name and lower(t.email) = s.email
-when not matched then insert (alert_name, email) values (s.alert_name, s.email);
+-- Recipients are kept in Snowflake only (one row per alert name and address), never written by a deploy, so a
+-- deploy cannot change who receives an email. Each address must be the verified email of a Snowflake user
+-- (01_account.sql, runbook step 3a). Alert names: ingestion, transformation, publishing, downstream, freshness,
+-- check_failures, streams, consumption_report. See docs/monitoring_and_escalation.md.
 
 create table if not exists CTL_HISTORY_LOAD (
   source_name   varchar not null,

@@ -39,8 +39,13 @@ Fivetran also sends its own sync-failure emails; set them to the same distributi
 ## Recipients
 
 GOLD.CONTROL.ALERT_RECIPIENTS holds, for each alert name (ingestion, transformation, publishing, downstream,
-freshness, check_failures, streams), the distribution list and any named contacts. Addresses must be verified in
-Snowflake before email can reach them. File owners are in GOLD.CONTROL.FEED_OWNERS.
+freshness, check_failures, streams, consumption_report), the distribution list and any named contacts. Addresses
+must be verified in Snowflake before email can reach them. File owners are in GOLD.CONTROL.FEED_OWNERS.
+
+Both tables are maintained in Snowflake only: no deploy writes to them, so changing a recipient is an update to the
+table, and a deploy never adds or removes anyone. During development (from 27 Nov 2026) every alert except the
+consumption report, and every rejected-file email, goes to the Boolean engineer only; the go-live lists are kept in
+GOLD.CONTROL.ALERT_RECIPIENTS_GOLIVE and GOLD.CONTROL.FEED_OWNERS_GOLIVE and are copied back at go-live.
 
 ## Proving the alerts work (before go-live)
 
