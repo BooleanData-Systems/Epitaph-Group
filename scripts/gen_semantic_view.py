@@ -106,11 +106,13 @@ left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code""",
               **{m: f"f.{m}" for m in ("site_visits", "flight_searches", "flight_bookings", "hotel_searches", "hotel_bookings",
                                        "travel_search_signals", "attributed_books")}}},
     {"row_type": "goal",
-     "from": "GOLD.MARTS.FCT_GOALS f\nleft join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code",
-     "cols": {"date_day": "f.period_month", "week_start": "f.period_month", "month_start": "f.period_month",
-              "client_code": "f.client_code", "client_name": "cl.client_name", "smart_campaign": "f.smart_campaign",
-              "campaign_filter": "nullif(trim(split_part(f.smart_campaign, ':', 2)), '')",
-              "source_name": "'Goals'", "goal_metric": "f.goal_metric", "goal_value": "f.goal_value"}},
+     # Goal rows look like TapClicks' Goal Smart Connector rows: source 'Goal Smart Connector' and the goal line as the
+     # campaign name, so the dashboards' goal filters (source + goal-line name patterns) work unchanged.
+     "from": "GOLD.MARTS.FCT_GOALS f\njoin GOLD.MARTS.DIM_DATE d on d.date_day = f.goal_date\n"
+             "left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code",
+     "cols": {**DATE_DIMS, "client_code": "f.client_code", "client_name": "cl.client_name",
+              "campaign_name": "f.goal_line", "platform": "f.platform",
+              "source_name": "'Goal Smart Connector'", "goal_metric": "f.goal_metric", "goal_value": "f.goal_value"}},
 ]
 
 

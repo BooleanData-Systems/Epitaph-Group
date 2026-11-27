@@ -56,7 +56,7 @@ feeds:
   - {id: F14, name: Adara Ottawa Tourism, folder: Vendors/Adara, match: "*.csv|*.xlsx", table: ADARA, required: [date, attribution_group_name, tracker_name], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Uploaded by Epitaph monthly", status: live}
   - {id: F15, name: Spotify Cobs Bread, folder: Vendors/Spotify, match: "*.csv|*.xlsx", table: SPOTIFY_FILES, required: [date, campaign_name, impressions], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Spotify sends the file", status: retired}  # Cobs Bread comes from the Spotify Ads connector
   # Planning
-  - {id: F16, name: Goals, folder: Planning/Goals, match: "*.csv|*.xlsx", table: GOALS, required: [date, campaign_name, impressions_goal], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Uploaded by Epitaph (goals process under review)", status: live}
+  - {id: F16, name: Goals, folder: Planning/Goals, match: "*.csv|*.xlsx", table: GOALS, required: [date, client, campaign_name], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "Uploaded by Epitaph: the Goal Smart Connector export (Date, Client, Campaign Name, one column per goal)", status: live}
   - {id: F19, name: WildBrain, folder: Vendors/WildBrain, match: "*.csv|*.xlsx", table: WILDBRAIN, required: [date], date_column: {name: date, format: auto}, owner: epitaph_media, arrives: "One-time upload of the past files", status: live}
 
   # History: TapClicks Data Table exports, one file per source per month (plans/history_download_plan.csv)

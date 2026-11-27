@@ -553,20 +553,24 @@ outcome("Adara Ottawa Tourism", "F14", "ADARA", FEED.format("Ottawa Tourism"), "
     ("enriched_flight_bookings + enriched_hotel_bookings", "attributed_books", "attributed_books", "number", "K13")])
 
 # ------------------------------------------------------------------ Goals (K12)
-outcome("Goals", "F16", "GOALS", "MCI rank 40 or 50: the client named at the start of the goal line", "STG_GOALS", "FCT_GOALS", [
-    ("date", "period_month", "period_month", "date", "daily goals summed to the month"),
-    ("campaign_name (part 1)", "client", "client_code", "varchar", "text before the first ' - ', found in the MCI"),
-    ("campaign_name (part 2)", "smart_campaign", "smart_campaign", "varchar", ""),
-    ("campaign_name (part 3, first word)", "platform", "platform", "varchar", ""),
-    ("campaign_name (part 3)", "goal_metric", "goal_metric", "varchar", "impression, click, spend, quote, trial or CPQ goal"),
-    ("impressions_goal | goal", "goal_value", "goal_value", "number", "shown beside actuals, never added to them")])
+outcome("Goals", "F16", "GOALS", "MAP_CLIENT_ACCOUNT (the export's Client column), else the client named at the start "
+        "of the goal line (MCI rank 40 or 50)", "STG_GOALS", "FCT_GOALS", [
+    ("date", "goal_date", "goal_date", "date", "one row per day as in the Goal Smart Connector export; newest file per day"),
+    ("client", "client_account", "client_code", "varchar", "TapClicks client account, mapped by MAP_CLIENT_ACCOUNT"),
+    ("campaign_name", "goal_line", "goal_line", "varchar", "the goal line name; dashboards pick goals by goal-line patterns "
+     "(shown as campaign_name, source 'Goal Smart Connector')"),
+    ("every *goal* column", "goal_metric", "goal_metric", "varchar", "one row per goal column: impression, click, spend, "
+     "quotes, CPQ, Adobe trials, video complete, scorecard, conversations, ROAS, CPC (LinkedIn and Meta give the platform)"),
+    ("every *goal* column", "goal_value", "goal_value", "number", "zero and empty cells dropped; shown beside actuals, never "
+     "added to them; rate goals (CPQ, CPC, ROAS) flagged is_rate and never summed")])
 
 # ------------------------------------------------------------------ Dashboard columns derived in Gold (specs/model_gaps.md)
 CAMP = "derived from the campaign (client from DIM_CAMPAIGN)"
 SC = "MAP_SMART_CAMPAIGN_OVERRIDE, then MAP_SMART_CAMPAIGN_RULE"
 for src_obj, src_field, silver_obj, gold_field, rule in (
         (SC, "smart_campaign", "", "campaign_filter",
-         "text after ':' in the Smart Campaign (\"Kids Help Phone: Grants\" gives \"Grants\"); goal rows take it from FCT_GOALS"),
+         "text after ':' in the Smart Campaign (\"Kids Help Phone: Grants\" gives \"Grants\"); empty on goal rows (goals are "
+         "picked by goal-line name)"),
         ("seeds/map_campaign_product.csv", "product", "", "product",
          "seed by campaign name first, else prod= in the campaign naming code"),
         ("campaign name", "geo=", "SILVER.STG.INT_AD_DELIVERY", "province",

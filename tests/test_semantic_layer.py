@@ -37,7 +37,10 @@ def con():
                  (20261001, 'C11', 'Red', 'quote_quality', 0, 15, 0, 0)""")
     c.execute("""insert into FCT_SXM_SCORECARD (date_key, client_code, performance_trials, organic_trials, performance_flow_starts, organic_flow_starts)
                  values (20261001, 'C10', 30, 10, 100, 100)""")
-    c.execute("insert into FCT_GOALS values ('2026-10-01', 'C08', 'Nulo: Brand', 'impressions', 50000)")
+    c.execute("""insert into FCT_GOALS (goal_date, period_month, client_code, client_account, goal_line, platform,
+                 goal_metric, is_rate, goal_value) values
+                 ('2026-10-01', '2026-10-01', 'C08', 'Nulo', 'Nulo Facebook Brand 2026 Impression Goal', null,
+                  'impressions', false, 50000)""")
     return c
 
 
@@ -105,8 +108,12 @@ def test_site_key_and_campaign_filter(con):
     rows = dict(con.execute("""select media_type, any_value(site_key) from V_MEDIA_PERFORMANCE_DAILY
                                where row_type = 'delivery' group by 1""").fetchall())
     assert rows == {"Search": "paidsearch", "Social": "facebook"}    # Google Ads and Facebook Ads rules in the seed
-    goal = con.execute("select campaign_filter from V_MEDIA_PERFORMANCE_DAILY where row_type = 'goal'").fetchone()[0]
-    assert goal == "Brand"                                           # "Nulo: Brand"
+    # Goal rows look like TapClicks' Goal Smart Connector rows: the goal line is the campaign name, so the
+    # dashboards' goal filters (source + goal-line name pattern) work unchanged
+    goal = con.execute("""select source_name, campaign_name, date_day from V_MEDIA_PERFORMANCE_DAILY
+                          where row_type = 'goal'""").fetchone()
+    assert goal[0] == "Goal Smart Connector" and goal[1] == "Nulo Facebook Brand 2026 Impression Goal"
+    assert str(goal[2]) == "2026-10-01"                              # daily grain, not month
     import omni_build
     assert "site_key" in omni_build.FILTER_FIELDS                    # a site key filter keeps outcome rows without one
     assert "site_key" not in omni_build.DELIVERY_ONLY                # SiriusXM commuter rows carry their own site key

@@ -101,7 +101,7 @@ def test_empty_file_rejected():
 def test_far_future_dates_rejected_except_goals():
     far = "Date,Campaign,Impressions\n2028-06-01,c,10\n"
     assert not sl.check_file(FEEDS["F11"], "h.csv", csv_bytes(far), today=TODAY).ok
-    goals = 'Date,Campaign Name,Impressions Goal\n6/01/28,Client A - Camp - Meta Impression Goal,"1,000.50"\n'
+    goals = 'Date,Client,Campaign Name,Impression Goal,CPQ Goal\n6/01/28,Client A,Client A - Camp - Meta Impression Goal,"1,000.50",\n'
     assert sl.check_file(FEEDS["F16"], "goals.csv", csv_bytes(goals), today=TODAY).ok
 
 

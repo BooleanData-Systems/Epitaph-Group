@@ -185,14 +185,21 @@ select to_number(to_char(activity_date, 'YYYYMMDD')) as date_key, client_code, c
 from SILVER.STG.STG_ADARA group by all;
 
 -- Goals (K12) and budget: shown next to actuals, never added to them
+-- One row per day, goal line and metric. The goal line keeps its name (dashboards pick goals by goal-line patterns,
+-- as in TapClicks). Client: the export's client account (MAP_CLIENT_ACCOUNT), else the text before the first " - "
+-- of the goal line found in the Master Client Index.
 create or replace dynamic table FCT_GOALS target_lag = '1 hour' warehouse = WH_TRANSFORMATION as
-select g.period_month, c.client_code, g.smart_campaign, g.platform, g.goal_metric, sum(g.goal_value) as goal_value
+select g.goal_date, date_trunc('month', g.goal_date) as period_month,
+       coalesce(ca.client_code, c.client_code) as client_code, g.client_account, g.goal_line,
+       g.goal_platform as platform, g.goal_metric, g.is_rate, sum(g.goal_value) as goal_value
 from SILVER.STG.STG_GOALS g
--- client named at the start of the goal line, found in the Master Client Index (client name or short name)
+left join (select lower(tapclicks_client_account) as account, any_value(client_code) as client_code
+           from GOLD.CONTROL.MAP_CLIENT_ACCOUNT group by 1) ca
+  on ca.account = lower(g.client_account)
 left join (select lower(id_value) as id_value, client_code from SILVER.STG.MCI_IDENTIFIERS
            where id_type in ('campaign_prefix', 'alias')
            qualify row_number() over (partition by lower(id_value) order by match_rank, client_code) = 1) c
-  on c.id_value = lower(g.client)
+  on c.id_value = lower(trim(split_part(g.goal_line, ' - ', 1)))
 group by all;
 
 create table if not exists FCT_BUDGET (

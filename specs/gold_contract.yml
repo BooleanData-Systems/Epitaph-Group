@@ -146,12 +146,16 @@ tables:
       uniques_reached: {type: number, status: built}
       impressions_per_clicks: {type: number, status: built}
   FCT_GOALS:
-    grain: [period_month, client_code, smart_campaign, goal_metric]
+    grain: [goal_date, goal_line, goal_metric, platform]
     columns:
+      goal_date: {type: date, status: built}
       period_month: {type: date, status: built}
       client_code: {type: varchar, status: built}
-      smart_campaign: {type: varchar, status: built}
+      client_account: {type: varchar, status: built}
+      goal_line: {type: varchar, status: built}
+      platform: {type: varchar, status: built}
       goal_metric: {type: varchar, status: built}
+      is_rate: {type: boolean, status: built}
       goal_value: {type: number, status: built}
   DIM_CAMPAIGN:
     grain: [campaign_key]

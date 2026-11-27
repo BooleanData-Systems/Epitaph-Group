@@ -508,19 +508,19 @@ left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code
 union all
 select
   'goal' as row_type,
-  f.period_month as date_day,
-  f.period_month as week_start,
-  f.period_month as month_start,
+  d.date_day as date_day,
+  d.week_start as week_start,
+  d.month_start as month_start,
   f.client_code as client_code,
   cl.client_name as client_name,
-  f.smart_campaign as smart_campaign,
-  null::varchar as campaign_name,
+  null::varchar as smart_campaign,
+  f.goal_line as campaign_name,
   null::varchar as job_number,
   null::varchar as language,
   null::varchar as country,
   null::boolean as campaign_name_valid,
-  'Goals' as source_name,
-  null::varchar as platform,
+  'Goal Smart Connector' as source_name,
+  f.platform as platform,
   null::varchar as media_type,
   null::varchar as channel,
   null::varchar as media_buy_name,
@@ -541,7 +541,7 @@ select
   null::varchar as segment,
   null::varchar as quality_band,
   null::varchar as line_type,
-  nullif(trim(split_part(f.smart_campaign, ':', 2)), '') as campaign_filter,
+  null::varchar as campaign_filter,
   null::varchar as site_key,
   null::varchar as program_code,
   null::varchar as size_khc,
@@ -584,6 +584,7 @@ select
   0 as attributed_books,
   coalesce(f.goal_value, 0) as goal_value
 from GOLD.MARTS.FCT_GOALS f
+join GOLD.MARTS.DIM_DATE d on d.date_day = f.goal_date
 left join GOLD.MARTS.DIM_CLIENT cl on cl.client_code = f.client_code;
 
 -- Custom dashboards read these alongside the main view. Each fact carries client_code from the Master Client Index.

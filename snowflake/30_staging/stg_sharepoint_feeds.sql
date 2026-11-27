@@ -300,29 +300,49 @@ left join SILVER.STG.MCI_FEED_CLIENT fc on fc.feed_id = r.feed_id
 qualify dense_rank() over (partition by SILVER.STG.DAY(record:date) order by f.logged_at desc, r.item_id desc) = 1;
 
 -- ---------------------------------------------------------------- Goals (K12)
--- The Goal Smart Connector file: one row per day and goal line, e.g.
---   "Conexus - Investing Awr 2026 - Meta Impression Goal", 54,087.28
--- Client = text before the first " - "; smart campaign = the middle part; platform and metric from the last part.
--- Daily goals are summed to the month. Only impression goals arrive in this file today.
+-- The Goal Smart Connector export (what TapClicks loads goals from): one row per day and goal line, with the client
+-- account and one column per goal metric, e.g.
+--   Date 2026-10-01 | Client "Sonnet Insurance" | Campaign Name "Sonnet_Ontario_Auto_CPQ Goal" | CPQ Goal 75.16 | ...
+-- Every column whose name is or contains "goal" becomes one row (metric, value); zero and empty cells are dropped.
+-- The goal line keeps its name: TapClicks dashboards pick goals by goal-line name patterns, and so do ours.
+-- Most lines are spread per day already; some carry one value per month on one day (kept as given, as in TapClicks).
+-- Rate goals (CPQ, CPC, ROAS) are repeated per day and are never summed (is_rate). For each day the newest file wins.
 create or replace view SILVER.STG.STG_GOALS as
-with g as (
-  select SILVER.STG.DAY(record:date) as goal_date,
-         SILVER.STG.TXT(record:campaign_name) as goal_line,
-         SILVER.STG.NUM(coalesce(record:impressions_goal, record:goal)) as goal_value,
+with cells as (
+  select SILVER.STG.DAY(r.record:date)              as goal_date,
+         SILVER.STG.TXT(r.record:client)            as client_account,
+         SILVER.STG.TXT(r.record:campaign_name)     as goal_line,
+         k.key                                      as goal_column,
+         SILVER.STG.NUM(k.value)                    as goal_value,
          r.item_id, f.logged_at
-  from BRONZE.SHAREPOINT.GOALS r join SILVER.STG.SP_LATEST_FILES f using (item_id, etag)
-  qualify dense_rank() over (partition by SILVER.STG.DAY(record:date) order by f.logged_at desc, r.item_id desc) = 1
+  from BRONZE.SHAREPOINT.GOALS r
+  join SILVER.STG.SP_LATEST_FILES f using (item_id, etag),
+  lateral flatten(input => r.record) k
+  where regexp_like(k.key, '(^|.*_)goal(_.*|$)')
+  qualify dense_rank() over (partition by SILVER.STG.DAY(r.record:date) order by f.logged_at desc, r.item_id desc) = 1
 )
-select trim(split_part(goal_line, ' - ', 1))                                as client,
-       trim(split_part(goal_line, ' - ', 2))                                as smart_campaign,
-       trim(split_part(trim(split_part(goal_line, ' - ', 3)), ' ', 1))      as platform,
-       date_trunc('month', goal_date)                                       as period_month,
-       case when goal_line ilike '%impression goal%' then 'impressions'
-            when goal_line ilike '%click goal%'      then 'clicks'
-            when goal_line ilike '%spend goal%'      then 'spend'
-            when goal_line ilike '%quote goal%'      then 'quotes'
-            when goal_line ilike '%trial goal%'      then 'trials'
-            when goal_line ilike '%cpq goal%'        then 'cpq'
-            else 'unknown' end                                              as goal_metric,
+select goal_date,
+       client_account,
+       goal_line,
+       case goal_column
+            when 'impression_goal'      then 'impressions'
+            when 'impressions_goal'     then 'impressions'
+            when 'goal'                 then 'impressions'   -- the first, single-metric layout
+            when 'click_goal'           then 'clicks'
+            when 'spend_goal'           then 'spend'
+            when 'quotes_goal'          then 'quotes'
+            when 'cpq_goal'             then 'cpq'
+            when 'adobe_trials_goal'    then 'trials'
+            when 'video_complete_goal'  then 'completed_plays'
+            when 'scorecard_goal'       then 'scorecard_trials'
+            when 'conversations_goal'   then 'conversations'
+            when 'roas_goal'            then 'roas'
+            when 'cpc_goal'             then 'cpc'
+            when 'cpc_goal_linkedin'    then 'cpc'
+            when 'cpc_goal_meta'        then 'cpc'
+            else goal_column end                    as goal_metric,
+       case goal_column when 'cpc_goal_linkedin' then 'LinkedIn' when 'cpc_goal_meta' then 'Meta' end as goal_platform,
+       goal_column in ('cpq_goal', 'cpc_goal', 'cpc_goal_linkedin', 'cpc_goal_meta', 'roas_goal') as is_rate,
        goal_value
-from g;
+from cells
+where goal_value is not null and goal_value <> 0;
