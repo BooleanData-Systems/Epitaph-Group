@@ -45,13 +45,8 @@ on t.warehouse_name = s.warehouse_name
 when not matched then insert (warehouse_name, environment, daily_credit_limit, auto_discovered, first_seen_date)
   values (s.warehouse_name, 'PROD', s.daily_limit, false, current_date());
 
--- Recipients: the same people as the other alerts (the distribution list and Nathan Sennema), copied from the
--- check_failures rows so no address is stored in this repo. Only adds missing rows.
-merge into GOLD.CONTROL.ALERT_RECIPIENTS t
-using (select distinct 'consumption_report' as alert_name, lower(email) as email
-       from GOLD.CONTROL.ALERT_RECIPIENTS where alert_name = 'check_failures') s
-on t.alert_name = s.alert_name and lower(t.email) = s.email
-when not matched then insert (alert_name, email) values (s.alert_name, s.email);
+-- Recipients: GOLD.CONTROL.ALERT_RECIPIENTS rows with alert_name 'consumption_report', kept in Snowflake only (a
+-- deploy never writes them; see control_tables.sql).
 
 -- Picks up warehouses created after this was deployed, with no limit until one is set. Skips Snowflake's own
 -- pseudo-warehouses (CLOUD_SERVICES_ONLY and the SYSTEM$ notebook warehouse).
