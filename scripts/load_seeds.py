@@ -3,6 +3,7 @@ reviewed like code, and this script replaces the table contents on deploy. Print
 
 Runs in CI with the deploy key (env SNOWFLAKE_ACCOUNT, SNOWFLAKE_USER, SNOWFLAKE_PRIVATE_KEY_PATH).
     python scripts/load_seeds.py            # all seeds
+    python scripts/load_seeds.py --only ctl_cutover.csv,map_platform_account.csv   # just these, by hand (a deploy loads all)
     python scripts/load_seeds.py --dry-run  # check files and columns, no connection
 """
 import argparse
@@ -55,9 +56,17 @@ def connect():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--only", default="", help="comma-separated seed file names; default all")
     a = ap.parse_args()
+    only = {f.strip() for f in a.only.split(",") if f.strip()}
+    unknown = only - set(SEEDS)
+    if unknown:   # a new seed file must be added to SEEDS before it can load
+        print(f"Not a known seed file: {', '.join(sorted(unknown))}")
+        return 1
     con = None if a.dry_run else connect()
     for fname, table in SEEDS.items():
+        if only and fname not in only:
+            continue
         path = ROOT / "seeds" / fname
         if not path.exists():
             print(f"{table}: no seed file yet, left as is")
