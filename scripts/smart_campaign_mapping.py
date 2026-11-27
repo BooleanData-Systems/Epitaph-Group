@@ -6,7 +6,7 @@ In Snowflake the grouping lives in two tables:
   CONTROL.map_smart_campaign_override  exact campaign -> Smart Campaign rows that beat any rule
 dim_smart_campaign applies them (override first, then rules by priority, else "Unmapped" and a DQ row).
 
-Commands (run by an engineer; the export holds real names, so never inside the automated code tools):
+Commands (run locally by an engineer, because the export holds real client and campaign names):
 
   seed      Read the dashboard specs and write seeds/dashboard_smart_campaigns.csv:
             every Smart Campaign each dashboard includes or excludes, plus seeds/filter_rules.csv for wildcards.

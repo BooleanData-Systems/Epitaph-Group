@@ -1,6 +1,6 @@
 """Build one dashboard spec per live TapClicks dashboard from the profiling workbook.
 
-Run locally by an engineer (never by the automated code tools), because the profiling workbook holds
+Run locally by an engineer, because the profiling workbook holds
 Epitaph's real client and campaign names:
 
     python scripts/build_specs.py --profiling /path/to/Epitaph_Profiling.xlsx --out specs/dashboards

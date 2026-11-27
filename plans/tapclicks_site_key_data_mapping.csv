@@ -1,512 +1,512 @@
-source_name,media_type,site_key,impressions_nov25_oct26
-Adobe Organic - Streaming,Adobe,,0
-Amazon Ads,Search - Amazon,,13540492
-Amazon DSP,CTV - Amazon Prime,programmatic / paidvideo,15021391
-Amazon DSP,StndDisplay,programmatic / paidvideo,221313674
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:EN;geo:Ontario]15s,programmatic / paidvideo,250510
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:EN;geo:Ontario]30s,programmatic / paidvideo,200439
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:FR;geo:Quebec]15s,programmatic / paidvideo,33261
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:FR;geo:Quebec]30s,programmatic / paidvideo,26634
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:EN;geo:Ontario]15s,programmatic / paidvideo,250471
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:EN;geo:Ontario]30s,programmatic / paidvideo,200458
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:FR;geo:Quebec]15s,programmatic / paidvideo,77982
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:FR;geo:Quebec]30s,programmatic / paidvideo,62458
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:EN;geo:Ontario]15s,programmatic / paidvideo,223616
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:EN;geo:Ontario]30s,programmatic / paidvideo,178937
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:FR;geo:Quebec]15s,programmatic / paidvideo,29711
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:FR;geo:Quebec]30s,programmatic / paidvideo,23817
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:EN;geo:Ontario]15s,programmatic / paidvideo,223624
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:EN;geo:Ontario]30s,programmatic / paidvideo,179007
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:FR;geo:Quebec]15s,programmatic / paidvideo,69688
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:FR;geo:Quebec]30s,programmatic / paidvideo,55786
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 1;lang:EN;geo:Ontario],programmatic / paidvideo,1831914
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 1;lang:FR;geo:Quebec],programmatic / paidvideo,1219673
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 2;lang:EN;geo:Ontario],programmatic / paidvideo,430830
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 2;lang:FR;geo:Quebec],programmatic / paidvideo,70904
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Prime Video;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 1;lang:EN;geo:Ontario],programmatic / paidvideo,712923
-Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Prime Video;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combinedt;aud1:Tier 2;lang:EN;geo:Ontario],programmatic / paidvideo,1280744
-Amazon DSP,chan=Paid Video,programmatic / paidvideo,1035117
-Amazon DSP,site=Bell,programmatic / paidvideo,491061
-Amazon DSP,site=Ideon,programmatic / paidvideo,2923609
-Amazon DSP,site=Netflix,programmatic / paidvideo,2172879
-Amazon DSP,site=PMP,programmatic / paidvideo,3655179
-Amazon DSP,site=Prime,programmatic / paidvideo,20680109
-Amazon DSP,site=Rogers,programmatic / paidvideo,2137550
-Apple Ads,Search - Apple,,406900
-Campaign Manager 360,Audio,Default Site Key,1139883
-Campaign Manager 360,Bundle,programmatic / paidvideo,2
-Campaign Manager 360,CTV,programmatic / paidvideo,60066953
-Campaign Manager 360,OLV,programmatic / paidvideo,324298
-Campaign Manager 360,SiriusXM,Default Site Key,4
-Campaign Manager 360,StndDisplay,programmatic / paiddisplay,321333721
-Campaign Manager 360,Video,programmatic / paidvideo,3551749
-Campaign Manager 360,Video,youtube,781195
-Campaign Manager 360,YouTube,youtube,71776005
-Campaign Manager 360,[br:Sonnet;prod:Multiline;creativet:IAMR;lang:EN;cta:Learn More;dim:30s;asset:Video;chan:Paid Video;pub:Rogers;geo:Ontario;Site:Sportsnet;obj:Awareness;pla-typ:In-Stream Video;tar:Combined],programmatic / paidvideo,467959
-Campaign Manager 360,[br:Sonnet;prod:Multiline;creativet:Laundry;lang:EN;cta:Learn More;dim:30s;asset:Video;chan:Paid Video;pub:Rogers;geo:Ontario;Site:Sportsnet;obj:Awareness;pla-typ:In-Stream Video;tar:Combined],programmatic / paidvideo,234557
-Campaign Manager 360,creativev=V2,youtube,858164
-Campaign Manager 360,lang=EN,programmatic / paidvideo,7212430
-Campaign Manager 360,lang=EN,youtube,96769833
-Campaign Manager 360,lang=FR,programmatic / paidvideo,2721263
-Campaign Manager 360,lang=FR,youtube,22369317
-Display & Video 360 IO,Auto Open In-Market,,0
-Display & Video 360 IO,Auto Open In-Market,Default Site Key,2952
-Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],Default Site Key,13652459
-Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],,0
-Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],Default Site Key,8493456
-Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Brand;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Brand;lang:EN;geo:Ontario],programmatic / paidvideo,1392672
-Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Hockey;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Hockey;lang:EN;geo:Ontario],programmatic / paidvideo,506688
-Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Select;aud2:Tier2;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Select;aud2:Tier2;lang:EN;geo:Ontario],programmatic / paidvideo,1010149
-Display & Video 360 IO,Multiline Open In-Market,,0
-Display & Video 360 IO,Multiline Open In-Market,Default Site Key,1810
-Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],Default Site Key,7761181
-Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],,0
-Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],Default Site Key,5277758
-Display & Video 360 IO,Multiline Start Quote Retargeting[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:Retargeting;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,Multiline Start Quote Retargeting[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:Retargeting;lang:EN;geo:Ontario],Default Site Key,1
-Display & Video 360 IO,Multiline Start Quote Retargeting[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:Retargeting;lang:FR;geo:Quebec],,0
-Display & Video 360 IO,Property Open In-Market,,0
-Display & Video 360 IO,Property Open In-Market,Default Site Key,85841
-Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],Default Site Key,6687756
-Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],,0
-Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],Default Site Key,2762330
-Display & Video 360 IO,[br:Sonnet;prod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Growth Personas;aud2:Tier 1;lang:FR;geo:Quebec],,0
-Display & Video 360 IO,[br:Sonnet;prod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Growth Personas;aud2:Tier 2;lang:FR;geo:Quebec],,0
-Display & Video 360 IO,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPV;tar:In-Market;aud1:Hockey;lang:EN;geo:Ontario],,0
-Display & Video 360 IO,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPV;tar:In-Market;aud1:Hockey;lang:EN;geo:Ontario],youtube,18593095
-Display & Video 360 IO,obj=Awareness,,0
-Display & Video 360 IO,obj=Awareness,programmatic / paidvideo,2581424
-Display & Video 360 IO,obj=Conversion,Default Site Key,48123561
-Display & Video 360 IO,site=YouTube,,0
-Display & Video 360 IO,site=YouTube,youtube,29903879
-Facebook Ads,2. Eng Change. Event. Oct 21.,,0
-Facebook Ads,2. Eng Change. Event. Oct 21.,facebook,51196
-Facebook Ads,2.B Eng Change. Event. Oct 21.,,0
-Facebook Ads,2.B Eng Change. Event. Oct 21.,facebook,52596
-Facebook Ads,2026,,0
-Facebook Ads,2026,facebook,62493
-Facebook Ads,3. Eng Change. Event. Oct 21.,,0
-Facebook Ads,3. Eng Change. Event. Oct 21.,facebook,133764
-Facebook Ads,3.B Eng Change. Event. Oct 21.,,0
-Facebook Ads,3.B Eng Change. Event. Oct 21.,facebook,97610
-Facebook Ads,Action Infographics,,0
-Facebook Ads,Action Infographics,facebook,100369
-Facebook Ads,Andrew's Reel,,0
-Facebook Ads,Andrew's Reel,facebook,781285
-Facebook Ads,Awareness Infographics,,0
-Facebook Ads,Awareness Infographics,facebook,43760
-Facebook Ads,Banfield WAGE – Montreal – FR – Aug26,,0
-Facebook Ads,Banfield WAGE – Montreal – FR – Aug26,facebook,97099
-Facebook Ads,Banfield WAGE – Toronto – EN – Aug26,,0
-Facebook Ads,Banfield WAGE – Toronto – EN – Aug26,facebook,35515
-Facebook Ads,Banfield. FR.,,0
-Facebook Ads,Banfield. FR.,facebook,8564
-Facebook Ads,Blog Subscribers - EN,,0
-Facebook Ads,Blog Subscribers - EN,facebook,0
-Facebook Ads,Blog Subscribers - EN - Copy,,0
-Facebook Ads,Blog Subscribers - EN - Copy,facebook,269760
-Facebook Ads,Blog Subscribers - FR,,0
-Facebook Ads,Blog Subscribers - FR,facebook,0
-Facebook Ads,Brittnee's Reel,,0
-Facebook Ads,Brittnee's Reel,facebook,793824
-Facebook Ads,Canada | Exclude Custom Audience (To get new people to like the page),,0
-Facebook Ads,Canada | Exclude Custom Audience (To get new people to like the page),facebook,27392
-Facebook Ads,Centering Survivors- ENG Ad set,,0
-Facebook Ads,Centering Survivors- ENG Ad set,facebook,11326
-Facebook Ads,Centering Survivors- FR Campaign  Ad set,,0
-Facebook Ads,Centering Survivors- FR Campaign  Ad set,facebook,12219
-Facebook Ads,Chamandy Manitoba,,0
-Facebook Ads,Chamandy Manitoba,facebook,102616
-Facebook Ads,Consideration EN Aug 26,,0
-Facebook Ads,Consideration EN Aug 26,facebook,8850
-Facebook Ads,Consideration EN Aug 26 – Conv,,0
-Facebook Ads,Consideration EN Aug 26 – Conv,facebook,410374
-Facebook Ads,Consideration FR Sept 1,,0
-Facebook Ads,Consideration FR Sept 1,facebook,890
-Facebook Ads,Consideration FR Sept 3 – Conv,,0
-Facebook Ads,Consideration FR Sept 3 – Conv,facebook,115533
-Facebook Ads,Cottage - 6/29 - Static,,0
-Facebook Ads,Cottage - 6/29 - Static,facebook,699270
-Facebook Ads,DON'T USE,,0
-Facebook Ads,DON'T USE,facebook,55463
-Facebook Ads,Debunking – Educators ON – Aug26,,0
-Facebook Ads,Debunking – Educators ON – Aug26,facebook,93203
-Facebook Ads,EN,,0
-Facebook Ads,EN,facebook,2074171
-Facebook Ads,Eng. ENGI Change. Event.,,0
-Facebook Ads,Eng. ENGI Change. Event.,facebook,44454
-Facebook Ads,Eng. Engi Change. Course.,,0
-Facebook Ads,Eng. Engi Change. Course.,facebook,97783
-Facebook Ads,Exclude Subs,,0
-Facebook Ads,Exclude Subs,facebook,14932511
-Facebook Ads,FR,,0
-Facebook Ads,FR,facebook,6477340
-Facebook Ads,Facebook,,0
-Facebook Ads,Facebook,facebook,27099148
-Facebook Ads,Facebook+Instagram,,0
-Facebook Ads,Facebook+Instagram,facebook,832579270
-Facebook Ads,Fall - 9/21 - Static,,0
-Facebook Ads,Fall - 9/21 - Static,facebook,483887
-Facebook Ads,Feb 26 Commercial Real Estate Report,,0
-Facebook Ads,Feb 26 Commercial Real Estate Report,facebook,4783
-Facebook Ads,Instagram,,0
-Facebook Ads,Instagram,facebook,45327673
-Facebook Ads,Instagram Post,,0
-Facebook Ads,Instagram Post,facebook,125938
-Facebook Ads,Instagram Profile Visits Ad: Roster update incoming! 💥 We are thrilled to announce...,,0
-Facebook Ads,Instagram Profile Visits Ad: Roster update incoming! 💥 We are thrilled to announce...,facebook,0
-Facebook Ads,Instagram post: @purrernie's holiday picks are...,,0
-Facebook Ads,Instagram post: @purrernie's holiday picks are...,facebook,3434
-Facebook Ads,"Instagram post: A day filled with dogs, skating,...",,0
-Facebook Ads,"Instagram post: A day filled with dogs, skating,...",facebook,5133
-Facebook Ads,Instagram post: A plus-one with paws? Don’t mind...,,0
-Facebook Ads,Instagram post: A plus-one with paws? Don’t mind...,facebook,9926
-Facebook Ads,Instagram post: A sweet way to show a little...,,0
-Facebook Ads,Instagram post: A sweet way to show a little...,facebook,19496
-Facebook Ads,Instagram post: Boys are hearing from the...,,0
-Facebook Ads,Instagram post: Boys are hearing from the...,facebook,44193
-Facebook Ads,"Instagram post: Enrichment, but make it...",,0
-Facebook Ads,"Instagram post: Enrichment, but make it...",facebook,8512
-Facebook Ads,Instagram post: Even incredible companions have...,,0
-Facebook Ads,Instagram post: Even incredible companions have...,facebook,5913
-Facebook Ads,Instagram post: Every journey benefits from a...,,0
-Facebook Ads,Instagram post: Every journey benefits from a...,facebook,5214
+source_name,media_type,site_key
+Adobe Organic - Streaming,Adobe,
+Amazon Ads,Search - Amazon,
+Amazon DSP,CTV - Amazon Prime,programmatic / paidvideo
+Amazon DSP,StndDisplay,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:EN;geo:Ontario]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:EN;geo:Ontario]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:FR;geo:Quebec]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 1;lang:FR;geo:Quebec]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:EN;geo:Ontario]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:EN;geo:Ontario]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:FR;geo:Quebec]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Demographic;aud1:Tier 2;lang:FR;geo:Quebec]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:EN;geo:Ontario]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:EN;geo:Ontario]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:FR;geo:Quebec]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 1;lang:FR;geo:Quebec]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:EN;geo:Ontario]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:EN;geo:Ontario]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:FR;geo:Quebec]15s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Netflix;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Interest;aud1:Tier 2;lang:FR;geo:Quebec]30s,programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 1;lang:EN;geo:Ontario],programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 1;lang:FR;geo:Quebec],programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 2;lang:EN;geo:Ontario],programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:PMP;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 2;lang:FR;geo:Quebec],programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Prime Video;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Tier 1;lang:EN;geo:Ontario],programmatic / paidvideo
+Amazon DSP,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:Prime Video;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combinedt;aud1:Tier 2;lang:EN;geo:Ontario],programmatic / paidvideo
+Amazon DSP,chan=Paid Video,programmatic / paidvideo
+Amazon DSP,site=Bell,programmatic / paidvideo
+Amazon DSP,site=Ideon,programmatic / paidvideo
+Amazon DSP,site=Netflix,programmatic / paidvideo
+Amazon DSP,site=PMP,programmatic / paidvideo
+Amazon DSP,site=Prime,programmatic / paidvideo
+Amazon DSP,site=Rogers,programmatic / paidvideo
+Apple Ads,Search - Apple,
+Campaign Manager 360,Audio,Default Site Key
+Campaign Manager 360,Bundle,programmatic / paidvideo
+Campaign Manager 360,CTV,programmatic / paidvideo
+Campaign Manager 360,OLV,programmatic / paidvideo
+Campaign Manager 360,SiriusXM,Default Site Key
+Campaign Manager 360,StndDisplay,programmatic / paiddisplay
+Campaign Manager 360,Video,programmatic / paidvideo
+Campaign Manager 360,Video,youtube
+Campaign Manager 360,YouTube,youtube
+Campaign Manager 360,[br:Sonnet;prod:Multiline;creativet:IAMR;lang:EN;cta:Learn More;dim:30s;asset:Video;chan:Paid Video;pub:Rogers;geo:Ontario;Site:Sportsnet;obj:Awareness;pla-typ:In-Stream Video;tar:Combined],programmatic / paidvideo
+Campaign Manager 360,[br:Sonnet;prod:Multiline;creativet:Laundry;lang:EN;cta:Learn More;dim:30s;asset:Video;chan:Paid Video;pub:Rogers;geo:Ontario;Site:Sportsnet;obj:Awareness;pla-typ:In-Stream Video;tar:Combined],programmatic / paidvideo
+Campaign Manager 360,creativev=V2,youtube
+Campaign Manager 360,lang=EN,programmatic / paidvideo
+Campaign Manager 360,lang=EN,youtube
+Campaign Manager 360,lang=FR,programmatic / paidvideo
+Campaign Manager 360,lang=FR,youtube
+Display & Video 360 IO,Auto Open In-Market,
+Display & Video 360 IO,Auto Open In-Market,Default Site Key
+Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],
+Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],Default Site Key
+Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],
+Display & Video 360 IO,Auto Open In-Market[br:Sonnet;prod:Auto;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],Default Site Key
+Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Brand;lang:EN;geo:Ontario],
+Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Brand;lang:EN;geo:Ontario],programmatic / paidvideo
+Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Hockey;lang:EN;geo:Ontario],
+Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Masthead;aud2:Hockey;lang:EN;geo:Ontario],programmatic / paidvideo
+Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Select;aud2:Tier2;lang:EN;geo:Ontario],
+Display & Video 360 IO,Ex: [br:Sonnet;prod:Multiline;chan:Paid Video;obj:Awareness;tar:In-Market;aud1:Select;aud2:Tier2;lang:EN;geo:Ontario],programmatic / paidvideo
+Display & Video 360 IO,Multiline Open In-Market,
+Display & Video 360 IO,Multiline Open In-Market,Default Site Key
+Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],
+Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],Default Site Key
+Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],
+Display & Video 360 IO,Multiline Open In-Market[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],Default Site Key
+Display & Video 360 IO,Multiline Start Quote Retargeting[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:Retargeting;lang:EN;geo:Ontario],
+Display & Video 360 IO,Multiline Start Quote Retargeting[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:Retargeting;lang:EN;geo:Ontario],Default Site Key
+Display & Video 360 IO,Multiline Start Quote Retargeting[br:Sonnet;prod:Multiline;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:Retargeting;lang:FR;geo:Quebec],
+Display & Video 360 IO,Property Open In-Market,
+Display & Video 360 IO,Property Open In-Market,Default Site Key
+Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],
+Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:EN;geo:Ontario],Default Site Key
+Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],
+Display & Video 360 IO,Property Open In-Market[br:Sonnet;prod:Homeowner;chan:Display;obj:Conversion;pla-typ:Display;buy:CPA;tar:In-Market;lang:FR;geo:Quebec],Default Site Key
+Display & Video 360 IO,[br:Sonnet;prod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Growth Personas;aud2:Tier 1;lang:FR;geo:Quebec],
+Display & Video 360 IO,[br:Sonnet;prod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPM;tar:Combined;aud1:Growth Personas;aud2:Tier 2;lang:FR;geo:Quebec],
+Display & Video 360 IO,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPV;tar:In-Market;aud1:Hockey;lang:EN;geo:Ontario],
+Display & Video 360 IO,[br:Sonnet;prod:Multiline;subprod:Multiline;chan:Paid Video;site:YouTube;obj:Awareness;pla-typ:In-Stream Video;buy:CPV;tar:In-Market;aud1:Hockey;lang:EN;geo:Ontario],youtube
+Display & Video 360 IO,obj=Awareness,
+Display & Video 360 IO,obj=Awareness,programmatic / paidvideo
+Display & Video 360 IO,obj=Conversion,Default Site Key
+Display & Video 360 IO,site=YouTube,
+Display & Video 360 IO,site=YouTube,youtube
+Facebook Ads,2. Eng Change. Event. Oct 21.,
+Facebook Ads,2. Eng Change. Event. Oct 21.,facebook
+Facebook Ads,2.B Eng Change. Event. Oct 21.,
+Facebook Ads,2.B Eng Change. Event. Oct 21.,facebook
+Facebook Ads,2026,
+Facebook Ads,2026,facebook
+Facebook Ads,3. Eng Change. Event. Oct 21.,
+Facebook Ads,3. Eng Change. Event. Oct 21.,facebook
+Facebook Ads,3.B Eng Change. Event. Oct 21.,
+Facebook Ads,3.B Eng Change. Event. Oct 21.,facebook
+Facebook Ads,Action Infographics,
+Facebook Ads,Action Infographics,facebook
+Facebook Ads,Andrew's Reel,
+Facebook Ads,Andrew's Reel,facebook
+Facebook Ads,Awareness Infographics,
+Facebook Ads,Awareness Infographics,facebook
+Facebook Ads,Banfield WAGE – Montreal – FR – Aug26,
+Facebook Ads,Banfield WAGE – Montreal – FR – Aug26,facebook
+Facebook Ads,Banfield WAGE – Toronto – EN – Aug26,
+Facebook Ads,Banfield WAGE – Toronto – EN – Aug26,facebook
+Facebook Ads,Banfield. FR.,
+Facebook Ads,Banfield. FR.,facebook
+Facebook Ads,Blog Subscribers - EN,
+Facebook Ads,Blog Subscribers - EN,facebook
+Facebook Ads,Blog Subscribers - EN - Copy,
+Facebook Ads,Blog Subscribers - EN - Copy,facebook
+Facebook Ads,Blog Subscribers - FR,
+Facebook Ads,Blog Subscribers - FR,facebook
+Facebook Ads,Brittnee's Reel,
+Facebook Ads,Brittnee's Reel,facebook
+Facebook Ads,Canada | Exclude Custom Audience (To get new people to like the page),
+Facebook Ads,Canada | Exclude Custom Audience (To get new people to like the page),facebook
+Facebook Ads,Centering Survivors- ENG Ad set,
+Facebook Ads,Centering Survivors- ENG Ad set,facebook
+Facebook Ads,Centering Survivors- FR Campaign  Ad set,
+Facebook Ads,Centering Survivors- FR Campaign  Ad set,facebook
+Facebook Ads,Chamandy Manitoba,
+Facebook Ads,Chamandy Manitoba,facebook
+Facebook Ads,Consideration EN Aug 26,
+Facebook Ads,Consideration EN Aug 26,facebook
+Facebook Ads,Consideration EN Aug 26 – Conv,
+Facebook Ads,Consideration EN Aug 26 – Conv,facebook
+Facebook Ads,Consideration FR Sept 1,
+Facebook Ads,Consideration FR Sept 1,facebook
+Facebook Ads,Consideration FR Sept 3 – Conv,
+Facebook Ads,Consideration FR Sept 3 – Conv,facebook
+Facebook Ads,Cottage - 6/29 - Static,
+Facebook Ads,Cottage - 6/29 - Static,facebook
+Facebook Ads,DON'T USE,
+Facebook Ads,DON'T USE,facebook
+Facebook Ads,Debunking – Educators ON – Aug26,
+Facebook Ads,Debunking – Educators ON – Aug26,facebook
+Facebook Ads,EN,
+Facebook Ads,EN,facebook
+Facebook Ads,Eng. ENGI Change. Event.,
+Facebook Ads,Eng. ENGI Change. Event.,facebook
+Facebook Ads,Eng. Engi Change. Course.,
+Facebook Ads,Eng. Engi Change. Course.,facebook
+Facebook Ads,Exclude Subs,
+Facebook Ads,Exclude Subs,facebook
+Facebook Ads,FR,
+Facebook Ads,FR,facebook
+Facebook Ads,Facebook,
+Facebook Ads,Facebook,facebook
+Facebook Ads,Facebook+Instagram,
+Facebook Ads,Facebook+Instagram,facebook
+Facebook Ads,Fall - 9/21 - Static,
+Facebook Ads,Fall - 9/21 - Static,facebook
+Facebook Ads,Feb 26 Commercial Real Estate Report,
+Facebook Ads,Feb 26 Commercial Real Estate Report,facebook
+Facebook Ads,Instagram,
+Facebook Ads,Instagram,facebook
+Facebook Ads,Instagram Post,
+Facebook Ads,Instagram Post,facebook
+Facebook Ads,Instagram Profile Visits Ad: Roster update incoming! 💥 We are thrilled to announce...,
+Facebook Ads,Instagram Profile Visits Ad: Roster update incoming! 💥 We are thrilled to announce...,facebook
+Facebook Ads,Instagram post: @purrernie's holiday picks are...,
+Facebook Ads,Instagram post: @purrernie's holiday picks are...,facebook
+Facebook Ads,"Instagram post: A day filled with dogs, skating,...",
+Facebook Ads,"Instagram post: A day filled with dogs, skating,...",facebook
+Facebook Ads,Instagram post: A plus-one with paws? Don’t mind...,
+Facebook Ads,Instagram post: A plus-one with paws? Don’t mind...,facebook
+Facebook Ads,Instagram post: A sweet way to show a little...,
+Facebook Ads,Instagram post: A sweet way to show a little...,facebook
+Facebook Ads,Instagram post: Boys are hearing from the...,
+Facebook Ads,Instagram post: Boys are hearing from the...,facebook
+Facebook Ads,"Instagram post: Enrichment, but make it...",
+Facebook Ads,"Instagram post: Enrichment, but make it...",facebook
+Facebook Ads,Instagram post: Even incredible companions have...,
+Facebook Ads,Instagram post: Even incredible companions have...,facebook
+Facebook Ads,Instagram post: Every journey benefits from a...,
+Facebook Ads,Instagram post: Every journey benefits from a...,facebook
 Facebook Ads,"Instagram post: Game faces on! 🏈
 
-Paisley, Sookie...",,0
+Paisley, Sookie...",
 Facebook Ads,"Instagram post: Game faces on! 🏈
 
-Paisley, Sookie...",facebook,8446
-Facebook Ads,"Instagram post: Home isn’t just a place, it’s...",,0
-Facebook Ads,"Instagram post: Home isn’t just a place, it’s...",facebook,628799
-Facebook Ads,"Instagram post: In our latest research, we asked...",,0
-Facebook Ads,"Instagram post: In our latest research, we asked...",facebook,27426
-Facebook Ads,Instagram post: Just add water and mix ➡️ instant...,,0
-Facebook Ads,Instagram post: Just add water and mix ➡️ instant...,facebook,21702
-Facebook Ads,"Instagram post: Just fueled athletes, doing...",,0
-Facebook Ads,"Instagram post: Just fueled athletes, doing...",facebook,11987
-Facebook Ads,Instagram post: Just out of the oven! You can now...,,0
-Facebook Ads,Instagram post: Just out of the oven! You can now...,facebook,12183
-Facebook Ads,Instagram post: Love is in the air… and in...,,0
-Facebook Ads,Instagram post: Love is in the air… and in...,facebook,9648
-Facebook Ads,Instagram post: Main character energy only ✨,,0
-Facebook Ads,Instagram post: Main character energy only ✨,facebook,4612
-Facebook Ads,"Instagram post: Millie Jo’s first day on the job,...",,0
-Facebook Ads,"Instagram post: Millie Jo’s first day on the job,...",facebook,10248
+Paisley, Sookie...",facebook
+Facebook Ads,"Instagram post: Home isn’t just a place, it’s...",
+Facebook Ads,"Instagram post: Home isn’t just a place, it’s...",facebook
+Facebook Ads,"Instagram post: In our latest research, we asked...",
+Facebook Ads,"Instagram post: In our latest research, we asked...",facebook
+Facebook Ads,Instagram post: Just add water and mix ➡️ instant...,
+Facebook Ads,Instagram post: Just add water and mix ➡️ instant...,facebook
+Facebook Ads,"Instagram post: Just fueled athletes, doing...",
+Facebook Ads,"Instagram post: Just fueled athletes, doing...",facebook
+Facebook Ads,Instagram post: Just out of the oven! You can now...,
+Facebook Ads,Instagram post: Just out of the oven! You can now...,facebook
+Facebook Ads,Instagram post: Love is in the air… and in...,
+Facebook Ads,Instagram post: Love is in the air… and in...,facebook
+Facebook Ads,Instagram post: Main character energy only ✨,
+Facebook Ads,Instagram post: Main character energy only ✨,facebook
+Facebook Ads,"Instagram post: Millie Jo’s first day on the job,...",
+Facebook Ads,"Instagram post: Millie Jo’s first day on the job,...",facebook
 Facebook Ads,"Instagram post: New year, new challenges. 🏆💪
  
-📸:...",,0
+📸:...",
 Facebook Ads,"Instagram post: New year, new challenges. 🏆💪
  
-📸:...",facebook,3064
-Facebook Ads,Instagram post: No notes from our quality...,,0
-Facebook Ads,Instagram post: No notes from our quality...,facebook,2917
-Facebook Ads,Instagram post: Our free guide helps families...,,0
-Facebook Ads,Instagram post: Our free guide helps families...,facebook,995
-Facebook Ads,"Instagram post: Pumpkins, puppacinos, and puppy...",,0
-Facebook Ads,"Instagram post: Pumpkins, puppacinos, and puppy...",facebook,2360
-Facebook Ads,Instagram post: Reese made the nice list for his...,,0
-Facebook Ads,Instagram post: Reese made the nice list for his...,facebook,2161
-Facebook Ads,Instagram post: Sending all the good luck to...,,0
-Facebook Ads,Instagram post: Sending all the good luck to...,facebook,9926
-Facebook Ads,"Instagram post: Sick algorithms can infect us,...",,0
-Facebook Ads,"Instagram post: Sick algorithms can infect us,...",facebook,2770
-Facebook Ads,"Instagram post: Skates off, thinking caps on. We...",,0
-Facebook Ads,"Instagram post: Skates off, thinking caps on. We...",facebook,425360
-Facebook Ads,Instagram post: Thanksgiving is around the corner...,,0
-Facebook Ads,Instagram post: Thanksgiving is around the corner...,facebook,2213
-Facebook Ads,"Instagram post: They trained with heart, they...",,0
-Facebook Ads,"Instagram post: They trained with heart, they...",facebook,34407
-Facebook Ads,"Instagram post: This Father's Day, let's help...",,0
-Facebook Ads,"Instagram post: This Father's Day, let's help...",facebook,3900
-Facebook Ads,Instagram post: Training era unlocked 🔓...,,0
-Facebook Ads,Instagram post: Training era unlocked 🔓...,facebook,9134
-Facebook Ads,Instagram post: Turns out not everyone is...,,0
-Facebook Ads,Instagram post: Turns out not everyone is...,facebook,5695
-Facebook Ads,Instagram post: We fully support more slow...,,0
-Facebook Ads,Instagram post: We fully support more slow...,facebook,3388
-Facebook Ads,"Instagram post: When it’s Shabu’s choice, only...",,0
-Facebook Ads,"Instagram post: When it’s Shabu’s choice, only...",facebook,4697
-Facebook Ads,"Instagram post: When the options are this good,...",,0
-Facebook Ads,"Instagram post: When the options are this good,...",facebook,4941
-Facebook Ads,Interrupting Grooming – MB no Winnipeg  – EN – Aug26,,0
-Facebook Ads,Interrupting Grooming – MB no Winnipeg  – EN – Aug26,facebook,31535
-Facebook Ads,Interrupting Grooming – MB – FR – Aug26,,0
-Facebook Ads,Interrupting Grooming – MB – FR – Aug26,facebook,6413
-Facebook Ads,Interrupting Grooming – QC – Montreal – EN – Aug26,,0
-Facebook Ads,Interrupting Grooming – QC – Montreal – EN – Aug26,facebook,17722
-Facebook Ads,Interrupting Grooming – QC – RestOfQC – FR – Aug26,,0
-Facebook Ads,Interrupting Grooming – QC – RestOfQC – FR – Aug26,facebook,21926
-Facebook Ads,Interrupting Grooming – Winnipeg – EN – Aug26,,0
-Facebook Ads,Interrupting Grooming – Winnipeg – EN – Aug26,facebook,16593
-Facebook Ads,Jahmeek Murray-Taylor Reel,,0
-Facebook Ads,Jahmeek Murray-Taylor Reel,facebook,1242861
-Facebook Ads,Joelle Anello Reel,,0
-Facebook Ads,Joelle Anello Reel,facebook,864808
-Facebook Ads,Joelle's Reel,,0
-Facebook Ads,Joelle's Reel,facebook,993293
-Facebook Ads,"LAL, A30-49, GTA, Video Viewers (Awareness) + Page Engagers, Exclude Subscribed",,0
-Facebook Ads,"LAL, A30-49, GTA, Video Viewers (Awareness) + Page Engagers, Exclude Subscribed",facebook,4466656
-Facebook Ads,Manitoba. Know SUS. ENG.,facebook,0
-Facebook Ads,Manitoba. Know SUS. FR,facebook,0
-Facebook Ads,March 26 Spring Rec,,0
-Facebook Ads,March 26 Spring Rec,facebook,114098
-Facebook Ads,March 26 Spring Rec Report,,0
-Facebook Ads,March 26 Spring Rec Report,facebook,2
-Facebook Ads,March Auto - QC - 2026,,0
-Facebook Ads,March Auto - QC - 2026,facebook,242337
-Facebook Ads,March Bundle - QC - 2026,,0
-Facebook Ads,March Bundle - QC - 2026,facebook,201838
-Facebook Ads,March Home - QC - 2026,,0
-Facebook Ads,March Home - QC - 2026,facebook,21166
-Facebook Ads,March Home - QC - 2026 - New,,0
-Facebook Ads,March Home - QC - 2026 - New,facebook,112948
-Facebook Ads,May,,0
-Facebook Ads,May,facebook,62205
-Facebook Ads,Mel's Reel,,0
-Facebook Ads,Mel's Reel,facebook,810305
-Facebook Ads,Meta,,0
-Facebook Ads,Meta,facebook,126915649
-Facebook Ads,NS - Broad + LAL - July 26 - Cottage,,0
-Facebook Ads,NS - Broad + LAL - July 26 - Cottage,facebook,301074
-Facebook Ads,NS - Broad + LAL - May 26 - Polaris,,0
-Facebook Ads,NS - Broad + LAL - May 26 - Polaris,facebook,1938935
-Facebook Ads,NS - Broad - Feb 26,,0
-Facebook Ads,NS - Broad - Feb 26,facebook,305269
-Facebook Ads,NS - Retargeting - Web Visit (L180D) - May 26 - Polaris,,0
-Facebook Ads,NS - Retargeting - Web Visit (L180D) - May 26 - Polaris,facebook,1245726
-Facebook Ads,NS Ad Set - General/Doctor - Broad Audience - VCNS Consult Published,,0
-Facebook Ads,NS Ad Set - General/Doctor - Broad Audience - VCNS Consult Published,facebook,1210904
-Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published,,0
-Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published,facebook,340795
-Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published - Copy,,0
-Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published - Copy,facebook,104232
-Facebook Ads,NS Ad Set - General/Doctor - LAL VCNS Audience - VCNS Consult Published,,0
-Facebook Ads,NS Ad Set - General/Doctor - LAL VCNS Audience - VCNS Consult Published,facebook,1007451
-Facebook Ads,NS Ad Set - General/Doctor - Website Visitors (L180D) - VCNS Consult Published,,0
-Facebook Ads,NS Ad Set - General/Doctor - Website Visitors (L180D) - VCNS Consult Published,facebook,1786651
-Facebook Ads,National | Jan 14 Recruit,,0
-Facebook Ads,National | Jan 14 Recruit,facebook,54221
-Facebook Ads,National | Jan 15 HPS Q4,,0
-Facebook Ads,National | Jan 15 HPS Q4,facebook,8226
-Facebook Ads,Nous Prevenons,,0
-Facebook Ads,Nous Prevenons,facebook,12875
-Facebook Ads,ON,,0
-Facebook Ads,ON,facebook,9403029
-Facebook Ads,Peak Season - Creator - Allana,,0
-Facebook Ads,Peak Season - Creator - Allana,facebook,387492
-Facebook Ads,Peak Season - Creator - Matt,,0
-Facebook Ads,Peak Season - Creator - Matt,facebook,355262
-Facebook Ads,Peak Season - Creator - Mel,,0
-Facebook Ads,Peak Season - Creator - Mel,facebook,516876
-Facebook Ads,Peak Season - Creator Content - Trey,,0
-Facebook Ads,Peak Season - Creator Content - Trey,facebook,518420
-Facebook Ads,Peak Season - Creator Content - Victoria H,,0
-Facebook Ads,Peak Season - Creator Content - Victoria H,facebook,466193
-Facebook Ads,"Post: ""What does meaningful male allyship look like in...""",,0
-Facebook Ads,"Post: ""What does meaningful male allyship look like in...""",facebook,11932
-Facebook Ads,Prospecting,,0
-Facebook Ads,Prospecting,facebook,10025836
-Facebook Ads,Prospecting  - Static - LAL - 2/9/26 - CA,,0
-Facebook Ads,Prospecting  - Static - LAL - 2/9/26 - CA,facebook,795668
-Facebook Ads,Prospecting  - Static - LAL - 5/7/26 - CA – Polaris,,0
-Facebook Ads,Prospecting  - Static - LAL - 5/7/26 - CA – Polaris,facebook,2999619
-Facebook Ads,Prospecting  - UGC 6/25/26 - CA – Polaris,,0
-Facebook Ads,Prospecting  - UGC 6/25/26 - CA – Polaris,facebook,1281840
-Facebook Ads,Prospecting  - UGC Video - LAL - 2/9/26 - CA,,0
-Facebook Ads,Prospecting  - UGC Video - LAL - 2/9/26 - CA,facebook,1451013
-Facebook Ads,Prospecting EN Aug 26,,0
-Facebook Ads,Prospecting EN Aug 26,facebook,776635
-Facebook Ads,Prospecting FR Sept 1,,0
-Facebook Ads,Prospecting FR Sept 1,facebook,209679
-Facebook Ads,Quebec. Know SUS. ENG.,facebook,0
-Facebook Ads,Quebec. Know SUS. FR,facebook,0
-Facebook Ads,Raising Boys – Instagram – CA – May 2026,,0
-Facebook Ads,Raising Boys – Instagram – CA – May 2026,facebook,17433
-Facebook Ads,Retargeting,,24898
-Facebook Ads,Retargeting,facebook,24544
-Facebook Ads,Sara Wells Reel,,0
-Facebook Ads,Sara Wells Reel,facebook,1009652
-Facebook Ads,Sask. Workshop Awareness.,,0
-Facebook Ads,Sask. Workshop Awareness.,facebook,16405
-Facebook Ads,Sask. Workshop. Clicks.,,0
-Facebook Ads,Sask. Workshop. Clicks.,facebook,14285
-Facebook Ads,Social Channel Follower Campaign - FB & IG,,0
-Facebook Ads,Social Channel Follower Campaign - FB & IG,facebook,235675
-Facebook Ads,Taylor Patterson #3,,0
-Facebook Ads,Taylor Patterson #3,facebook,903989
-Facebook Ads,Taylor Patterson Reel,,0
-Facebook Ads,Taylor Patterson Reel,facebook,798748
-Facebook Ads,Taylor Patterson Reel #2,,0
-Facebook Ads,Taylor Patterson Reel #2,facebook,600494
-Facebook Ads,Trisha Enriquez Reel,,0
-Facebook Ads,Trisha Enriquez Reel,facebook,1224843
-Facebook Ads,Vanessa's Reel,,0
-Facebook Ads,Vanessa's Reel,facebook,807719
-Facebook Ads,"Visits, single asset. Raising boys.",,0
-Facebook Ads,"Visits, single asset. Raising boys.",facebook,75905
-Facebook Ads,WE Prevent ENG,,0
-Facebook Ads,WE Prevent ENG,facebook,69797
-Facebook Ads,WRC 124. Event Promotion.,,0
-Facebook Ads,WRC 124. Event Promotion.,facebook,14004
-Facebook Ads,WRC 140,,0
-Facebook Ads,WRC 140,facebook,86228
-Facebook Ads,WRC 144 - Manitoba Youth Engagement,,0
-Facebook Ads,WRC 144 - Manitoba Youth Engagement,facebook,11309
-Facebook Ads,"WRC 145, NFF, Oct. 2025",,0
-Facebook Ads,"WRC 145, NFF, Oct. 2025",facebook,95574
-Facebook Ads,WRC 156. Debunking.,,0
-Facebook Ads,WRC 156. Debunking.,facebook,98180
-Facebook Ads,We Prevent – Educators ON – Aug26,,0
-Facebook Ads,We Prevent – Educators ON – Aug26,facebook,84679
-Facebook Ads,WebVisitors - 5/7 – Polaris,,0
-Facebook Ads,WebVisitors - 5/7 – Polaris,facebook,1299770
-Facebook Ads,Website Visitors - 2/9,,0
-Facebook Ads,Website Visitors - 2/9,facebook,254796
-Facebook Ads,World Cup - 6/19,,0
-Facebook Ads,World Cup - 6/19,facebook,270692
-Facebook Ads,[6/13/2026] Promoting https://www.whiteribbon.ca/raisingboys-fathersday,,0
-Facebook Ads,[6/13/2026] Promoting https://www.whiteribbon.ca/raisingboys-fathersday,facebook,9712
-Facebook Ads,[WRC145] Draw the Line - Back to School V1,,0
-Facebook Ads,[WRC145] Draw the Line - Back to School V1,facebook,161343
-Facebook Ads,chan=Paid Social,,0
-Facebook Ads,chan=Paid Social,facebook,40563645
-Facebook Ads,geo=Ontario,,0
-Facebook Ads,geo=Ontario,facebook,0
-Facebook Ads,geo=Quebec,,0
-Facebook Ads,geo=Quebec,facebook,0
-Facebook Ads,obj=Conversion,,0
-Facebook Ads,obj=Conversion,facebook,0
-Facebook Ads,site=Meta,,0
-Facebook Ads,site=Meta,facebook,23997633
-Facebook Ads,subprod=home,,0
-Facebook Ads,subprod=home,facebook,5592839
-Google Ads,DemandGen,,0
-Google Ads,DemandGen,paidsearch,29082578
-Google Ads,Google App Store,,0
-Google Ads,Google App Store,paidsearch,5357559
-Google Ads,Search,,0
-Google Ads,Search,paidsearch,101111276
-Google Ads,Search - Perfmax,,182245749
-Google Ads,StndDisplay - Google,,0
-Google Ads,StndDisplay - Google,paidsearch,25803875
-Google Ads,YouTube,,120566229
-Google Ads,YouTube,paidsearch,15558270
-Google Analytics 4,,Default Site Key,0
-Google Analytics 4,,bell,0
-Google Analytics 4,,facebook,0
-Google Analytics 4,,paidsearch,0
-Google Analytics 4,,paidsearch - bing,0
-Google Analytics 4,,programmatic / paiddisplay,0
-Google Analytics 4,,programmatic / paidvideo,0
-Google Analytics 4,,reddit / paiddisplay,0
-Google Analytics 4,,snapchat,0
-Google Analytics 4,,tiktok,0
-Google Analytics 4,,youtube,0
-HiveStack,DOOH,,337250172
-LinkedIn Ads,2022 ABM Lite TO - Lead Generation,,0
-LinkedIn Ads,2025-ADV-CONS-Microsoft - AgenticAI - Awareness,,135560
-LinkedIn Ads,2025-ADV-CONS-Microsoft - F&O article - Awareness,,319274
-LinkedIn Ads,2026 - PubCo - Article,,64919
-LinkedIn Ads,2026 - PubCo - Hub,,71585
-LinkedIn Ads,2026 bso bdointuit - boosted post - reach,,20138
-LinkedIn Ads,2026 bso bdointuit - boosted post - website visits,,4560
-LinkedIn Ads,2026-Microsoft-PressRelease,,345070
-LinkedIn Ads,AI Accountability Gap Boosting Sam Khoury Nov 17 event,,158600
-LinkedIn Ads,Awareness,,24429
-LinkedIn Ads,BC - New West 2025,,0
-LinkedIn Ads,Boost1,,4355
-LinkedIn Ads,Boost3,,5364
-LinkedIn Ads,Boost4,,8745
-LinkedIn Ads,Boosted,,66062
-LinkedIn Ads,Boosted Post - Anne-Marie - October 23,,2945
-LinkedIn Ads,Brian - Trade Environment April 23,,0
-LinkedIn Ads,Brian Boosts - Q4 - Video 4,,5311
-LinkedIn Ads,Brian Boosts - Q4 - Video 5,,5654
-LinkedIn Ads,Buisness,,113980
-LinkedIn Ads,Business,,18004
-LinkedIn Ads,Categories,,112185
-LinkedIn Ads,Company,,121831
-LinkedIn Ads,Daryl Boost - AI Driven,,1063338
-LinkedIn Ads,Document,,8758
-LinkedIn Ads,Event: Selling your business Oakville Dec 2 2026,,1148
-LinkedIn Ads,Harry Chana: Tax’s next test: Can the infrastructure keep up?,,32833
-LinkedIn Ads,Image,,10954
-LinkedIn Ads,LinkedIn,,2961266
-LinkedIn Ads,Market Activation - Tax - Sunshine - Brian Boosts - Q4 - Video 6,,7248
-LinkedIn Ads,Microsoft Partner Ads,,87624
-LinkedIn Ads,National - Brand awareness - Image - Feb 2025,,0
-LinkedIn Ads,PT-Prospecting,,125337
-LinkedIn Ads,Paradox Event 3,,0
-LinkedIn Ads,Productivity Paradox general awareness ads - exclude Quebec,,49387
-LinkedIn Ads,"SYB: Boost Post Engagement September 2, 2026 at 7:01 PM",,12720
-LinkedIn Ads,Sato,,58160
-LinkedIn Ads,Text,,644731
-LinkedIn Ads,VIDEO,,1228175
-LinkedIn Ads,"Website visits - Aug 31, 2026",,86085
-LinkedIn Ads,a,,782994
-Microsoft Advertising,Search - Bing,,0
-Microsoft Advertising,Search - Bing,paidsearch - bing,34295481
-Pinterest Ads,Holiday - Family-Oriented Frugal - EN,,1
-Pinterest Ads,Holiday - Family-Oriented Frugal - FR,,26
-Pinterest Ads,Holiday - Sophisticated Explorer - FR,,2
-Pinterest Ads,Pinterest,,14082839
-Reddit Ads,ON(br=Sonnet,reddit / paidvideo,1896055
-Reddit Ads,Reddit,reddit / paiddisplay,147237813
-Reddit Ads,Reddit,reddit / paidvideo,745123
-Reddit Ads,chan=Paid Social,reddit / paiddisplay,22061993
-Reddit Ads,chan=Paid Social,reddit / paidvideo,20658341
-Reddit Ads,prod=Multiline,reddit / paiddisplay,5389840
-Reddit Ads,prod=Multiline,reddit / paidvideo,2888396
-Reddit Ads,site=Reddit,reddit / paiddisplay,17194192
-Reddit Ads,site=Reddit,reddit / paidvideo,3845977
-SnapChat,En,snapchat,3469874
-SnapChat,Fr,snapchat,837365
-SnapChat,Snapchat,snapchat,154166124
-Spotify Ads,Audio,,7512657
-Teads Daily,Teads,,4969382
-The Trade Desk,CTV,,11253333
-The Trade Desk,CTV - Bell Media,,0
-The Trade Desk,CTV - Bell Media,programmatic / paidvideo,0
-The Trade Desk,NativeDis,,0
-The Trade Desk,NativeDis,programmatic / paiddisplay,0
-The Trade Desk,OLV,,0
-The Trade Desk,StndDisplay,,10005806
-TikTok Ads,"A30-49, FSAs",,0
-TikTok Ads,"A30-49, FSAs",tiktok,9627181
-TikTok Ads,Jahmeek Murray-Taylor,,0
-TikTok Ads,Jahmeek Murray-Taylor,tiktok,1160959
-TikTok Ads,"Jahmeek Murray-Taylor - A30-49, FSAs",,0
-TikTok Ads,"Jahmeek Murray-Taylor - A30-49, FSAs",tiktok,1016014
-TikTok Ads,"Joelle Anello - A30-49, FSAs",,0
-TikTok Ads,"Joelle Anello - A30-49, FSAs",tiktok,1056346
-TikTok Ads,Joelle Anello Video #1,,0
-TikTok Ads,Joelle Anello Video #1,tiktok,1370121
-TikTok Ads,"Sara Wells - A30-49, FSAs",,0
-TikTok Ads,"Sara Wells - A30-49, FSAs",tiktok,589856
-TikTok Ads,Sarah Wells Video #1,,0
-TikTok Ads,Sarah Wells Video #1,tiktok,844937
-TikTok Ads,"Taylor Patterson #2 - A30-49, FSAs",,0
-TikTok Ads,"Taylor Patterson #2 - A30-49, FSAs",tiktok,401000
-TikTok Ads,"Taylor Patterson #3 - A30-49, FSAs",,0
-TikTok Ads,"Taylor Patterson #3 - A30-49, FSAs",tiktok,522145
-TikTok Ads,"Taylor Patterson - A30-49, FSAs",,0
-TikTok Ads,"Taylor Patterson - A30-49, FSAs",tiktok,372789
-TikTok Ads,Taylor Patterson Video #1,,0
-TikTok Ads,Taylor Patterson Video #1,tiktok,858308
-TikTok Ads,Taylor Patterson Video #2,,0
-TikTok Ads,Taylor Patterson Video #2,tiktok,1471193
-TikTok Ads,Taylor Patterson Video #3,,0
-TikTok Ads,Taylor Patterson Video #3,tiktok,1525507
-TikTok Ads,TikTok,,0
-TikTok Ads,TikTok,tiktok,418619926
-TikTok Ads,"Trisha Enriquez - A30-49, FSAs",,0
-TikTok Ads,"Trisha Enriquez - A30-49, FSAs",tiktok,992587
-TikTok Ads,Trisha Enriquez Video #1,,0
-TikTok Ads,Trisha Enriquez Video #1,tiktok,536934
+📸:...",facebook
+Facebook Ads,Instagram post: No notes from our quality...,
+Facebook Ads,Instagram post: No notes from our quality...,facebook
+Facebook Ads,Instagram post: Our free guide helps families...,
+Facebook Ads,Instagram post: Our free guide helps families...,facebook
+Facebook Ads,"Instagram post: Pumpkins, puppacinos, and puppy...",
+Facebook Ads,"Instagram post: Pumpkins, puppacinos, and puppy...",facebook
+Facebook Ads,Instagram post: Reese made the nice list for his...,
+Facebook Ads,Instagram post: Reese made the nice list for his...,facebook
+Facebook Ads,Instagram post: Sending all the good luck to...,
+Facebook Ads,Instagram post: Sending all the good luck to...,facebook
+Facebook Ads,"Instagram post: Sick algorithms can infect us,...",
+Facebook Ads,"Instagram post: Sick algorithms can infect us,...",facebook
+Facebook Ads,"Instagram post: Skates off, thinking caps on. We...",
+Facebook Ads,"Instagram post: Skates off, thinking caps on. We...",facebook
+Facebook Ads,Instagram post: Thanksgiving is around the corner...,
+Facebook Ads,Instagram post: Thanksgiving is around the corner...,facebook
+Facebook Ads,"Instagram post: They trained with heart, they...",
+Facebook Ads,"Instagram post: They trained with heart, they...",facebook
+Facebook Ads,"Instagram post: This Father's Day, let's help...",
+Facebook Ads,"Instagram post: This Father's Day, let's help...",facebook
+Facebook Ads,Instagram post: Training era unlocked 🔓...,
+Facebook Ads,Instagram post: Training era unlocked 🔓...,facebook
+Facebook Ads,Instagram post: Turns out not everyone is...,
+Facebook Ads,Instagram post: Turns out not everyone is...,facebook
+Facebook Ads,Instagram post: We fully support more slow...,
+Facebook Ads,Instagram post: We fully support more slow...,facebook
+Facebook Ads,"Instagram post: When it’s Shabu’s choice, only...",
+Facebook Ads,"Instagram post: When it’s Shabu’s choice, only...",facebook
+Facebook Ads,"Instagram post: When the options are this good,...",
+Facebook Ads,"Instagram post: When the options are this good,...",facebook
+Facebook Ads,Interrupting Grooming – MB no Winnipeg  – EN – Aug26,
+Facebook Ads,Interrupting Grooming – MB no Winnipeg  – EN – Aug26,facebook
+Facebook Ads,Interrupting Grooming – MB – FR – Aug26,
+Facebook Ads,Interrupting Grooming – MB – FR – Aug26,facebook
+Facebook Ads,Interrupting Grooming – QC – Montreal – EN – Aug26,
+Facebook Ads,Interrupting Grooming – QC – Montreal – EN – Aug26,facebook
+Facebook Ads,Interrupting Grooming – QC – RestOfQC – FR – Aug26,
+Facebook Ads,Interrupting Grooming – QC – RestOfQC – FR – Aug26,facebook
+Facebook Ads,Interrupting Grooming – Winnipeg – EN – Aug26,
+Facebook Ads,Interrupting Grooming – Winnipeg – EN – Aug26,facebook
+Facebook Ads,Jahmeek Murray-Taylor Reel,
+Facebook Ads,Jahmeek Murray-Taylor Reel,facebook
+Facebook Ads,Joelle Anello Reel,
+Facebook Ads,Joelle Anello Reel,facebook
+Facebook Ads,Joelle's Reel,
+Facebook Ads,Joelle's Reel,facebook
+Facebook Ads,"LAL, A30-49, GTA, Video Viewers (Awareness) + Page Engagers, Exclude Subscribed",
+Facebook Ads,"LAL, A30-49, GTA, Video Viewers (Awareness) + Page Engagers, Exclude Subscribed",facebook
+Facebook Ads,Manitoba. Know SUS. ENG.,facebook
+Facebook Ads,Manitoba. Know SUS. FR,facebook
+Facebook Ads,March 26 Spring Rec,
+Facebook Ads,March 26 Spring Rec,facebook
+Facebook Ads,March 26 Spring Rec Report,
+Facebook Ads,March 26 Spring Rec Report,facebook
+Facebook Ads,March Auto - QC - 2026,
+Facebook Ads,March Auto - QC - 2026,facebook
+Facebook Ads,March Bundle - QC - 2026,
+Facebook Ads,March Bundle - QC - 2026,facebook
+Facebook Ads,March Home - QC - 2026,
+Facebook Ads,March Home - QC - 2026,facebook
+Facebook Ads,March Home - QC - 2026 - New,
+Facebook Ads,March Home - QC - 2026 - New,facebook
+Facebook Ads,May,
+Facebook Ads,May,facebook
+Facebook Ads,Mel's Reel,
+Facebook Ads,Mel's Reel,facebook
+Facebook Ads,Meta,
+Facebook Ads,Meta,facebook
+Facebook Ads,NS - Broad + LAL - July 26 - Cottage,
+Facebook Ads,NS - Broad + LAL - July 26 - Cottage,facebook
+Facebook Ads,NS - Broad + LAL - May 26 - Polaris,
+Facebook Ads,NS - Broad + LAL - May 26 - Polaris,facebook
+Facebook Ads,NS - Broad - Feb 26,
+Facebook Ads,NS - Broad - Feb 26,facebook
+Facebook Ads,NS - Retargeting - Web Visit (L180D) - May 26 - Polaris,
+Facebook Ads,NS - Retargeting - Web Visit (L180D) - May 26 - Polaris,facebook
+Facebook Ads,NS Ad Set - General/Doctor - Broad Audience - VCNS Consult Published,
+Facebook Ads,NS Ad Set - General/Doctor - Broad Audience - VCNS Consult Published,facebook
+Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published,
+Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published,facebook
+Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published - Copy,
+Facebook Ads,NS Ad Set - General/Doctor - Cold Audience - VCNS Consult Published - Copy,facebook
+Facebook Ads,NS Ad Set - General/Doctor - LAL VCNS Audience - VCNS Consult Published,
+Facebook Ads,NS Ad Set - General/Doctor - LAL VCNS Audience - VCNS Consult Published,facebook
+Facebook Ads,NS Ad Set - General/Doctor - Website Visitors (L180D) - VCNS Consult Published,
+Facebook Ads,NS Ad Set - General/Doctor - Website Visitors (L180D) - VCNS Consult Published,facebook
+Facebook Ads,National | Jan 14 Recruit,
+Facebook Ads,National | Jan 14 Recruit,facebook
+Facebook Ads,National | Jan 15 HPS Q4,
+Facebook Ads,National | Jan 15 HPS Q4,facebook
+Facebook Ads,Nous Prevenons,
+Facebook Ads,Nous Prevenons,facebook
+Facebook Ads,ON,
+Facebook Ads,ON,facebook
+Facebook Ads,Peak Season - Creator - Allana,
+Facebook Ads,Peak Season - Creator - Allana,facebook
+Facebook Ads,Peak Season - Creator - Matt,
+Facebook Ads,Peak Season - Creator - Matt,facebook
+Facebook Ads,Peak Season - Creator - Mel,
+Facebook Ads,Peak Season - Creator - Mel,facebook
+Facebook Ads,Peak Season - Creator Content - Trey,
+Facebook Ads,Peak Season - Creator Content - Trey,facebook
+Facebook Ads,Peak Season - Creator Content - Victoria H,
+Facebook Ads,Peak Season - Creator Content - Victoria H,facebook
+Facebook Ads,"Post: ""What does meaningful male allyship look like in...""",
+Facebook Ads,"Post: ""What does meaningful male allyship look like in...""",facebook
+Facebook Ads,Prospecting,
+Facebook Ads,Prospecting,facebook
+Facebook Ads,Prospecting  - Static - LAL - 2/9/26 - CA,
+Facebook Ads,Prospecting  - Static - LAL - 2/9/26 - CA,facebook
+Facebook Ads,Prospecting  - Static - LAL - 5/7/26 - CA – Polaris,
+Facebook Ads,Prospecting  - Static - LAL - 5/7/26 - CA – Polaris,facebook
+Facebook Ads,Prospecting  - UGC 6/25/26 - CA – Polaris,
+Facebook Ads,Prospecting  - UGC 6/25/26 - CA – Polaris,facebook
+Facebook Ads,Prospecting  - UGC Video - LAL - 2/9/26 - CA,
+Facebook Ads,Prospecting  - UGC Video - LAL - 2/9/26 - CA,facebook
+Facebook Ads,Prospecting EN Aug 26,
+Facebook Ads,Prospecting EN Aug 26,facebook
+Facebook Ads,Prospecting FR Sept 1,
+Facebook Ads,Prospecting FR Sept 1,facebook
+Facebook Ads,Quebec. Know SUS. ENG.,facebook
+Facebook Ads,Quebec. Know SUS. FR,facebook
+Facebook Ads,Raising Boys – Instagram – CA – May 2026,
+Facebook Ads,Raising Boys – Instagram – CA – May 2026,facebook
+Facebook Ads,Retargeting,
+Facebook Ads,Retargeting,facebook
+Facebook Ads,Sara Wells Reel,
+Facebook Ads,Sara Wells Reel,facebook
+Facebook Ads,Sask. Workshop Awareness.,
+Facebook Ads,Sask. Workshop Awareness.,facebook
+Facebook Ads,Sask. Workshop. Clicks.,
+Facebook Ads,Sask. Workshop. Clicks.,facebook
+Facebook Ads,Social Channel Follower Campaign - FB & IG,
+Facebook Ads,Social Channel Follower Campaign - FB & IG,facebook
+Facebook Ads,Taylor Patterson #3,
+Facebook Ads,Taylor Patterson #3,facebook
+Facebook Ads,Taylor Patterson Reel,
+Facebook Ads,Taylor Patterson Reel,facebook
+Facebook Ads,Taylor Patterson Reel #2,
+Facebook Ads,Taylor Patterson Reel #2,facebook
+Facebook Ads,Trisha Enriquez Reel,
+Facebook Ads,Trisha Enriquez Reel,facebook
+Facebook Ads,Vanessa's Reel,
+Facebook Ads,Vanessa's Reel,facebook
+Facebook Ads,"Visits, single asset. Raising boys.",
+Facebook Ads,"Visits, single asset. Raising boys.",facebook
+Facebook Ads,WE Prevent ENG,
+Facebook Ads,WE Prevent ENG,facebook
+Facebook Ads,WRC 124. Event Promotion.,
+Facebook Ads,WRC 124. Event Promotion.,facebook
+Facebook Ads,WRC 140,
+Facebook Ads,WRC 140,facebook
+Facebook Ads,WRC 144 - Manitoba Youth Engagement,
+Facebook Ads,WRC 144 - Manitoba Youth Engagement,facebook
+Facebook Ads,"WRC 145, NFF, Oct. 2025",
+Facebook Ads,"WRC 145, NFF, Oct. 2025",facebook
+Facebook Ads,WRC 156. Debunking.,
+Facebook Ads,WRC 156. Debunking.,facebook
+Facebook Ads,We Prevent – Educators ON – Aug26,
+Facebook Ads,We Prevent – Educators ON – Aug26,facebook
+Facebook Ads,WebVisitors - 5/7 – Polaris,
+Facebook Ads,WebVisitors - 5/7 – Polaris,facebook
+Facebook Ads,Website Visitors - 2/9,
+Facebook Ads,Website Visitors - 2/9,facebook
+Facebook Ads,World Cup - 6/19,
+Facebook Ads,World Cup - 6/19,facebook
+Facebook Ads,[6/13/2026] Promoting https://www.whiteribbon.ca/raisingboys-fathersday,
+Facebook Ads,[6/13/2026] Promoting https://www.whiteribbon.ca/raisingboys-fathersday,facebook
+Facebook Ads,[WRC145] Draw the Line - Back to School V1,
+Facebook Ads,[WRC145] Draw the Line - Back to School V1,facebook
+Facebook Ads,chan=Paid Social,
+Facebook Ads,chan=Paid Social,facebook
+Facebook Ads,geo=Ontario,
+Facebook Ads,geo=Ontario,facebook
+Facebook Ads,geo=Quebec,
+Facebook Ads,geo=Quebec,facebook
+Facebook Ads,obj=Conversion,
+Facebook Ads,obj=Conversion,facebook
+Facebook Ads,site=Meta,
+Facebook Ads,site=Meta,facebook
+Facebook Ads,subprod=home,
+Facebook Ads,subprod=home,facebook
+Google Ads,DemandGen,
+Google Ads,DemandGen,paidsearch
+Google Ads,Google App Store,
+Google Ads,Google App Store,paidsearch
+Google Ads,Search,
+Google Ads,Search,paidsearch
+Google Ads,Search - Perfmax,
+Google Ads,StndDisplay - Google,
+Google Ads,StndDisplay - Google,paidsearch
+Google Ads,YouTube,
+Google Ads,YouTube,paidsearch
+Google Analytics 4,,Default Site Key
+Google Analytics 4,,bell
+Google Analytics 4,,facebook
+Google Analytics 4,,paidsearch
+Google Analytics 4,,paidsearch - bing
+Google Analytics 4,,programmatic / paiddisplay
+Google Analytics 4,,programmatic / paidvideo
+Google Analytics 4,,reddit / paiddisplay
+Google Analytics 4,,snapchat
+Google Analytics 4,,tiktok
+Google Analytics 4,,youtube
+HiveStack,DOOH,
+LinkedIn Ads,2022 ABM Lite TO - Lead Generation,
+LinkedIn Ads,2025-ADV-CONS-Microsoft - AgenticAI - Awareness,
+LinkedIn Ads,2025-ADV-CONS-Microsoft - F&O article - Awareness,
+LinkedIn Ads,2026 - PubCo - Article,
+LinkedIn Ads,2026 - PubCo - Hub,
+LinkedIn Ads,2026 bso bdointuit - boosted post - reach,
+LinkedIn Ads,2026 bso bdointuit - boosted post - website visits,
+LinkedIn Ads,2026-Microsoft-PressRelease,
+LinkedIn Ads,AI Accountability Gap Boosting Sam Khoury Nov 17 event,
+LinkedIn Ads,Awareness,
+LinkedIn Ads,BC - New West 2025,
+LinkedIn Ads,Boost1,
+LinkedIn Ads,Boost3,
+LinkedIn Ads,Boost4,
+LinkedIn Ads,Boosted,
+LinkedIn Ads,Boosted Post - Anne-Marie - October 23,
+LinkedIn Ads,Brian - Trade Environment April 23,
+LinkedIn Ads,Brian Boosts - Q4 - Video 4,
+LinkedIn Ads,Brian Boosts - Q4 - Video 5,
+LinkedIn Ads,Buisness,
+LinkedIn Ads,Business,
+LinkedIn Ads,Categories,
+LinkedIn Ads,Company,
+LinkedIn Ads,Daryl Boost - AI Driven,
+LinkedIn Ads,Document,
+LinkedIn Ads,Event: Selling your business Oakville Dec 2 2026,
+LinkedIn Ads,Harry Chana: Tax’s next test: Can the infrastructure keep up?,
+LinkedIn Ads,Image,
+LinkedIn Ads,LinkedIn,
+LinkedIn Ads,Market Activation - Tax - Sunshine - Brian Boosts - Q4 - Video 6,
+LinkedIn Ads,Microsoft Partner Ads,
+LinkedIn Ads,National - Brand awareness - Image - Feb 2025,
+LinkedIn Ads,PT-Prospecting,
+LinkedIn Ads,Paradox Event 3,
+LinkedIn Ads,Productivity Paradox general awareness ads - exclude Quebec,
+LinkedIn Ads,"SYB: Boost Post Engagement September 2, 2026 at 7:01 PM",
+LinkedIn Ads,Sato,
+LinkedIn Ads,Text,
+LinkedIn Ads,VIDEO,
+LinkedIn Ads,"Website visits - Aug 31, 2026",
+LinkedIn Ads,a,
+Microsoft Advertising,Search - Bing,
+Microsoft Advertising,Search - Bing,paidsearch - bing
+Pinterest Ads,Holiday - Family-Oriented Frugal - EN,
+Pinterest Ads,Holiday - Family-Oriented Frugal - FR,
+Pinterest Ads,Holiday - Sophisticated Explorer - FR,
+Pinterest Ads,Pinterest,
+Reddit Ads,ON(br=Sonnet,reddit / paidvideo
+Reddit Ads,Reddit,reddit / paiddisplay
+Reddit Ads,Reddit,reddit / paidvideo
+Reddit Ads,chan=Paid Social,reddit / paiddisplay
+Reddit Ads,chan=Paid Social,reddit / paidvideo
+Reddit Ads,prod=Multiline,reddit / paiddisplay
+Reddit Ads,prod=Multiline,reddit / paidvideo
+Reddit Ads,site=Reddit,reddit / paiddisplay
+Reddit Ads,site=Reddit,reddit / paidvideo
+SnapChat,En,snapchat
+SnapChat,Fr,snapchat
+SnapChat,Snapchat,snapchat
+Spotify Ads,Audio,
+Teads Daily,Teads,
+The Trade Desk,CTV,
+The Trade Desk,CTV - Bell Media,
+The Trade Desk,CTV - Bell Media,programmatic / paidvideo
+The Trade Desk,NativeDis,
+The Trade Desk,NativeDis,programmatic / paiddisplay
+The Trade Desk,OLV,
+The Trade Desk,StndDisplay,
+TikTok Ads,"A30-49, FSAs",
+TikTok Ads,"A30-49, FSAs",tiktok
+TikTok Ads,Jahmeek Murray-Taylor,
+TikTok Ads,Jahmeek Murray-Taylor,tiktok
+TikTok Ads,"Jahmeek Murray-Taylor - A30-49, FSAs",
+TikTok Ads,"Jahmeek Murray-Taylor - A30-49, FSAs",tiktok
+TikTok Ads,"Joelle Anello - A30-49, FSAs",
+TikTok Ads,"Joelle Anello - A30-49, FSAs",tiktok
+TikTok Ads,Joelle Anello Video #1,
+TikTok Ads,Joelle Anello Video #1,tiktok
+TikTok Ads,"Sara Wells - A30-49, FSAs",
+TikTok Ads,"Sara Wells - A30-49, FSAs",tiktok
+TikTok Ads,Sarah Wells Video #1,
+TikTok Ads,Sarah Wells Video #1,tiktok
+TikTok Ads,"Taylor Patterson #2 - A30-49, FSAs",
+TikTok Ads,"Taylor Patterson #2 - A30-49, FSAs",tiktok
+TikTok Ads,"Taylor Patterson #3 - A30-49, FSAs",
+TikTok Ads,"Taylor Patterson #3 - A30-49, FSAs",tiktok
+TikTok Ads,"Taylor Patterson - A30-49, FSAs",
+TikTok Ads,"Taylor Patterson - A30-49, FSAs",tiktok
+TikTok Ads,Taylor Patterson Video #1,
+TikTok Ads,Taylor Patterson Video #1,tiktok
+TikTok Ads,Taylor Patterson Video #2,
+TikTok Ads,Taylor Patterson Video #2,tiktok
+TikTok Ads,Taylor Patterson Video #3,
+TikTok Ads,Taylor Patterson Video #3,tiktok
+TikTok Ads,TikTok,
+TikTok Ads,TikTok,tiktok
+TikTok Ads,"Trisha Enriquez - A30-49, FSAs",
+TikTok Ads,"Trisha Enriquez - A30-49, FSAs",tiktok
+TikTok Ads,Trisha Enriquez Video #1,
+TikTok Ads,Trisha Enriquez Video #1,tiktok
