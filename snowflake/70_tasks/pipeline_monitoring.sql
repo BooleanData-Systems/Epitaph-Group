@@ -152,7 +152,7 @@ begin
    -- 24 and 25 Nov and was suspended), so both columns go through varchar first
    where "stale"::varchar = 'true' or try_to_timestamp_ltz("stale_after"::varchar) < dateadd(day, 2, current_timestamp());
   if (n > 0) then
-    call GOLD.CONTROL.NOTIFY('alert', 'streams', 'Epitaph data: ' || n || ' stream(s) stale or close to stale',
+    call GOLD.CONTROL.NOTIFY('alert', 'streams', 'Epitaph data: ' || :n || ' stream(s) stale or close to stale',
       'Run SHOW STREAMS IN ACCOUNT and read a stream before its stale_after time.');
   end if;
   return n || ' stream(s) at risk';
@@ -178,9 +178,12 @@ begin
   if (n = 0) then
     return 'nothing new';
   end if;
-  insert into GOLD.CONTROL.MON_ALERT_LOG (alert_name, issue_key, issue) select :alert_name, issue_key, issue from MON_NEW;
-  call GOLD.CONTROL.NOTIFY('alert', :alert_name, :subject || ' (' || n || ')',
+  -- Inside a CALL every variable needs its colon (:n), or Snowflake reads it as a column ("invalid identifier 'N'").
+  -- The log is written only after the email has gone, so a failed send is retried on the next run instead of
+  -- being recorded as sent and held back for 6 hours.
+  call GOLD.CONTROL.NOTIFY('alert', :alert_name, :subject || ' (' || :n || ')',
        :body || '\n\nWhat to do: docs/monitoring_and_escalation.md. Health views: GOLD.ADMIN.');
+  insert into GOLD.CONTROL.MON_ALERT_LOG (alert_name, issue_key, issue) select :alert_name, issue_key, issue from MON_NEW;
   return n || ' issue(s) sent';
 end;
 $$;
