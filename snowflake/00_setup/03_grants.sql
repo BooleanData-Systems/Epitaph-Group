@@ -14,6 +14,14 @@ grant usage on warehouse WH_TRANSFORMATION to role EPITAPH_DEVELOPER;
 grant usage on warehouse WH_ADHOC to role EPITAPH_DEVELOPER;
 grant usage on warehouse WH_ADHOC to role EPITAPH_STRUCTURE;
 grant usage on warehouse WH_ADHOC to role EPITAPH_MONITOR;
+-- The daily warehouse standard check (GOLD.ADMIN.CHECK_WAREHOUSE_STANDARD, task T_DAILY_PLATFORM_CHECKS) runs as the
+-- transformer role and reads every warehouse's settings. SHOW PARAMETERS IN WAREHOUSE needs USAGE (MONITOR is refused,
+-- tested 26 Nov), so the transformer role gets USAGE on the other four warehouses; its own work still runs on
+-- WH_TRANSFORMATION (every task, alert and dynamic table names that warehouse).
+grant usage on warehouse WH_LOAD to role EPITAPH_TRANSFORMER;
+grant usage on warehouse WH_HISTORY to role EPITAPH_TRANSFORMER;
+grant usage on warehouse WH_REPORTING to role EPITAPH_TRANSFORMER;
+grant usage on warehouse WH_ADHOC to role EPITAPH_TRANSFORMER;
 
 -- Loader: create and write in BRONZE (Fivetran creates its own schemas)
 grant usage, create schema on database BRONZE to role EPITAPH_LOADER;
